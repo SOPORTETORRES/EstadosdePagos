@@ -130,6 +130,12 @@
       <DependentUpon>FrmVisualizador.cs</DependentUpon>
     </Compile>
     <Compile Include="Informes\Informes.cs" />
+    <Compile Include="Informes\MestroDetalleDesp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MestroDetalleDesp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Informes\PortadaPL.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,6 +200,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\FrmVisualizador.resx">
       <DependentUpon>FrmVisualizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\MestroDetalleDesp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MestroDetalleDesp.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\PortadaPL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

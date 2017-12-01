@@ -290,18 +290,51 @@ namespace EstadosdePagos
         /// <param name="sourcePath">Carpeta de origen</param>
         /// <param name="destinationPath">Carpeta de destino</param>
         /// <param name="listaArchivos">Lista de archivos a copiar</param>
-        private void copiarArchivosLista(string sourcePath, string destinationPath, List<string> listaArchivos)
+        private void copiarArchivosLista(string sourcePath, string destinationPath, List<string> listaArchivos, string iTipo)
         {
+            string lPathPortada = ""; string lPathDetalle = ""; string lArchivo = "";
             sourcePath += (!su.Right(sourcePath, 1).Equals("\\") ? "\\" : "");
             destinationPath += (!su.Right(destinationPath, 1).Equals("\\") ? "\\" : "");
-            if (fs.DirectoryExists(sourcePath) && fs.DirectoryExists(destinationPath))
+
+            if (iTipo == "G")
             {
-                foreach (string archivo in listaArchivos)
+                if (fs.DirectoryExists(sourcePath) && fs.DirectoryExists(destinationPath))
                 {
-                    if (fs.FileExists(sourcePath + archivo))
-                        fs.copyFile(sourcePath + archivo, destinationPath + archivo);
+                    foreach (string archivo in listaArchivos)
+                    {
+                        if (fs.FileExists(sourcePath + archivo))
+                            fs.copyFile(sourcePath + archivo, destinationPath + archivo);
+                    }
                 }
             }
+            if (iTipo == "I")
+            {
+                Char Delimitador = '.';
+         
+                if (fs.DirectoryExists(sourcePath) && fs.DirectoryExists(destinationPath))
+                {
+                    foreach (string archivo in listaArchivos)
+                    {
+                        String[] lPartes = archivo.Split(Delimitador);
+                        lArchivo = string.Concat (lPartes[0].Replace("/", "_"), "P.pdf");
+
+                        if (fs.FileExists(sourcePath + lArchivo))
+                            fs.copyFile(sourcePath + lArchivo, destinationPath + lArchivo);
+
+                         lPartes = archivo.Split(Delimitador);
+                        lArchivo = string.Concat(lPartes[0].Replace("/", "_"), "D.pdf");
+
+                        if (fs.FileExists(sourcePath + lArchivo))
+                            fs.copyFile(sourcePath + lArchivo, destinationPath + lArchivo);
+
+
+                    }
+                }
+            }
+
+
+
+
         }
 
         /// <summary>
@@ -383,7 +416,7 @@ namespace EstadosdePagos
         /// <param name="ep_id">Id del EP</param>
         /// <param name="accion">Acciona realizar: 1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente</param>
         /// <returns>string, Vacio si no hubo errores o errores encontrados dentro de la generacion</returns>
-        public string generarEP(string ep_obra, string obra, Int32 ep_id, int accion) //1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente
+        public string generarEP(string ep_obra, string obra, Int32 ep_id, int accion, ref ProgressBar Pb, ref Label Lbl_PB) //1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente
         {
             string error = "", valorKiloSuministro = "", destinatarios = "", dir_guiaDespacho = "", dir_it = "", archivo = "";
             StringBuilder sb = new StringBuilder();
@@ -406,6 +439,8 @@ namespace EstadosdePagos
             //Verifica si existe la informacion necesaria para generar el informe
             try
             {
+                Lbl_PB.Text = "Inicializando Variables . . . "; Lbl_PB.Refresh();
+
                 //Encabezado
                 sb.Append("Obra: " + obra + "\n");
                 sb.Append("EP: " + ep_id.ToString() + "\n\n");
@@ -417,6 +452,7 @@ namespace EstadosdePagos
                     dtResumenxGuiaDespacho = listaDataSetOp.DataSet.Tables[0];
                 else
                     error = listaDataSetOp.MensajeError.ToString();
+
 
                 //Valor kilo suministro
                 valorKiloSuministro = ws.ValorKiloSuministro_EP(ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
@@ -438,7 +474,9 @@ namespace EstadosdePagos
 
                 // Debemos Saber a que empresa estamos haciendo el EP, ya que el  directorio esta por Empresa.
                 lEmpresa = ws.ObtenerEmpresaPor_EP(ep_obra);
-               
+
+                Lbl_PB.Text = " Obteniendo Parametros Generales  . . . "; Lbl_PB.Refresh();
+
                 ///---GUIAS DE DESPACHO---///
                 //Obtiene el directorio donde se almacenan las imagenes de las guias de despacho
                 result = obtenerParametro("EP_DIRECTORIO", "DIR_GUIADESPACHO"); //utils
@@ -474,16 +512,26 @@ namespace EstadosdePagos
                 view = new DataView(dtResumenxGuiaDespacho);
                 totalGuiasDespacho = view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows.Count;
 
+                Lbl_PB.Text = " Revisando Guías de Despacho   . . . "; Lbl_PB.Refresh();
+                Pb.Maximum  = totalGuiasDespacho; Pb.Minimum = 1; Pb.Value  = 1;
+
                 if (!dir_guiaDespacho.Equals(""))
                 {
                     foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
                     {
+                        if (Pb.Value < Pb.Maximum)
+                          Pb.Value = Pb.Value+1;
+                        else
+                            Pb.Value = Pb.Value-1;
+
+
                         archivo = row[COLUMNNAME_GUIA_DESPACHO].ToString() + ".pdf";
                         if (fs.FileExists(dir_guiaDespacho + archivo))
                             listArchivosGuiasDespacho.Add(archivo);
                         else
                             archivoFaltantesGD.Append(" -> " + archivo + "\n");
                     }
+
                     if (archivoFaltantesGD.ToString().Length > 0)
                         sb.Append("Faltan los siguientes archivos gds :\n");
                     sb.Append(archivoFaltantesGD);
@@ -505,6 +553,25 @@ namespace EstadosdePagos
                     error = result.MensajeError;
                 sb.Append("Directorio con las ITs: " + (dir_it.Trim().Equals("") ? "(No definido)" : dir_it) + "\n\n");
 
+
+                // Recorremos la tabla con las IT, si no estan las creamos
+                Lbl_PB.Text = " Revisando las IT    . . . "; Lbl_PB.Refresh();
+                Pb.Maximum = dtResumenxGuiaDespacho.Rows.Count; Pb.Minimum = 1; Pb.Value = 1;
+
+                int i = 0; string lPathArchivo = dir_it;
+                for (i = 0; i < dtResumenxGuiaDespacho.Rows.Count; i++)
+                {
+                    if (Pb.Value < Pb.Maximum)
+                        Pb.Value = Pb.Value+1;
+                    else
+                        Pb.Value = Pb.Value-1;
+
+                    Pb.Refresh();
+                    //por cada IT, debe haber una portada y un detalle 
+                    if (ExisteArchivo(dtResumenxGuiaDespacho.Rows[i]["It"].ToString(), lPathArchivo) ==false)
+                            CreaInforme(dtResumenxGuiaDespacho.Rows [i]["It"].ToString(), true );
+                }
+
                 //Obtiene la cantidad de ITs y verifica si el reporte cuenta con los archivos PDFs de las ITs
                 view = new DataView(dtResumenxGuiaDespacho);
                 totalITs = view.ToTable(true, COLUMNNAME_IT).Rows.Count;
@@ -516,11 +583,13 @@ namespace EstadosdePagos
                         archivo = row[COLUMNNAME_IT].ToString() + ".PDF";
                         //Parche para los nombres de las ITS 
                         archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
-                        if (fs.FileExists(dir_it + archivo))
+                        //debemos revisar 2 archivos por IT
+                        lPathArchivo = string.Concat(dir_it, archivo);
+                        if (ExisteArchivo(archivo.ToString(), lPathArchivo) == false)
+                            //if (fs.FileExists(dir_it + archivo))
                             listArchivosIT.Add(archivo);
                         else
-                        {
-                            CreaInforme(row[COLUMNNAME_IT].ToString());
+                        {   
                             archivoFaltantesIT.Append(" -> " + archivo + "\n");
                         }
                             
@@ -592,6 +661,7 @@ namespace EstadosdePagos
                     else
                         selectedPath = seleccionarCarpeta();
 
+
                     if (!selectedPath.Equals(""))
                     {
                         if (generarArchivoEP(selectedPath, sb.ToString()))
@@ -601,9 +671,9 @@ namespace EstadosdePagos
                             if (accion.Equals(1) || accion.Equals(2))
                             {
                                 if (listArchivosGuiasDespacho.Count > 0)
-                                    copiarArchivosLista(dir_guiaDespacho, selectedPath, listArchivosGuiasDespacho);
+                                    copiarArchivosLista(dir_guiaDespacho, selectedPath, listArchivosGuiasDespacho,"G");
                                 if (listArchivosIT.Count > 0)
-                                    copiarArchivosLista(dir_it, selectedPath, listArchivosIT);
+                                    copiarArchivosLista(dir_it, selectedPath, listArchivosIT,"I");
                                 fs.shell(selectedPath); //Abre la carpeta de destino
                             }
                             else if (accion.Equals(3))
@@ -630,10 +700,32 @@ namespace EstadosdePagos
             return validacion.ToString();
         }
 
-        private void CreaInforme(string iViaje)
+        private Boolean ExisteArchivo(string lViaje, string lPathBase)
+        {
+            Boolean lRes = false; string lPathPortada = ""; string lPathDetalle = ""; int lCont = 0;
+            lPathPortada = string.Concat(lPathBase, lViaje.Replace("/", "_"), "P.pdf");
+            lPathDetalle = string.Concat(lPathBase, lViaje.Replace("/", "_"), "D.pdf");
+            if (File.Exists(lPathPortada) == true)
+                lCont++;
+
+
+            if (File.Exists(lPathDetalle) == true)
+                lCont++;
+
+            if (lCont < 2) //No estan los 2 archivos por viaje
+                lRes = false;
+            else
+                lRes = true;
+
+
+            return lRes;
+
+        }
+
+        private void CreaInforme(string iViaje, Boolean iEliminaArchivo)
         {
             Informes.Informes lInf = new Informes.Informes();
-            lInf.ImprimirInforme(iViaje);
+            lInf.ImprimirInforme(iViaje, iEliminaArchivo);
         }
 
         public Boolean EsNumero(string iDato)

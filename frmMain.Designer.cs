@@ -60,6 +60,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTotalKilos = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_imprimePL = new System.Windows.Forms.Button();
             this.btnDestinatariosObra = new System.Windows.Forms.Button();
             this.chkActualizar = new System.Windows.Forms.CheckBox();
             this.cboEmpresa = new System.Windows.Forms.ComboBox();
@@ -74,7 +75,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
             this.tabGuiasDespacho = new System.Windows.Forms.TabControl();
-            this.Btn_imprimePL = new System.Windows.Forms.Button();
+            this.Gb_Estado = new System.Windows.Forms.GroupBox();
+            this.Pb = new System.Windows.Forms.ProgressBar();
+            this.Lbl_PB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -82,6 +85,7 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.tabGuiasDespacho.SuspendLayout();
+            this.Gb_Estado.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvResumen
@@ -188,14 +192,14 @@
             // btnVerReporteEP
             // 
             this.btnVerReporteEP.Name = "btnVerReporteEP";
-            this.btnVerReporteEP.Size = new System.Drawing.Size(115, 22);
+            this.btnVerReporteEP.Size = new System.Drawing.Size(152, 22);
             this.btnVerReporteEP.Text = "Ver";
             this.btnVerReporteEP.Click += new System.EventHandler(this.btnVerReporteEP_Click);
             // 
             // btnGenerarReporteEP
             // 
             this.btnGenerarReporteEP.Name = "btnGenerarReporteEP";
-            this.btnGenerarReporteEP.Size = new System.Drawing.Size(115, 22);
+            this.btnGenerarReporteEP.Size = new System.Drawing.Size(152, 22);
             this.btnGenerarReporteEP.Text = "Generar";
             this.btnGenerarReporteEP.Click += new System.EventHandler(this.btnGenerarReporteEP_Click);
             // 
@@ -347,6 +351,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Gb_Estado);
             this.panel1.Controls.Add(this.Btn_imprimePL);
             this.panel1.Controls.Add(this.btnDestinatariosObra);
             this.panel1.Controls.Add(this.chkActualizar);
@@ -364,6 +369,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1174, 128);
             this.panel1.TabIndex = 7;
+            // 
+            // Btn_imprimePL
+            // 
+            this.Btn_imprimePL.Location = new System.Drawing.Point(357, 13);
+            this.Btn_imprimePL.Name = "Btn_imprimePL";
+            this.Btn_imprimePL.Size = new System.Drawing.Size(75, 23);
+            this.Btn_imprimePL.TabIndex = 13;
+            this.Btn_imprimePL.Text = "Imprime PL";
+            this.Btn_imprimePL.UseVisualStyleBackColor = true;
+            this.Btn_imprimePL.Click += new System.EventHandler(this.Btn_imprimePL_Click);
             // 
             // btnDestinatariosObra
             // 
@@ -517,15 +532,31 @@
             this.tabGuiasDespacho.Size = new System.Drawing.Size(1174, 158);
             this.tabGuiasDespacho.TabIndex = 8;
             // 
-            // Btn_imprimePL
+            // Gb_Estado
             // 
-            this.Btn_imprimePL.Location = new System.Drawing.Point(688, 40);
-            this.Btn_imprimePL.Name = "Btn_imprimePL";
-            this.Btn_imprimePL.Size = new System.Drawing.Size(75, 23);
-            this.Btn_imprimePL.TabIndex = 13;
-            this.Btn_imprimePL.Text = "Imprime PL";
-            this.Btn_imprimePL.UseVisualStyleBackColor = true;
-            this.Btn_imprimePL.Click += new System.EventHandler(this.Btn_imprimePL_Click);
+            this.Gb_Estado.Controls.Add(this.Lbl_PB);
+            this.Gb_Estado.Controls.Add(this.Pb);
+            this.Gb_Estado.Location = new System.Drawing.Point(601, 18);
+            this.Gb_Estado.Name = "Gb_Estado";
+            this.Gb_Estado.Size = new System.Drawing.Size(461, 63);
+            this.Gb_Estado.TabIndex = 15;
+            this.Gb_Estado.TabStop = false;
+            this.Gb_Estado.Text = "Estado de la Operación";
+            // 
+            // Pb
+            // 
+            this.Pb.Location = new System.Drawing.Point(26, 20);
+            this.Pb.Name = "Pb";
+            this.Pb.Size = new System.Drawing.Size(409, 15);
+            this.Pb.TabIndex = 15;
+            // 
+            // Lbl_PB
+            // 
+            this.Lbl_PB.Location = new System.Drawing.Point(29, 42);
+            this.Lbl_PB.Name = "Lbl_PB";
+            this.Lbl_PB.Size = new System.Drawing.Size(406, 18);
+            this.Lbl_PB.TabIndex = 16;
+            this.Lbl_PB.Text = "label3";
             // 
             // frmMain
             // 
@@ -552,6 +583,7 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.tabGuiasDespacho.ResumeLayout(false);
+            this.Gb_Estado.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,5 +637,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.Button btnDestinatariosObra;
         private System.Windows.Forms.Button Btn_imprimePL;
+        private System.Windows.Forms.GroupBox Gb_Estado;
+        private System.Windows.Forms.Label Lbl_PB;
+        private System.Windows.Forms.ProgressBar Pb;
     }
 }

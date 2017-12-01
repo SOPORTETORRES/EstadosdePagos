@@ -63,7 +63,7 @@ namespace EstadosdePagos
 
                     case "btnVerReporte":
                         Cursor.Current = Cursors.WaitCursor;
-                        new Utils().generarEP(ep_obra, obra, ep_id, 1); //1-Vista preliminar
+                       // new Utils().generarEP(ep_obra, obra, ep_id, 1); //1-Vista preliminar
                         Cursor.Current = Cursors.Default;
                         break;
 
