@@ -359,6 +359,8 @@ namespace EstadosdePagos
                 String obra = currentRow.Cells["OBRA"].Value.ToString();
                 Int32 ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
                 String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+                Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
+                String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
 
                 //Validaciones iniciales
                 if (!accion.Equals("btnCrearEP") && ep_id.Equals(0))
@@ -399,6 +401,7 @@ namespace EstadosdePagos
                         frm0.Ep_obra = ep_obra;
                         frm0.Obra = obra;
                         frm0.TecnicoObra = tecnicoObra;
+                        frm0.CargaFormulario(ref Pb, ref  Lbl_PB);
                         frm0.ShowDialog(this);
                         if (frm0.changed)
                             btnActualizar.PerformClick();
@@ -407,7 +410,7 @@ namespace EstadosdePagos
 
                     case "btnVerReporteEP":
                         Cursor.Current = Cursors.WaitCursor;
-                        utils.generarEP(ep_obra, obra, ep_id, 1, ref Pb , ref Lbl_PB); //1-Vista preliminar
+                        utils.generarEP(ep_obra, obra, ep_id, 1, ref Pb , ref Lbl_PB, carpeta, correlativo); //1-Vista preliminar
                         Cursor.Current = Cursors.Default;  
                         break;
 
@@ -418,7 +421,7 @@ namespace EstadosdePagos
                             Cursor.Current = Cursors.WaitCursor;
                             try
                             {
-                                if (utils.generarEP(ep_obra, obra, ep_id, 2, ref Pb  , ref Lbl_PB ).Equals("")) //2-Generar el reporte
+                                if (utils.generarEP(ep_obra, obra, ep_id, 2, ref Pb  , ref Lbl_PB , carpeta, correlativo).Equals("")) //2-Generar el reporte
                                 {
                                     WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
                                     WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();
@@ -443,7 +446,7 @@ namespace EstadosdePagos
                             Cursor.Current = Cursors.WaitCursor;
                             try
                             {
-                                if (utils.generarEP(ep_obra, obra, ep_id, 3,ref Pb , ref Lbl_PB).Equals("")) //3-Envio al cliente
+                                if (utils.generarEP(ep_obra, obra, ep_id, 3,ref Pb , ref Lbl_PB,carpeta ,correlativo ).Equals("")) //3-Envio al cliente
                                 {
                                     WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
                                     WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();

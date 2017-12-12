@@ -8,7 +8,64 @@ namespace EstadosdePagos.Informes
     public class Informes
     {
 
-        private Dts_PL CargaDatosPortada(string iViaje)
+
+        private Dts_PL CargaDatosPortada_ViajeSaldo(string iViaje)
+        {
+            Dim lPx As New Px_Ws.Ws_ToSoapClient, i As Integer = 0, lIdsPiezas As New ArrayList, lRes As String = ""
+        //' Creamos instancia del visualizador
+        Dim frmVisualiza As FrmVisualizador, lTmp As String = ""
+        Dim dtsPl As New Dts_PL()
+
+        dtsPl.EnforceConstraints = False
+        dtsPl.Merge(lPx.ObtenerDtsPL_ViajeDesp(iCodigoIt, IdIt, iCodViaje, IdObra)) 'idcliente,idempresa        
+        //'22/10/2012  ---- cargamos los datos del subreport        
+        Dim lDtsTablas As New DataSet, lFila As Dts_PL.KilosPorDiametroRow ', lFilaIT As Dts_PL.ResumenDespRow
+        lDtsTablas = lPx.ObtenerDiametrosPorViaje(iCodViaje)
+        If lDtsTablas.Tables.Count > 0 Then
+            For i = 0 To lDtsTablas.Tables(0).Rows.Count - 1
+                lFila = dtsPl.KilosPorDiametro.NewKilosPorDiametroRow     'dtsPl.ActaEntrega.NewActaEntregaRow '  ActaEntregaRow '.NewRow
+                lFila("Diametro") = lDtsTablas.Tables(0).Rows(i)("Diametro").ToString
+                lFila("Kilos") = String.Concat(lDtsTablas.Tables(0).Rows(i)("Kilos").ToString, " Kilos")
+                lFila("KilosDesp") = String.Concat(lDtsTablas.Tables(0).Rows(i)("KilosDesp").ToString, " Kilos")
+                dtsPl.KilosPorDiametro.Rows.Add(lFila)
+            Next
+        End If
+
+        If dtsPl.ResumenDesp.Rows.Count > 0 Then
+            dtsPl.ResumenDesp.Rows(0)("ObsIt") = ObtenerObsITAprobada(iCodViaje)
+        End If
+
+        Dim lTblTmp As New DataTable, lStrTmp As String = ""
+        lTblTmp = ObtenerDatosViajeDespachado_Saldos(iCodViaje)
+        If lTblTmp.Rows.Count > 0 Then
+            lTmp = Replace(FormatNumber(lTblTmp.Rows(0)("KILOS").ToString, 0), ",", ".")
+            dtsPl.ResumenDesp.Rows(0)("PesoTotalDesp") = lTmp  'lTblTmp.Rows(0)("KILOS").ToString
+
+            dtsPl.ResumenDesp.Rows(0)("NroEtiquetasDesp") = lTblTmp.Rows(0)("NroEtiquetas").ToString
+
+            lTmp = Replace(FormatNumber(Val(OBtenerValorKilo(IdObra)) * Val(lTblTmp.Rows(0)("KILOS").ToString), 0), ",", ".")
+            'dtsPl.ResumenDesp.Rows(0)("ValorTotal_ITDesp") = Val(OBtenerValorKilo(IdObra)) * Val(lTblTmp.Rows(0)("KILOS").ToString)
+            dtsPl.ResumenDesp.Rows(0)("ValorTotal_ITDesp") = String.Concat("$ ", lTmp)
+        End If
+        //'------------------obtenemos el valor kilo
+
+
+        '-------------
+        frmVisualiza = New FrmVisualizador(Report.ViajeDespachado, dtsPl)
+        frmVisualiza.ShowDialog()
+
+
+
+
+        }
+
+
+
+
+
+
+
+        private Dts_PL CargaDatosPortada_ViajeOriginal(string iViaje)
         {
             string iIdIt = ""; string iIdObra = "";
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); int i = 0;
@@ -109,6 +166,7 @@ namespace EstadosdePagos.Informes
             catch (Exception exc)   
             {
                 //MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw exc;
             }
 
             //**************************************************************************

@@ -60,6 +60,9 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTotalKilos = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Gb_Estado = new System.Windows.Forms.GroupBox();
+            this.Lbl_PB = new System.Windows.Forms.Label();
+            this.Pb = new System.Windows.Forms.ProgressBar();
             this.Btn_imprimePL = new System.Windows.Forms.Button();
             this.btnDestinatariosObra = new System.Windows.Forms.Button();
             this.chkActualizar = new System.Windows.Forms.CheckBox();
@@ -75,31 +78,29 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
             this.tabGuiasDespacho = new System.Windows.Forms.TabControl();
-            this.Gb_Estado = new System.Windows.Forms.GroupBox();
-            this.Pb = new System.Windows.Forms.ProgressBar();
-            this.Lbl_PB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Gb_Estado.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.tabGuiasDespacho.SuspendLayout();
-            this.Gb_Estado.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvResumen
             // 
             this.dgvResumen.AllowUserToAddRows = false;
             this.dgvResumen.AllowUserToDeleteRows = false;
+            this.dgvResumen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResumen.Location = new System.Drawing.Point(0, 153);
             this.dgvResumen.MultiSelect = false;
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.ReadOnly = true;
             this.dgvResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResumen.Size = new System.Drawing.Size(1174, 203);
+            this.dgvResumen.Size = new System.Drawing.Size(1174, 222);
             this.dgvResumen.TabIndex = 6;
             this.dgvResumen.SelectionChanged += new System.EventHandler(this.dgvResumen_SelectionChanged);
             this.dgvResumen.DoubleClick += new System.EventHandler(this.dgvResumen_DoubleClick);
@@ -127,7 +128,7 @@
             this.btnSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1174, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1179, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -192,14 +193,14 @@
             // btnVerReporteEP
             // 
             this.btnVerReporteEP.Name = "btnVerReporteEP";
-            this.btnVerReporteEP.Size = new System.Drawing.Size(152, 22);
+            this.btnVerReporteEP.Size = new System.Drawing.Size(115, 22);
             this.btnVerReporteEP.Text = "Ver";
             this.btnVerReporteEP.Click += new System.EventHandler(this.btnVerReporteEP_Click);
             // 
             // btnGenerarReporteEP
             // 
             this.btnGenerarReporteEP.Name = "btnGenerarReporteEP";
-            this.btnGenerarReporteEP.Size = new System.Drawing.Size(152, 22);
+            this.btnGenerarReporteEP.Size = new System.Drawing.Size(115, 22);
             this.btnGenerarReporteEP.Text = "Generar";
             this.btnGenerarReporteEP.Click += new System.EventHandler(this.btnGenerarReporteEP_Click);
             // 
@@ -282,7 +283,7 @@
             this.btnSalir.Image = global::EstadosdePagos.Properties.Resources.salir;
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(49, 20);
+            this.btnSalir.Size = new System.Drawing.Size(49, 22);
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -296,9 +297,9 @@
             this.lblTotalEtiquetas,
             this.toolStripStatusLabel2,
             this.lblTotalKilos});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 514);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 580);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1174, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1179, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -367,8 +368,34 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1174, 128);
+            this.panel1.Size = new System.Drawing.Size(1179, 128);
             this.panel1.TabIndex = 7;
+            // 
+            // Gb_Estado
+            // 
+            this.Gb_Estado.Controls.Add(this.Lbl_PB);
+            this.Gb_Estado.Controls.Add(this.Pb);
+            this.Gb_Estado.Location = new System.Drawing.Point(601, 18);
+            this.Gb_Estado.Name = "Gb_Estado";
+            this.Gb_Estado.Size = new System.Drawing.Size(461, 63);
+            this.Gb_Estado.TabIndex = 15;
+            this.Gb_Estado.TabStop = false;
+            this.Gb_Estado.Text = "Estado de la Operación";
+            // 
+            // Lbl_PB
+            // 
+            this.Lbl_PB.Location = new System.Drawing.Point(29, 42);
+            this.Lbl_PB.Name = "Lbl_PB";
+            this.Lbl_PB.Size = new System.Drawing.Size(406, 18);
+            this.Lbl_PB.TabIndex = 16;
+            this.Lbl_PB.Text = "label3";
+            // 
+            // Pb
+            // 
+            this.Pb.Location = new System.Drawing.Point(26, 20);
+            this.Pb.Name = "Pb";
+            this.Pb.Size = new System.Drawing.Size(409, 15);
+            this.Pb.TabIndex = 15;
             // 
             // Btn_imprimePL
             // 
@@ -503,7 +530,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1166, 132);
+            this.tabPage1.Size = new System.Drawing.Size(1171, 176);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Guías de despacho";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -519,50 +546,25 @@
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.ReadOnly = true;
             this.dgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalle.Size = new System.Drawing.Size(1160, 126);
+            this.dgvDetalle.Size = new System.Drawing.Size(1165, 170);
             this.dgvDetalle.TabIndex = 7;
             // 
             // tabGuiasDespacho
             // 
+            this.tabGuiasDespacho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tabGuiasDespacho.Controls.Add(this.tabPage1);
-            this.tabGuiasDespacho.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabGuiasDespacho.Location = new System.Drawing.Point(0, 356);
+            this.tabGuiasDespacho.Location = new System.Drawing.Point(0, 378);
             this.tabGuiasDespacho.Name = "tabGuiasDespacho";
             this.tabGuiasDespacho.SelectedIndex = 0;
-            this.tabGuiasDespacho.Size = new System.Drawing.Size(1174, 158);
+            this.tabGuiasDespacho.Size = new System.Drawing.Size(1179, 202);
             this.tabGuiasDespacho.TabIndex = 8;
-            // 
-            // Gb_Estado
-            // 
-            this.Gb_Estado.Controls.Add(this.Lbl_PB);
-            this.Gb_Estado.Controls.Add(this.Pb);
-            this.Gb_Estado.Location = new System.Drawing.Point(601, 18);
-            this.Gb_Estado.Name = "Gb_Estado";
-            this.Gb_Estado.Size = new System.Drawing.Size(461, 63);
-            this.Gb_Estado.TabIndex = 15;
-            this.Gb_Estado.TabStop = false;
-            this.Gb_Estado.Text = "Estado de la Operación";
-            // 
-            // Pb
-            // 
-            this.Pb.Location = new System.Drawing.Point(26, 20);
-            this.Pb.Name = "Pb";
-            this.Pb.Size = new System.Drawing.Size(409, 15);
-            this.Pb.TabIndex = 15;
-            // 
-            // Lbl_PB
-            // 
-            this.Lbl_PB.Location = new System.Drawing.Point(29, 42);
-            this.Lbl_PB.Name = "Lbl_PB";
-            this.Lbl_PB.Size = new System.Drawing.Size(406, 18);
-            this.Lbl_PB.TabIndex = 16;
-            this.Lbl_PB.Text = "label3";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 536);
+            this.ClientSize = new System.Drawing.Size(1179, 602);
             this.Controls.Add(this.dgvResumen);
             this.Controls.Add(this.tabGuiasDespacho);
             this.Controls.Add(this.panel1);
@@ -570,6 +572,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control estados de pago";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -580,10 +583,10 @@
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Gb_Estado.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.tabGuiasDespacho.ResumeLayout(false);
-            this.Gb_Estado.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

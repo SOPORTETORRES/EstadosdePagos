@@ -201,6 +201,79 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ListarEPExcel_ResumenObra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEPExcel_ResumenObraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarEPExcel_ResumenObraResult" type="tns:ListaDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEPExcel_ResumenEpGeneradosxObra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEPExcel_ResumenEpGeneradosxObraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarEPExcel_ResumenEpGeneradosxObraResult" type="tns:ListaDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEPExcel_ResumenGuiasxObra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEPExcel_ResumenGuiasxObraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarEPExcel_ResumenGuiasxObraResult" type="tns:ListaDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosObraParaEP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iidObra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosObraParaEPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDatosObraParaEPResult" type="tns:ListaDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarCorreoNotificacion_NC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iDestinatarios" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iAsunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iCuerpo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCuerpoHtml" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarCorreoNotificacion_NCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarCorreoNotificacion_NCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GuardarSolicitudMaterial">
         <s:complexType>
           <s:sequence>
@@ -1719,6 +1792,36 @@
   <wsdl:message name="ObtenerParametroTOSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerParametroTOResponse" />
   </wsdl:message>
+  <wsdl:message name="ListarEPExcel_ResumenObraSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenObra" />
+  </wsdl:message>
+  <wsdl:message name="ListarEPExcel_ResumenObraSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenObraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarEPExcel_ResumenEpGeneradosxObraSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenEpGeneradosxObra" />
+  </wsdl:message>
+  <wsdl:message name="ListarEPExcel_ResumenEpGeneradosxObraSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenEpGeneradosxObraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarEPExcel_ResumenGuiasxObraSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenGuiasxObra" />
+  </wsdl:message>
+  <wsdl:message name="ListarEPExcel_ResumenGuiasxObraSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenGuiasxObraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosObraParaEPSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosObraParaEP" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosObraParaEPSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosObraParaEPResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoNotificacion_NCSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoNotificacion_NC" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoNotificacion_NCSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoNotificacion_NCResponse" />
+  </wsdl:message>
   <wsdl:message name="GuardarSolicitudMaterialSoapIn">
     <wsdl:part name="parameters" element="tns:GuardarSolicitudMaterial" />
   </wsdl:message>
@@ -2256,6 +2359,26 @@
       <wsdl:input message="tns:ObtenerParametroTOSoapIn" />
       <wsdl:output message="tns:ObtenerParametroTOSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenObra">
+      <wsdl:input message="tns:ListarEPExcel_ResumenObraSoapIn" />
+      <wsdl:output message="tns:ListarEPExcel_ResumenObraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenEpGeneradosxObra">
+      <wsdl:input message="tns:ListarEPExcel_ResumenEpGeneradosxObraSoapIn" />
+      <wsdl:output message="tns:ListarEPExcel_ResumenEpGeneradosxObraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenGuiasxObra">
+      <wsdl:input message="tns:ListarEPExcel_ResumenGuiasxObraSoapIn" />
+      <wsdl:output message="tns:ListarEPExcel_ResumenGuiasxObraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosObraParaEP">
+      <wsdl:input message="tns:ObtenerDatosObraParaEPSoapIn" />
+      <wsdl:output message="tns:ObtenerDatosObraParaEPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoNotificacion_NC">
+      <wsdl:input message="tns:EnviarCorreoNotificacion_NCSoapIn" />
+      <wsdl:output message="tns:EnviarCorreoNotificacion_NCSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GuardarSolicitudMaterial">
       <wsdl:input message="tns:GuardarSolicitudMaterialSoapIn" />
       <wsdl:output message="tns:GuardarSolicitudMaterialSoapOut" />
@@ -2660,6 +2783,51 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerParametroTO">
       <soap:operation soapAction="http://tempuri.org/ObtenerParametroTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenObra">
+      <soap:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenObra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenEpGeneradosxObra">
+      <soap:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenEpGeneradosxObra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenGuiasxObra">
+      <soap:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenGuiasxObra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosObraParaEP">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDatosObraParaEP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoNotificacion_NC">
+      <soap:operation soapAction="http://tempuri.org/EnviarCorreoNotificacion_NC" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3491,6 +3659,51 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerParametroTO">
       <soap12:operation soapAction="http://tempuri.org/ObtenerParametroTO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenObra">
+      <soap12:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenObra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenEpGeneradosxObra">
+      <soap12:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenEpGeneradosxObra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_ResumenGuiasxObra">
+      <soap12:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenGuiasxObra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosObraParaEP">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDatosObraParaEP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoNotificacion_NC">
+      <soap12:operation soapAction="http://tempuri.org/EnviarCorreoNotificacion_NC" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

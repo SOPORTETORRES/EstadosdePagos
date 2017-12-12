@@ -67,6 +67,16 @@ namespace EstadosdePagos
         private const string COLUMNNAME_NROETIQUETAS = "NroEtiquetas";
         private const string COLUMNNAME_ETIQUETASCONEP = "EtiquetasconEP";
 
+        #region "Metodos Publicos"
+
+        public void CargaFormulario(ref ProgressBar Pb, ref Label Lbl_PB)
+        {
+            cargarInfoObrayGuiaDespacho_INET(ref Pb, ref Lbl_PB);
+
+        }
+
+        #endregion
+
         public frmEPNueva()
         {
             InitializeComponent();
@@ -139,11 +149,19 @@ namespace EstadosdePagos
             lblTecnicoObra.Text = _tecnicoObra;
             dgvEtiquetas.Tag = "";  //Se utiliza para detectar el cambio de guia de despacho en la pestaña etiquetas
             cboIT.Tag = "";         //Se utiliza para detectar el cambio de IT en la pestaña etiquetas
-            cargarInfoObrayGuiaDespacho_INET();
-            //RevisaDatosCargados();
-
+                                    //cargarInfoObrayGuiaDespacho_INET();
+                                    //RevisaDatosCargados();
+            RevisaGrilla();
         }
 
+
+        private void Refrescar(ref ProgressBar Pb, ref Label Lbl_PB)
+        {
+            Lbl_PB.Refresh();
+            Pb.Refresh();
+            Application.DoEvents();
+
+        }
 
         private void RevisaDatosCargados()
         {
@@ -160,7 +178,7 @@ namespace EstadosdePagos
 
         }
 
-        private void cargarInfoObrayGuiaDespacho_INET()
+        private void cargarInfoObrayGuiaDespacho_INET(ref ProgressBar Pb, ref Label Lbl_PB)
         {
             //WsTo.Operacion wsTo = null;
             //WsTo.ListaDataSet listaDataSetTo = null;
@@ -175,7 +193,9 @@ namespace EstadosdePagos
             {
                 //wsTo = new WsTo.Operacion();
                 //Obtiene el dia de presentacion de los EP, y la fecha de creacion de la Obra
-                listaDataSetOp = wsOperacion.ObtenerObrasActivas_EP(this._empresa);
+                Lbl_PB.Text = ". . . OBTENIENDO DATOS INICIALES . . . "; Refrescar(ref   Pb, ref   Lbl_PB);
+
+                 listaDataSetOp = wsOperacion.ObtenerObrasActivas_EP(this._empresa);
                 if (listaDataSetOp.MensajeError.Equals(""))
                 {
                     DataRow[] foundRows = listaDataSetOp.DataSet.Tables[0].Select("IdObra = '" + this._ep_obra + "'");
@@ -212,6 +232,8 @@ namespace EstadosdePagos
                         }
                     }
                 }
+                Lbl_PB.Text = ". . . OBTENIENDO GUÍAS DE DESPACHO . . . "; Refrescar(ref Pb, ref Lbl_PB);
+
                 //Obtiene las guias de despacho, pendientes por asignar a un EP
                 listaDataSetOp = wsOperacion.ObtenerGuiasDesdeInicio_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
                 if (listaDataSetOp.MensajeError.Equals(""))
@@ -230,7 +252,12 @@ namespace EstadosdePagos
                         dtGuiasDespachoINET.Columns.Add(marcaOriginal);
                     }
                     //Recorre el dataTable para contar las etiquetas de la guia de despacho que ya cuentan con EP
+                  
                     int lCont = 0;
+                    Lbl_PB.Text = ". . . REVISANDO GUIAS DE DESPACHO . . . ";
+                    Pb.Maximum = dtGuiasDespachoINET.Rows.Count;Pb.Minimum = 1;Pb.Value = 1;
+                    Refrescar(ref Pb, ref Lbl_PB);
+
                     foreach (DataRow row in dtGuiasDespachoINET.Rows) 
                     {
                         lCont++;
@@ -256,7 +283,19 @@ namespace EstadosdePagos
                             else
                                 row.Delete();
                         }
+
+                        //actualizamos la barra de avance
+                        if (Pb.Value < Pb.Maximum)
+                            Pb.Value = Pb.Value + 1;
+                        else
+                            Pb.Value = Pb.Value - 1;
+
+                        Refrescar(ref Pb, ref Lbl_PB);
+                        //fin
+
                     }
+
+                    Lbl_PB.Text = ". . . REALIZANDO CALCULOS FINALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
                     dgvGuiasDespacho.DataSource = dtGuiasDespachoINET;
                     utils.bloquearColumnas(dgvGuiasDespacho);
                     forms.dataGridViewHideColumns(dgvGuiasDespacho, new string[] { "Column1", COLUMNNAME_MARCA_ORIGINAL });
@@ -264,7 +303,7 @@ namespace EstadosdePagos
                     forms.dataGridViewAutoSizeColumnsMode(dgvGuiasDespacho, DataGridViewAutoSizeColumnsMode.DisplayedCells);
                     dgvGuiasDespacho.Columns["fechaDespacho"].DisplayIndex = dgvGuiasDespacho.Columns.Count - 1;
                     lblRegistrosGDespacho.Text = "Registro(s): " + dgvGuiasDespacho.Rows.Count;
-                    RevisaGrilla();
+                 
                 }
                 else
                     MessageBox.Show(listaDataSetOp.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);

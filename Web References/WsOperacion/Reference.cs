@@ -46,6 +46,16 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ObtenerParametroTOOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ListarEPExcel_ResumenObraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarEPExcel_ResumenEpGeneradosxObraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarEPExcel_ResumenGuiasxObraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosObraParaEPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EnviarCorreoNotificacion_NCOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GuardarSolicitudMaterialOperationCompleted;
         
         private System.Threading.SendOrPostCallback AsociarProductosaSolicitudOperationCompleted;
@@ -275,6 +285,21 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         public event ObtenerParametroTOCompletedEventHandler ObtenerParametroTOCompleted;
+        
+        /// <remarks/>
+        public event ListarEPExcel_ResumenObraCompletedEventHandler ListarEPExcel_ResumenObraCompleted;
+        
+        /// <remarks/>
+        public event ListarEPExcel_ResumenEpGeneradosxObraCompletedEventHandler ListarEPExcel_ResumenEpGeneradosxObraCompleted;
+        
+        /// <remarks/>
+        public event ListarEPExcel_ResumenGuiasxObraCompletedEventHandler ListarEPExcel_ResumenGuiasxObraCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosObraParaEPCompletedEventHandler ObtenerDatosObraParaEPCompleted;
+        
+        /// <remarks/>
+        public event EnviarCorreoNotificacion_NCCompletedEventHandler EnviarCorreoNotificacion_NCCompleted;
         
         /// <remarks/>
         public event GuardarSolicitudMaterialCompletedEventHandler GuardarSolicitudMaterialCompleted;
@@ -781,6 +806,157 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ObtenerParametroTOCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ObtenerParametroTOCompleted(this, new ObtenerParametroTOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarEPExcel_ResumenObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarEPExcel_ResumenObra(string obra) {
+            object[] results = this.Invoke("ListarEPExcel_ResumenObra", new object[] {
+                        obra});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_ResumenObraAsync(string obra) {
+            this.ListarEPExcel_ResumenObraAsync(obra, null);
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_ResumenObraAsync(string obra, object userState) {
+            if ((this.ListarEPExcel_ResumenObraOperationCompleted == null)) {
+                this.ListarEPExcel_ResumenObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarEPExcel_ResumenObraOperationCompleted);
+            }
+            this.InvokeAsync("ListarEPExcel_ResumenObra", new object[] {
+                        obra}, this.ListarEPExcel_ResumenObraOperationCompleted, userState);
+        }
+        
+        private void OnListarEPExcel_ResumenObraOperationCompleted(object arg) {
+            if ((this.ListarEPExcel_ResumenObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarEPExcel_ResumenObraCompleted(this, new ListarEPExcel_ResumenObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarEPExcel_ResumenEpGeneradosxObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarEPExcel_ResumenEpGeneradosxObra(string obra) {
+            object[] results = this.Invoke("ListarEPExcel_ResumenEpGeneradosxObra", new object[] {
+                        obra});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_ResumenEpGeneradosxObraAsync(string obra) {
+            this.ListarEPExcel_ResumenEpGeneradosxObraAsync(obra, null);
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_ResumenEpGeneradosxObraAsync(string obra, object userState) {
+            if ((this.ListarEPExcel_ResumenEpGeneradosxObraOperationCompleted == null)) {
+                this.ListarEPExcel_ResumenEpGeneradosxObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarEPExcel_ResumenEpGeneradosxObraOperationCompleted);
+            }
+            this.InvokeAsync("ListarEPExcel_ResumenEpGeneradosxObra", new object[] {
+                        obra}, this.ListarEPExcel_ResumenEpGeneradosxObraOperationCompleted, userState);
+        }
+        
+        private void OnListarEPExcel_ResumenEpGeneradosxObraOperationCompleted(object arg) {
+            if ((this.ListarEPExcel_ResumenEpGeneradosxObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarEPExcel_ResumenEpGeneradosxObraCompleted(this, new ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarEPExcel_ResumenGuiasxObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarEPExcel_ResumenGuiasxObra(string obra) {
+            object[] results = this.Invoke("ListarEPExcel_ResumenGuiasxObra", new object[] {
+                        obra});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_ResumenGuiasxObraAsync(string obra) {
+            this.ListarEPExcel_ResumenGuiasxObraAsync(obra, null);
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_ResumenGuiasxObraAsync(string obra, object userState) {
+            if ((this.ListarEPExcel_ResumenGuiasxObraOperationCompleted == null)) {
+                this.ListarEPExcel_ResumenGuiasxObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarEPExcel_ResumenGuiasxObraOperationCompleted);
+            }
+            this.InvokeAsync("ListarEPExcel_ResumenGuiasxObra", new object[] {
+                        obra}, this.ListarEPExcel_ResumenGuiasxObraOperationCompleted, userState);
+        }
+        
+        private void OnListarEPExcel_ResumenGuiasxObraOperationCompleted(object arg) {
+            if ((this.ListarEPExcel_ResumenGuiasxObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarEPExcel_ResumenGuiasxObraCompleted(this, new ListarEPExcel_ResumenGuiasxObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosObraParaEP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosObraParaEP(string iidObra) {
+            object[] results = this.Invoke("ObtenerDatosObraParaEP", new object[] {
+                        iidObra});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosObraParaEPAsync(string iidObra) {
+            this.ObtenerDatosObraParaEPAsync(iidObra, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosObraParaEPAsync(string iidObra, object userState) {
+            if ((this.ObtenerDatosObraParaEPOperationCompleted == null)) {
+                this.ObtenerDatosObraParaEPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosObraParaEPOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosObraParaEP", new object[] {
+                        iidObra}, this.ObtenerDatosObraParaEPOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosObraParaEPOperationCompleted(object arg) {
+            if ((this.ObtenerDatosObraParaEPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosObraParaEPCompleted(this, new ObtenerDatosObraParaEPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EnviarCorreoNotificacion_NC", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string EnviarCorreoNotificacion_NC(string iDestinatarios, string iAsunto, string iCuerpo, bool iCuerpoHtml) {
+            object[] results = this.Invoke("EnviarCorreoNotificacion_NC", new object[] {
+                        iDestinatarios,
+                        iAsunto,
+                        iCuerpo,
+                        iCuerpoHtml});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EnviarCorreoNotificacion_NCAsync(string iDestinatarios, string iAsunto, string iCuerpo, bool iCuerpoHtml) {
+            this.EnviarCorreoNotificacion_NCAsync(iDestinatarios, iAsunto, iCuerpo, iCuerpoHtml, null);
+        }
+        
+        /// <remarks/>
+        public void EnviarCorreoNotificacion_NCAsync(string iDestinatarios, string iAsunto, string iCuerpo, bool iCuerpoHtml, object userState) {
+            if ((this.EnviarCorreoNotificacion_NCOperationCompleted == null)) {
+                this.EnviarCorreoNotificacion_NCOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEnviarCorreoNotificacion_NCOperationCompleted);
+            }
+            this.InvokeAsync("EnviarCorreoNotificacion_NC", new object[] {
+                        iDestinatarios,
+                        iAsunto,
+                        iCuerpo,
+                        iCuerpoHtml}, this.EnviarCorreoNotificacion_NCOperationCompleted, userState);
+        }
+        
+        private void OnEnviarCorreoNotificacion_NCOperationCompleted(object arg) {
+            if ((this.EnviarCorreoNotificacion_NCCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EnviarCorreoNotificacion_NCCompleted(this, new EnviarCorreoNotificacion_NCCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -5555,6 +5731,136 @@ namespace EstadosdePagos.WsOperacion {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ListarEPExcel_ResumenObraCompletedEventHandler(object sender, ListarEPExcel_ResumenObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPExcel_ResumenObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPExcel_ResumenObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ListarEPExcel_ResumenEpGeneradosxObraCompletedEventHandler(object sender, ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ListarEPExcel_ResumenGuiasxObraCompletedEventHandler(object sender, ListarEPExcel_ResumenGuiasxObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPExcel_ResumenGuiasxObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPExcel_ResumenGuiasxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ObtenerDatosObraParaEPCompletedEventHandler(object sender, ObtenerDatosObraParaEPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosObraParaEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosObraParaEPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void EnviarCorreoNotificacion_NCCompletedEventHandler(object sender, EnviarCorreoNotificacion_NCCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EnviarCorreoNotificacion_NCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EnviarCorreoNotificacion_NCCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }
