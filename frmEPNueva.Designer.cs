@@ -67,6 +67,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblValorKiloSuministro = new System.Windows.Forms.Label();
             this.lblDestinatarios = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tx_KgsSeleccionado = new System.Windows.Forms.TextBox();
+            this.Btn_ObtenerKgsSel = new System.Windows.Forms.Button();
             this.tabCrecionEP.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDespacho)).BeginInit();
@@ -165,7 +168,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(741, 262);
+            this.tabPage2.Size = new System.Drawing.Size(741, 552);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Etiquetas";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -180,7 +183,7 @@
             this.dgvEtiquetas.MultiSelect = false;
             this.dgvEtiquetas.Name = "dgvEtiquetas";
             this.dgvEtiquetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEtiquetas.Size = new System.Drawing.Size(735, 196);
+            this.dgvEtiquetas.Size = new System.Drawing.Size(735, 486);
             this.dgvEtiquetas.TabIndex = 9;
             this.dgvEtiquetas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtiquetas_CellContentClick);
             this.dgvEtiquetas.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtiquetas_CellValueChanged);
@@ -189,7 +192,7 @@
             // 
             this.panel3.Controls.Add(this.lblRegistrosEtiquetas);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 230);
+            this.panel3.Location = new System.Drawing.Point(3, 520);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(735, 29);
             this.panel3.TabIndex = 10;
@@ -280,7 +283,7 @@
             // 
             this.lblTecnicoObra.AutoSize = true;
             this.lblTecnicoObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTecnicoObra.Location = new System.Drawing.Point(110, 41);
+            this.lblTecnicoObra.Location = new System.Drawing.Point(110, 32);
             this.lblTecnicoObra.Name = "lblTecnicoObra";
             this.lblTecnicoObra.Size = new System.Drawing.Size(40, 13);
             this.lblTecnicoObra.TabIndex = 25;
@@ -290,7 +293,7 @@
             // 
             this.lblObra.AutoSize = true;
             this.lblObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObra.Location = new System.Drawing.Point(50, 14);
+            this.lblObra.Location = new System.Drawing.Point(50, 5);
             this.lblObra.Name = "lblObra";
             this.lblObra.Size = new System.Drawing.Size(40, 13);
             this.lblObra.TabIndex = 24;
@@ -299,7 +302,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 41);
+            this.label3.Location = new System.Drawing.Point(14, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 22;
@@ -308,7 +311,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 14);
+            this.label2.Location = new System.Drawing.Point(14, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 21;
@@ -361,7 +364,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 68);
+            this.label5.Location = new System.Drawing.Point(14, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 13);
             this.label5.TabIndex = 28;
@@ -370,7 +373,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 96);
+            this.label6.Location = new System.Drawing.Point(14, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(156, 13);
             this.label6.TabIndex = 29;
@@ -378,7 +381,7 @@
             // 
             // txtDiaPresentEP
             // 
-            this.txtDiaPresentEP.Location = new System.Drawing.Point(175, 65);
+            this.txtDiaPresentEP.Location = new System.Drawing.Point(175, 56);
             this.txtDiaPresentEP.Name = "txtDiaPresentEP";
             this.txtDiaPresentEP.ReadOnly = true;
             this.txtDiaPresentEP.Size = new System.Drawing.Size(32, 20);
@@ -386,7 +389,7 @@
             // 
             // dtpFechaPresentEP
             // 
-            this.dtpFechaPresentEP.Location = new System.Drawing.Point(175, 93);
+            this.dtpFechaPresentEP.Location = new System.Drawing.Point(175, 84);
             this.dtpFechaPresentEP.Name = "dtpFechaPresentEP";
             this.dtpFechaPresentEP.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaPresentEP.TabIndex = 31;
@@ -394,7 +397,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(416, 14);
+            this.label7.Location = new System.Drawing.Point(416, 5);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 13);
             this.label7.TabIndex = 32;
@@ -404,7 +407,7 @@
             // 
             this.lblFechaCreacion.AutoSize = true;
             this.lblFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaCreacion.Location = new System.Drawing.Point(530, 14);
+            this.lblFechaCreacion.Location = new System.Drawing.Point(530, 5);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
             this.lblFechaCreacion.Size = new System.Drawing.Size(40, 13);
             this.lblFechaCreacion.TabIndex = 33;
@@ -414,7 +417,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(530, 41);
+            this.lblID.Location = new System.Drawing.Point(530, 32);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(40, 13);
             this.lblID.TabIndex = 35;
@@ -423,7 +426,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(497, 41);
+            this.label8.Location = new System.Drawing.Point(497, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 34;
@@ -431,18 +434,18 @@
             // 
             // txtComentario
             // 
-            this.txtComentario.Location = new System.Drawing.Point(175, 119);
+            this.txtComentario.Location = new System.Drawing.Point(175, 108);
             this.txtComentario.MaxLength = 500;
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(574, 50);
+            this.txtComentario.Size = new System.Drawing.Size(574, 38);
             this.txtComentario.TabIndex = 0;
             this.txtComentario.Leave += new System.EventHandler(this.txtComentario_Leave);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 122);
+            this.label10.Location = new System.Drawing.Point(14, 113);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 13);
             this.label10.TabIndex = 36;
@@ -451,7 +454,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(422, 68);
+            this.label11.Location = new System.Drawing.Point(422, 59);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 13);
             this.label11.TabIndex = 37;
@@ -460,7 +463,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(453, 96);
+            this.label12.Location = new System.Drawing.Point(453, 87);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 38;
@@ -470,7 +473,7 @@
             // 
             this.lblValorKiloSuministro.AutoSize = true;
             this.lblValorKiloSuministro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorKiloSuministro.Location = new System.Drawing.Point(530, 68);
+            this.lblValorKiloSuministro.Location = new System.Drawing.Point(530, 59);
             this.lblValorKiloSuministro.Name = "lblValorKiloSuministro";
             this.lblValorKiloSuministro.Size = new System.Drawing.Size(40, 13);
             this.lblValorKiloSuministro.TabIndex = 39;
@@ -480,17 +483,48 @@
             // 
             this.lblDestinatarios.AutoSize = true;
             this.lblDestinatarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDestinatarios.Location = new System.Drawing.Point(530, 96);
+            this.lblDestinatarios.Location = new System.Drawing.Point(530, 87);
             this.lblDestinatarios.Name = "lblDestinatarios";
             this.lblDestinatarios.Size = new System.Drawing.Size(40, 13);
             this.lblDestinatarios.TabIndex = 40;
             this.lblDestinatarios.Text = "(dato)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(16, 156);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(142, 13);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Total de Kilos seleccionados";
+            // 
+            // tx_KgsSeleccionado
+            // 
+            this.tx_KgsSeleccionado.Location = new System.Drawing.Point(177, 151);
+            this.tx_KgsSeleccionado.Name = "tx_KgsSeleccionado";
+            this.tx_KgsSeleccionado.ReadOnly = true;
+            this.tx_KgsSeleccionado.Size = new System.Drawing.Size(198, 20);
+            this.tx_KgsSeleccionado.TabIndex = 42;
+            // 
+            // Btn_ObtenerKgsSel
+            // 
+            this.Btn_ObtenerKgsSel.Location = new System.Drawing.Point(393, 152);
+            this.Btn_ObtenerKgsSel.Name = "Btn_ObtenerKgsSel";
+            this.Btn_ObtenerKgsSel.Size = new System.Drawing.Size(114, 19);
+            this.Btn_ObtenerKgsSel.TabIndex = 43;
+            this.Btn_ObtenerKgsSel.Text = "Kilos Seleccionados";
+            this.Btn_ObtenerKgsSel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_ObtenerKgsSel.UseVisualStyleBackColor = true;
+            this.Btn_ObtenerKgsSel.Click += new System.EventHandler(this.Btn_ObtenerKgsSel_Click);
             // 
             // frmEPNueva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 794);
+            this.Controls.Add(this.Btn_ObtenerKgsSel);
+            this.Controls.Add(this.tx_KgsSeleccionado);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.lblDestinatarios);
             this.Controls.Add(this.lblValorKiloSuministro);
             this.Controls.Add(this.label12);
@@ -576,5 +610,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblValorKiloSuministro;
         private System.Windows.Forms.Label lblDestinatarios;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tx_KgsSeleccionado;
+        private System.Windows.Forms.Button Btn_ObtenerKgsSel;
     }
 }

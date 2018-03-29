@@ -473,8 +473,8 @@ namespace EstadosdePagos
                                                 etiqueta.Guia_despacho = guia_Despacho; //rowEtiqueta["NroGuiaInet"].ToString();
                                                 etiqueta.It = rowEtiqueta["Codigo"].ToString();
                                                 etiqueta.Etiqueta = rowEtiqueta["IdPaq"].ToString();
-                                                if (lComun.EsNumero(rowEtiqueta["KgsReales"].ToString()) == true)
-                                                    etiqueta.Kgs = Convert.ToInt32(rowEtiqueta["KgsReales"].ToString());
+                                                if (lComun.EsNumero(rowEtiqueta["KgsPaquete"].ToString()) == true)
+                                                    etiqueta.Kgs = Convert.ToInt32(rowEtiqueta["KgsPaquete"].ToString());
                                                 else
                                                     etiqueta.Kgs = 0;
 
@@ -781,6 +781,7 @@ namespace EstadosdePagos
 
         private void dgvGuiasDespacho_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int lKgsSel = 0; Utils lCnn = new EstadosdePagos.Utils();
             try {
                 if (dgvGuiasDespacho.CurrentCell.GetType() == typeof(DataGridViewCheckBoxCell))
                 {
@@ -797,16 +798,53 @@ namespace EstadosdePagos
                                     if (MessageBox.Show("Esta seleccionando una guia con fecha de despacho INET posterior a la próxima presentación.\n\n¿Desea continuar?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.No)
                                         dgvGuiasDespacho.CurrentCell.Value = false;
                                 }
+                                //if (lCnn.EsNumeroDesdeINET(dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["KgsGuia"].Value.ToString()) == true)
+                                //{
+                                //    lKgsSel = lKgsSel + lCnn.ValDesdeINET(dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["KgsGuia"].Value.ToString());
+                                //    tx_KgsSeleccionado.Text = lKgsSel.ToString();
+                                //}
                             }
                         }
                     }
-                }
+                }   
+                //TotalKilosSeleccionados();
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private string TotalKilosSeleccionados()
+        {
+            int i = 0;Utils lCnn = new Utils();int lTotal = 0;/* bool lCheck = false;*/
+            try
+            {
+                for (i = 0; i < dgvGuiasDespacho.RowCount; i++)
+                {
+                    DataGridViewRow row = dgvGuiasDespacho.Rows[i];
+                    DataGridViewCheckBoxCell lCheck = row.Cells["MARCA"] as DataGridViewCheckBoxCell;
+
+                    //lCheck = (bool)dgvGuiasDespacho.Rows[i].Cells[0].Value;
+                    if  (( !DBNull .Value .Equals(lCheck.Value )) &&    (Convert.ToBoolean(lCheck.Value)))
+                    {
+                        if (lCnn.EsNumeroDesdeINET(dgvGuiasDespacho.Rows[i].Cells["KgsGuia"].Value.ToString()))
+                        {
+                            lTotal = lTotal + lCnn.ValDesdeINET(dgvGuiasDespacho.Rows[i].Cells["KgsGuia"].Value.ToString());
+                        }
+                    }
+
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return lTotal.ToString();
+
+        }
+
+
 
         private void dgvEtiquetas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -819,6 +857,11 @@ namespace EstadosdePagos
         private void txtComentario_Leave(object sender, EventArgs e)
         {
             txtComentario.Text = new Utils().eliminarCaracteresEspeciales(txtComentario.Text.Trim());
+        }
+
+        private void Btn_ObtenerKgsSel_Click(object sender, EventArgs e)
+        {
+           tx_KgsSeleccionado .Text = TotalKilosSeleccionados();
         }
     }
 }

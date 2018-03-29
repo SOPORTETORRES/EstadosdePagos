@@ -292,7 +292,7 @@ namespace EstadosdePagos
         /// <param name="listaArchivos">Lista de archivos a copiar</param>
         private void copiarArchivosLista(string sourcePath, string destinationPath, List<string> listaArchivos, string iTipo)
         {
-            string lPathPortada = ""; string lPathDetalle = ""; string lArchivo = "";
+              string lArchivo = "";
             sourcePath += (!su.Right(sourcePath, 1).Equals("\\") ? "\\" : "");
             destinationPath += (!su.Right(destinationPath, 1).Equals("\\") ? "\\" : "");
 
@@ -434,12 +434,15 @@ namespace EstadosdePagos
             string validarFiles_GuiaDespacho = "0";
             Result result = null;
             DataRow[] rows = null;string lEmpresa = "";
-            int totalGuiasDespacho = 0, totalITs = 0, totalEtiquetas = 0, totalKilos = 0, totalaCobrar = 0;
+            int totalGuiasDespacho = 0, totalITs = 0, totalEtiquetas = 0, totalKilos = 0 ;
             DataView view = null;
+            DataTable dtResumenxGuiaDespacho = null;
+            WsOperacion.EP_Generado lEP = new WsOperacion.EP_Generado();
 
             //Verifica si existe la informacion necesaria para generar el informe
             try
             {
+                lEP.Id_EP = correlativo;
                 Lbl_PB.Text = "Inicializando Variables . . . "; Lbl_PB.Refresh();
 
                 //Encabezado
@@ -447,7 +450,7 @@ namespace EstadosdePagos
                 sb.Append("EP: " + ep_id.ToString() + "\n\n");
 
                 //Actualiza la informacion del detalle EP: dgvDetalle
-                DataTable dtResumenxGuiaDespacho = null;
+               
                 listaDataSetOp = wsOperacion.ListarEPResumenGuiaDespachoxEp(ep_id); //GD /IT /Etiquetas /Kilos
                 if (listaDataSetOp.MensajeError.Equals(""))
                     dtResumenxGuiaDespacho = listaDataSetOp.DataSet.Tables[0];
@@ -692,9 +695,13 @@ namespace EstadosdePagos
                                 excelApplication.Visible = true;
                                 ExcelApp.Workbook excelWorkBook = excelApplication.Workbooks.Open(outputEP); //.Add(paramMissing);
                                 ExcelApp.Worksheet excelSheet = null;
+                                DataTable ltblServicios = new DataTable ();
+                                if (listaDataTMP.DataSet.Tables.Count  > 1)
+                                    ltblServicios = listaDataTMP.DataSet.Tables["ServiciosObra"].Copy();
+
+
                                 if (excelWorkBook != null)
                                 {
-                   
                                     //Hoja: Resumen
                                     (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
                                     listaDataSetOp = wsOperacion.ListarEPExcel_ResumenObra(ep_obra);
@@ -702,31 +709,52 @@ namespace EstadosdePagos
                                     {
                                         foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
                                         {
-                                            excelSheet.Range["C6"].Value = "ORDEN DE COMPRA N° " + row["ORDEN_COMPRA"].ToString();
-                                            excelSheet.Range["E11"].Value = row["UNIDAD"].ToString();
-                                            excelSheet.Range["BG37"].Value = Program.currentUser.Name;  //row["NOMBREUSUARIO"].ToString(); //Program.currentUser.Name;
-                                            excelSheet.Range["D33"].Value = row["CLIENTE"].ToString();
-                                            excelSheet.Range["D35"].Value = row["RUTCliente"].ToString();
-                                            excelSheet.Range["D37"].Value = row["CentroCOSTO"].ToString();
+                                            excelSheet.Range["D6"].Value = "ORDEN DE COMPRA N° " + row["ORDEN_COMPRA"].ToString();
+                                            excelSheet.Range["F11"].Value = row["UNIDAD"].ToString();
+                                            excelSheet.Range["F12"].Value = row["UNIDAD"].ToString();
+                                            excelSheet.Range["F13"].Value = row["UNIDAD"].ToString();
+                                            excelSheet.Range["BH29"].Value = Program.currentUser.Name;  //row["NOMBREUSUARIO"].ToString(); //Program.currentUser.Name;
+                                            excelSheet.Range["E25"].Value = row["CLIENTE"].ToString();
+                                            excelSheet.Range["E27"].Value = row["RUTCliente"].ToString();
+                                            excelSheet.Range["E29"].Value = row["CentroCOSTO"].ToString();
 
                                             if ((listaDataTMP.DataSet.Tables.Count > 0) && (listaDataTMP.DataSet.Tables[0].Rows.Count > 0))
                                             {
-                                                excelSheet.Range["D11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
-                                                excelSheet.Range["F11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString();
-                                                excelSheet.Range["BD11"].Value = totalKilos;
-                                                excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
+                                                excelSheet.Range["E11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
+                                                excelSheet.Range["E12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
+                                                excelSheet.Range["E13"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
+                                   
+                                                if (ltblServicios != null)
+                                                {
+                                                    excelSheet.Range["G11"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Suministro"); //Sumunistro
+                                                    excelSheet.Range["G12"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Preparacion"); //Preparacion
+                                                }
+                                                else
+                                                {
+                                                    excelSheet.Range["G11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Sumunistro
+                                                    excelSheet.Range["G12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Preparacion
+                                                }
+
+
+                                                //
+                                                excelSheet.Range["BE11"].Value = totalKilos;  //Sumunistro
+                                                
+                                                 excelSheet.Range["BE12"].Value = RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  // si la IT es tipo TP 
+                                                //excelSheet.Range["BE12"].Value = totalKilos;  // si la IT es tipo TP 
+                                                //No se incluye en la linea de cobro de preparación==> TotalKilos - Kilos de la Guia 
+                                               // excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
                                             }
                                         }
                                     }
                                     else
                                         error = listaDataSetOp.MensajeError.ToString();
 
-                                    excelSheet.Range["BB5"].Value = "Obra " + obra;
-                                    excelSheet.Range["BD6"].Value = "ESTADO DE PAGO ACTUAL N° " + correlativo;
+                                    excelSheet.Range["BC5"].Value = "Obra " + obra;
+                                    excelSheet.Range["BE6"].Value = "ESTADO DE PAGO ACTUAL N° " + correlativo;
 
                                     //EP generados (Todos)
                                     int fila = 11;
-                                    int columna = 8;
+                                    int columna = 9;
                                     Int64 kilos = 0, total = 0, correl = 0;
                                     Int64 totalKilosCobrados = 0, totalCobrado = 0;
                                     listaDataSetOp = wsOperacion.ListarEPExcel_ResumenEpGeneradosxObra(ep_obra);
@@ -753,9 +781,62 @@ namespace EstadosdePagos
                                     else
                                         error = listaDataSetOp.MensajeError.ToString();
 
+                                    //LLenamos el Objeto con los totales del EP **********************************************+
+                                    int lTmp = 0;
+                                    lTmp = !EsNumero(excelSheet.Range["BE14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE14"].Value.ToString());
+                                    lEP.TotalKgs_EP = lTmp;
+                                    lTmp = !EsNumero(excelSheet.Range["BF14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BF14"].Value.ToString());
+                                    lEP.TotalValor_EP  = lTmp;
+                                    lTmp = !EsNumero(ep_obra.ToString()) ? 0 : Convert.ToInt32(ep_obra.ToString());
+                                    lEP.IdObra = lTmp;
+
+                                    //List<WsOperacion.EP_GeneradoDetalle> lList_DetEP = new List<WsOperacion.EP_GeneradoDetalle>() ;
+                                    WsOperacion.EP_GeneradoDetalle[] lList_DetEP = new WsOperacion.EP_GeneradoDetalle[3];
+
+                                    WsOperacion.EP_GeneradoDetalle lDetEP = new WsOperacion.EP_GeneradoDetalle();
+                                    //Suministro
+                                    lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Suministro";
+                                    lTmp = !EsNumero(excelSheet.Range["G11"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G11"].Value.ToString());
+                                    lDetEP.ValorKgs = lTmp;
+                                    lTmp = !EsNumero(excelSheet.Range["BE11"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE11"].Value.ToString());
+                                    lDetEP.TotalKgs   = lTmp;
+                                    lList_DetEP[0]=lDetEP;
+                                    //Preparacion
+                                    lDetEP = new WsOperacion.EP_GeneradoDetalle();
+                                    lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Preparacion";
+                                    lTmp = !EsNumero(excelSheet.Range["G12"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G12"].Value.ToString());
+                                    lDetEP.ValorKgs = lTmp;
+                                    lTmp = !EsNumero(excelSheet.Range["BE12"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE12"].Value.ToString());
+                                    lDetEP.TotalKgs = lTmp;
+                                    lList_DetEP[1]=(lDetEP);
+                                    //Otros 
+                                    lDetEP = new WsOperacion.EP_GeneradoDetalle();
+                                    lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Otros";
+                                    lTmp = !EsNumero(excelSheet.Range["G13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G13"].Value.ToString());
+                                    lDetEP.ValorKgs = lTmp;
+                                    lTmp = !EsNumero(excelSheet.Range["BE13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE13"].Value.ToString());
+                                    lDetEP.TotalKgs = lTmp;
+                                    lList_DetEP[2]=(lDetEP);
+                                    //Persistimos los regitros
+                                    //Falta la llamada a  la Ws por la persistencia de datos, con try cath para evitar la visualizacion de Excel
+                                    try
+                                    {
+                                        lEP.Detalle = lList_DetEP;
+                                        lEP = ws.GrabaEP_Generado(lEP);
+
+                                    }
+                                    catch (Exception exc)
+                                    {
+                                        MessageBox.Show(string.Concat("Ha Ocurrido el siguiente error: ", exc.Message.ToString()), "Avisos Sistema");
+                                    }
+
+                                    // Falta de MModificacion
+                                    //Fin  carga Obj EP
+
                                     //EP anteriores
-                                    excelSheet.Range["BB11"].Value = totalKilosCobrados;
-                                    excelSheet.Range["BC11"].Value = totalCobrado;
+                                    excelSheet.Range["BC11"].Value = totalKilosCobrados;
+                                    
+                                    excelSheet.Range["BD11"].Value = totalCobrado;
                                     //EP actual
                                     // se comenta por modificaciones 06-12-2017
                                     //excelSheet.Range["BD11"].Value = totalKilos;
@@ -763,7 +844,7 @@ namespace EstadosdePagos
 
                                     //Hoja: Detalle Guias
                                     (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
-                                    ExcelApp.Range rng = excelSheet.get_Range("A8", "A1000");
+                                    ExcelApp.Range rng = excelSheet.get_Range("B8", "A1000");
                                     rng.EntireRow.Delete(ExcelApp.XlDirection.xlUp);
 
                                     fila = 8;
@@ -851,6 +932,32 @@ namespace EstadosdePagos
             return validacion.ToString();
         }
 
+        private string ObtenerPrecioUnitarioPorServicio(DataTable iTbl, string iServicio)
+        {
+            string lRes = "";
+            DataView lVista = new DataView(iTbl, string.Concat("Servicio='", iServicio, "'"), "", DataViewRowState.CurrentRows);
+            if (lVista.Count > 0)
+            {
+                lRes = lVista[0]["ImporteServicio"].ToString();
+            }
+            return lRes;
+        }
+
+        private string RevisaTiposDeGuiaINET(DataTable iTbl )
+        {
+             int i = 0; int lTotal = 0;int lTotalTP = 0;
+            for (i = 0; i < iTbl.Rows.Count; i++)
+            {
+                lTotal = lTotal + int.Parse (iTbl.Rows[i]["Total_Kgs"].ToString ());
+                if (iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("TP"))
+                {
+                    lTotalTP = lTotalTP + int.Parse(iTbl.Rows[i]["Total_Kgs"].ToString());
+                }
+            }
+             
+            return (lTotal- lTotalTP).ToString ();
+        }
+
 
         private Boolean ExisteArchivo(string lViaje, string lPathBase)
         {
@@ -874,11 +981,13 @@ namespace EstadosdePagos
 
         }
 
-        private void CreaInforme(string iViaje, Boolean iEliminaArchivo)
+        public void CreaInforme(string iViaje, Boolean iEliminaArchivo)
         {
             Informes.Informes lInf = new Informes.Informes();
             lInf.ImprimirInforme(iViaje, iEliminaArchivo);
         }
+
+
 
         public Boolean EsNumero(string iDato)
         {
@@ -893,6 +1002,68 @@ namespace EstadosdePagos
                 lRes = false;
             }
             return lRes;
+        }
+
+        public int Val(string iDato)
+        {
+            int lRes = 0;
+            try
+            {
+                lRes= int.Parse (iDato);
+
+            }
+            catch (Exception exc)
+            {
+                lRes = 0;
+            }
+            return lRes;
+
+        }
+
+        public Boolean EsNumeroDesdeINET(string iDato)
+        {
+            Boolean lRes = true;
+              string lTmp = "";
+            Char Delimitador = ',';
+            try
+            {
+                String[] lPartes = iDato.Split(Delimitador);
+                if (lPartes.Length > 1)
+                {
+                    lTmp = lPartes[0].ToString();
+                    Convert.ToInt64(lTmp);
+                }
+
+            }
+            catch (Exception exc)
+            {
+                lRes = false;
+            }
+            return lRes;
+        }
+
+        public int ValDesdeINET(string iDato)
+        {
+            int lRes = 0;string lTmp = "";
+            Char Delimitador = ',';
+
+            try
+            {
+                String[] lPartes = iDato.Split(Delimitador);
+                if (lPartes.Length > 1)
+                {
+                    lTmp = lPartes[0].ToString();
+                    lRes = int.Parse(lTmp);
+                }
+              
+
+            }
+            catch (Exception exc)
+            {
+                lRes = 0;
+            }
+            return lRes;
+
         }
 
     }

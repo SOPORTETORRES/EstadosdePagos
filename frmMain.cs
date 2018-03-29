@@ -971,7 +971,8 @@ namespace EstadosdePagos
 
         private void Btn_imprimePL_Click(object sender, EventArgs e)
         {
-
+            Informes.Frm_Tmp lFrm = new Informes.Frm_Tmp();
+            lFrm.ShowDialog(this);
             //ImprimirInforme("","","");
 
         }

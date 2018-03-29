@@ -56,6 +56,8 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback EnviarCorreoNotificacion_NCOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GrabaEP_GeneradoOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GuardarSolicitudMaterialOperationCompleted;
         
         private System.Threading.SendOrPostCallback AsociarProductosaSolicitudOperationCompleted;
@@ -300,6 +302,9 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         public event EnviarCorreoNotificacion_NCCompletedEventHandler EnviarCorreoNotificacion_NCCompleted;
+        
+        /// <remarks/>
+        public event GrabaEP_GeneradoCompletedEventHandler GrabaEP_GeneradoCompleted;
         
         /// <remarks/>
         public event GuardarSolicitudMaterialCompletedEventHandler GuardarSolicitudMaterialCompleted;
@@ -957,6 +962,35 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.EnviarCorreoNotificacion_NCCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.EnviarCorreoNotificacion_NCCompleted(this, new EnviarCorreoNotificacion_NCCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GrabaEP_Generado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public EP_Generado GrabaEP_Generado(EP_Generado iEP) {
+            object[] results = this.Invoke("GrabaEP_Generado", new object[] {
+                        iEP});
+            return ((EP_Generado)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GrabaEP_GeneradoAsync(EP_Generado iEP) {
+            this.GrabaEP_GeneradoAsync(iEP, null);
+        }
+        
+        /// <remarks/>
+        public void GrabaEP_GeneradoAsync(EP_Generado iEP, object userState) {
+            if ((this.GrabaEP_GeneradoOperationCompleted == null)) {
+                this.GrabaEP_GeneradoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGrabaEP_GeneradoOperationCompleted);
+            }
+            this.InvokeAsync("GrabaEP_Generado", new object[] {
+                        iEP}, this.GrabaEP_GeneradoOperationCompleted, userState);
+        }
+        
+        private void OnGrabaEP_GeneradoOperationCompleted(object arg) {
+            if ((this.GrabaEP_GeneradoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GrabaEP_GeneradoCompleted(this, new GrabaEP_GeneradoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -5163,6 +5197,204 @@ namespace EstadosdePagos.WsOperacion {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class EP_GeneradoDetalle {
+        
+        private int idField;
+        
+        private int id_EPField;
+        
+        private string servicioField;
+        
+        private int valorKgsField;
+        
+        private int totalKgsField;
+        
+        private int idUsuarioGeneraField;
+        
+        private System.DateTime fechaField;
+        
+        /// <comentarios/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int Id_EP {
+            get {
+                return this.id_EPField;
+            }
+            set {
+                this.id_EPField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Servicio {
+            get {
+                return this.servicioField;
+            }
+            set {
+                this.servicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int ValorKgs {
+            get {
+                return this.valorKgsField;
+            }
+            set {
+                this.valorKgsField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int TotalKgs {
+            get {
+                return this.totalKgsField;
+            }
+            set {
+                this.totalKgsField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdUsuarioGenera {
+            get {
+                return this.idUsuarioGeneraField;
+            }
+            set {
+                this.idUsuarioGeneraField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class EP_Generado {
+        
+        private int idField;
+        
+        private int id_EPField;
+        
+        private int totalKgs_EPField;
+        
+        private int totalValor_EPField;
+        
+        private int idUsuarioGeneraField;
+        
+        private int idObraField;
+        
+        private System.DateTime fechaField;
+        
+        private EP_GeneradoDetalle[] detalleField;
+        
+        /// <comentarios/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int Id_EP {
+            get {
+                return this.id_EPField;
+            }
+            set {
+                this.id_EPField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int TotalKgs_EP {
+            get {
+                return this.totalKgs_EPField;
+            }
+            set {
+                this.totalKgs_EPField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int TotalValor_EP {
+            get {
+                return this.totalValor_EPField;
+            }
+            set {
+                this.totalValor_EPField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdUsuarioGenera {
+            get {
+                return this.idUsuarioGeneraField;
+            }
+            set {
+                this.idUsuarioGeneraField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdObra {
+            get {
+                return this.idObraField;
+            }
+            set {
+                this.idObraField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public EP_GeneradoDetalle[] Detalle {
+            get {
+                return this.detalleField;
+            }
+            set {
+                this.detalleField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class PiezaTipoB {
         
         private string idField;
@@ -5861,6 +6093,32 @@ namespace EstadosdePagos.WsOperacion {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void GrabaEP_GeneradoCompletedEventHandler(object sender, GrabaEP_GeneradoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GrabaEP_GeneradoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GrabaEP_GeneradoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public EP_Generado Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((EP_Generado)(this.results[0]));
             }
         }
     }
