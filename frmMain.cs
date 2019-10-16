@@ -362,6 +362,7 @@ namespace EstadosdePagos
                 Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
                 String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
 
+               
                 //Validaciones iniciales
                 if (!accion.Equals("btnCrearEP") && ep_id.Equals(0))
                 {
@@ -410,7 +411,9 @@ namespace EstadosdePagos
 
                     case "btnVerReporteEP":
                         Cursor.Current = Cursors.WaitCursor;
-                        utils.generarEP(ep_obra, obra, ep_id, 1, ref Pb , ref Lbl_PB, carpeta, correlativo); //1-Vista preliminar
+                        //generarEP_V2
+                        utils.generarEP_V2(ep_obra, obra, ep_id, 1, ref Pb, ref Lbl_PB, carpeta, correlativo);
+                      //  utils.generarEP(ep_obra, obra, ep_id, 1, ref Pb , ref Lbl_PB, carpeta, correlativo); //1-Vista preliminar
                         Cursor.Current = Cursors.Default;  
                         break;
 
@@ -955,6 +958,8 @@ namespace EstadosdePagos
                 frm0.Obra = currentRow.Cells["OBRA"].Value.ToString();
                 frm0.TecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
                 frm0.Estado = currentRow.Cells["EP_ESTADO"].Value.ToString();
+                frm0.CargaFormulario(ref Pb, ref Lbl_PB);
+
                 frm0.ShowDialog(this);
                 if (frm0.changed)
                     btnActualizar.PerformClick();

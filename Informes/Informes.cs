@@ -47,10 +47,7 @@ namespace EstadosdePagos.Informes
                 iIdIt = lDtsTmp.Tables[0].Rows[0]["IdIT"].ToString();
                 iIdObra = lDtsTmp.Tables[0].Rows[0]["IdObra"].ToString();
 
-                //dtsPl.Merge(lPx.ObtenerDtsPL_ViajeDesp_ConSaldos(iCodigoIt, IdIt, iCodViaje, IdObra))
-                //dtsPl.Merge(lPx.ObtenerDtsPL_ConDet_SaldosViaje(iCodigoIt, IdIt, iCodViaje, iTipoImp, IdObra, "DESP"))
-                dtsPl.EnforceConstraints = false;
-                //dtsPl.Merge(lPx.ObtenerDtsPL_ViajeDesp("", iIdIt, iViaje, iIdObra)); //'idcliente,idempresa      
+                dtsPl.EnforceConstraints = false;   
                 dtsPl.Merge(lPx.ObtenerDtsPL_ViajeDesp_ConSaldos("", iIdIt, iViaje,  iIdObra));
 
                                                                                              //'22/10/2012  ---- cargamos los datos del subreport   
@@ -171,7 +168,6 @@ namespace EstadosdePagos.Informes
                 iIdObra = lDtsTmp.Tables[0].Rows[0]["IdObra"].ToString();
 
                 lDts.EnforceConstraints = false;
-
             }
 
             lDts.Merge(lPx.ObtenerDtsPL_ConDet("", iIdIt, iViaje, "I", iIdObra, "DESP"));
@@ -196,14 +192,13 @@ namespace EstadosdePagos.Informes
                 lDts.EnforceConstraints = false;
 
             }
-            //dtsPl.Merge(lPx.ObtenerDtsPL_ConDet_SaldosViaje(iCodigoIt, IdIt, iCodViaje, iTipoImp, IdObra, "DESP"))
             lDts.Merge(lPx.ObtenerDtsPL_ConDet_SaldosViaje("", iIdIt, iViaje, "I", iIdObra, "DESP"));
 
             return lDts;
         }
 
 
-        public  void ImprimirInforme( string iViaje, Boolean iEliminaArchivo)
+        public  void ImprimirInforme( string iViaje, Boolean iEliminaArchivo, string iPathDestino)
         {
             string iIdIt = ""; string iIdObra = ""; Dts_PL lDtsPortada = new Dts_PL() ;
             Dts_PL lDtsDetalle = new Dts_PL(); Char Delimitador = '/';Utils lComun = new Utils();
@@ -217,10 +212,10 @@ namespace EstadosdePagos.Informes
                     {
                         lDtsPortada = CargaDatosPortada_ViajeOriginal(iViaje);
                         lFrmInf.InicializaInforme("P", lDtsPortada, iViaje, iEliminaArchivo);
-                        lFrmInf.GeneraPdf();
+                        lFrmInf.GeneraPdf(iPathDestino);
                         lDtsDetalle = CargaDatosDetalleViajeOriginal(iViaje);
                         lFrmInf.InicializaInforme("D", lDtsDetalle, iViaje, iEliminaArchivo);
-                        lFrmInf.GeneraPdf();
+                        lFrmInf.GeneraPdf(iPathDestino);
                         lFrmInf.Close();
                     }
                     else
@@ -229,25 +224,13 @@ namespace EstadosdePagos.Informes
                        lDtsPortada = CargaDatosPortada_ViajeSaldo(iViaje);
                              //lDtsPortada = CargaDatosDetalle_ViajeSaldo(iViaje);
                         lFrmInf.InicializaInforme("P", lDtsPortada, iViaje, iEliminaArchivo);
-                        lFrmInf.GeneraPdf();
+                        lFrmInf.GeneraPdf(iPathDestino);
                         lDtsDetalle = CargaDatosDetalle_ViajeSaldo(iViaje);
                         lFrmInf.InicializaInforme("D", lDtsDetalle, iViaje, iEliminaArchivo);
-                        lFrmInf.GeneraPdf();
+                        lFrmInf.GeneraPdf(iPathDestino);
                         lFrmInf.Close();
-
-
                     }
-
-                    //    lDtsPortada = CargaDatosPortada_ViajeSaldo(iViaje);
-                    //lFrmInf.InicializaInforme("P", lDtsPortada, iViaje, iEliminaArchivo);
-                    //lFrmInf.GeneraPdf();
-
                 }
-               
-                
-                //****************************************
-
-
 
             }
             catch (Exception exc)   

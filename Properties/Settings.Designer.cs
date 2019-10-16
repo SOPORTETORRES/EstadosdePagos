@@ -12,7 +12,7 @@ namespace EstadosdePagos.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,17 +26,7 @@ namespace EstadosdePagos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:55038/ws/ws_sesion.asmx")]
-        public string EstadosdePagos_WsSesion_Sesion1 {
-            get {
-                return ((string)(this["EstadosdePagos_WsSesion_Sesion1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:55038/WS/Ws_To.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/Test/WS/Ws_To.asmx")]
         public string EstadosdePagos_WsMensajeria_Ws_To {
             get {
                 return ((string)(this["EstadosdePagos_WsMensajeria_Ws_To"]));
@@ -50,6 +40,16 @@ namespace EstadosdePagos.Properties {
         public string EstadosdePagos_WsOperacion_Operacion {
             get {
                 return ((string)(this["EstadosdePagos_WsOperacion_Operacion"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/Test/ws/ws_sesion.asmx")]
+        public string EstadosdePagos_WsSesion_Sesion1 {
+            get {
+                return ((string)(this["EstadosdePagos_WsSesion_Sesion1"]));
             }
         }
     }

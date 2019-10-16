@@ -90,7 +90,7 @@
             this.tabCrecionEP.Location = new System.Drawing.Point(7, 175);
             this.tabCrecionEP.Name = "tabCrecionEP";
             this.tabCrecionEP.SelectedIndex = 0;
-            this.tabCrecionEP.Size = new System.Drawing.Size(749, 578);
+            this.tabCrecionEP.Size = new System.Drawing.Size(749, 399);
             this.tabCrecionEP.TabIndex = 26;
             // 
             // tabPage1
@@ -100,7 +100,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(741, 552);
+            this.tabPage1.Size = new System.Drawing.Size(741, 373);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Seleccion de las Guias de despacho";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -109,15 +109,13 @@
             // 
             this.dgvGuiasDespacho.AllowUserToAddRows = false;
             this.dgvGuiasDespacho.AllowUserToDeleteRows = false;
-            this.dgvGuiasDespacho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGuiasDespacho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGuiasDespacho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGuiasDespacho.Location = new System.Drawing.Point(3, 3);
             this.dgvGuiasDespacho.MultiSelect = false;
             this.dgvGuiasDespacho.Name = "dgvGuiasDespacho";
             this.dgvGuiasDespacho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGuiasDespacho.Size = new System.Drawing.Size(735, 517);
+            this.dgvGuiasDespacho.Size = new System.Drawing.Size(735, 367);
             this.dgvGuiasDespacho.TabIndex = 8;
             this.dgvGuiasDespacho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDespacho_CellContentClick);
             this.dgvGuiasDespacho.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDespacho_CellValueChanged);
@@ -132,7 +130,7 @@
             this.panel2.Controls.Add(this.lblRegistrosGDespacho);
             this.panel2.Location = new System.Drawing.Point(3, 230);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(735, 319);
+            this.panel2.Size = new System.Drawing.Size(735, 232);
             this.panel2.TabIndex = 9;
             // 
             // label9
@@ -142,7 +140,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(124, 297);
+            this.label9.Location = new System.Drawing.Point(124, 118);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(534, 13);
             this.label9.TabIndex = 1;
@@ -154,7 +152,7 @@
             this.lblRegistrosGDespacho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegistrosGDespacho.AutoSize = true;
-            this.lblRegistrosGDespacho.Location = new System.Drawing.Point(12, 297);
+            this.lblRegistrosGDespacho.Location = new System.Drawing.Point(12, 118);
             this.lblRegistrosGDespacho.Name = "lblRegistrosGDespacho";
             this.lblRegistrosGDespacho.Size = new System.Drawing.Size(69, 13);
             this.lblRegistrosGDespacho.TabIndex = 0;
@@ -168,7 +166,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(741, 552);
+            this.tabPage2.Size = new System.Drawing.Size(741, 373);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Etiquetas";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -183,7 +181,7 @@
             this.dgvEtiquetas.MultiSelect = false;
             this.dgvEtiquetas.Name = "dgvEtiquetas";
             this.dgvEtiquetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEtiquetas.Size = new System.Drawing.Size(735, 486);
+            this.dgvEtiquetas.Size = new System.Drawing.Size(735, 307);
             this.dgvEtiquetas.TabIndex = 9;
             this.dgvEtiquetas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtiquetas_CellContentClick);
             this.dgvEtiquetas.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtiquetas_CellValueChanged);
@@ -192,7 +190,7 @@
             // 
             this.panel3.Controls.Add(this.lblRegistrosEtiquetas);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 520);
+            this.panel3.Location = new System.Drawing.Point(3, 341);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(735, 29);
             this.panel3.TabIndex = 10;
@@ -319,11 +317,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Image = global::EstadosdePagos.Properties.Resources.cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(533, 766);
+            this.btnCancelar.Location = new System.Drawing.Point(533, 587);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 23);
             this.btnCancelar.TabIndex = 19;
@@ -333,12 +330,11 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Enabled = false;
             this.btnAceptar.Image = global::EstadosdePagos.Properties.Resources.aceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(440, 766);
+            this.btnAceptar.Location = new System.Drawing.Point(440, 587);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(87, 23);
             this.btnAceptar.TabIndex = 18;
@@ -348,12 +344,11 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.Enabled = false;
             this.btnGuardar.Image = global::EstadosdePagos.Properties.Resources.guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(310, 766);
+            this.btnGuardar.Location = new System.Drawing.Point(310, 587);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 23);
             this.btnGuardar.TabIndex = 27;
@@ -521,7 +516,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 794);
+            this.ClientSize = new System.Drawing.Size(764, 615);
             this.Controls.Add(this.Btn_ObtenerKgsSel);
             this.Controls.Add(this.tx_KgsSeleccionado);
             this.Controls.Add(this.label13);
@@ -553,6 +548,7 @@
             this.Name = "frmEPNueva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creacion de un EP";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmEPNueva_Load);
             this.tabCrecionEP.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

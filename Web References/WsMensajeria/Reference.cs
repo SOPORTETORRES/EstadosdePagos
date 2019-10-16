@@ -24,7 +24,7 @@ namespace EstadosdePagos.WsMensajeria {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="Ws_ToSoap", Namespace="http://tempuri.org/")]
@@ -4021,7 +4021,7 @@ namespace EstadosdePagos.WsMensajeria {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("Dts_PL")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     public partial class Dts_PL : global::System.Data.DataSet {
         
         private ObsCuadroProgramacionDataTable tableObsCuadroProgramacion;
@@ -4041,7 +4041,7 @@ namespace EstadosdePagos.WsMensajeria {
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public Dts_PL() {
             this.BeginInit();
             this.InitClass();
@@ -4052,7 +4052,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected Dts_PL(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
@@ -4106,7 +4106,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public ObsCuadroProgramacionDataTable ObsCuadroProgramacion {
@@ -4116,7 +4116,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public ResumenDespDataTable ResumenDesp {
@@ -4126,7 +4126,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public DetalleDespDataTable DetalleDesp {
@@ -4136,7 +4136,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public DetallePLDataTable DetallePL {
@@ -4146,7 +4146,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public LaminaDataTable Lamina {
@@ -4156,7 +4156,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public CabeceraDetDataTable CabeceraDet {
@@ -4166,7 +4166,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public BECHTELDataTable BECHTEL {
@@ -4176,7 +4176,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -4189,7 +4189,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataTableCollection Tables {
             get {
@@ -4198,7 +4198,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataRelationCollection Relations {
             get {
@@ -4207,7 +4207,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override void InitializeDerivedDataSet() {
             this.BeginInit();
             this.InitClass();
@@ -4215,7 +4215,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
             Dts_PL cln = ((Dts_PL)(base.Clone()));
             cln.InitVars();
@@ -4224,19 +4224,19 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override bool ShouldSerializeTables() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override bool ShouldSerializeRelations() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
             if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 this.Reset();
@@ -4279,7 +4279,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
             this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
@@ -4288,13 +4288,13 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars() {
             this.InitVars(true);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
             this.tableObsCuadroProgramacion = ((ObsCuadroProgramacionDataTable)(base.Tables["ObsCuadroProgramacion"]));
             if ((initTable == true)) {
@@ -4341,7 +4341,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
             this.DataSetName = "Dts_PL";
             this.Prefix = "";
@@ -4365,49 +4365,49 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeObsCuadroProgramacion() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeResumenDesp() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeDetalleDesp() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeDetallePL() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeLamina() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeCabeceraDet() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeBECHTEL() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -4415,7 +4415,7 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
             Dts_PL ds = new Dts_PL();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
@@ -4461,25 +4461,25 @@ namespace EstadosdePagos.WsMensajeria {
             return type;
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void ObsCuadroProgramacionRowChangeEventHandler(object sender, ObsCuadroProgramacionRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void ResumenDespRowChangeEventHandler(object sender, ResumenDespRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void DetalleDespRowChangeEventHandler(object sender, DetalleDespRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void DetallePLRowChangeEventHandler(object sender, DetallePLRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void LaminaRowChangeEventHandler(object sender, LaminaRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void CabeceraDetRowChangeEventHandler(object sender, CabeceraDetRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void BECHTELRowChangeEventHandler(object sender, BECHTELRowChangeEvent e);
         
         /// <summary>
@@ -4502,7 +4502,7 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataColumn columnUsuarioCrea;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ObsCuadroProgramacionDataTable() {
                 this.TableName = "ObsCuadroProgramacion";
                 this.BeginInit();
@@ -4511,7 +4511,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal ObsCuadroProgramacionDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -4528,14 +4528,14 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected ObsCuadroProgramacionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn IdColumn {
                 get {
                     return this.columnId;
@@ -4543,7 +4543,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn FechaColumn {
                 get {
                     return this.columnFecha;
@@ -4551,7 +4551,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CodViajeColumn {
                 get {
                     return this.columnCodViaje;
@@ -4559,7 +4559,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ObsColumn {
                 get {
                     return this.columnObs;
@@ -4567,7 +4567,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn FechaObsColumn {
                 get {
                     return this.columnFechaObs;
@@ -4575,7 +4575,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UsuarioCreaColumn {
                 get {
                     return this.columnUsuarioCrea;
@@ -4583,7 +4583,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4592,33 +4592,33 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ObsCuadroProgramacionRow this[int index] {
                 get {
                     return ((ObsCuadroProgramacionRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ObsCuadroProgramacionRowChangeEventHandler ObsCuadroProgramacionRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ObsCuadroProgramacionRowChangeEventHandler ObsCuadroProgramacionRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ObsCuadroProgramacionRowChangeEventHandler ObsCuadroProgramacionRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ObsCuadroProgramacionRowChangeEventHandler ObsCuadroProgramacionRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddObsCuadroProgramacionRow(ObsCuadroProgramacionRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ObsCuadroProgramacionRow AddObsCuadroProgramacionRow(string Fecha, string CodViaje, string Obs, System.DateTime FechaObs, int UsuarioCrea) {
                 ObsCuadroProgramacionRow rowObsCuadroProgramacionRow = ((ObsCuadroProgramacionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -4634,7 +4634,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ObsCuadroProgramacionRow FindByFechaCodViaje(string Fecha, string CodViaje) {
                 return ((ObsCuadroProgramacionRow)(this.Rows.Find(new object[] {
                             Fecha,
@@ -4642,13 +4642,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public virtual global::System.Collections.IEnumerator GetEnumerator() {
                 return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 ObsCuadroProgramacionDataTable cln = ((ObsCuadroProgramacionDataTable)(base.Clone()));
                 cln.InitVars();
@@ -4656,13 +4656,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new ObsCuadroProgramacionDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnFecha = base.Columns["Fecha"];
@@ -4673,7 +4673,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
@@ -4703,25 +4703,25 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ObsCuadroProgramacionRow NewObsCuadroProgramacionRow() {
                 return ((ObsCuadroProgramacionRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new ObsCuadroProgramacionRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(ObsCuadroProgramacionRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.ObsCuadroProgramacionRowChanged != null)) {
@@ -4730,7 +4730,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.ObsCuadroProgramacionRowChanging != null)) {
@@ -4739,7 +4739,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.ObsCuadroProgramacionRowDeleted != null)) {
@@ -4748,7 +4748,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.ObsCuadroProgramacionRowDeleting != null)) {
@@ -4757,13 +4757,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveObsCuadroProgramacionRow(ObsCuadroProgramacionRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -4842,7 +4842,7 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataColumn columnPesoTotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ResumenDespDataTable() {
                 this.TableName = "ResumenDesp";
                 this.BeginInit();
@@ -4851,7 +4851,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal ResumenDespDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -4868,14 +4868,14 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected ResumenDespDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CodigoITColumn {
                 get {
                     return this.columnCodigoIT;
@@ -4883,7 +4883,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ObraColumn {
                 get {
                     return this.columnObra;
@@ -4891,7 +4891,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn NroGDColumn {
                 get {
                     return this.columnNroGD;
@@ -4899,7 +4899,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PesoTotalColumn {
                 get {
                     return this.columnPesoTotal;
@@ -4907,7 +4907,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4916,33 +4916,33 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ResumenDespRow this[int index] {
                 get {
                     return ((ResumenDespRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ResumenDespRowChangeEventHandler ResumenDespRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ResumenDespRowChangeEventHandler ResumenDespRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ResumenDespRowChangeEventHandler ResumenDespRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event ResumenDespRowChangeEventHandler ResumenDespRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddResumenDespRow(ResumenDespRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ResumenDespRow AddResumenDespRow(string CodigoIT, string Obra, string NroGD, string PesoTotal) {
                 ResumenDespRow rowResumenDespRow = ((ResumenDespRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -4956,13 +4956,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public virtual global::System.Collections.IEnumerator GetEnumerator() {
                 return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 ResumenDespDataTable cln = ((ResumenDespDataTable)(base.Clone()));
                 cln.InitVars();
@@ -4970,13 +4970,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new ResumenDespDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnCodigoIT = base.Columns["CodigoIT"];
                 this.columnObra = base.Columns["Obra"];
@@ -4985,7 +4985,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnCodigoIT = new global::System.Data.DataColumn("CodigoIT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodigoIT);
@@ -4998,25 +4998,25 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ResumenDespRow NewResumenDespRow() {
                 return ((ResumenDespRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new ResumenDespRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(ResumenDespRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.ResumenDespRowChanged != null)) {
@@ -5025,7 +5025,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.ResumenDespRowChanging != null)) {
@@ -5034,7 +5034,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.ResumenDespRowDeleted != null)) {
@@ -5043,7 +5043,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.ResumenDespRowDeleting != null)) {
@@ -5052,13 +5052,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveResumenDespRow(ResumenDespRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -5139,7 +5139,7 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataColumn columnPesoDesp;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetalleDespDataTable() {
                 this.TableName = "DetalleDesp";
                 this.BeginInit();
@@ -5148,7 +5148,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal DetalleDespDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -5165,14 +5165,14 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected DetalleDespDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CodigoITColumn {
                 get {
                     return this.columnCodigoIT;
@@ -5180,7 +5180,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UbicacionColumn {
                 get {
                     return this.columnUbicacion;
@@ -5188,7 +5188,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PesoColumn {
                 get {
                     return this.columnPeso;
@@ -5196,7 +5196,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn HojaColumn {
                 get {
                     return this.columnHoja;
@@ -5204,7 +5204,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PesoDespColumn {
                 get {
                     return this.columnPesoDesp;
@@ -5212,7 +5212,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5221,33 +5221,33 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetalleDespRow this[int index] {
                 get {
                     return ((DetalleDespRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetalleDespRowChangeEventHandler DetalleDespRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetalleDespRowChangeEventHandler DetalleDespRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetalleDespRowChangeEventHandler DetalleDespRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetalleDespRowChangeEventHandler DetalleDespRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddDetalleDespRow(DetalleDespRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetalleDespRow AddDetalleDespRow(string CodigoIT, string Ubicacion, string Peso, string Hoja, string PesoDesp) {
                 DetalleDespRow rowDetalleDespRow = ((DetalleDespRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -5262,13 +5262,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public virtual global::System.Collections.IEnumerator GetEnumerator() {
                 return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 DetalleDespDataTable cln = ((DetalleDespDataTable)(base.Clone()));
                 cln.InitVars();
@@ -5276,13 +5276,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new DetalleDespDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnCodigoIT = base.Columns["CodigoIT"];
                 this.columnUbicacion = base.Columns["Ubicacion"];
@@ -5292,7 +5292,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnCodigoIT = new global::System.Data.DataColumn("CodigoIT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodigoIT);
@@ -5307,25 +5307,25 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetalleDespRow NewDetalleDespRow() {
                 return ((DetalleDespRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new DetalleDespRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(DetalleDespRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.DetalleDespRowChanged != null)) {
@@ -5334,7 +5334,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.DetalleDespRowChanging != null)) {
@@ -5343,7 +5343,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.DetalleDespRowDeleted != null)) {
@@ -5352,7 +5352,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.DetalleDespRowDeleting != null)) {
@@ -5361,13 +5361,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveDetalleDespRow(DetalleDespRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -5464,7 +5464,7 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataColumn columnDespacho;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetallePLDataTable() {
                 this.TableName = "DetallePL";
                 this.BeginInit();
@@ -5473,7 +5473,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal DetallePLDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -5490,14 +5490,14 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected DetallePLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn IdCabeceraColumn {
                 get {
                     return this.columnIdCabecera;
@@ -5505,7 +5505,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ItemColumn {
                 get {
                     return this.columnItem;
@@ -5513,7 +5513,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PiezaColumn {
                 get {
                     return this.columnPieza;
@@ -5521,7 +5521,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CantidadColumn {
                 get {
                     return this.columnCantidad;
@@ -5529,7 +5529,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DiametroColumn {
                 get {
                     return this.columnDiametro;
@@ -5537,7 +5537,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn LargoColumn {
                 get {
                     return this.columnLargo;
@@ -5545,7 +5545,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn MarcaColumn {
                 get {
                     return this.columnMarca;
@@ -5553,7 +5553,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PesoColumn {
                 get {
                     return this.columnPeso;
@@ -5561,7 +5561,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ImagenColumn {
                 get {
                     return this.columnImagen;
@@ -5569,7 +5569,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn IdPiezaColumn {
                 get {
                     return this.columnIdPieza;
@@ -5577,7 +5577,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ValoresColumn {
                 get {
                     return this.columnValores;
@@ -5585,7 +5585,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn OrdenColumn {
                 get {
                     return this.columnOrden;
@@ -5593,7 +5593,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DespachoColumn {
                 get {
                     return this.columnDespacho;
@@ -5601,7 +5601,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5610,33 +5610,33 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetallePLRow this[int index] {
                 get {
                     return ((DetallePLRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetallePLRowChangeEventHandler DetallePLRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetallePLRowChangeEventHandler DetallePLRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetallePLRowChangeEventHandler DetallePLRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event DetallePLRowChangeEventHandler DetallePLRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddDetallePLRow(DetallePLRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetallePLRow AddDetallePLRow(string IdCabecera, string Item, string Pieza, string Cantidad, string Diametro, string Largo, string Marca, string Peso, byte[] Imagen, string IdPieza, string Valores, string Orden, string Despacho) {
                 DetallePLRow rowDetallePLRow = ((DetallePLRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -5659,13 +5659,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public virtual global::System.Collections.IEnumerator GetEnumerator() {
                 return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 DetallePLDataTable cln = ((DetallePLDataTable)(base.Clone()));
                 cln.InitVars();
@@ -5673,13 +5673,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new DetallePLDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnIdCabecera = base.Columns["IdCabecera"];
                 this.columnItem = base.Columns["Item"];
@@ -5697,7 +5697,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnIdCabecera = new global::System.Data.DataColumn("IdCabecera", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdCabecera);
@@ -5732,25 +5732,25 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetallePLRow NewDetallePLRow() {
                 return ((DetallePLRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new DetallePLRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(DetallePLRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.DetallePLRowChanged != null)) {
@@ -5759,7 +5759,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.DetallePLRowChanging != null)) {
@@ -5768,7 +5768,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.DetallePLRowDeleted != null)) {
@@ -5777,7 +5777,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.DetallePLRowDeleting != null)) {
@@ -5786,13 +5786,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveDetallePLRow(DetallePLRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -5889,7 +5889,7 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataColumn columnValores;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LaminaDataTable() {
                 this.TableName = "Lamina";
                 this.BeginInit();
@@ -5898,7 +5898,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal LaminaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -5915,14 +5915,14 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected LaminaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ObraColumn {
                 get {
                     return this.columnObra;
@@ -5930,7 +5930,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn SectorColumn {
                 get {
                     return this.columnSector;
@@ -5938,7 +5938,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UbicacionColumn {
                 get {
                     return this.columnUbicacion;
@@ -5946,7 +5946,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PlanoColumn {
                 get {
                     return this.columnPlano;
@@ -5954,7 +5954,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ItemColumn {
                 get {
                     return this.columnItem;
@@ -5962,7 +5962,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn KilosColumn {
                 get {
                     return this.columnKilos;
@@ -5970,7 +5970,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn LaminaColumn {
                 get {
                     return this.columnLamina;
@@ -5978,7 +5978,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CantidadColumn {
                 get {
                     return this.columnCantidad;
@@ -5986,7 +5986,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DiametroColumn {
                 get {
                     return this.columnDiametro;
@@ -5994,7 +5994,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn MarcaColumn {
                 get {
                     return this.columnMarca;
@@ -6002,7 +6002,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn LargoColumn {
                 get {
                     return this.columnLargo;
@@ -6010,7 +6010,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ImagenColumn {
                 get {
                     return this.columnImagen;
@@ -6018,7 +6018,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ValoresColumn {
                 get {
                     return this.columnValores;
@@ -6026,7 +6026,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6035,33 +6035,33 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LaminaRow this[int index] {
                 get {
                     return ((LaminaRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event LaminaRowChangeEventHandler LaminaRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event LaminaRowChangeEventHandler LaminaRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event LaminaRowChangeEventHandler LaminaRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event LaminaRowChangeEventHandler LaminaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddLaminaRow(LaminaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LaminaRow AddLaminaRow(string Obra, string Sector, string Ubicacion, string Plano, string Item, string Kilos, string Lamina, string Cantidad, string Diametro, string Marca, string Largo, byte[] Imagen, string Valores) {
                 LaminaRow rowLaminaRow = ((LaminaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -6084,13 +6084,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public virtual global::System.Collections.IEnumerator GetEnumerator() {
                 return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 LaminaDataTable cln = ((LaminaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -6098,13 +6098,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new LaminaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnObra = base.Columns["Obra"];
                 this.columnSector = base.Columns["Sector"];
@@ -6122,7 +6122,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnObra = new global::System.Data.DataColumn("Obra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObra);
@@ -6157,25 +6157,25 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LaminaRow NewLaminaRow() {
                 return ((LaminaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new LaminaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(LaminaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.LaminaRowChanged != null)) {
@@ -6184,7 +6184,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.LaminaRowChanging != null)) {
@@ -6193,7 +6193,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.LaminaRowDeleted != null)) {
@@ -6202,7 +6202,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.LaminaRowDeleting != null)) {
@@ -6211,13 +6211,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveLaminaRow(LaminaRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -6302,7 +6302,7 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataColumn columnIdCabecera;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CabeceraDetDataTable() {
                 this.TableName = "CabeceraDet";
                 this.BeginInit();
@@ -6311,7 +6311,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal CabeceraDetDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -6328,14 +6328,14 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected CabeceraDetDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn FiguraColumn {
                 get {
                     return this.columnFigura;
@@ -6343,7 +6343,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn SectorColumn {
                 get {
                     return this.columnSector;
@@ -6351,7 +6351,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UbicacionColumn {
                 get {
                     return this.columnUbicacion;
@@ -6359,7 +6359,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PlanoColumn {
                 get {
                     return this.columnPlano;
@@ -6367,7 +6367,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CodigoITColumn {
                 get {
                     return this.columnCodigoIT;
@@ -6375,7 +6375,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn NombreObraColumn {
                 get {
                     return this.columnNombreObra;
@@ -6383,7 +6383,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn IdCabeceraColumn {
                 get {
                     return this.columnIdCabecera;
@@ -6391,7 +6391,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6400,33 +6400,33 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CabeceraDetRow this[int index] {
                 get {
                     return ((CabeceraDetRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event CabeceraDetRowChangeEventHandler CabeceraDetRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event CabeceraDetRowChangeEventHandler CabeceraDetRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event CabeceraDetRowChangeEventHandler CabeceraDetRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event CabeceraDetRowChangeEventHandler CabeceraDetRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddCabeceraDetRow(CabeceraDetRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CabeceraDetRow AddCabeceraDetRow(string Figura, string Sector, string Ubicacion, string Plano, string CodigoIT, string NombreObra, string IdCabecera) {
                 CabeceraDetRow rowCabeceraDetRow = ((CabeceraDetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -6443,13 +6443,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public virtual global::System.Collections.IEnumerator GetEnumerator() {
                 return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 CabeceraDetDataTable cln = ((CabeceraDetDataTable)(base.Clone()));
                 cln.InitVars();
@@ -6457,13 +6457,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new CabeceraDetDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnFigura = base.Columns["Figura"];
                 this.columnSector = base.Columns["Sector"];
@@ -6475,7 +6475,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnFigura = new global::System.Data.DataColumn("Figura", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFigura);
@@ -6494,25 +6494,25 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CabeceraDetRow NewCabeceraDetRow() {
                 return ((CabeceraDetRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new CabeceraDetRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(CabeceraDetRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.CabeceraDetRowChanged != null)) {
@@ -6521,7 +6521,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.CabeceraDetRowChanging != null)) {
@@ -6530,7 +6530,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.CabeceraDetRowDeleted != null)) {
@@ -6539,7 +6539,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.CabeceraDetRowDeleting != null)) {
@@ -6548,13 +6548,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveCabeceraDetRow(CabeceraDetRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -6651,7 +6651,7 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataColumn columnImagen;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public BECHTELDataTable() {
                 this.TableName = "BECHTEL";
                 this.BeginInit();
@@ -6660,7 +6660,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal BECHTELDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -6677,14 +6677,14 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected BECHTELDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn IdColumn {
                 get {
                     return this.columnId;
@@ -6692,7 +6692,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DescObraColumn {
                 get {
                     return this.columnDescObra;
@@ -6700,7 +6700,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn FiguraColumn {
                 get {
                     return this.columnFigura;
@@ -6708,7 +6708,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn NivelColumn {
                 get {
                     return this.columnNivel;
@@ -6716,7 +6716,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ElementoColumn {
                 get {
                     return this.columnElemento;
@@ -6724,7 +6724,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PlanoColumn {
                 get {
                     return this.columnPlano;
@@ -6732,7 +6732,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UbicacionColumn {
                 get {
                     return this.columnUbicacion;
@@ -6740,7 +6740,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn PesoColumn {
                 get {
                     return this.columnPeso;
@@ -6748,7 +6748,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn CantidadColumn {
                 get {
                     return this.columnCantidad;
@@ -6756,7 +6756,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DiametroColumn {
                 get {
                     return this.columnDiametro;
@@ -6764,7 +6764,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn LargoColumn {
                 get {
                     return this.columnLargo;
@@ -6772,7 +6772,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn MarcaColumn {
                 get {
                     return this.columnMarca;
@@ -6780,7 +6780,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ImagenColumn {
                 get {
                     return this.columnImagen;
@@ -6788,7 +6788,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6797,33 +6797,33 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public BECHTELRow this[int index] {
                 get {
                     return ((BECHTELRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event BECHTELRowChangeEventHandler BECHTELRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event BECHTELRowChangeEventHandler BECHTELRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event BECHTELRowChangeEventHandler BECHTELRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event BECHTELRowChangeEventHandler BECHTELRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddBECHTELRow(BECHTELRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public BECHTELRow AddBECHTELRow(string Id, string DescObra, string Figura, string Nivel, string Elemento, string Plano, string Ubicacion, string Peso, string Cantidad, string Diametro, string Largo, string Marca, string Imagen) {
                 BECHTELRow rowBECHTELRow = ((BECHTELRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -6846,13 +6846,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public virtual global::System.Collections.IEnumerator GetEnumerator() {
                 return this.Rows.GetEnumerator();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 BECHTELDataTable cln = ((BECHTELDataTable)(base.Clone()));
                 cln.InitVars();
@@ -6860,13 +6860,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new BECHTELDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnDescObra = base.Columns["DescObra"];
@@ -6884,7 +6884,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
@@ -6915,25 +6915,25 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public BECHTELRow NewBECHTELRow() {
                 return ((BECHTELRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new BECHTELRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(BECHTELRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.BECHTELRowChanged != null)) {
@@ -6942,7 +6942,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.BECHTELRowChanging != null)) {
@@ -6951,7 +6951,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.BECHTELRowDeleted != null)) {
@@ -6960,7 +6960,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.BECHTELRowDeleting != null)) {
@@ -6969,13 +6969,13 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveBECHTELRow(BECHTELRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -7046,14 +7046,14 @@ namespace EstadosdePagos.WsMensajeria {
             private ObsCuadroProgramacionDataTable tableObsCuadroProgramacion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal ObsCuadroProgramacionRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableObsCuadroProgramacion = ((ObsCuadroProgramacionDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Id {
                 get {
                     return ((int)(this[this.tableObsCuadroProgramacion.IdColumn]));
@@ -7064,7 +7064,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Fecha {
                 get {
                     return ((string)(this[this.tableObsCuadroProgramacion.FechaColumn]));
@@ -7075,7 +7075,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CodViaje {
                 get {
                     return ((string)(this[this.tableObsCuadroProgramacion.CodViajeColumn]));
@@ -7086,7 +7086,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Obs {
                 get {
                     try {
@@ -7102,7 +7102,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime FechaObs {
                 get {
                     try {
@@ -7118,7 +7118,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int UsuarioCrea {
                 get {
                     try {
@@ -7135,37 +7135,37 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsObsNull() {
                 return this.IsNull(this.tableObsCuadroProgramacion.ObsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetObsNull() {
                 this[this.tableObsCuadroProgramacion.ObsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFechaObsNull() {
                 return this.IsNull(this.tableObsCuadroProgramacion.FechaObsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFechaObsNull() {
                 this[this.tableObsCuadroProgramacion.FechaObsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsUsuarioCreaNull() {
                 return this.IsNull(this.tableObsCuadroProgramacion.UsuarioCreaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetUsuarioCreaNull() {
                 this[this.tableObsCuadroProgramacion.UsuarioCreaColumn] = global::System.Convert.DBNull;
             }
@@ -7179,14 +7179,14 @@ namespace EstadosdePagos.WsMensajeria {
             private ResumenDespDataTable tableResumenDesp;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal ResumenDespRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableResumenDesp = ((ResumenDespDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CodigoIT {
                 get {
                     try {
@@ -7202,7 +7202,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Obra {
                 get {
                     try {
@@ -7218,7 +7218,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NroGD {
                 get {
                     try {
@@ -7234,7 +7234,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string PesoTotal {
                 get {
                     try {
@@ -7250,49 +7250,49 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCodigoITNull() {
                 return this.IsNull(this.tableResumenDesp.CodigoITColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCodigoITNull() {
                 this[this.tableResumenDesp.CodigoITColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsObraNull() {
                 return this.IsNull(this.tableResumenDesp.ObraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetObraNull() {
                 this[this.tableResumenDesp.ObraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNroGDNull() {
                 return this.IsNull(this.tableResumenDesp.NroGDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNroGDNull() {
                 this[this.tableResumenDesp.NroGDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPesoTotalNull() {
                 return this.IsNull(this.tableResumenDesp.PesoTotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPesoTotalNull() {
                 this[this.tableResumenDesp.PesoTotalColumn] = global::System.Convert.DBNull;
             }
@@ -7306,14 +7306,14 @@ namespace EstadosdePagos.WsMensajeria {
             private DetalleDespDataTable tableDetalleDesp;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal DetalleDespRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableDetalleDesp = ((DetalleDespDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CodigoIT {
                 get {
                     try {
@@ -7329,7 +7329,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Ubicacion {
                 get {
                     try {
@@ -7345,7 +7345,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Peso {
                 get {
                     try {
@@ -7361,7 +7361,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Hoja {
                 get {
                     try {
@@ -7377,7 +7377,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string PesoDesp {
                 get {
                     try {
@@ -7393,61 +7393,61 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCodigoITNull() {
                 return this.IsNull(this.tableDetalleDesp.CodigoITColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCodigoITNull() {
                 this[this.tableDetalleDesp.CodigoITColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsUbicacionNull() {
                 return this.IsNull(this.tableDetalleDesp.UbicacionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetUbicacionNull() {
                 this[this.tableDetalleDesp.UbicacionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPesoNull() {
                 return this.IsNull(this.tableDetalleDesp.PesoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPesoNull() {
                 this[this.tableDetalleDesp.PesoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsHojaNull() {
                 return this.IsNull(this.tableDetalleDesp.HojaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetHojaNull() {
                 this[this.tableDetalleDesp.HojaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPesoDespNull() {
                 return this.IsNull(this.tableDetalleDesp.PesoDespColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPesoDespNull() {
                 this[this.tableDetalleDesp.PesoDespColumn] = global::System.Convert.DBNull;
             }
@@ -7461,14 +7461,14 @@ namespace EstadosdePagos.WsMensajeria {
             private DetallePLDataTable tableDetallePL;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal DetallePLRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableDetallePL = ((DetallePLDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string IdCabecera {
                 get {
                     try {
@@ -7484,7 +7484,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Item {
                 get {
                     try {
@@ -7500,7 +7500,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Pieza {
                 get {
                     try {
@@ -7516,7 +7516,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Cantidad {
                 get {
                     try {
@@ -7532,7 +7532,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Diametro {
                 get {
                     try {
@@ -7548,7 +7548,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Largo {
                 get {
                     try {
@@ -7564,7 +7564,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Marca {
                 get {
                     try {
@@ -7580,7 +7580,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Peso {
                 get {
                     try {
@@ -7596,7 +7596,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte[] Imagen {
                 get {
                     try {
@@ -7612,7 +7612,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string IdPieza {
                 get {
                     try {
@@ -7628,7 +7628,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Valores {
                 get {
                     try {
@@ -7644,7 +7644,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Orden {
                 get {
                     try {
@@ -7660,7 +7660,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Despacho {
                 get {
                     try {
@@ -7676,157 +7676,157 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIdCabeceraNull() {
                 return this.IsNull(this.tableDetallePL.IdCabeceraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetIdCabeceraNull() {
                 this[this.tableDetallePL.IdCabeceraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsItemNull() {
                 return this.IsNull(this.tableDetallePL.ItemColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetItemNull() {
                 this[this.tableDetallePL.ItemColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPiezaNull() {
                 return this.IsNull(this.tableDetallePL.PiezaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPiezaNull() {
                 this[this.tableDetallePL.PiezaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCantidadNull() {
                 return this.IsNull(this.tableDetallePL.CantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCantidadNull() {
                 this[this.tableDetallePL.CantidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDiametroNull() {
                 return this.IsNull(this.tableDetallePL.DiametroColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDiametroNull() {
                 this[this.tableDetallePL.DiametroColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsLargoNull() {
                 return this.IsNull(this.tableDetallePL.LargoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetLargoNull() {
                 this[this.tableDetallePL.LargoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMarcaNull() {
                 return this.IsNull(this.tableDetallePL.MarcaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetMarcaNull() {
                 this[this.tableDetallePL.MarcaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPesoNull() {
                 return this.IsNull(this.tableDetallePL.PesoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPesoNull() {
                 this[this.tableDetallePL.PesoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsImagenNull() {
                 return this.IsNull(this.tableDetallePL.ImagenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetImagenNull() {
                 this[this.tableDetallePL.ImagenColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIdPiezaNull() {
                 return this.IsNull(this.tableDetallePL.IdPiezaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetIdPiezaNull() {
                 this[this.tableDetallePL.IdPiezaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsValoresNull() {
                 return this.IsNull(this.tableDetallePL.ValoresColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetValoresNull() {
                 this[this.tableDetallePL.ValoresColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsOrdenNull() {
                 return this.IsNull(this.tableDetallePL.OrdenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetOrdenNull() {
                 this[this.tableDetallePL.OrdenColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDespachoNull() {
                 return this.IsNull(this.tableDetallePL.DespachoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDespachoNull() {
                 this[this.tableDetallePL.DespachoColumn] = global::System.Convert.DBNull;
             }
@@ -7840,14 +7840,14 @@ namespace EstadosdePagos.WsMensajeria {
             private LaminaDataTable tableLamina;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal LaminaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableLamina = ((LaminaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Obra {
                 get {
                     try {
@@ -7863,7 +7863,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Sector {
                 get {
                     try {
@@ -7879,7 +7879,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Ubicacion {
                 get {
                     try {
@@ -7895,7 +7895,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Plano {
                 get {
                     try {
@@ -7911,7 +7911,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Item {
                 get {
                     try {
@@ -7927,7 +7927,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Kilos {
                 get {
                     try {
@@ -7943,7 +7943,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Lamina {
                 get {
                     try {
@@ -7959,7 +7959,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Cantidad {
                 get {
                     try {
@@ -7975,7 +7975,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Diametro {
                 get {
                     try {
@@ -7991,7 +7991,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Marca {
                 get {
                     try {
@@ -8007,7 +8007,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Largo {
                 get {
                     try {
@@ -8023,7 +8023,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte[] Imagen {
                 get {
                     try {
@@ -8039,7 +8039,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Valores {
                 get {
                     try {
@@ -8055,157 +8055,157 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsObraNull() {
                 return this.IsNull(this.tableLamina.ObraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetObraNull() {
                 this[this.tableLamina.ObraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsSectorNull() {
                 return this.IsNull(this.tableLamina.SectorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetSectorNull() {
                 this[this.tableLamina.SectorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsUbicacionNull() {
                 return this.IsNull(this.tableLamina.UbicacionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetUbicacionNull() {
                 this[this.tableLamina.UbicacionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPlanoNull() {
                 return this.IsNull(this.tableLamina.PlanoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPlanoNull() {
                 this[this.tableLamina.PlanoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsItemNull() {
                 return this.IsNull(this.tableLamina.ItemColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetItemNull() {
                 this[this.tableLamina.ItemColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsKilosNull() {
                 return this.IsNull(this.tableLamina.KilosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetKilosNull() {
                 this[this.tableLamina.KilosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsLaminaNull() {
                 return this.IsNull(this.tableLamina.LaminaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetLaminaNull() {
                 this[this.tableLamina.LaminaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCantidadNull() {
                 return this.IsNull(this.tableLamina.CantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCantidadNull() {
                 this[this.tableLamina.CantidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDiametroNull() {
                 return this.IsNull(this.tableLamina.DiametroColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDiametroNull() {
                 this[this.tableLamina.DiametroColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMarcaNull() {
                 return this.IsNull(this.tableLamina.MarcaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetMarcaNull() {
                 this[this.tableLamina.MarcaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsLargoNull() {
                 return this.IsNull(this.tableLamina.LargoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetLargoNull() {
                 this[this.tableLamina.LargoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsImagenNull() {
                 return this.IsNull(this.tableLamina.ImagenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetImagenNull() {
                 this[this.tableLamina.ImagenColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsValoresNull() {
                 return this.IsNull(this.tableLamina.ValoresColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetValoresNull() {
                 this[this.tableLamina.ValoresColumn] = global::System.Convert.DBNull;
             }
@@ -8219,14 +8219,14 @@ namespace EstadosdePagos.WsMensajeria {
             private CabeceraDetDataTable tableCabeceraDet;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal CabeceraDetRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableCabeceraDet = ((CabeceraDetDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Figura {
                 get {
                     try {
@@ -8242,7 +8242,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Sector {
                 get {
                     try {
@@ -8258,7 +8258,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Ubicacion {
                 get {
                     try {
@@ -8274,7 +8274,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Plano {
                 get {
                     try {
@@ -8290,7 +8290,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CodigoIT {
                 get {
                     try {
@@ -8306,7 +8306,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NombreObra {
                 get {
                     try {
@@ -8322,7 +8322,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string IdCabecera {
                 get {
                     try {
@@ -8338,85 +8338,85 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFiguraNull() {
                 return this.IsNull(this.tableCabeceraDet.FiguraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFiguraNull() {
                 this[this.tableCabeceraDet.FiguraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsSectorNull() {
                 return this.IsNull(this.tableCabeceraDet.SectorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetSectorNull() {
                 this[this.tableCabeceraDet.SectorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsUbicacionNull() {
                 return this.IsNull(this.tableCabeceraDet.UbicacionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetUbicacionNull() {
                 this[this.tableCabeceraDet.UbicacionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPlanoNull() {
                 return this.IsNull(this.tableCabeceraDet.PlanoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPlanoNull() {
                 this[this.tableCabeceraDet.PlanoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCodigoITNull() {
                 return this.IsNull(this.tableCabeceraDet.CodigoITColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCodigoITNull() {
                 this[this.tableCabeceraDet.CodigoITColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNombreObraNull() {
                 return this.IsNull(this.tableCabeceraDet.NombreObraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNombreObraNull() {
                 this[this.tableCabeceraDet.NombreObraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIdCabeceraNull() {
                 return this.IsNull(this.tableCabeceraDet.IdCabeceraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetIdCabeceraNull() {
                 this[this.tableCabeceraDet.IdCabeceraColumn] = global::System.Convert.DBNull;
             }
@@ -8430,14 +8430,14 @@ namespace EstadosdePagos.WsMensajeria {
             private BECHTELDataTable tableBECHTEL;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal BECHTELRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableBECHTEL = ((BECHTELDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Id {
                 get {
                     try {
@@ -8453,7 +8453,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string DescObra {
                 get {
                     try {
@@ -8469,7 +8469,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Figura {
                 get {
                     try {
@@ -8485,7 +8485,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Nivel {
                 get {
                     try {
@@ -8501,7 +8501,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Elemento {
                 get {
                     try {
@@ -8517,7 +8517,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Plano {
                 get {
                     try {
@@ -8533,7 +8533,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Ubicacion {
                 get {
                     try {
@@ -8549,7 +8549,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Peso {
                 get {
                     try {
@@ -8565,7 +8565,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Cantidad {
                 get {
                     try {
@@ -8581,7 +8581,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Diametro {
                 get {
                     try {
@@ -8597,7 +8597,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Largo {
                 get {
                     try {
@@ -8613,7 +8613,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Marca {
                 get {
                     try {
@@ -8629,7 +8629,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Imagen {
                 get {
                     try {
@@ -8645,157 +8645,157 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIdNull() {
                 return this.IsNull(this.tableBECHTEL.IdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetIdNull() {
                 this[this.tableBECHTEL.IdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDescObraNull() {
                 return this.IsNull(this.tableBECHTEL.DescObraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDescObraNull() {
                 this[this.tableBECHTEL.DescObraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFiguraNull() {
                 return this.IsNull(this.tableBECHTEL.FiguraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFiguraNull() {
                 this[this.tableBECHTEL.FiguraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNivelNull() {
                 return this.IsNull(this.tableBECHTEL.NivelColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNivelNull() {
                 this[this.tableBECHTEL.NivelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsElementoNull() {
                 return this.IsNull(this.tableBECHTEL.ElementoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetElementoNull() {
                 this[this.tableBECHTEL.ElementoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPlanoNull() {
                 return this.IsNull(this.tableBECHTEL.PlanoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPlanoNull() {
                 this[this.tableBECHTEL.PlanoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsUbicacionNull() {
                 return this.IsNull(this.tableBECHTEL.UbicacionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetUbicacionNull() {
                 this[this.tableBECHTEL.UbicacionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPesoNull() {
                 return this.IsNull(this.tableBECHTEL.PesoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPesoNull() {
                 this[this.tableBECHTEL.PesoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCantidadNull() {
                 return this.IsNull(this.tableBECHTEL.CantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCantidadNull() {
                 this[this.tableBECHTEL.CantidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDiametroNull() {
                 return this.IsNull(this.tableBECHTEL.DiametroColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDiametroNull() {
                 this[this.tableBECHTEL.DiametroColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsLargoNull() {
                 return this.IsNull(this.tableBECHTEL.LargoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetLargoNull() {
                 this[this.tableBECHTEL.LargoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMarcaNull() {
                 return this.IsNull(this.tableBECHTEL.MarcaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetMarcaNull() {
                 this[this.tableBECHTEL.MarcaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsImagenNull() {
                 return this.IsNull(this.tableBECHTEL.ImagenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetImagenNull() {
                 this[this.tableBECHTEL.ImagenColumn] = global::System.Convert.DBNull;
             }
@@ -8804,7 +8804,7 @@ namespace EstadosdePagos.WsMensajeria {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class ObsCuadroProgramacionRowChangeEvent : global::System.EventArgs {
             
             private ObsCuadroProgramacionRow eventRow;
@@ -8812,14 +8812,14 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ObsCuadroProgramacionRowChangeEvent(ObsCuadroProgramacionRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ObsCuadroProgramacionRow Row {
                 get {
                     return this.eventRow;
@@ -8827,7 +8827,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -8838,7 +8838,7 @@ namespace EstadosdePagos.WsMensajeria {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class ResumenDespRowChangeEvent : global::System.EventArgs {
             
             private ResumenDespRow eventRow;
@@ -8846,14 +8846,14 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ResumenDespRowChangeEvent(ResumenDespRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ResumenDespRow Row {
                 get {
                     return this.eventRow;
@@ -8861,7 +8861,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -8872,7 +8872,7 @@ namespace EstadosdePagos.WsMensajeria {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class DetalleDespRowChangeEvent : global::System.EventArgs {
             
             private DetalleDespRow eventRow;
@@ -8880,14 +8880,14 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetalleDespRowChangeEvent(DetalleDespRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetalleDespRow Row {
                 get {
                     return this.eventRow;
@@ -8895,7 +8895,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -8906,7 +8906,7 @@ namespace EstadosdePagos.WsMensajeria {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class DetallePLRowChangeEvent : global::System.EventArgs {
             
             private DetallePLRow eventRow;
@@ -8914,14 +8914,14 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetallePLRowChangeEvent(DetallePLRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DetallePLRow Row {
                 get {
                     return this.eventRow;
@@ -8929,7 +8929,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -8940,7 +8940,7 @@ namespace EstadosdePagos.WsMensajeria {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class LaminaRowChangeEvent : global::System.EventArgs {
             
             private LaminaRow eventRow;
@@ -8948,14 +8948,14 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LaminaRowChangeEvent(LaminaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public LaminaRow Row {
                 get {
                     return this.eventRow;
@@ -8963,7 +8963,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -8974,7 +8974,7 @@ namespace EstadosdePagos.WsMensajeria {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class CabeceraDetRowChangeEvent : global::System.EventArgs {
             
             private CabeceraDetRow eventRow;
@@ -8982,14 +8982,14 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CabeceraDetRowChangeEvent(CabeceraDetRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CabeceraDetRow Row {
                 get {
                     return this.eventRow;
@@ -8997,7 +8997,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -9008,7 +9008,7 @@ namespace EstadosdePagos.WsMensajeria {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class BECHTELRowChangeEvent : global::System.EventArgs {
             
             private BECHTELRow eventRow;
@@ -9016,14 +9016,14 @@ namespace EstadosdePagos.WsMensajeria {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public BECHTELRowChangeEvent(BECHTELRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public BECHTELRow Row {
                 get {
                     return this.eventRow;
@@ -9031,7 +9031,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -9040,8 +9040,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9080,7 +9080,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string movvaltotField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Tmetip {
             get {
                 return this.tmetipField;
@@ -9090,7 +9090,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Tmecod {
             get {
                 return this.tmecodField;
@@ -9100,7 +9100,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movsuccod {
             get {
                 return this.movsuccodField;
@@ -9110,7 +9110,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movnumdoc {
             get {
                 return this.movnumdocField;
@@ -9120,7 +9120,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movfecdoc {
             get {
                 return this.movfecdocField;
@@ -9130,7 +9130,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movfecdig {
             get {
                 return this.movfecdigField;
@@ -9140,7 +9140,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movhordig {
             get {
                 return this.movhordigField;
@@ -9150,7 +9150,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movrefdoc {
             get {
                 return this.movrefdocField;
@@ -9160,7 +9160,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movbodcod {
             get {
                 return this.movbodcodField;
@@ -9170,7 +9170,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movbodsuc {
             get {
                 return this.movbodsucField;
@@ -9180,7 +9180,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movglo1 {
             get {
                 return this.movglo1Field;
@@ -9190,7 +9190,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movglo2 {
             get {
                 return this.movglo2Field;
@@ -9200,7 +9200,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movsis {
             get {
                 return this.movsisField;
@@ -9210,7 +9210,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movultsec {
             get {
                 return this.movultsecField;
@@ -9220,7 +9220,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public Detalle_ObjINET[] DetalleMov {
             get {
                 return this.detalleMovField;
@@ -9230,7 +9230,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Movvaltot {
             get {
                 return this.movvaltotField;
@@ -9241,8 +9241,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9283,7 +9283,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string invmov17Field;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmonumsec {
             get {
                 return this.dmonumsecField;
@@ -9293,7 +9293,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Prdcod {
             get {
                 return this.prdcodField;
@@ -9303,7 +9303,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Prdexipla {
             get {
                 return this.prdexiplaField;
@@ -9313,7 +9313,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmoplacod {
             get {
                 return this.dmoplacodField;
@@ -9323,7 +9323,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmocencod {
             get {
                 return this.dmocencodField;
@@ -9333,7 +9333,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmoitecod {
             get {
                 return this.dmoitecodField;
@@ -9343,7 +9343,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmoarecod {
             get {
                 return this.dmoarecodField;
@@ -9353,7 +9353,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmocan {
             get {
                 return this.dmocanField;
@@ -9363,7 +9363,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmopreuni {
             get {
                 return this.dmopreuniField;
@@ -9373,7 +9373,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dmovaltot {
             get {
                 return this.dmovaltotField;
@@ -9383,7 +9383,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Invmov11 {
             get {
                 return this.invmov11Field;
@@ -9393,7 +9393,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Invmov12 {
             get {
                 return this.invmov12Field;
@@ -9403,7 +9403,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Invmov13 {
             get {
                 return this.invmov13Field;
@@ -9413,7 +9413,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Invmov14 {
             get {
                 return this.invmov14Field;
@@ -9423,7 +9423,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Invmov15 {
             get {
                 return this.invmov15Field;
@@ -9433,7 +9433,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Invmov16 {
             get {
                 return this.invmov16Field;
@@ -9443,7 +9443,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Invmov17 {
             get {
                 return this.invmov17Field;
@@ -9454,8 +9454,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9484,7 +9484,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string idObraField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string id {
             get {
                 return this.idField;
@@ -9494,7 +9494,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Item_OC {
             get {
                 return this.item_OCField;
@@ -9504,7 +9504,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string KilosActa {
             get {
                 return this.kilosActaField;
@@ -9514,7 +9514,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string KilosOC {
             get {
                 return this.kilosOCField;
@@ -9524,7 +9524,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string KilosEntregados {
             get {
                 return this.kilosEntregadosField;
@@ -9534,7 +9534,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PesoAsignado {
             get {
                 return this.pesoAsignadoField;
@@ -9544,7 +9544,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Nrocolada {
             get {
                 return this.nrocoladaField;
@@ -9554,7 +9554,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string SaldoOC {
             get {
                 return this.saldoOCField;
@@ -9564,7 +9564,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Diametro {
             get {
                 return this.diametroField;
@@ -9574,7 +9574,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodViaje {
             get {
                 return this.codViajeField;
@@ -9584,7 +9584,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdObra {
             get {
                 return this.idObraField;
@@ -9595,8 +9595,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9663,7 +9663,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string fueImpresaField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string id {
             get {
                 return this.idField;
@@ -9673,7 +9673,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string EtiquetaLateral {
             get {
                 return this.etiquetaLateralField;
@@ -9683,7 +9683,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CantEtiq {
             get {
                 return this.cantEtiqField;
@@ -9693,7 +9693,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PesoEtiq {
             get {
                 return this.pesoEtiqField;
@@ -9703,7 +9703,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FiguraB {
             get {
                 return this.figuraBField;
@@ -9713,7 +9713,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PiezasXEtiq {
             get {
                 return this.piezasXEtiqField;
@@ -9723,7 +9723,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroPaquetes {
             get {
                 return this.nroPaquetesField;
@@ -9733,7 +9733,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Obra {
             get {
                 return this.obraField;
@@ -9743,7 +9743,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Figura {
             get {
                 return this.figuraField;
@@ -9753,7 +9753,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Nivel {
             get {
                 return this.nivelField;
@@ -9763,7 +9763,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Elemento {
             get {
                 return this.elementoField;
@@ -9773,7 +9773,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Plano {
             get {
                 return this.planoField;
@@ -9783,7 +9783,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Ubicacion {
             get {
                 return this.ubicacionField;
@@ -9793,7 +9793,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Peso {
             get {
                 return this.pesoField;
@@ -9803,7 +9803,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Paquete {
             get {
                 return this.paqueteField;
@@ -9813,7 +9813,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Cantidad {
             get {
                 return this.cantidadField;
@@ -9823,7 +9823,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Diametro {
             get {
                 return this.diametroField;
@@ -9833,7 +9833,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Largo {
             get {
                 return this.largoField;
@@ -9843,7 +9843,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Marca {
             get {
                 return this.marcaField;
@@ -9853,7 +9853,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodigoIt {
             get {
                 return this.codigoItField;
@@ -9863,7 +9863,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Pieza {
             get {
                 return this.piezaField;
@@ -9873,7 +9873,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string ValoresVar {
             get {
                 return this.valoresVarField;
@@ -9883,7 +9883,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Orden {
             get {
                 return this.ordenField;
@@ -9893,7 +9893,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdDetallePieza {
             get {
                 return this.idDetallePiezaField;
@@ -9903,7 +9903,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroPiezasVAR {
             get {
                 return this.nroPiezasVARField;
@@ -9913,7 +9913,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
         public byte[] Imagen {
             get {
@@ -9924,7 +9924,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Colada {
             get {
                 return this.coladaField;
@@ -9934,7 +9934,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroCertificado {
             get {
                 return this.nroCertificadoField;
@@ -9944,7 +9944,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdForma {
             get {
                 return this.idFormaField;
@@ -9954,7 +9954,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FueImpresa {
             get {
                 return this.fueImpresaField;
@@ -9965,8 +9965,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9995,7 +9995,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string etiquetaField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -10005,7 +10005,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdPieza {
             get {
                 return this.idPiezaField;
@@ -10015,7 +10015,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdMov {
             get {
                 return this.idMovField;
@@ -10025,7 +10025,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int NroPaq {
             get {
                 return this.nroPaqField;
@@ -10035,7 +10035,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int TotalPaq {
             get {
                 return this.totalPaqField;
@@ -10045,7 +10045,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int NroPiezas {
             get {
                 return this.nroPiezasField;
@@ -10055,7 +10055,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public double KgsPaquete {
             get {
                 return this.kgsPaqueteField;
@@ -10065,7 +10065,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Estado {
             get {
                 return this.estadoField;
@@ -10075,7 +10075,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int OPCION {
             get {
                 return this.oPCIONField;
@@ -10085,7 +10085,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Err {
             get {
                 return this.errField;
@@ -10095,7 +10095,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Etiqueta {
             get {
                 return this.etiquetaField;
@@ -10106,8 +10106,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10130,7 +10130,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string totalKgsField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int id {
             get {
                 return this.idField;
@@ -10140,7 +10140,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodViaje {
             get {
                 return this.codViajeField;
@@ -10150,7 +10150,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string OC {
             get {
                 return this.ocField;
@@ -10160,7 +10160,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Archivo {
             get {
                 return this.archivoField;
@@ -10170,7 +10170,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdColada {
             get {
                 return this.idColadaField;
@@ -10180,7 +10180,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroCertificado {
             get {
                 return this.nroCertificadoField;
@@ -10190,7 +10190,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroActa {
             get {
                 return this.nroActaField;
@@ -10200,7 +10200,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string TotalKgs {
             get {
                 return this.totalKgsField;
@@ -10211,8 +10211,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10235,7 +10235,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private int kilosField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -10245,7 +10245,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Diametro {
             get {
                 return this.diametroField;
@@ -10255,7 +10255,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Largo {
             get {
                 return this.largoField;
@@ -10265,7 +10265,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroColada {
             get {
                 return this.nroColadaField;
@@ -10275,7 +10275,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroCertificado {
             get {
                 return this.nroCertificadoField;
@@ -10285,7 +10285,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Procedencia {
             get {
                 return this.procedenciaField;
@@ -10295,7 +10295,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroGuiaDespacho {
             get {
                 return this.nroGuiaDespachoField;
@@ -10305,7 +10305,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Kilos {
             get {
                 return this.kilosField;
@@ -10316,8 +10316,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10336,7 +10336,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string diametroField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string id {
             get {
                 return this.idField;
@@ -10346,7 +10346,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Item_OC {
             get {
                 return this.item_OCField;
@@ -10356,7 +10356,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdObra {
             get {
                 return this.idObraField;
@@ -10366,7 +10366,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Peso {
             get {
                 return this.pesoField;
@@ -10376,7 +10376,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Descripcion {
             get {
                 return this.descripcionField;
@@ -10386,7 +10386,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Diametro {
             get {
                 return this.diametroField;
@@ -10397,8 +10397,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10447,7 +10447,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string codViajeField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string id {
             get {
                 return this.idField;
@@ -10457,7 +10457,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string idPiezaTipoB {
             get {
                 return this.idPiezaTipoBField;
@@ -10467,7 +10467,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdObra {
             get {
                 return this.idObraField;
@@ -10477,7 +10477,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Plano {
             get {
                 return this.planoField;
@@ -10487,7 +10487,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Marca {
             get {
                 return this.marcaField;
@@ -10497,7 +10497,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PiezasTotales {
             get {
                 return this.piezasTotalesField;
@@ -10507,7 +10507,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Asignadas {
             get {
                 return this.asignadasField;
@@ -10517,7 +10517,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PesoAsignado {
             get {
                 return this.pesoAsignadoField;
@@ -10527,7 +10527,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Saldo {
             get {
                 return this.saldoField;
@@ -10537,7 +10537,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PesoSaldo {
             get {
                 return this.pesoSaldoField;
@@ -10547,7 +10547,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroPaquetes {
             get {
                 return this.nroPaquetesField;
@@ -10557,7 +10557,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PiezasXPaquete {
             get {
                 return this.piezasXPaqueteField;
@@ -10567,7 +10567,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string KilosTotales {
             get {
                 return this.kilosTotalesField;
@@ -10577,7 +10577,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Fecha {
             get {
                 return this.fechaField;
@@ -10587,7 +10587,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario {
             get {
                 return this.usuarioField;
@@ -10597,7 +10597,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Estado {
             get {
                 return this.estadoField;
@@ -10607,7 +10607,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Tipo {
             get {
                 return this.tipoField;
@@ -10617,7 +10617,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Imagen {
             get {
                 return this.imagenField;
@@ -10627,7 +10627,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Factor {
             get {
                 return this.factorField;
@@ -10637,7 +10637,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Errores {
             get {
                 return this.erroresField;
@@ -10647,7 +10647,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodViaje {
             get {
                 return this.codViajeField;
@@ -10658,8 +10658,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10676,7 +10676,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string coordenadaY_LadoIField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdForma {
             get {
                 return this.idFormaField;
@@ -10686,7 +10686,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CoordenadaX_LadoD {
             get {
                 return this.coordenadaX_LadoDField;
@@ -10696,7 +10696,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CoordenadaY_LadoD {
             get {
                 return this.coordenadaY_LadoDField;
@@ -10706,7 +10706,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CoordenadaX_LadoI {
             get {
                 return this.coordenadaX_LadoIField;
@@ -10716,7 +10716,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CoordenadaY_LadoI {
             get {
                 return this.coordenadaY_LadoIField;
@@ -10727,8 +10727,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10747,7 +10747,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string valorPtoField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string EsAngulo {
             get {
                 return this.esAnguloField;
@@ -10757,7 +10757,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdForma {
             get {
                 return this.idFormaField;
@@ -10767,7 +10767,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Punto {
             get {
                 return this.puntoField;
@@ -10777,7 +10777,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CoordenadaX_Pto {
             get {
                 return this.coordenadaX_PtoField;
@@ -10787,7 +10787,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CoordenadaY_Pto {
             get {
                 return this.coordenadaY_PtoField;
@@ -10797,7 +10797,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string ValorPto {
             get {
                 return this.valorPtoField;
@@ -10808,8 +10808,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10817,9 +10817,9 @@ namespace EstadosdePagos.WsMensajeria {
     public partial class ColorPalette {
     }
     
-    /// <comentarios/>
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Image))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10827,8 +10827,8 @@ namespace EstadosdePagos.WsMensajeria {
     public abstract partial class MarshalByRefObject {
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10839,7 +10839,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private ColorPalette paletteField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public object Tag {
             get {
                 return this.tagField;
@@ -10849,7 +10849,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public ColorPalette Palette {
             get {
                 return this.paletteField;
@@ -10860,8 +10860,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10876,7 +10876,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private TipoDetalleForma[] detalleFormaField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public Image Img {
             get {
                 return this.imgField;
@@ -10886,7 +10886,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdForma {
             get {
                 return this.idFormaField;
@@ -10896,7 +10896,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PathImg {
             get {
                 return this.pathImgField;
@@ -10906,7 +10906,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public TipoDetalleForma[] DetalleForma {
             get {
                 return this.detalleFormaField;
@@ -10917,8 +10917,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10993,7 +10993,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string idEncargadoField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Id {
             get {
                 return this.idField;
@@ -11003,7 +11003,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Nombre {
             get {
                 return this.nombreField;
@@ -11013,7 +11013,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Dir {
             get {
                 return this.dirField;
@@ -11023,7 +11023,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Encargado {
             get {
                 return this.encargadoField;
@@ -11033,7 +11033,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Fono {
             get {
                 return this.fonoField;
@@ -11043,7 +11043,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string TipoObra {
             get {
                 return this.tipoObraField;
@@ -11053,7 +11053,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Vigente {
             get {
                 return this.vigenteField;
@@ -11063,7 +11063,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FechaCreacion {
             get {
                 return this.fechaCreacionField;
@@ -11073,7 +11073,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string UsuarioCrea {
             get {
                 return this.usuarioCreaField;
@@ -11083,7 +11083,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Error {
             get {
                 return this.errorField;
@@ -11093,7 +11093,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Obs {
             get {
                 return this.obsField;
@@ -11103,7 +11103,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string MovilSup {
             get {
                 return this.movilSupField;
@@ -11113,7 +11113,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroContrato {
             get {
                 return this.nroContratoField;
@@ -11123,7 +11123,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Oc {
             get {
                 return this.ocField;
@@ -11133,7 +11133,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int PesoMax {
             get {
                 return this.pesoMaxField;
@@ -11143,7 +11143,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PesoMaxIT {
             get {
                 return this.pesoMaxITField;
@@ -11153,7 +11153,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string SiglaObra {
             get {
                 return this.siglaObraField;
@@ -11163,7 +11163,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Cliente {
             get {
                 return this.clienteField;
@@ -11173,7 +11173,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Rut {
             get {
                 return this.rutField;
@@ -11183,7 +11183,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Sucursal {
             get {
                 return this.sucursalField;
@@ -11193,7 +11193,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CentroCosto {
             get {
                 return this.centroCostoField;
@@ -11203,7 +11203,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Codigo_INET {
             get {
                 return this.codigo_INETField;
@@ -11213,7 +11213,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodigoGuia_INET {
             get {
                 return this.codigoGuia_INETField;
@@ -11223,7 +11223,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string EstadoAlta {
             get {
                 return this.estadoAltaField;
@@ -11233,7 +11233,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Superficie {
             get {
                 return this.superficieField;
@@ -11243,7 +11243,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string TipoObra2 {
             get {
                 return this.tipoObra2Field;
@@ -11253,7 +11253,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Vehiculo {
             get {
                 return this.vehiculoField;
@@ -11263,7 +11263,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CondicionVenta {
             get {
                 return this.condicionVentaField;
@@ -11273,7 +11273,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodigoParaFacturar {
             get {
                 return this.codigoParaFacturarField;
@@ -11283,7 +11283,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string TipoDocumento {
             get {
                 return this.tipoDocumentoField;
@@ -11293,7 +11293,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Empresa {
             get {
                 return this.empresaField;
@@ -11303,7 +11303,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string ObraRelacionada {
             get {
                 return this.obraRelacionadaField;
@@ -11313,7 +11313,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Avance {
             get {
                 return this.avanceField;
@@ -11323,7 +11323,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdEncargado {
             get {
                 return this.idEncargadoField;
@@ -11334,8 +11334,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11380,7 +11380,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string userModField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Id {
             get {
                 return this.idField;
@@ -11390,7 +11390,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdPieza {
             get {
                 return this.idPiezaField;
@@ -11400,7 +11400,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdForma {
             get {
                 return this.idFormaField;
@@ -11410,7 +11410,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string TipoPieza {
             get {
                 return this.tipoPiezaField;
@@ -11420,7 +11420,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string A {
             get {
                 return this.aField;
@@ -11430,7 +11430,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string B {
             get {
                 return this.bField;
@@ -11440,7 +11440,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string C {
             get {
                 return this.cField;
@@ -11450,7 +11450,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string D {
             get {
                 return this.dField;
@@ -11460,7 +11460,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string E {
             get {
                 return this.eField;
@@ -11470,7 +11470,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string F {
             get {
                 return this.fField;
@@ -11480,7 +11480,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string G {
             get {
                 return this.gField;
@@ -11490,7 +11490,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string H {
             get {
                 return this.hField;
@@ -11500,7 +11500,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string I {
             get {
                 return this.iField;
@@ -11510,7 +11510,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string J {
             get {
                 return this.jField;
@@ -11520,7 +11520,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string K {
             get {
                 return this.kField;
@@ -11530,7 +11530,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string L {
             get {
                 return this.lField;
@@ -11540,7 +11540,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string M {
             get {
                 return this.mField;
@@ -11550,7 +11550,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string N {
             get {
                 return this.nField;
@@ -11560,7 +11560,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string UserMod {
             get {
                 return this.userModField;
@@ -11571,8 +11571,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11639,7 +11639,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string tramaHilosField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdPieza {
             get {
                 return this.idPiezaField;
@@ -11649,7 +11649,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public TipoDetalleCotas Cotas {
             get {
                 return this.cotasField;
@@ -11659,7 +11659,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Correlativo {
             get {
                 return this.correlativoField;
@@ -11669,7 +11669,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public bool EsVariable {
             get {
                 return this.esVariableField;
@@ -11679,7 +11679,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Error {
             get {
                 return this.errorField;
@@ -11689,7 +11689,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Pieza {
             get {
                 return this.piezaField;
@@ -11699,7 +11699,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdForma {
             get {
                 return this.idFormaField;
@@ -11709,7 +11709,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Marca {
             get {
                 return this.marcaField;
@@ -11719,7 +11719,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Cantidad {
             get {
                 return this.cantidadField;
@@ -11729,7 +11729,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Diametro {
             get {
                 return this.diametroField;
@@ -11739,7 +11739,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Largo {
             get {
                 return this.largoField;
@@ -11749,7 +11749,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string TotalKilos {
             get {
                 return this.totalKilosField;
@@ -11759,7 +11759,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Estado {
             get {
                 return this.estadoField;
@@ -11769,7 +11769,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdImagen {
             get {
                 return this.idImagenField;
@@ -11779,7 +11779,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string DetallePieza {
             get {
                 return this.detallePiezaField;
@@ -11789,7 +11789,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FechaCreacion {
             get {
                 return this.fechaCreacionField;
@@ -11799,7 +11799,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Ubicacion {
             get {
                 return this.ubicacionField;
@@ -11809,7 +11809,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Id_Hd {
             get {
                 return this.id_HdField;
@@ -11819,7 +11819,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdIt {
             get {
                 return this.idItField;
@@ -11829,7 +11829,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PathImg {
             get {
                 return this.pathImgField;
@@ -11839,7 +11839,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string LargoDes {
             get {
                 return this.largoDesField;
@@ -11849,7 +11849,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string UserMod {
             get {
                 return this.userModField;
@@ -11859,7 +11859,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodViaje {
             get {
                 return this.codViajeField;
@@ -11869,7 +11869,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Origen {
             get {
                 return this.origenField;
@@ -11879,7 +11879,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Plano {
             get {
                 return this.planoField;
@@ -11889,7 +11889,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FechaDespacho {
             get {
                 return this.fechaDespachoField;
@@ -11899,7 +11899,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FechaDespachoReal {
             get {
                 return this.fechaDespachoRealField;
@@ -11909,7 +11909,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int NroPiezasVar {
             get {
                 return this.nroPiezasVarField;
@@ -11919,7 +11919,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int NroCotasVar {
             get {
                 return this.nroCotasVarField;
@@ -11929,7 +11929,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string TramaHilos {
             get {
                 return this.tramaHilosField;
@@ -11940,8 +11940,8 @@ namespace EstadosdePagos.WsMensajeria {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11972,7 +11972,7 @@ namespace EstadosdePagos.WsMensajeria {
         
         private string userModField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Id {
             get {
                 return this.idField;
@@ -11982,7 +11982,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Fecha {
             get {
                 return this.fechaField;
@@ -11992,7 +11992,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Sector {
             get {
                 return this.sectorField;
@@ -12002,7 +12002,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string OC {
             get {
                 return this.ocField;
@@ -12012,7 +12012,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Obra {
             get {
                 return this.obraField;
@@ -12022,7 +12022,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Figura {
             get {
                 return this.figuraField;
@@ -12032,7 +12032,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Plano {
             get {
                 return this.planoField;
@@ -12042,7 +12042,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Ubicacion {
             get {
                 return this.ubicacionField;
@@ -12052,7 +12052,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string EstadoOp {
             get {
                 return this.estadoOpField;
@@ -12062,7 +12062,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string IdObra {
             get {
                 return this.idObraField;
@@ -12072,7 +12072,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Error {
             get {
                 return this.errorField;
@@ -12082,7 +12082,7 @@ namespace EstadosdePagos.WsMensajeria {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string UserMod {
             get {
                 return this.userModField;
@@ -12094,11 +12094,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ConDet_NewCompletedEventHandler(object sender, ObtenerDtsPL_ConDet_NewCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDet_NewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12120,11 +12120,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDiametros_SaldosViajeCompletedEventHandler(object sender, ObtenerDiametros_SaldosViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametros_SaldosViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12146,11 +12146,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTrazabilidadColadasCompletedEventHandler(object sender, ObtenerTrazabilidadColadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTrazabilidadColadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12172,11 +12172,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ConDetBECHCompletedEventHandler(object sender, ObtenerDtsPL_ConDetBECHCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDetBECHCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12198,11 +12198,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ConDet_SaldosViajeCompletedEventHandler(object sender, ObtenerDtsPL_ConDet_SaldosViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDet_SaldosViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12224,11 +12224,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPLCompletedEventHandler(object sender, ObtenerDtsPLCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12250,11 +12250,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_Original_ViajeDespCompletedEventHandler(object sender, ObtenerDtsPL_Original_ViajeDespCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_Original_ViajeDespCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12276,11 +12276,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ViajeDespCompletedEventHandler(object sender, ObtenerDtsPL_ViajeDespCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ViajeDespCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12302,11 +12302,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ViajeDesp_ConSaldosCompletedEventHandler(object sender, ObtenerDtsPL_ViajeDesp_ConSaldosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ViajeDesp_ConSaldosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12328,11 +12328,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ConSaldosCompletedEventHandler(object sender, ObtenerDtsPL_ConSaldosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConSaldosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12354,11 +12354,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_BECHCompletedEventHandler(object sender, ObtenerDtsPL_BECHCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_BECHCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12380,11 +12380,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_OriginalCompletedEventHandler(object sender, ObtenerDtsPL_OriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_OriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12406,11 +12406,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPesoBechtellCompletedEventHandler(object sender, ObtenerPesoBechtellCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPesoBechtellCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12432,11 +12432,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void DelPiezaTipoBCompletedEventHandler(object sender, DelPiezaTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DelPiezaTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12458,11 +12458,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDatosControlCargaCompletedEventHandler(object sender, ObtenerDatosControlCargaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosControlCargaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12484,11 +12484,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDatosProtocoloDimCompletedEventHandler(object sender, ObtenerDatosProtocoloDimCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosProtocoloDimCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12510,11 +12510,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ActualizaOrdenPorViajeCompletedEventHandler(object sender, ActualizaOrdenPorViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ActualizaOrdenPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12536,11 +12536,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDatosFacturacionPorCamionCompletedEventHandler(object sender, ObtenerDatosFacturacionPorCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosFacturacionPorCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12562,11 +12562,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObrasPorUsuarioCompletedEventHandler(object sender, ObrasPorUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObrasPorUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12588,11 +12588,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void CreaDatosEn_TOCompletedEventHandler(object sender, CreaDatosEn_TOCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CreaDatosEn_TOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12614,11 +12614,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void Crea_IT_ViajeEN_TOCompletedEventHandler(object sender, Crea_IT_ViajeEN_TOCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Crea_IT_ViajeEN_TOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12640,11 +12640,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerProductosPorMaquinaCompletedEventHandler(object sender, ObtenerProductosPorMaquinaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerProductosPorMaquinaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12666,11 +12666,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerObjetoINETCompletedEventHandler(object sender, ObtenerObjetoINETCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerObjetoINETCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12692,11 +12692,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerObjetoINETPorProductoCompletedEventHandler(object sender, ObtenerObjetoINETPorProductoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerObjetoINETPorProductoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12718,11 +12718,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPortada_PL_ItDespachadaCompletedEventHandler(object sender, ObtenerDtsPortada_PL_ItDespachadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPortada_PL_ItDespachadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12744,11 +12744,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabaImagenCompletedEventHandler(object sender, GrabaImagenCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaImagenCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12770,11 +12770,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListadoKilosMontadosCompletedEventHandler(object sender, ListadoKilosMontadosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListadoKilosMontadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12796,11 +12796,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void enviarCorreoNotificacionaObraCompletedEventHandler(object sender, enviarCorreoNotificacionaObraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class enviarCorreoNotificacionaObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12822,11 +12822,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void EnviaNotificacionesEnviaMsgDeNotificacionCompletedEventHandler(object sender, EnviaNotificacionesEnviaMsgDeNotificacionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class EnviaNotificacionesEnviaMsgDeNotificacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12848,11 +12848,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDatosBloqueosObraCompletedEventHandler(object sender, ObtenerDatosBloqueosObraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosBloqueosObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12874,11 +12874,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerNroGuiaInetCompletedEventHandler(object sender, ObtenerNroGuiaInetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerNroGuiaInetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12900,11 +12900,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerNroGuiaInet_DespachoCamCompletedEventHandler(object sender, ObtenerNroGuiaInet_DespachoCamCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerNroGuiaInet_DespachoCamCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12926,11 +12926,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerCantidadDesdeInetCompletedEventHandler(object sender, ObtenerCantidadDesdeInetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerCantidadDesdeInetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12952,11 +12952,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerKgsViajesCompletedEventHandler(object sender, ObtenerKgsViajesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerKgsViajesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12978,11 +12978,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTblDetallePreItCompletedEventHandler(object sender, ObtenerTblDetallePreItCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTblDetallePreItCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13004,11 +13004,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarImagenFormaCompletedEventHandler(object sender, GrabarImagenFormaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarImagenFormaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13030,11 +13030,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarImagenesLayoutCompletedEventHandler(object sender, GrabarImagenesLayoutCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarImagenesLayoutCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13056,11 +13056,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarImagenFormaOriginalCompletedEventHandler(object sender, GrabarImagenFormaOriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarImagenFormaOriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13082,11 +13082,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabaLogImpresionCompletedEventHandler(object sender, GrabaLogImpresionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaLogImpresionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13108,11 +13108,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ExistePiezaCompletedEventHandler(object sender, ExistePiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ExistePiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13134,11 +13134,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDatosCompletedEventHandler(object sender, ObtenerDatosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13160,11 +13160,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerParametroCompletedEventHandler(object sender, ObtenerParametroCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerParametroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13186,11 +13186,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerHojaDespiecePorIdCompletedEventHandler(object sender, ObtenerHojaDespiecePorIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerHojaDespiecePorIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13212,11 +13212,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerHojaDespiecePorIdPCompletedEventHandler(object sender, ObtenerHojaDespiecePorIdPCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerHojaDespiecePorIdPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13238,11 +13238,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerResumenPiezasDigitadasCompletedEventHandler(object sender, ObtenerResumenPiezasDigitadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerResumenPiezasDigitadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13264,11 +13264,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerUsuarioCompletedEventHandler(object sender, ObtenerUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13290,11 +13290,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerUsuarioTOSOLCompletedEventHandler(object sender, ObtenerUsuarioTOSOLCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerUsuarioTOSOLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13316,11 +13316,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabaPiezaCompletedEventHandler(object sender, GrabaPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13342,11 +13342,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void Pasa_a_MM_ConIdFormaCompletedEventHandler(object sender, Pasa_a_MM_ConIdFormaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Pasa_a_MM_ConIdFormaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13368,11 +13368,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerImgCompletedEventHandler(object sender, ObtenerImgCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerImgCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13394,11 +13394,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerImagenOriginalCompletedEventHandler(object sender, ObtenerImagenOriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerImagenOriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13420,11 +13420,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabaHdCompletedEventHandler(object sender, GrabaHdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaHdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13446,11 +13446,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerObrasVigentesCompletedEventHandler(object sender, ObtenerObrasVigentesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerObrasVigentesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13472,11 +13472,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTBL_ObrasVigentesCompletedEventHandler(object sender, ObtenerTBL_ObrasVigentesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTBL_ObrasVigentesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13498,11 +13498,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTipoFormaCompletedEventHandler(object sender, ObtenerTipoFormaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTipoFormaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13524,11 +13524,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTipoFormaConHiloCompletedEventHandler(object sender, ObtenerTipoFormaConHiloCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTipoFormaConHiloCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13550,11 +13550,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTodasLasFormasCompletedEventHandler(object sender, ObtenerTodasLasFormasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTodasLasFormasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13576,11 +13576,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerVariabilidadTipoFormasCompletedEventHandler(object sender, ObtenerVariabilidadTipoFormasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerVariabilidadTipoFormasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13602,11 +13602,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDiametrosCompletedEventHandler(object sender, ObtenerDiametrosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13628,11 +13628,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsSectorFiguraUbicacionCompletedEventHandler(object sender, ObtenerDtsSectorFiguraUbicacionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsSectorFiguraUbicacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13654,11 +13654,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPieasTipoB_V2CompletedEventHandler(object sender, ObtenerDtsPieasTipoB_V2CompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPieasTipoB_V2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13680,11 +13680,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPieasTipoBCompletedEventHandler(object sender, ObtenerDtsPieasTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPieasTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13706,11 +13706,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ClonarPiezasTipoBCompletedEventHandler(object sender, ClonarPiezasTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ClonarPiezasTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13732,11 +13732,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ModificacionEncabezados_HDCompletedEventHandler(object sender, ModificacionEncabezados_HDCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ModificacionEncabezados_HDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13758,11 +13758,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void CargaPiezasOCCompletedEventHandler(object sender, CargaPiezasOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CargaPiezasOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13784,11 +13784,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsCmbObrasCompletedEventHandler(object sender, ObtenerDtsCmbObrasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsCmbObrasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13810,11 +13810,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void EliminaColadaCompletedEventHandler(object sender, EliminaColadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class EliminaColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13836,11 +13836,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void CalcularNroPaquetesCompletedEventHandler(object sender, CalcularNroPaquetesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CalcularNroPaquetesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13862,11 +13862,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void RegistraErrorCompletedEventHandler(object sender, RegistraErrorCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RegistraErrorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13888,11 +13888,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarOCCompletedEventHandler(object sender, GrabarOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13914,11 +13914,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarColadaCompletedEventHandler(object sender, GrabarColadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13940,11 +13940,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarCotasCompletedEventHandler(object sender, GrabarCotasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarCotasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13966,11 +13966,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerColadasIgresadasCompletedEventHandler(object sender, ObtenerColadasIgresadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerColadasIgresadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13992,11 +13992,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void Obtener_entregasOCCompletedEventHandler(object sender, Obtener_entregasOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Obtener_entregasOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14018,11 +14018,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void Obtener_OC_IgresadasCompletedEventHandler(object sender, Obtener_OC_IgresadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Obtener_OC_IgresadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14044,11 +14044,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarActaEntregaCompletedEventHandler(object sender, GrabarActaEntregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarActaEntregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14070,11 +14070,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void EliminaActaEntregaCompletedEventHandler(object sender, EliminaActaEntregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class EliminaActaEntregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14096,11 +14096,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerActaEntregaCompletedEventHandler(object sender, ObtenerActaEntregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerActaEntregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14122,11 +14122,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsCmbObras_V2CompletedEventHandler(object sender, ObtenerDtsCmbObras_V2CompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsCmbObras_V2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14148,11 +14148,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezasPorPlanoParaDelCompletedEventHandler(object sender, ObtenerPiezasPorPlanoParaDelCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasPorPlanoParaDelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14174,11 +14174,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezaTipoB_PorIdCompletedEventHandler(object sender, ObtenerPiezaTipoB_PorIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezaTipoB_PorIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14200,11 +14200,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezasParaModCompletedEventHandler(object sender, ObtenerPiezasParaModCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasParaModCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14226,11 +14226,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDatosHdPorIdPiezaTipoBCompletedEventHandler(object sender, ObtenerDatosHdPorIdPiezaTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosHdPorIdPiezaTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14252,11 +14252,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezasPorPlanoCompletedEventHandler(object sender, ObtenerPiezasPorPlanoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasPorPlanoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14278,11 +14278,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void SP_GeneraDetallePaquetesPiezaCompletedEventHandler(object sender, SP_GeneraDetallePaquetesPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SP_GeneraDetallePaquetesPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14304,11 +14304,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerParametrosTextoImgCompletedEventHandler(object sender, ObtenerParametrosTextoImgCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerParametrosTextoImgCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14330,11 +14330,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerNombreUsuarioCompletedEventHandler(object sender, ObtenerNombreUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerNombreUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14356,11 +14356,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerResumenItsCompletedEventHandler(object sender, ObtenerResumenItsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerResumenItsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14382,11 +14382,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ResumenImpresionEtiquetasCompletedEventHandler(object sender, ResumenImpresionEtiquetasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResumenImpresionEtiquetasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14408,11 +14408,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ResumenItsPara_PLCompletedEventHandler(object sender, ResumenItsPara_PLCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResumenItsPara_PLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14434,11 +14434,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ResumenItsPara_LaminasCompletedEventHandler(object sender, ResumenItsPara_LaminasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResumenItsPara_LaminasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14460,11 +14460,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void MarcaPiezasComoImpresasCompletedEventHandler(object sender, MarcaPiezasComoImpresasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MarcaPiezasComoImpresasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14486,11 +14486,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void MarcaPiezasComoLaminasImpresasCompletedEventHandler(object sender, MarcaPiezasComoLaminasImpresasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MarcaPiezasComoLaminasImpresasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14512,11 +14512,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTipoDeObraCompletedEventHandler(object sender, ObtenerTipoDeObraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTipoDeObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14538,11 +14538,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ConLamCompletedEventHandler(object sender, ObtenerDtsPL_ConLamCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConLamCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14564,11 +14564,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezasConProblemasImgCompletedEventHandler(object sender, ObtenerPiezasConProblemasImgCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasConProblemasImgCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14590,11 +14590,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerCotas_PorIdPiezaCompletedEventHandler(object sender, ObtenerCotas_PorIdPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerCotas_PorIdPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14616,11 +14616,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerImg_PorIdPiezaCompletedEventHandler(object sender, ObtenerImg_PorIdPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerImg_PorIdPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14642,11 +14642,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezas_BELTECHCompletedEventHandler(object sender, ObtenerPiezas_BELTECHCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezas_BELTECHCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14668,11 +14668,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezas_BELTECH_Desde_DbCompletedEventHandler(object sender, ObtenerPiezas_BELTECH_Desde_DbCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezas_BELTECH_Desde_DbCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14694,11 +14694,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDiametrosPorViaje_ParaEPCompletedEventHandler(object sender, ObtenerDiametrosPorViaje_ParaEPCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosPorViaje_ParaEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14720,11 +14720,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDiametrosPorViajeCompletedEventHandler(object sender, ObtenerDiametrosPorViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14746,11 +14746,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDiametrosPorViaje_PL_OriginalCompletedEventHandler(object sender, ObtenerDiametrosPorViaje_PL_OriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosPorViaje_PL_OriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14772,11 +14772,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void OCCompletedEventHandler(object sender, OCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class OCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14798,11 +14798,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GrabarEntregasOCCompletedEventHandler(object sender, GrabarEntregasOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarEntregasOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14824,11 +14824,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerKilosEntregadosPorItemCompletedEventHandler(object sender, ObtenerKilosEntregadosPorItemCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerKilosEntregadosPorItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14850,11 +14850,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_ConDetCompletedEventHandler(object sender, ObtenerDtsPL_ConDetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14876,11 +14876,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDtsPL_Original_ConDetCompletedEventHandler(object sender, ObtenerDtsPL_Original_ConDetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_Original_ConDetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

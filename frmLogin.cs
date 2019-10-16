@@ -119,5 +119,21 @@ namespace EstadosdePagos
         {
             txtClave.Text = eliminarCaracteresEspeciales(txtClave.Text.Trim());
         }
+
+        private void Btn_imprimePL_Click(object sender, EventArgs e)
+        {
+            Informes.Frm_Tmp lFrm = new Informes.Frm_Tmp();
+            lFrm.ShowDialog(this);
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Activated(object sender, EventArgs e)
+        {
+            //Btn_imprimePL_Click(null, null);
+        }
     }
 }

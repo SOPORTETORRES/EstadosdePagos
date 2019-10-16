@@ -45,27 +45,29 @@ namespace EstadosdePagos.Informes
                 
            
            }
-        public void GeneraPdf( )
+        public void GeneraPdf(string iPathDestino)
         {
             int lRes = 0;
             if (mDtsInforme != null)
             {
-                string lPathArchivo = "X:\\Gerencia de Logistica\\Guias de Despacho\\Escaneados\\IT\\";
-                //string lPathArchivo = "C:\\TMP\\Oficina Tecnica\\EP\\";
+                string lPathArchivo = string.Concat(iPathDestino, "\\"); // "C:\\TMP\\Estado de pago\\DOC\\";
+                //string lPathArchivo = "//192.168.1.191//Gerencia de Logistica//Guias de Despacho//Guías Santiago//IT//";
+
+                //\\192.168.1.191\Gerencia de Logistica\Guias de Despacho\Guías Santiago\IT//string lPathArchivo = "C:\\TMP\\Oficina Tecnica\\EP\\";
                 string lArchivo = "";
                // CargarInforme(mDtsInforme, lInforme);
                 Cursor = Cursors.WaitCursor;
                 try
                 {
-                   string[] separators = { "-" };
-                   string[] lPartes = mViaje.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-                    if (lPartes.Length > 1)
-                    {
-                        lPathArchivo = string.Concat(lPathArchivo, lPartes[0], "\\");
-                        if (Directory.Exists(lPathArchivo) == false)
+                       string[] separators = { "-" };
+                       string[] lPartes = mViaje.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                        if (lPartes.Length > 1)
                         {
-                            Directory.CreateDirectory(lPathArchivo);
-                        }
+                            //lPathArchivo = string.Concat(lPathArchivo, lPartes[0], "\\");
+                            if (Directory.Exists(lPathArchivo) == false)
+                            {
+                                Directory.CreateDirectory(lPathArchivo);
+                            }
                     switch (mInforme.ToUpper())
                     {
                         case "P":
@@ -108,6 +110,7 @@ namespace EstadosdePagos.Informes
                 catch (Exception exc)
                 {
                     MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Restart();
                 }
 
             }

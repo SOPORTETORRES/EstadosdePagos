@@ -102,12 +102,34 @@ namespace EstadosdePagos
 
         private bool comentarioRequerido() {
             bool required = false;
-            if (this._estado.Equals("P15") && txtComentario.Text.Trim().Equals("")) //P15-ENVIADO A CLIENTE
+            switch (_estado.ToString() )
             {
-                MessageBox.Show("- Debe ingresar un comentario", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtComentario.Focus();
-                required = true;
-            }
+                case "P05":
+                    if (txtComentario.Text.Trim().Equals(""))
+                    {
+                        MessageBox.Show("- Debe ingresar un comentario", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtComentario.Focus();
+                        required = true;
+                    }
+                    
+                    break;
+                case "P15":
+                    if (txtComentario.Text.Trim().Equals(""))
+                    {
+                        MessageBox.Show("- Debe ingresar un comentario", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtComentario.Focus();
+                        required = true;
+                    }
+
+                    break;            }
+
+
+            //if (this._estado.Equals("P15") && txtComentario.Text.Trim().Equals("")) //P15-ENVIADO A CLIENTE
+            //{
+            //    MessageBox.Show("- Debe ingresar un comentario", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtComentario.Focus();
+            //    required = true;
+            //}
             return required;
         }
 
@@ -128,7 +150,7 @@ namespace EstadosdePagos
             if (!comentarioRequerido())
             {
                 btnGuardar_Click(sender, e);
-                this.Hide();
+                //this.Hide();
             }
         }
 
@@ -303,7 +325,8 @@ namespace EstadosdePagos
                     forms.dataGridViewAutoSizeColumnsMode(dgvGuiasDespacho, DataGridViewAutoSizeColumnsMode.DisplayedCells);
                     dgvGuiasDespacho.Columns["fechaDespacho"].DisplayIndex = dgvGuiasDespacho.Columns.Count - 1;
                     lblRegistrosGDespacho.Text = "Registro(s): " + dgvGuiasDespacho.Rows.Count;
-                 
+
+                    Btn_ObtenerKgsSel_Click(null, null);
                 }
                 else
                     MessageBox.Show(listaDataSetOp.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -314,6 +337,161 @@ namespace EstadosdePagos
             }
             Cursor.Current = Cursors.Default;    
         }
+
+
+        #region Modificacion EP
+
+        private void CargaCabecera()
+        {
+            WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+            WsOperacion.ListaDataSet listaDataSetOp = new WsOperacion.ListaDataSet();
+            Result result = new Result();  DataTable dataTable = null;
+
+            listaDataSetOp = wsOperacion.ObtenerObrasActivas_EP(this._empresa);
+            if (listaDataSetOp.MensajeError.Equals(""))
+            {
+                DataRow[] foundRows = listaDataSetOp.DataSet.Tables[0].Select("IdObra = '" + this._ep_obra + "'");
+                if (foundRows.Length > 0)
+                {
+                    txtDiaPresentEP.Text = foundRows[0]["diaPresentacion_EP"].ToString();
+                    lblFechaCreacion.Text = foundRows[0]["fechaCreacion"].ToString();
+                    //--2017-01-11
+                    //Valor kilo suministro
+                    string valorKiloSuministro = wsOperacion.ValorKiloSuministro_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
+                    lblValorKiloSuministro.Text = (valorKiloSuministro.Trim().Equals("") ? "(No definido)" : valorKiloSuministro);
+
+                    //Obtiene los destinatarios de la obra
+                    result = utils.obtenerDestinatariosObra(this._ep_obra);
+                    if (result.MensajeError.Equals(""))
+                        lblDestinatarios.Text = result.StringValue;
+                    //else
+                    //    error = result.MensajeError;
+                    //--2017-01-11
+                    if (_ep_id.Equals(0))
+                        dtpFechaPresentEP.Value = Convert.ToDateTime(txtDiaPresentEP.Text + DateTime.Now.AddMonths(1).ToString("-MM-yyyy"));
+                    else
+                    {
+                        wsOperacion = new WsOperacion.Operacion();
+                        listaDataSetOp = new WsOperacion.ListaDataSet();
+                        listaDataSetOp = wsOperacion.ListarEstadoPago(this._ep_id);
+                        if (listaDataSetOp.MensajeError.Equals(""))
+                        {
+                            dataTable = listaDataSetOp.DataSet.Tables[0];
+                            if (dataTable.Rows.Count > 0)
+                                dtpFechaPresentEP.Value = Convert.ToDateTime(dataTable.Rows[0]["fecha_prox_present"].ToString());
+                        }
+                        //else
+                        //    result.MensajeError = listaDataSetOp.MensajeError.ToString();
+                    }
+                }
+            }
+        }
+
+
+        private void cargarInfoObrayGuiaDespacho_INET_V2(ref ProgressBar Pb, ref Label Lbl_PB)
+        {
+            //WsTo.Operacion wsTo = null;
+            //WsTo.ListaDataSet listaDataSetTo = null;
+            WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+            WsOperacion.ListaDataSet listaDataSetOp = new WsOperacion.ListaDataSet();
+            Result result = new Result();
+            DataTable dataTable = null, dtGuiasDespachoINET = null;
+            Int32 counter = 0;
+
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                //wsTo = new WsTo.Operacion();
+                //Obtiene el dia de presentacion de los EP, y la fecha de creacion de la Obra
+                Lbl_PB.Text = ". . . OBTENIENDO DATOS INICIALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
+                CargaCabecera();
+                
+                Lbl_PB.Text = ". . . OBTENIENDO GUÍAS DE DESPACHO . . . "; Refrescar(ref Pb, ref Lbl_PB);
+
+                //Obtiene las guias de despacho, pendientes por asignar a un EP
+                listaDataSetOp = wsOperacion.ObtenerGuiasDesdeInicio_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
+                if (listaDataSetOp.MensajeError.Equals(""))
+                {
+                    dtGuiasDespachoINET = listaDataSetOp.DataSet.Tables[0];
+
+                    //Inserta la columna MARCA y la columna EtiquetasconEP para mostrar los registros ya asociados a un EP
+                    DataColumn marca = new DataColumn(COLUMNNAME_MARCA, typeof(bool));
+                    dtGuiasDespachoINET.Columns.Add(marca);
+                    marca.SetOrdinal(0);
+                    DataColumn etiquetasconEP = new DataColumn(COLUMNNAME_ETIQUETASCONEP, typeof(Int32));
+                    dtGuiasDespachoINET.Columns.Add(etiquetasconEP);
+                    if (this._estado.Equals("P15")) //P15-ENVIADO A CLIENTE
+                    {
+                        DataColumn marcaOriginal = new DataColumn(COLUMNNAME_MARCA_ORIGINAL, typeof(bool));
+                        dtGuiasDespachoINET.Columns.Add(marcaOriginal);
+                    }
+                    //Recorre el dataTable para contar las etiquetas de la guia de despacho que ya cuentan con EP
+
+                    int lCont = 0;
+                    Lbl_PB.Text = ". . . REVISANDO GUIAS DE DESPACHO . . . ";
+                    Pb.Maximum = dtGuiasDespachoINET.Rows.Count; Pb.Minimum = 1; Pb.Value = 1;
+                    //Refrescar(ref Pb, ref Lbl_PB);
+
+                    foreach (DataRow row in dtGuiasDespachoINET.Rows)
+                    {
+                        lCont++;
+                        //Obtiene la cantidad de registros x Guia de despacho que existen en el EP
+                        result = cargarInfoEtiquetasxGuiaDespacho_EP(row[COLUMNNAME_NROGUIAINET].ToString());
+                        counter = 0;
+                        if (result.MensajeError.Equals(""))
+                            counter = result.DataTable.Rows.Count;
+                        row[COLUMNNAME_ETIQUETASCONEP] = counter;
+                        if (counter > 0) //Marca los registros de las guias de despacho que existen en la tabla EP
+                            row[COLUMNNAME_MARCA] = true;
+                        if (this._estado.Equals("P15")) //P15-ENVIADO A CLIENTE -> Se utiliza para detectar las modificaciones solicitadas por el cliente
+                            row[COLUMNNAME_MARCA_ORIGINAL] = row[COLUMNNAME_MARCA];
+
+                        //Verifica si el registro (Guia despacho) debe mostrarse o no
+                        if (this._ep_id.Equals(0))
+                        {
+                            if (Convert.ToInt32(row[COLUMNNAME_NROETIQUETAS].ToString()) > Convert.ToInt32(row[COLUMNNAME_ETIQUETASCONEP].ToString())) { } //Si qEtiquetasINET > qEtiquetasEP -> Mostrar
+                            else
+                                row.Delete();
+                        }
+                        else
+                        {
+                            if ((Convert.ToInt32(row[COLUMNNAME_NROETIQUETAS].ToString()) > Convert.ToInt32(row[COLUMNNAME_ETIQUETASCONEP].ToString())) || counter > 0) { } //Si qEtiquetasINET > qEtiquetasEP O gd existe EP -> Mostrar
+                            else
+                                row.Delete();
+                        }
+
+                        //actualizamos la barra de avance
+                        if (Pb.Value < Pb.Maximum)
+                            Pb.Value = Pb.Value + 1;
+                        else
+                            Pb.Value = Pb.Value - 1;
+
+                        Refrescar(ref Pb, ref Lbl_PB);
+                        //fin
+
+                    }
+
+                    Lbl_PB.Text = ". . . REALIZANDO CALCULOS FINALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
+                    dgvGuiasDespacho.DataSource = dtGuiasDespachoINET;
+                    utils.bloquearColumnas(dgvGuiasDespacho);
+                    forms.dataGridViewHideColumns(dgvGuiasDespacho, new string[] { "Column1", COLUMNNAME_MARCA_ORIGINAL });
+                    new Utils().estiloMillaresDataGridViewColumn(dgvGuiasDespacho, new string[] { "Kgsguia" });
+                    forms.dataGridViewAutoSizeColumnsMode(dgvGuiasDespacho, DataGridViewAutoSizeColumnsMode.DisplayedCells);
+                    dgvGuiasDespacho.Columns["fechaDespacho"].DisplayIndex = dgvGuiasDespacho.Columns.Count - 1;
+                    lblRegistrosGDespacho.Text = "Registro(s): " + dgvGuiasDespacho.Rows.Count;
+
+                }
+                else
+                    MessageBox.Show(listaDataSetOp.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        #endregion
 
         private void RevisaGrilla()
         {
@@ -328,11 +506,29 @@ namespace EstadosdePagos
 
                 }
 
-
             }
+        }
 
+        private void CargaDatosObra(string idObra)
+        {
+            //WsOperacion.Operacion ws = new WsOperacion.Operacion();
+
+            //int i = 0; Utils lCom = new Utils(); int j = 0;
+            //for (i = 0; i < dgvGuiasDespacho.RowCount; i++)
+            //{
+            //    // if (lCom.EsNumero(dgvGuiasDespacho.Rows[i].Cells["Kgsguia"].Value.ToString()) == false)
+            //    if (dgvGuiasDespacho.Rows[i].Cells["Kgsguia"].Value.ToString().Trim().Length == 0)
+            //    {
+            //        for (j = 1; j < dgvGuiasDespacho.ColumnCount; j++)
+            //            dgvGuiasDespacho.Rows[i].Cells[j].Style.BackColor = Color.LightSalmon;
+            //        ws.o
+            //    }
+
+
+            //}
 
         }
+           
 
         private void cargarInfoEtiquetasxGuiaDespacho_INET(string guiaDespacho)
         {

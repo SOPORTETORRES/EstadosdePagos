@@ -405,6 +405,7 @@
             this.Btn_imprimePL.TabIndex = 13;
             this.Btn_imprimePL.Text = "Imprime PL";
             this.Btn_imprimePL.UseVisualStyleBackColor = true;
+            this.Btn_imprimePL.Visible = false;
             this.Btn_imprimePL.Click += new System.EventHandler(this.Btn_imprimePL_Click);
             // 
             // btnDestinatariosObra

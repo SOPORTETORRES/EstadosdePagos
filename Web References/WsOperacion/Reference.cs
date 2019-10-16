@@ -24,11 +24,81 @@ namespace EstadosdePagos.WsOperacion {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="OperacionSoap", Namespace="http://tempuri.org/")]
     public partial class Operacion : System.Web.Services.Protocols.SoapHttpClientProtocol {
+        
+        private System.Threading.SendOrPostCallback obtenerIdRC_PorColadaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GuardarDespachoColadaBodegaMPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AsociarEtiquetaColadaaBodegaMPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerMotivosExcepcionProduccionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerPiezaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegistrarPasoaProduccionPiezaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegistrarPasoaProduccionPieza_V_AZAOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerPiezaProduccionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GuardarDespachoPiezaBodegaAcopioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SP_VERIFICA_VIAJE_DESPACHOOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GuardarDespachoCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GuardarDespachoPiezaCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AsociarEtiquetaPiezaaCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarDespachoCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback VbDespachoCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerTodasObrasVigentesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerViajesPorObraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerPiezasDespachoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ValidarRNOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PersisteColadaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerColadasPorNroOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerPiezasDespachoCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback VbDespachoPiezaCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarDespachoBodegaMPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarDespachoBodegaAcopioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarPiezasNoDespachadasBodegaAcopioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosProduccionPorColadaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PersistirEtiquetaAZAOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Obtener_MPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDetalle_OC_AzaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback VerificaNroGuiaDespachoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDetalleProduccionPorColadaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDetalleProduccionPorColadaQrOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerResumanPiezasPorViajeOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerDatosConsultaGenericaOperationCompleted;
         
@@ -58,6 +128,26 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback GrabaEP_GeneradoOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ObtenerDatosInicialesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GrabarChequeoMaquinaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback VerificaChequeoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerSupervisoresOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosParaEnvioMailOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback IntegraBodegasINETOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerResumenGD_ParaExcelOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerEtiquetaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerAsignacionITMaqOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GrabarRecepcion_MPOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GuardarSolicitudMaterialOperationCompleted;
         
         private System.Threading.SendOrPostCallback AsociarProductosaSolicitudOperationCompleted;
@@ -70,6 +160,8 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ListarSolicitudMaterial_CierreOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ListarSolicitudMaterial_CierreAutOperationCompleted;
+        
         private System.Threading.SendOrPostCallback DevolucionDeMPOperationCompleted;
         
         private System.Threading.SendOrPostCallback GuardarCierreMaterialOperationCompleted;
@@ -81,6 +173,8 @@ namespace EstadosdePagos.WsOperacion {
         private System.Threading.SendOrPostCallback AnularDetalleSolicitudMateriaPrimaOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerResumenSMP_PorTurnoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerResumenSMP_PorTurno_TotemOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerResumenSMP_PorSolIdOperationCompleted;
         
@@ -152,13 +246,61 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ObtenerEmpresaPor_EPOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ObtenerTotelaciaExtraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerPesoMaxBasculaMovilOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ValidaUsuarioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosPorIdDespachoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosGuiasSinVincularOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GrabarDatosPesajeCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerCamionesEnPlantaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDetallePesajeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SacarITDespachoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminaRegistroCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CierraCicloCamionOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerPatentesParaDespachoOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerPatentesParaCalculoCargaOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerPesoTaraPorPatenteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosPesajeCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosResumen_PesajeCamionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PersistePesajeBMOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GrabarProduccionExternaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GrabarNoConformidadProdExtOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDetalleRecepcionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PersisteEnviosProdExOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerEnviosSinRecepcionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerEnviosParaRecepcionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosIniciales_PEOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerIt_PorObraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerIt_PorObra_ProdExOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerEtiquetasPorViajeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RevisaRNOperationCompleted;
         
         private System.Threading.SendOrPostCallback GuardarRecepcion_ColadaOperationCompleted;
         
@@ -171,60 +313,6 @@ namespace EstadosdePagos.WsOperacion {
         private System.Threading.SendOrPostCallback ImprimirRecepcion_ColadaOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerRecepcionxEtiqueta_ColadaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback obtenerIdRC_PorColadaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GuardarDespachoColadaBodegaMPOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback AsociarEtiquetaColadaaBodegaMPOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerMotivosExcepcionProduccionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerPiezaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback RegistrarPasoaProduccionPiezaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerPiezaProduccionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GuardarDespachoPiezaBodegaAcopioOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback SP_VERIFICA_VIAJE_DESPACHOOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GuardarDespachoPiezaCamionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback AsociarEtiquetaPiezaaCamionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarDespachoCamionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback VbDespachoCamionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerTodasObrasVigentesOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerViajesPorObraOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerPiezasDespachoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ValidarRNOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerColadasPorNroOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerPiezasDespachoCamionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback VbDespachoPiezaCamionOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarDespachoBodegaMPOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarDespachoBodegaAcopioOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarPiezasNoDespachadasBodegaAcopioOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerDatosProduccionPorColadaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerDetalleProduccionPorColadaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ObtenerResumanPiezasPorViajeOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -263,6 +351,111 @@ namespace EstadosdePagos.WsOperacion {
                 this.useDefaultCredentialsSetExplicitly = true;
             }
         }
+        
+        /// <remarks/>
+        public event obtenerIdRC_PorColadaCompletedEventHandler obtenerIdRC_PorColadaCompleted;
+        
+        /// <remarks/>
+        public event GuardarDespachoColadaBodegaMPCompletedEventHandler GuardarDespachoColadaBodegaMPCompleted;
+        
+        /// <remarks/>
+        public event AsociarEtiquetaColadaaBodegaMPCompletedEventHandler AsociarEtiquetaColadaaBodegaMPCompleted;
+        
+        /// <remarks/>
+        public event ObtenerMotivosExcepcionProduccionCompletedEventHandler ObtenerMotivosExcepcionProduccionCompleted;
+        
+        /// <remarks/>
+        public event ObtenerPiezaCompletedEventHandler ObtenerPiezaCompleted;
+        
+        /// <remarks/>
+        public event RegistrarPasoaProduccionPiezaCompletedEventHandler RegistrarPasoaProduccionPiezaCompleted;
+        
+        /// <remarks/>
+        public event RegistrarPasoaProduccionPieza_V_AZACompletedEventHandler RegistrarPasoaProduccionPieza_V_AZACompleted;
+        
+        /// <remarks/>
+        public event ObtenerPiezaProduccionCompletedEventHandler ObtenerPiezaProduccionCompleted;
+        
+        /// <remarks/>
+        public event GuardarDespachoPiezaBodegaAcopioCompletedEventHandler GuardarDespachoPiezaBodegaAcopioCompleted;
+        
+        /// <remarks/>
+        public event AsociarEtiquetaPiezaaBodegaAcopioCompletedEventHandler AsociarEtiquetaPiezaaBodegaAcopioCompleted;
+        
+        /// <remarks/>
+        public event SP_VERIFICA_VIAJE_DESPACHOCompletedEventHandler SP_VERIFICA_VIAJE_DESPACHOCompleted;
+        
+        /// <remarks/>
+        public event GuardarDespachoCamionCompletedEventHandler GuardarDespachoCamionCompleted;
+        
+        /// <remarks/>
+        public event GuardarDespachoPiezaCamionCompletedEventHandler GuardarDespachoPiezaCamionCompleted;
+        
+        /// <remarks/>
+        public event AsociarEtiquetaPiezaaCamionCompletedEventHandler AsociarEtiquetaPiezaaCamionCompleted;
+        
+        /// <remarks/>
+        public event ListarDespachoCamionCompletedEventHandler ListarDespachoCamionCompleted;
+        
+        /// <remarks/>
+        public event VbDespachoCamionCompletedEventHandler VbDespachoCamionCompleted;
+        
+        /// <remarks/>
+        public event ObtenerTodasObrasVigentesCompletedEventHandler ObtenerTodasObrasVigentesCompleted;
+        
+        /// <remarks/>
+        public event ObtenerViajesPorObraCompletedEventHandler ObtenerViajesPorObraCompleted;
+        
+        /// <remarks/>
+        public event ObtenerPiezasDespachoCompletedEventHandler ObtenerPiezasDespachoCompleted;
+        
+        /// <remarks/>
+        public event ValidarRNCompletedEventHandler ValidarRNCompleted;
+        
+        /// <remarks/>
+        public event PersisteColadaCompletedEventHandler PersisteColadaCompleted;
+        
+        /// <remarks/>
+        public event ObtenerColadasPorNroCompletedEventHandler ObtenerColadasPorNroCompleted;
+        
+        /// <remarks/>
+        public event ObtenerPiezasDespachoCamionCompletedEventHandler ObtenerPiezasDespachoCamionCompleted;
+        
+        /// <remarks/>
+        public event VbDespachoPiezaCamionCompletedEventHandler VbDespachoPiezaCamionCompleted;
+        
+        /// <remarks/>
+        public event ListarDespachoBodegaMPCompletedEventHandler ListarDespachoBodegaMPCompleted;
+        
+        /// <remarks/>
+        public event ListarDespachoBodegaAcopioCompletedEventHandler ListarDespachoBodegaAcopioCompleted;
+        
+        /// <remarks/>
+        public event ListarPiezasNoDespachadasBodegaAcopioCompletedEventHandler ListarPiezasNoDespachadasBodegaAcopioCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosProduccionPorColadaCompletedEventHandler ObtenerDatosProduccionPorColadaCompleted;
+        
+        /// <remarks/>
+        public event PersistirEtiquetaAZACompletedEventHandler PersistirEtiquetaAZACompleted;
+        
+        /// <remarks/>
+        public event Obtener_MPCompletedEventHandler Obtener_MPCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDetalle_OC_AzaCompletedEventHandler ObtenerDetalle_OC_AzaCompleted;
+        
+        /// <remarks/>
+        public event VerificaNroGuiaDespachoCompletedEventHandler VerificaNroGuiaDespachoCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDetalleProduccionPorColadaCompletedEventHandler ObtenerDetalleProduccionPorColadaCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDetalleProduccionPorColadaQrCompletedEventHandler ObtenerDetalleProduccionPorColadaQrCompleted;
+        
+        /// <remarks/>
+        public event ObtenerResumanPiezasPorViajeCompletedEventHandler ObtenerResumanPiezasPorViajeCompleted;
         
         /// <remarks/>
         public event ObtenerDatosConsultaGenericaCompletedEventHandler ObtenerDatosConsultaGenericaCompleted;
@@ -307,6 +500,36 @@ namespace EstadosdePagos.WsOperacion {
         public event GrabaEP_GeneradoCompletedEventHandler GrabaEP_GeneradoCompleted;
         
         /// <remarks/>
+        public event ObtenerDatosInicialesCompletedEventHandler ObtenerDatosInicialesCompleted;
+        
+        /// <remarks/>
+        public event GrabarChequeoMaquinaCompletedEventHandler GrabarChequeoMaquinaCompleted;
+        
+        /// <remarks/>
+        public event VerificaChequeoCompletedEventHandler VerificaChequeoCompleted;
+        
+        /// <remarks/>
+        public event ObtenerSupervisoresCompletedEventHandler ObtenerSupervisoresCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosParaEnvioMailCompletedEventHandler ObtenerDatosParaEnvioMailCompleted;
+        
+        /// <remarks/>
+        public event IntegraBodegasINETCompletedEventHandler IntegraBodegasINETCompleted;
+        
+        /// <remarks/>
+        public event ObtenerResumenGD_ParaExcelCompletedEventHandler ObtenerResumenGD_ParaExcelCompleted;
+        
+        /// <remarks/>
+        public event ObtenerEtiquetaCompletedEventHandler ObtenerEtiquetaCompleted;
+        
+        /// <remarks/>
+        public event ObtenerAsignacionITMaqCompletedEventHandler ObtenerAsignacionITMaqCompleted;
+        
+        /// <remarks/>
+        public event GrabarRecepcion_MPCompletedEventHandler GrabarRecepcion_MPCompleted;
+        
+        /// <remarks/>
         public event GuardarSolicitudMaterialCompletedEventHandler GuardarSolicitudMaterialCompleted;
         
         /// <remarks/>
@@ -325,6 +548,9 @@ namespace EstadosdePagos.WsOperacion {
         public event ListarSolicitudMaterial_CierreCompletedEventHandler ListarSolicitudMaterial_CierreCompleted;
         
         /// <remarks/>
+        public event ListarSolicitudMaterial_CierreAutCompletedEventHandler ListarSolicitudMaterial_CierreAutCompleted;
+        
+        /// <remarks/>
         public event DevolucionDeMPCompletedEventHandler DevolucionDeMPCompleted;
         
         /// <remarks/>
@@ -341,6 +567,9 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         public event ObtenerResumenSMP_PorTurnoCompletedEventHandler ObtenerResumenSMP_PorTurnoCompleted;
+        
+        /// <remarks/>
+        public event ObtenerResumenSMP_PorTurno_TotemCompletedEventHandler ObtenerResumenSMP_PorTurno_TotemCompleted;
         
         /// <remarks/>
         public event ObtenerResumenSMP_PorSolIdCompletedEventHandler ObtenerResumenSMP_PorSolIdCompleted;
@@ -448,7 +677,37 @@ namespace EstadosdePagos.WsOperacion {
         public event ObtenerEmpresaPor_EPCompletedEventHandler ObtenerEmpresaPor_EPCompleted;
         
         /// <remarks/>
+        public event ObtenerTotelaciaExtraCompletedEventHandler ObtenerTotelaciaExtraCompleted;
+        
+        /// <remarks/>
+        public event ObtenerPesoMaxBasculaMovilCompletedEventHandler ObtenerPesoMaxBasculaMovilCompleted;
+        
+        /// <remarks/>
+        public event ValidaUsuarioCompletedEventHandler ValidaUsuarioCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosPorIdDespachoCompletedEventHandler ObtenerDatosPorIdDespachoCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosGuiasSinVincularCompletedEventHandler ObtenerDatosGuiasSinVincularCompleted;
+        
+        /// <remarks/>
         public event GrabarDatosPesajeCamionCompletedEventHandler GrabarDatosPesajeCamionCompleted;
+        
+        /// <remarks/>
+        public event ObtenerCamionesEnPlantaCompletedEventHandler ObtenerCamionesEnPlantaCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDetallePesajeCompletedEventHandler ObtenerDetallePesajeCompleted;
+        
+        /// <remarks/>
+        public event SacarITDespachoCompletedEventHandler SacarITDespachoCompleted;
+        
+        /// <remarks/>
+        public event EliminaRegistroCamionCompletedEventHandler EliminaRegistroCamionCompleted;
+        
+        /// <remarks/>
+        public event CierraCicloCamionCompletedEventHandler CierraCicloCamionCompleted;
         
         /// <remarks/>
         public event ObtenerPatentesParaDespachoCompletedEventHandler ObtenerPatentesParaDespachoCompleted;
@@ -458,6 +717,48 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         public event ObtenerPesoTaraPorPatenteCompletedEventHandler ObtenerPesoTaraPorPatenteCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosPesajeCamionCompletedEventHandler ObtenerDatosPesajeCamionCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosResumen_PesajeCamionCompletedEventHandler ObtenerDatosResumen_PesajeCamionCompleted;
+        
+        /// <remarks/>
+        public event PersistePesajeBMCompletedEventHandler PersistePesajeBMCompleted;
+        
+        /// <remarks/>
+        public event GrabarProduccionExternaCompletedEventHandler GrabarProduccionExternaCompleted;
+        
+        /// <remarks/>
+        public event GrabarNoConformidadProdExtCompletedEventHandler GrabarNoConformidadProdExtCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDetalleRecepcionCompletedEventHandler ObtenerDetalleRecepcionCompleted;
+        
+        /// <remarks/>
+        public event PersisteEnviosProdExCompletedEventHandler PersisteEnviosProdExCompleted;
+        
+        /// <remarks/>
+        public event ObtenerEnviosSinRecepcionCompletedEventHandler ObtenerEnviosSinRecepcionCompleted;
+        
+        /// <remarks/>
+        public event ObtenerEnviosParaRecepcionCompletedEventHandler ObtenerEnviosParaRecepcionCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosIniciales_PECompletedEventHandler ObtenerDatosIniciales_PECompleted;
+        
+        /// <remarks/>
+        public event ObtenerIt_PorObraCompletedEventHandler ObtenerIt_PorObraCompleted;
+        
+        /// <remarks/>
+        public event ObtenerIt_PorObra_ProdExCompletedEventHandler ObtenerIt_PorObra_ProdExCompleted;
+        
+        /// <remarks/>
+        public event ObtenerEtiquetasPorViajeCompletedEventHandler ObtenerEtiquetasPorViajeCompleted;
+        
+        /// <remarks/>
+        public event RevisaRNCompletedEventHandler RevisaRNCompleted;
         
         /// <remarks/>
         public event GuardarRecepcion_ColadaCompletedEventHandler GuardarRecepcion_ColadaCompleted;
@@ -478,85 +779,1085 @@ namespace EstadosdePagos.WsOperacion {
         public event ObtenerRecepcionxEtiqueta_ColadaCompletedEventHandler ObtenerRecepcionxEtiqueta_ColadaCompleted;
         
         /// <remarks/>
-        public event obtenerIdRC_PorColadaCompletedEventHandler obtenerIdRC_PorColadaCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/obtenerIdRC_PorColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet obtenerIdRC_PorColada(string etiqueta_colada) {
+            object[] results = this.Invoke("obtenerIdRC_PorColada", new object[] {
+                        etiqueta_colada});
+            return ((ListaDataSet)(results[0]));
+        }
         
         /// <remarks/>
-        public event GuardarDespachoColadaBodegaMPCompletedEventHandler GuardarDespachoColadaBodegaMPCompleted;
+        public void obtenerIdRC_PorColadaAsync(string etiqueta_colada) {
+            this.obtenerIdRC_PorColadaAsync(etiqueta_colada, null);
+        }
         
         /// <remarks/>
-        public event AsociarEtiquetaColadaaBodegaMPCompletedEventHandler AsociarEtiquetaColadaaBodegaMPCompleted;
+        public void obtenerIdRC_PorColadaAsync(string etiqueta_colada, object userState) {
+            if ((this.obtenerIdRC_PorColadaOperationCompleted == null)) {
+                this.obtenerIdRC_PorColadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnobtenerIdRC_PorColadaOperationCompleted);
+            }
+            this.InvokeAsync("obtenerIdRC_PorColada", new object[] {
+                        etiqueta_colada}, this.obtenerIdRC_PorColadaOperationCompleted, userState);
+        }
+        
+        private void OnobtenerIdRC_PorColadaOperationCompleted(object arg) {
+            if ((this.obtenerIdRC_PorColadaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.obtenerIdRC_PorColadaCompleted(this, new obtenerIdRC_PorColadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event ObtenerMotivosExcepcionProduccionCompletedEventHandler ObtenerMotivosExcepcionProduccionCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarDespachoColadaBodegaMP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Bodega_MP GuardarDespachoColadaBodegaMP(Despacho_Bodega_MP despacho_Bodega_MP, string terminal) {
+            object[] results = this.Invoke("GuardarDespachoColadaBodegaMP", new object[] {
+                        despacho_Bodega_MP,
+                        terminal});
+            return ((Despacho_Bodega_MP)(results[0]));
+        }
         
         /// <remarks/>
-        public event ObtenerPiezaCompletedEventHandler ObtenerPiezaCompleted;
+        public void GuardarDespachoColadaBodegaMPAsync(Despacho_Bodega_MP despacho_Bodega_MP, string terminal) {
+            this.GuardarDespachoColadaBodegaMPAsync(despacho_Bodega_MP, terminal, null);
+        }
         
         /// <remarks/>
-        public event RegistrarPasoaProduccionPiezaCompletedEventHandler RegistrarPasoaProduccionPiezaCompleted;
+        public void GuardarDespachoColadaBodegaMPAsync(Despacho_Bodega_MP despacho_Bodega_MP, string terminal, object userState) {
+            if ((this.GuardarDespachoColadaBodegaMPOperationCompleted == null)) {
+                this.GuardarDespachoColadaBodegaMPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGuardarDespachoColadaBodegaMPOperationCompleted);
+            }
+            this.InvokeAsync("GuardarDespachoColadaBodegaMP", new object[] {
+                        despacho_Bodega_MP,
+                        terminal}, this.GuardarDespachoColadaBodegaMPOperationCompleted, userState);
+        }
+        
+        private void OnGuardarDespachoColadaBodegaMPOperationCompleted(object arg) {
+            if ((this.GuardarDespachoColadaBodegaMPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GuardarDespachoColadaBodegaMPCompleted(this, new GuardarDespachoColadaBodegaMPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event ObtenerPiezaProduccionCompletedEventHandler ObtenerPiezaProduccionCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AsociarEtiquetaColadaaBodegaMP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Bodega_MP AsociarEtiquetaColadaaBodegaMP(int idDespacho, string etiqueta_colada, string usuario, string terminal) {
+            object[] results = this.Invoke("AsociarEtiquetaColadaaBodegaMP", new object[] {
+                        idDespacho,
+                        etiqueta_colada,
+                        usuario,
+                        terminal});
+            return ((Despacho_Bodega_MP)(results[0]));
+        }
         
         /// <remarks/>
-        public event GuardarDespachoPiezaBodegaAcopioCompletedEventHandler GuardarDespachoPiezaBodegaAcopioCompleted;
+        public void AsociarEtiquetaColadaaBodegaMPAsync(int idDespacho, string etiqueta_colada, string usuario, string terminal) {
+            this.AsociarEtiquetaColadaaBodegaMPAsync(idDespacho, etiqueta_colada, usuario, terminal, null);
+        }
         
         /// <remarks/>
-        public event AsociarEtiquetaPiezaaBodegaAcopioCompletedEventHandler AsociarEtiquetaPiezaaBodegaAcopioCompleted;
+        public void AsociarEtiquetaColadaaBodegaMPAsync(int idDespacho, string etiqueta_colada, string usuario, string terminal, object userState) {
+            if ((this.AsociarEtiquetaColadaaBodegaMPOperationCompleted == null)) {
+                this.AsociarEtiquetaColadaaBodegaMPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAsociarEtiquetaColadaaBodegaMPOperationCompleted);
+            }
+            this.InvokeAsync("AsociarEtiquetaColadaaBodegaMP", new object[] {
+                        idDespacho,
+                        etiqueta_colada,
+                        usuario,
+                        terminal}, this.AsociarEtiquetaColadaaBodegaMPOperationCompleted, userState);
+        }
+        
+        private void OnAsociarEtiquetaColadaaBodegaMPOperationCompleted(object arg) {
+            if ((this.AsociarEtiquetaColadaaBodegaMPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AsociarEtiquetaColadaaBodegaMPCompleted(this, new AsociarEtiquetaColadaaBodegaMPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event SP_VERIFICA_VIAJE_DESPACHOCompletedEventHandler SP_VERIFICA_VIAJE_DESPACHOCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerMotivosExcepcionProduccion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerMotivosExcepcionProduccion() {
+            object[] results = this.Invoke("ObtenerMotivosExcepcionProduccion", new object[0]);
+            return ((ListaDataSet)(results[0]));
+        }
         
         /// <remarks/>
-        public event GuardarDespachoPiezaCamionCompletedEventHandler GuardarDespachoPiezaCamionCompleted;
+        public void ObtenerMotivosExcepcionProduccionAsync() {
+            this.ObtenerMotivosExcepcionProduccionAsync(null);
+        }
         
         /// <remarks/>
-        public event AsociarEtiquetaPiezaaCamionCompletedEventHandler AsociarEtiquetaPiezaaCamionCompleted;
+        public void ObtenerMotivosExcepcionProduccionAsync(object userState) {
+            if ((this.ObtenerMotivosExcepcionProduccionOperationCompleted == null)) {
+                this.ObtenerMotivosExcepcionProduccionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerMotivosExcepcionProduccionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerMotivosExcepcionProduccion", new object[0], this.ObtenerMotivosExcepcionProduccionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerMotivosExcepcionProduccionOperationCompleted(object arg) {
+            if ((this.ObtenerMotivosExcepcionProduccionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerMotivosExcepcionProduccionCompleted(this, new ObtenerMotivosExcepcionProduccionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event ListarDespachoCamionCompletedEventHandler ListarDespachoCamionCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPieza", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerPieza(int idPieza) {
+            object[] results = this.Invoke("ObtenerPieza", new object[] {
+                        idPieza});
+            return ((ListaDataSet)(results[0]));
+        }
         
         /// <remarks/>
-        public event VbDespachoCamionCompletedEventHandler VbDespachoCamionCompleted;
+        public void ObtenerPiezaAsync(int idPieza) {
+            this.ObtenerPiezaAsync(idPieza, null);
+        }
         
         /// <remarks/>
-        public event ObtenerTodasObrasVigentesCompletedEventHandler ObtenerTodasObrasVigentesCompleted;
+        public void ObtenerPiezaAsync(int idPieza, object userState) {
+            if ((this.ObtenerPiezaOperationCompleted == null)) {
+                this.ObtenerPiezaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerPieza", new object[] {
+                        idPieza}, this.ObtenerPiezaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerPiezaOperationCompleted(object arg) {
+            if ((this.ObtenerPiezaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerPiezaCompleted(this, new ObtenerPiezaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event ObtenerViajesPorObraCompletedEventHandler ObtenerViajesPorObraCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistrarPasoaProduccionPieza", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Pieza RegistrarPasoaProduccionPieza(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser) {
+            object[] results = this.Invoke("RegistrarPasoaProduccionPieza", new object[] {
+                        pieza,
+                        maquina,
+                        usuario,
+                        terminal,
+                        iCant,
+                        iIdUser});
+            return ((Pieza)(results[0]));
+        }
         
         /// <remarks/>
-        public event ObtenerPiezasDespachoCompletedEventHandler ObtenerPiezasDespachoCompleted;
+        public void RegistrarPasoaProduccionPiezaAsync(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser) {
+            this.RegistrarPasoaProduccionPiezaAsync(pieza, maquina, usuario, terminal, iCant, iIdUser, null);
+        }
         
         /// <remarks/>
-        public event ValidarRNCompletedEventHandler ValidarRNCompleted;
+        public void RegistrarPasoaProduccionPiezaAsync(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser, object userState) {
+            if ((this.RegistrarPasoaProduccionPiezaOperationCompleted == null)) {
+                this.RegistrarPasoaProduccionPiezaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistrarPasoaProduccionPiezaOperationCompleted);
+            }
+            this.InvokeAsync("RegistrarPasoaProduccionPieza", new object[] {
+                        pieza,
+                        maquina,
+                        usuario,
+                        terminal,
+                        iCant,
+                        iIdUser}, this.RegistrarPasoaProduccionPiezaOperationCompleted, userState);
+        }
+        
+        private void OnRegistrarPasoaProduccionPiezaOperationCompleted(object arg) {
+            if ((this.RegistrarPasoaProduccionPiezaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegistrarPasoaProduccionPiezaCompleted(this, new RegistrarPasoaProduccionPiezaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event ObtenerColadasPorNroCompletedEventHandler ObtenerColadasPorNroCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistrarPasoaProduccionPieza_V_AZA", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Pieza RegistrarPasoaProduccionPieza_V_AZA(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser) {
+            object[] results = this.Invoke("RegistrarPasoaProduccionPieza_V_AZA", new object[] {
+                        pieza,
+                        maquina,
+                        usuario,
+                        terminal,
+                        iCant,
+                        iIdUser});
+            return ((Pieza)(results[0]));
+        }
         
         /// <remarks/>
-        public event ObtenerPiezasDespachoCamionCompletedEventHandler ObtenerPiezasDespachoCamionCompleted;
+        public void RegistrarPasoaProduccionPieza_V_AZAAsync(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser) {
+            this.RegistrarPasoaProduccionPieza_V_AZAAsync(pieza, maquina, usuario, terminal, iCant, iIdUser, null);
+        }
         
         /// <remarks/>
-        public event VbDespachoPiezaCamionCompletedEventHandler VbDespachoPiezaCamionCompleted;
+        public void RegistrarPasoaProduccionPieza_V_AZAAsync(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser, object userState) {
+            if ((this.RegistrarPasoaProduccionPieza_V_AZAOperationCompleted == null)) {
+                this.RegistrarPasoaProduccionPieza_V_AZAOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistrarPasoaProduccionPieza_V_AZAOperationCompleted);
+            }
+            this.InvokeAsync("RegistrarPasoaProduccionPieza_V_AZA", new object[] {
+                        pieza,
+                        maquina,
+                        usuario,
+                        terminal,
+                        iCant,
+                        iIdUser}, this.RegistrarPasoaProduccionPieza_V_AZAOperationCompleted, userState);
+        }
+        
+        private void OnRegistrarPasoaProduccionPieza_V_AZAOperationCompleted(object arg) {
+            if ((this.RegistrarPasoaProduccionPieza_V_AZACompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegistrarPasoaProduccionPieza_V_AZACompleted(this, new RegistrarPasoaProduccionPieza_V_AZACompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event ListarDespachoBodegaMPCompletedEventHandler ListarDespachoBodegaMPCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPiezaProduccion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerPiezaProduccion(string etiqueta_pieza) {
+            object[] results = this.Invoke("ObtenerPiezaProduccion", new object[] {
+                        etiqueta_pieza});
+            return ((ListaDataSet)(results[0]));
+        }
         
         /// <remarks/>
-        public event ListarDespachoBodegaAcopioCompletedEventHandler ListarDespachoBodegaAcopioCompleted;
+        public void ObtenerPiezaProduccionAsync(string etiqueta_pieza) {
+            this.ObtenerPiezaProduccionAsync(etiqueta_pieza, null);
+        }
         
         /// <remarks/>
-        public event ListarPiezasNoDespachadasBodegaAcopioCompletedEventHandler ListarPiezasNoDespachadasBodegaAcopioCompleted;
+        public void ObtenerPiezaProduccionAsync(string etiqueta_pieza, object userState) {
+            if ((this.ObtenerPiezaProduccionOperationCompleted == null)) {
+                this.ObtenerPiezaProduccionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezaProduccionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerPiezaProduccion", new object[] {
+                        etiqueta_pieza}, this.ObtenerPiezaProduccionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerPiezaProduccionOperationCompleted(object arg) {
+            if ((this.ObtenerPiezaProduccionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerPiezaProduccionCompleted(this, new ObtenerPiezaProduccionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
-        public event ObtenerDatosProduccionPorColadaCompletedEventHandler ObtenerDatosProduccionPorColadaCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarDespachoPiezaBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Bodega_Acopio GuardarDespachoPiezaBodegaAcopio(Despacho_Bodega_Acopio despacho_Bodega_Acopio, string terminal) {
+            object[] results = this.Invoke("GuardarDespachoPiezaBodegaAcopio", new object[] {
+                        despacho_Bodega_Acopio,
+                        terminal});
+            return ((Despacho_Bodega_Acopio)(results[0]));
+        }
         
         /// <remarks/>
-        public event ObtenerDetalleProduccionPorColadaCompletedEventHandler ObtenerDetalleProduccionPorColadaCompleted;
+        public void GuardarDespachoPiezaBodegaAcopioAsync(Despacho_Bodega_Acopio despacho_Bodega_Acopio, string terminal) {
+            this.GuardarDespachoPiezaBodegaAcopioAsync(despacho_Bodega_Acopio, terminal, null);
+        }
         
         /// <remarks/>
-        public event ObtenerResumanPiezasPorViajeCompletedEventHandler ObtenerResumanPiezasPorViajeCompleted;
+        public void GuardarDespachoPiezaBodegaAcopioAsync(Despacho_Bodega_Acopio despacho_Bodega_Acopio, string terminal, object userState) {
+            if ((this.GuardarDespachoPiezaBodegaAcopioOperationCompleted == null)) {
+                this.GuardarDespachoPiezaBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGuardarDespachoPiezaBodegaAcopioOperationCompleted);
+            }
+            this.InvokeAsync("GuardarDespachoPiezaBodegaAcopio", new object[] {
+                        despacho_Bodega_Acopio,
+                        terminal}, this.GuardarDespachoPiezaBodegaAcopioOperationCompleted, userState);
+        }
+        
+        private void OnGuardarDespachoPiezaBodegaAcopioOperationCompleted(object arg) {
+            if ((this.GuardarDespachoPiezaBodegaAcopioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GuardarDespachoPiezaBodegaAcopioCompleted(this, new GuardarDespachoPiezaBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AsociarEtiquetaPiezaaBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Bodega_Acopio AsociarEtiquetaPiezaaBodegaAcopio(int idDespacho, string etiqueta_pieza, string usuario, string terminal) {
+            object[] results = this.Invoke("AsociarEtiquetaPiezaaBodegaAcopio", new object[] {
+                        idDespacho,
+                        etiqueta_pieza,
+                        usuario,
+                        terminal});
+            return ((Despacho_Bodega_Acopio)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AsociarEtiquetaPiezaaBodegaAcopioAsync(int idDespacho, string etiqueta_pieza, string usuario, string terminal) {
+            this.AsociarEtiquetaPiezaaBodegaAcopioAsync(idDespacho, etiqueta_pieza, usuario, terminal, null);
+        }
+        
+        /// <remarks/>
+        public void AsociarEtiquetaPiezaaBodegaAcopioAsync(int idDespacho, string etiqueta_pieza, string usuario, string terminal, object userState) {
+            if ((this.AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted == null)) {
+                this.AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAsociarEtiquetaPiezaaBodegaAcopioOperationCompleted);
+            }
+            this.InvokeAsync("AsociarEtiquetaPiezaaBodegaAcopio", new object[] {
+                        idDespacho,
+                        etiqueta_pieza,
+                        usuario,
+                        terminal}, this.AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted, userState);
+        }
+        
+        private void OnAsociarEtiquetaPiezaaBodegaAcopioOperationCompleted(object arg) {
+            if ((this.AsociarEtiquetaPiezaaBodegaAcopioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AsociarEtiquetaPiezaaBodegaAcopioCompleted(this, new AsociarEtiquetaPiezaaBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SP_VERIFICA_VIAJE_DESPACHO", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string SP_VERIFICA_VIAJE_DESPACHO(string iViaje) {
+            object[] results = this.Invoke("SP_VERIFICA_VIAJE_DESPACHO", new object[] {
+                        iViaje});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SP_VERIFICA_VIAJE_DESPACHOAsync(string iViaje) {
+            this.SP_VERIFICA_VIAJE_DESPACHOAsync(iViaje, null);
+        }
+        
+        /// <remarks/>
+        public void SP_VERIFICA_VIAJE_DESPACHOAsync(string iViaje, object userState) {
+            if ((this.SP_VERIFICA_VIAJE_DESPACHOOperationCompleted == null)) {
+                this.SP_VERIFICA_VIAJE_DESPACHOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSP_VERIFICA_VIAJE_DESPACHOOperationCompleted);
+            }
+            this.InvokeAsync("SP_VERIFICA_VIAJE_DESPACHO", new object[] {
+                        iViaje}, this.SP_VERIFICA_VIAJE_DESPACHOOperationCompleted, userState);
+        }
+        
+        private void OnSP_VERIFICA_VIAJE_DESPACHOOperationCompleted(object arg) {
+            if ((this.SP_VERIFICA_VIAJE_DESPACHOCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SP_VERIFICA_VIAJE_DESPACHOCompleted(this, new SP_VERIFICA_VIAJE_DESPACHOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarDespachoCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Camion GuardarDespachoCamion(Despacho_Camion despacho_Camion, string terminal, System.Data.DataSet iDtsDatos) {
+            object[] results = this.Invoke("GuardarDespachoCamion", new object[] {
+                        despacho_Camion,
+                        terminal,
+                        iDtsDatos});
+            return ((Despacho_Camion)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GuardarDespachoCamionAsync(Despacho_Camion despacho_Camion, string terminal, System.Data.DataSet iDtsDatos) {
+            this.GuardarDespachoCamionAsync(despacho_Camion, terminal, iDtsDatos, null);
+        }
+        
+        /// <remarks/>
+        public void GuardarDespachoCamionAsync(Despacho_Camion despacho_Camion, string terminal, System.Data.DataSet iDtsDatos, object userState) {
+            if ((this.GuardarDespachoCamionOperationCompleted == null)) {
+                this.GuardarDespachoCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGuardarDespachoCamionOperationCompleted);
+            }
+            this.InvokeAsync("GuardarDespachoCamion", new object[] {
+                        despacho_Camion,
+                        terminal,
+                        iDtsDatos}, this.GuardarDespachoCamionOperationCompleted, userState);
+        }
+        
+        private void OnGuardarDespachoCamionOperationCompleted(object arg) {
+            if ((this.GuardarDespachoCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GuardarDespachoCamionCompleted(this, new GuardarDespachoCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarDespachoPiezaCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Camion GuardarDespachoPiezaCamion(Despacho_Camion despacho_Camion, string terminal) {
+            object[] results = this.Invoke("GuardarDespachoPiezaCamion", new object[] {
+                        despacho_Camion,
+                        terminal});
+            return ((Despacho_Camion)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GuardarDespachoPiezaCamionAsync(Despacho_Camion despacho_Camion, string terminal) {
+            this.GuardarDespachoPiezaCamionAsync(despacho_Camion, terminal, null);
+        }
+        
+        /// <remarks/>
+        public void GuardarDespachoPiezaCamionAsync(Despacho_Camion despacho_Camion, string terminal, object userState) {
+            if ((this.GuardarDespachoPiezaCamionOperationCompleted == null)) {
+                this.GuardarDespachoPiezaCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGuardarDespachoPiezaCamionOperationCompleted);
+            }
+            this.InvokeAsync("GuardarDespachoPiezaCamion", new object[] {
+                        despacho_Camion,
+                        terminal}, this.GuardarDespachoPiezaCamionOperationCompleted, userState);
+        }
+        
+        private void OnGuardarDespachoPiezaCamionOperationCompleted(object arg) {
+            if ((this.GuardarDespachoPiezaCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GuardarDespachoPiezaCamionCompleted(this, new GuardarDespachoPiezaCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AsociarEtiquetaPiezaaCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Camion AsociarEtiquetaPiezaaCamion(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string terminal) {
+            object[] results = this.Invoke("AsociarEtiquetaPiezaaCamion", new object[] {
+                        idDespacho,
+                        etiqueta_colada,
+                        etiqueta_pieza,
+                        usuario,
+                        terminal});
+            return ((Despacho_Camion)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AsociarEtiquetaPiezaaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string terminal) {
+            this.AsociarEtiquetaPiezaaCamionAsync(idDespacho, etiqueta_colada, etiqueta_pieza, usuario, terminal, null);
+        }
+        
+        /// <remarks/>
+        public void AsociarEtiquetaPiezaaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string terminal, object userState) {
+            if ((this.AsociarEtiquetaPiezaaCamionOperationCompleted == null)) {
+                this.AsociarEtiquetaPiezaaCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAsociarEtiquetaPiezaaCamionOperationCompleted);
+            }
+            this.InvokeAsync("AsociarEtiquetaPiezaaCamion", new object[] {
+                        idDespacho,
+                        etiqueta_colada,
+                        etiqueta_pieza,
+                        usuario,
+                        terminal}, this.AsociarEtiquetaPiezaaCamionOperationCompleted, userState);
+        }
+        
+        private void OnAsociarEtiquetaPiezaaCamionOperationCompleted(object arg) {
+            if ((this.AsociarEtiquetaPiezaaCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AsociarEtiquetaPiezaaCamionCompleted(this, new AsociarEtiquetaPiezaaCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarDespachoCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarDespachoCamion(System.DateTime fecha) {
+            object[] results = this.Invoke("ListarDespachoCamion", new object[] {
+                        fecha});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarDespachoCamionAsync(System.DateTime fecha) {
+            this.ListarDespachoCamionAsync(fecha, null);
+        }
+        
+        /// <remarks/>
+        public void ListarDespachoCamionAsync(System.DateTime fecha, object userState) {
+            if ((this.ListarDespachoCamionOperationCompleted == null)) {
+                this.ListarDespachoCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarDespachoCamionOperationCompleted);
+            }
+            this.InvokeAsync("ListarDespachoCamion", new object[] {
+                        fecha}, this.ListarDespachoCamionOperationCompleted, userState);
+        }
+        
+        private void OnListarDespachoCamionOperationCompleted(object arg) {
+            if ((this.ListarDespachoCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarDespachoCamionCompleted(this, new ListarDespachoCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VbDespachoCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Camion VbDespachoCamion(int idDespacho, string usuario, string obs, string terminal) {
+            object[] results = this.Invoke("VbDespachoCamion", new object[] {
+                        idDespacho,
+                        usuario,
+                        obs,
+                        terminal});
+            return ((Despacho_Camion)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void VbDespachoCamionAsync(int idDespacho, string usuario, string obs, string terminal) {
+            this.VbDespachoCamionAsync(idDespacho, usuario, obs, terminal, null);
+        }
+        
+        /// <remarks/>
+        public void VbDespachoCamionAsync(int idDespacho, string usuario, string obs, string terminal, object userState) {
+            if ((this.VbDespachoCamionOperationCompleted == null)) {
+                this.VbDespachoCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVbDespachoCamionOperationCompleted);
+            }
+            this.InvokeAsync("VbDespachoCamion", new object[] {
+                        idDespacho,
+                        usuario,
+                        obs,
+                        terminal}, this.VbDespachoCamionOperationCompleted, userState);
+        }
+        
+        private void OnVbDespachoCamionOperationCompleted(object arg) {
+            if ((this.VbDespachoCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.VbDespachoCamionCompleted(this, new VbDespachoCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerTodasObrasVigentes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerTodasObrasVigentes() {
+            object[] results = this.Invoke("ObtenerTodasObrasVigentes", new object[0]);
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerTodasObrasVigentesAsync() {
+            this.ObtenerTodasObrasVigentesAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerTodasObrasVigentesAsync(object userState) {
+            if ((this.ObtenerTodasObrasVigentesOperationCompleted == null)) {
+                this.ObtenerTodasObrasVigentesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerTodasObrasVigentesOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerTodasObrasVigentes", new object[0], this.ObtenerTodasObrasVigentesOperationCompleted, userState);
+        }
+        
+        private void OnObtenerTodasObrasVigentesOperationCompleted(object arg) {
+            if ((this.ObtenerTodasObrasVigentesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerTodasObrasVigentesCompleted(this, new ObtenerTodasObrasVigentesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerViajesPorObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerViajesPorObra(string iIdObra) {
+            object[] results = this.Invoke("ObtenerViajesPorObra", new object[] {
+                        iIdObra});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerViajesPorObraAsync(string iIdObra) {
+            this.ObtenerViajesPorObraAsync(iIdObra, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerViajesPorObraAsync(string iIdObra, object userState) {
+            if ((this.ObtenerViajesPorObraOperationCompleted == null)) {
+                this.ObtenerViajesPorObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerViajesPorObraOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerViajesPorObra", new object[] {
+                        iIdObra}, this.ObtenerViajesPorObraOperationCompleted, userState);
+        }
+        
+        private void OnObtenerViajesPorObraOperationCompleted(object arg) {
+            if ((this.ObtenerViajesPorObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerViajesPorObraCompleted(this, new ObtenerViajesPorObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPiezasDespacho", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public PiezaTipoB[] ObtenerPiezasDespacho(string iCodViaje, string iIdIt) {
+            object[] results = this.Invoke("ObtenerPiezasDespacho", new object[] {
+                        iCodViaje,
+                        iIdIt});
+            return ((PiezaTipoB[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerPiezasDespachoAsync(string iCodViaje, string iIdIt) {
+            this.ObtenerPiezasDespachoAsync(iCodViaje, iIdIt, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerPiezasDespachoAsync(string iCodViaje, string iIdIt, object userState) {
+            if ((this.ObtenerPiezasDespachoOperationCompleted == null)) {
+                this.ObtenerPiezasDespachoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezasDespachoOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerPiezasDespacho", new object[] {
+                        iCodViaje,
+                        iIdIt}, this.ObtenerPiezasDespachoOperationCompleted, userState);
+        }
+        
+        private void OnObtenerPiezasDespachoOperationCompleted(object arg) {
+            if ((this.ObtenerPiezasDespachoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerPiezasDespachoCompleted(this, new ObtenerPiezasDespachoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ValidarRN", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string ValidarRN(string iIdObra, int iNroRN) {
+            object[] results = this.Invoke("ValidarRN", new object[] {
+                        iIdObra,
+                        iNroRN});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ValidarRNAsync(string iIdObra, int iNroRN) {
+            this.ValidarRNAsync(iIdObra, iNroRN, null);
+        }
+        
+        /// <remarks/>
+        public void ValidarRNAsync(string iIdObra, int iNroRN, object userState) {
+            if ((this.ValidarRNOperationCompleted == null)) {
+                this.ValidarRNOperationCompleted = new System.Threading.SendOrPostCallback(this.OnValidarRNOperationCompleted);
+            }
+            this.InvokeAsync("ValidarRN", new object[] {
+                        iIdObra,
+                        iNroRN}, this.ValidarRNOperationCompleted, userState);
+        }
+        
+        private void OnValidarRNOperationCompleted(object arg) {
+            if ((this.ValidarRNCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ValidarRNCompleted(this, new ValidarRNCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PersisteColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet PersisteColada(string colada) {
+            object[] results = this.Invoke("PersisteColada", new object[] {
+                        colada});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PersisteColadaAsync(string colada) {
+            this.PersisteColadaAsync(colada, null);
+        }
+        
+        /// <remarks/>
+        public void PersisteColadaAsync(string colada, object userState) {
+            if ((this.PersisteColadaOperationCompleted == null)) {
+                this.PersisteColadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPersisteColadaOperationCompleted);
+            }
+            this.InvokeAsync("PersisteColada", new object[] {
+                        colada}, this.PersisteColadaOperationCompleted, userState);
+        }
+        
+        private void OnPersisteColadaOperationCompleted(object arg) {
+            if ((this.PersisteColadaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PersisteColadaCompleted(this, new PersisteColadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerColadasPorNro", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerColadasPorNro(string colada) {
+            object[] results = this.Invoke("ObtenerColadasPorNro", new object[] {
+                        colada});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerColadasPorNroAsync(string colada) {
+            this.ObtenerColadasPorNroAsync(colada, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerColadasPorNroAsync(string colada, object userState) {
+            if ((this.ObtenerColadasPorNroOperationCompleted == null)) {
+                this.ObtenerColadasPorNroOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerColadasPorNroOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerColadasPorNro", new object[] {
+                        colada}, this.ObtenerColadasPorNroOperationCompleted, userState);
+        }
+        
+        private void OnObtenerColadasPorNroOperationCompleted(object arg) {
+            if ((this.ObtenerColadasPorNroCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerColadasPorNroCompleted(this, new ObtenerColadasPorNroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPiezasDespachoCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerPiezasDespachoCamion(int idDespachoCamion) {
+            object[] results = this.Invoke("ObtenerPiezasDespachoCamion", new object[] {
+                        idDespachoCamion});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerPiezasDespachoCamionAsync(int idDespachoCamion) {
+            this.ObtenerPiezasDespachoCamionAsync(idDespachoCamion, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerPiezasDespachoCamionAsync(int idDespachoCamion, object userState) {
+            if ((this.ObtenerPiezasDespachoCamionOperationCompleted == null)) {
+                this.ObtenerPiezasDespachoCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezasDespachoCamionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerPiezasDespachoCamion", new object[] {
+                        idDespachoCamion}, this.ObtenerPiezasDespachoCamionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerPiezasDespachoCamionOperationCompleted(object arg) {
+            if ((this.ObtenerPiezasDespachoCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerPiezasDespachoCamionCompleted(this, new ObtenerPiezasDespachoCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VbDespachoPiezaCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Despacho_Camion VbDespachoPiezaCamion(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string obs, string terminal) {
+            object[] results = this.Invoke("VbDespachoPiezaCamion", new object[] {
+                        idDespacho,
+                        etiqueta_colada,
+                        etiqueta_pieza,
+                        usuario,
+                        obs,
+                        terminal});
+            return ((Despacho_Camion)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void VbDespachoPiezaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string obs, string terminal) {
+            this.VbDespachoPiezaCamionAsync(idDespacho, etiqueta_colada, etiqueta_pieza, usuario, obs, terminal, null);
+        }
+        
+        /// <remarks/>
+        public void VbDespachoPiezaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string obs, string terminal, object userState) {
+            if ((this.VbDespachoPiezaCamionOperationCompleted == null)) {
+                this.VbDespachoPiezaCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVbDespachoPiezaCamionOperationCompleted);
+            }
+            this.InvokeAsync("VbDespachoPiezaCamion", new object[] {
+                        idDespacho,
+                        etiqueta_colada,
+                        etiqueta_pieza,
+                        usuario,
+                        obs,
+                        terminal}, this.VbDespachoPiezaCamionOperationCompleted, userState);
+        }
+        
+        private void OnVbDespachoPiezaCamionOperationCompleted(object arg) {
+            if ((this.VbDespachoPiezaCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.VbDespachoPiezaCamionCompleted(this, new VbDespachoPiezaCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarDespachoBodegaMP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarDespachoBodegaMP(int idBodega) {
+            object[] results = this.Invoke("ListarDespachoBodegaMP", new object[] {
+                        idBodega});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarDespachoBodegaMPAsync(int idBodega) {
+            this.ListarDespachoBodegaMPAsync(idBodega, null);
+        }
+        
+        /// <remarks/>
+        public void ListarDespachoBodegaMPAsync(int idBodega, object userState) {
+            if ((this.ListarDespachoBodegaMPOperationCompleted == null)) {
+                this.ListarDespachoBodegaMPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarDespachoBodegaMPOperationCompleted);
+            }
+            this.InvokeAsync("ListarDespachoBodegaMP", new object[] {
+                        idBodega}, this.ListarDespachoBodegaMPOperationCompleted, userState);
+        }
+        
+        private void OnListarDespachoBodegaMPOperationCompleted(object arg) {
+            if ((this.ListarDespachoBodegaMPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarDespachoBodegaMPCompleted(this, new ListarDespachoBodegaMPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarDespachoBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarDespachoBodegaAcopio(int idBodega) {
+            object[] results = this.Invoke("ListarDespachoBodegaAcopio", new object[] {
+                        idBodega});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarDespachoBodegaAcopioAsync(int idBodega) {
+            this.ListarDespachoBodegaAcopioAsync(idBodega, null);
+        }
+        
+        /// <remarks/>
+        public void ListarDespachoBodegaAcopioAsync(int idBodega, object userState) {
+            if ((this.ListarDespachoBodegaAcopioOperationCompleted == null)) {
+                this.ListarDespachoBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarDespachoBodegaAcopioOperationCompleted);
+            }
+            this.InvokeAsync("ListarDespachoBodegaAcopio", new object[] {
+                        idBodega}, this.ListarDespachoBodegaAcopioOperationCompleted, userState);
+        }
+        
+        private void OnListarDespachoBodegaAcopioOperationCompleted(object arg) {
+            if ((this.ListarDespachoBodegaAcopioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarDespachoBodegaAcopioCompleted(this, new ListarDespachoBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarPiezasNoDespachadasBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarPiezasNoDespachadasBodegaAcopio(int idMaquina) {
+            object[] results = this.Invoke("ListarPiezasNoDespachadasBodegaAcopio", new object[] {
+                        idMaquina});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarPiezasNoDespachadasBodegaAcopioAsync(int idMaquina) {
+            this.ListarPiezasNoDespachadasBodegaAcopioAsync(idMaquina, null);
+        }
+        
+        /// <remarks/>
+        public void ListarPiezasNoDespachadasBodegaAcopioAsync(int idMaquina, object userState) {
+            if ((this.ListarPiezasNoDespachadasBodegaAcopioOperationCompleted == null)) {
+                this.ListarPiezasNoDespachadasBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarPiezasNoDespachadasBodegaAcopioOperationCompleted);
+            }
+            this.InvokeAsync("ListarPiezasNoDespachadasBodegaAcopio", new object[] {
+                        idMaquina}, this.ListarPiezasNoDespachadasBodegaAcopioOperationCompleted, userState);
+        }
+        
+        private void OnListarPiezasNoDespachadasBodegaAcopioOperationCompleted(object arg) {
+            if ((this.ListarPiezasNoDespachadasBodegaAcopioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarPiezasNoDespachadasBodegaAcopioCompleted(this, new ListarPiezasNoDespachadasBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosProduccionPorColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosProduccionPorColada(string EtiquetaColada) {
+            object[] results = this.Invoke("ObtenerDatosProduccionPorColada", new object[] {
+                        EtiquetaColada});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosProduccionPorColadaAsync(string EtiquetaColada) {
+            this.ObtenerDatosProduccionPorColadaAsync(EtiquetaColada, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosProduccionPorColadaAsync(string EtiquetaColada, object userState) {
+            if ((this.ObtenerDatosProduccionPorColadaOperationCompleted == null)) {
+                this.ObtenerDatosProduccionPorColadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosProduccionPorColadaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosProduccionPorColada", new object[] {
+                        EtiquetaColada}, this.ObtenerDatosProduccionPorColadaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosProduccionPorColadaOperationCompleted(object arg) {
+            if ((this.ObtenerDatosProduccionPorColadaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosProduccionPorColadaCompleted(this, new ObtenerDatosProduccionPorColadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PersistirEtiquetaAZA", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public TipoEtiquetaAza PersistirEtiquetaAZA(TipoEtiquetaAza EtiquetaColada) {
+            object[] results = this.Invoke("PersistirEtiquetaAZA", new object[] {
+                        EtiquetaColada});
+            return ((TipoEtiquetaAza)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PersistirEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada) {
+            this.PersistirEtiquetaAZAAsync(EtiquetaColada, null);
+        }
+        
+        /// <remarks/>
+        public void PersistirEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada, object userState) {
+            if ((this.PersistirEtiquetaAZAOperationCompleted == null)) {
+                this.PersistirEtiquetaAZAOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPersistirEtiquetaAZAOperationCompleted);
+            }
+            this.InvokeAsync("PersistirEtiquetaAZA", new object[] {
+                        EtiquetaColada}, this.PersistirEtiquetaAZAOperationCompleted, userState);
+        }
+        
+        private void OnPersistirEtiquetaAZAOperationCompleted(object arg) {
+            if ((this.PersistirEtiquetaAZACompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PersistirEtiquetaAZACompleted(this, new PersistirEtiquetaAZACompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Obtener_MP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet Obtener_MP() {
+            object[] results = this.Invoke("Obtener_MP", new object[0]);
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Obtener_MPAsync() {
+            this.Obtener_MPAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Obtener_MPAsync(object userState) {
+            if ((this.Obtener_MPOperationCompleted == null)) {
+                this.Obtener_MPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtener_MPOperationCompleted);
+            }
+            this.InvokeAsync("Obtener_MP", new object[0], this.Obtener_MPOperationCompleted, userState);
+        }
+        
+        private void OnObtener_MPOperationCompleted(object arg) {
+            if ((this.Obtener_MPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Obtener_MPCompleted(this, new Obtener_MPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDetalle_OC_Aza", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDetalle_OC_Aza(string iCodSuc, string IdOc) {
+            object[] results = this.Invoke("ObtenerDetalle_OC_Aza", new object[] {
+                        iCodSuc,
+                        IdOc});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalle_OC_AzaAsync(string iCodSuc, string IdOc) {
+            this.ObtenerDetalle_OC_AzaAsync(iCodSuc, IdOc, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalle_OC_AzaAsync(string iCodSuc, string IdOc, object userState) {
+            if ((this.ObtenerDetalle_OC_AzaOperationCompleted == null)) {
+                this.ObtenerDetalle_OC_AzaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDetalle_OC_AzaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDetalle_OC_Aza", new object[] {
+                        iCodSuc,
+                        IdOc}, this.ObtenerDetalle_OC_AzaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDetalle_OC_AzaOperationCompleted(object arg) {
+            if ((this.ObtenerDetalle_OC_AzaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDetalle_OC_AzaCompleted(this, new ObtenerDetalle_OC_AzaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VerificaNroGuiaDespacho", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet VerificaNroGuiaDespacho(string IdNroGuia) {
+            object[] results = this.Invoke("VerificaNroGuiaDespacho", new object[] {
+                        IdNroGuia});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void VerificaNroGuiaDespachoAsync(string IdNroGuia) {
+            this.VerificaNroGuiaDespachoAsync(IdNroGuia, null);
+        }
+        
+        /// <remarks/>
+        public void VerificaNroGuiaDespachoAsync(string IdNroGuia, object userState) {
+            if ((this.VerificaNroGuiaDespachoOperationCompleted == null)) {
+                this.VerificaNroGuiaDespachoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVerificaNroGuiaDespachoOperationCompleted);
+            }
+            this.InvokeAsync("VerificaNroGuiaDespacho", new object[] {
+                        IdNroGuia}, this.VerificaNroGuiaDespachoOperationCompleted, userState);
+        }
+        
+        private void OnVerificaNroGuiaDespachoOperationCompleted(object arg) {
+            if ((this.VerificaNroGuiaDespachoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.VerificaNroGuiaDespachoCompleted(this, new VerificaNroGuiaDespachoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDetalleProduccionPorColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDetalleProduccionPorColada(string EtiquetaColada) {
+            object[] results = this.Invoke("ObtenerDetalleProduccionPorColada", new object[] {
+                        EtiquetaColada});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalleProduccionPorColadaAsync(string EtiquetaColada) {
+            this.ObtenerDetalleProduccionPorColadaAsync(EtiquetaColada, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalleProduccionPorColadaAsync(string EtiquetaColada, object userState) {
+            if ((this.ObtenerDetalleProduccionPorColadaOperationCompleted == null)) {
+                this.ObtenerDetalleProduccionPorColadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDetalleProduccionPorColadaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDetalleProduccionPorColada", new object[] {
+                        EtiquetaColada}, this.ObtenerDetalleProduccionPorColadaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDetalleProduccionPorColadaOperationCompleted(object arg) {
+            if ((this.ObtenerDetalleProduccionPorColadaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDetalleProduccionPorColadaCompleted(this, new ObtenerDetalleProduccionPorColadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDetalleProduccionPorColadaQr", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDetalleProduccionPorColadaQr(string EtiquetaColada) {
+            object[] results = this.Invoke("ObtenerDetalleProduccionPorColadaQr", new object[] {
+                        EtiquetaColada});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalleProduccionPorColadaQrAsync(string EtiquetaColada) {
+            this.ObtenerDetalleProduccionPorColadaQrAsync(EtiquetaColada, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalleProduccionPorColadaQrAsync(string EtiquetaColada, object userState) {
+            if ((this.ObtenerDetalleProduccionPorColadaQrOperationCompleted == null)) {
+                this.ObtenerDetalleProduccionPorColadaQrOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDetalleProduccionPorColadaQrOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDetalleProduccionPorColadaQr", new object[] {
+                        EtiquetaColada}, this.ObtenerDetalleProduccionPorColadaQrOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDetalleProduccionPorColadaQrOperationCompleted(object arg) {
+            if ((this.ObtenerDetalleProduccionPorColadaQrCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDetalleProduccionPorColadaQrCompleted(this, new ObtenerDetalleProduccionPorColadaQrCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerResumanPiezasPorViaje", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerResumanPiezasPorViaje(string iCodViaje) {
+            object[] results = this.Invoke("ObtenerResumanPiezasPorViaje", new object[] {
+                        iCodViaje});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerResumanPiezasPorViajeAsync(string iCodViaje) {
+            this.ObtenerResumanPiezasPorViajeAsync(iCodViaje, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerResumanPiezasPorViajeAsync(string iCodViaje, object userState) {
+            if ((this.ObtenerResumanPiezasPorViajeOperationCompleted == null)) {
+                this.ObtenerResumanPiezasPorViajeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerResumanPiezasPorViajeOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerResumanPiezasPorViaje", new object[] {
+                        iCodViaje}, this.ObtenerResumanPiezasPorViajeOperationCompleted, userState);
+        }
+        
+        private void OnObtenerResumanPiezasPorViajeOperationCompleted(object arg) {
+            if ((this.ObtenerResumanPiezasPorViajeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerResumanPiezasPorViajeCompleted(this, new ObtenerResumanPiezasPorViajeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosConsultaGenerica", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -995,6 +2296,302 @@ namespace EstadosdePagos.WsOperacion {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosIniciales", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet ObtenerDatosIniciales(string iTipo) {
+            object[] results = this.Invoke("ObtenerDatosIniciales", new object[] {
+                        iTipo});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosInicialesAsync(string iTipo) {
+            this.ObtenerDatosInicialesAsync(iTipo, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosInicialesAsync(string iTipo, object userState) {
+            if ((this.ObtenerDatosInicialesOperationCompleted == null)) {
+                this.ObtenerDatosInicialesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosInicialesOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosIniciales", new object[] {
+                        iTipo}, this.ObtenerDatosInicialesOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosInicialesOperationCompleted(object arg) {
+            if ((this.ObtenerDatosInicialesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosInicialesCompleted(this, new ObtenerDatosInicialesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GrabarChequeoMaquina", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet GrabarChequeoMaquina(System.Data.DataSet Dts) {
+            object[] results = this.Invoke("GrabarChequeoMaquina", new object[] {
+                        Dts});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GrabarChequeoMaquinaAsync(System.Data.DataSet Dts) {
+            this.GrabarChequeoMaquinaAsync(Dts, null);
+        }
+        
+        /// <remarks/>
+        public void GrabarChequeoMaquinaAsync(System.Data.DataSet Dts, object userState) {
+            if ((this.GrabarChequeoMaquinaOperationCompleted == null)) {
+                this.GrabarChequeoMaquinaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGrabarChequeoMaquinaOperationCompleted);
+            }
+            this.InvokeAsync("GrabarChequeoMaquina", new object[] {
+                        Dts}, this.GrabarChequeoMaquinaOperationCompleted, userState);
+        }
+        
+        private void OnGrabarChequeoMaquinaOperationCompleted(object arg) {
+            if ((this.GrabarChequeoMaquinaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GrabarChequeoMaquinaCompleted(this, new GrabarChequeoMaquinaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VerificaChequeo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string VerificaChequeo(string IdMaquina) {
+            object[] results = this.Invoke("VerificaChequeo", new object[] {
+                        IdMaquina});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void VerificaChequeoAsync(string IdMaquina) {
+            this.VerificaChequeoAsync(IdMaquina, null);
+        }
+        
+        /// <remarks/>
+        public void VerificaChequeoAsync(string IdMaquina, object userState) {
+            if ((this.VerificaChequeoOperationCompleted == null)) {
+                this.VerificaChequeoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVerificaChequeoOperationCompleted);
+            }
+            this.InvokeAsync("VerificaChequeo", new object[] {
+                        IdMaquina}, this.VerificaChequeoOperationCompleted, userState);
+        }
+        
+        private void OnVerificaChequeoOperationCompleted(object arg) {
+            if ((this.VerificaChequeoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.VerificaChequeoCompleted(this, new VerificaChequeoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerSupervisores", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerSupervisores() {
+            object[] results = this.Invoke("ObtenerSupervisores", new object[0]);
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerSupervisoresAsync() {
+            this.ObtenerSupervisoresAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerSupervisoresAsync(object userState) {
+            if ((this.ObtenerSupervisoresOperationCompleted == null)) {
+                this.ObtenerSupervisoresOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerSupervisoresOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerSupervisores", new object[0], this.ObtenerSupervisoresOperationCompleted, userState);
+        }
+        
+        private void OnObtenerSupervisoresOperationCompleted(object arg) {
+            if ((this.ObtenerSupervisoresCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerSupervisoresCompleted(this, new ObtenerSupervisoresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosParaEnvioMail", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosParaEnvioMail() {
+            object[] results = this.Invoke("ObtenerDatosParaEnvioMail", new object[0]);
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosParaEnvioMailAsync() {
+            this.ObtenerDatosParaEnvioMailAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosParaEnvioMailAsync(object userState) {
+            if ((this.ObtenerDatosParaEnvioMailOperationCompleted == null)) {
+                this.ObtenerDatosParaEnvioMailOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosParaEnvioMailOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosParaEnvioMail", new object[0], this.ObtenerDatosParaEnvioMailOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosParaEnvioMailOperationCompleted(object arg) {
+            if ((this.ObtenerDatosParaEnvioMailCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosParaEnvioMailCompleted(this, new ObtenerDatosParaEnvioMailCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IntegraBodegasINET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet IntegraBodegasINET(string iFecha, string IdIt_PorAprobar, bool iPersisteResultado) {
+            object[] results = this.Invoke("IntegraBodegasINET", new object[] {
+                        iFecha,
+                        IdIt_PorAprobar,
+                        iPersisteResultado});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void IntegraBodegasINETAsync(string iFecha, string IdIt_PorAprobar, bool iPersisteResultado) {
+            this.IntegraBodegasINETAsync(iFecha, IdIt_PorAprobar, iPersisteResultado, null);
+        }
+        
+        /// <remarks/>
+        public void IntegraBodegasINETAsync(string iFecha, string IdIt_PorAprobar, bool iPersisteResultado, object userState) {
+            if ((this.IntegraBodegasINETOperationCompleted == null)) {
+                this.IntegraBodegasINETOperationCompleted = new System.Threading.SendOrPostCallback(this.OnIntegraBodegasINETOperationCompleted);
+            }
+            this.InvokeAsync("IntegraBodegasINET", new object[] {
+                        iFecha,
+                        IdIt_PorAprobar,
+                        iPersisteResultado}, this.IntegraBodegasINETOperationCompleted, userState);
+        }
+        
+        private void OnIntegraBodegasINETOperationCompleted(object arg) {
+            if ((this.IntegraBodegasINETCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.IntegraBodegasINETCompleted(this, new IntegraBodegasINETCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerResumenGD_ParaExcel", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerResumenGD_ParaExcel(string iViaje) {
+            object[] results = this.Invoke("ObtenerResumenGD_ParaExcel", new object[] {
+                        iViaje});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerResumenGD_ParaExcelAsync(string iViaje) {
+            this.ObtenerResumenGD_ParaExcelAsync(iViaje, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerResumenGD_ParaExcelAsync(string iViaje, object userState) {
+            if ((this.ObtenerResumenGD_ParaExcelOperationCompleted == null)) {
+                this.ObtenerResumenGD_ParaExcelOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerResumenGD_ParaExcelOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerResumenGD_ParaExcel", new object[] {
+                        iViaje}, this.ObtenerResumenGD_ParaExcelOperationCompleted, userState);
+        }
+        
+        private void OnObtenerResumenGD_ParaExcelOperationCompleted(object arg) {
+            if ((this.ObtenerResumenGD_ParaExcelCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerResumenGD_ParaExcelCompleted(this, new ObtenerResumenGD_ParaExcelCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerEtiqueta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public TipoEtiquetaAza ObtenerEtiqueta(string iLote, string iBulto) {
+            object[] results = this.Invoke("ObtenerEtiqueta", new object[] {
+                        iLote,
+                        iBulto});
+            return ((TipoEtiquetaAza)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetaAsync(string iLote, string iBulto) {
+            this.ObtenerEtiquetaAsync(iLote, iBulto, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetaAsync(string iLote, string iBulto, object userState) {
+            if ((this.ObtenerEtiquetaOperationCompleted == null)) {
+                this.ObtenerEtiquetaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEtiquetaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerEtiqueta", new object[] {
+                        iLote,
+                        iBulto}, this.ObtenerEtiquetaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerEtiquetaOperationCompleted(object arg) {
+            if ((this.ObtenerEtiquetaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerEtiquetaCompleted(this, new ObtenerEtiquetaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerAsignacionITMaq", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet ObtenerAsignacionITMaq(string iFecha, string IdIt_PorAprobar, bool iPersisteResultado) {
+            object[] results = this.Invoke("ObtenerAsignacionITMaq", new object[] {
+                        iFecha,
+                        IdIt_PorAprobar,
+                        iPersisteResultado});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerAsignacionITMaqAsync(string iFecha, string IdIt_PorAprobar, bool iPersisteResultado) {
+            this.ObtenerAsignacionITMaqAsync(iFecha, IdIt_PorAprobar, iPersisteResultado, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerAsignacionITMaqAsync(string iFecha, string IdIt_PorAprobar, bool iPersisteResultado, object userState) {
+            if ((this.ObtenerAsignacionITMaqOperationCompleted == null)) {
+                this.ObtenerAsignacionITMaqOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerAsignacionITMaqOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerAsignacionITMaq", new object[] {
+                        iFecha,
+                        IdIt_PorAprobar,
+                        iPersisteResultado}, this.ObtenerAsignacionITMaqOperationCompleted, userState);
+        }
+        
+        private void OnObtenerAsignacionITMaqOperationCompleted(object arg) {
+            if ((this.ObtenerAsignacionITMaqCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerAsignacionITMaqCompleted(this, new ObtenerAsignacionITMaqCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GrabarRecepcion_MP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Recepcion_MP GrabarRecepcion_MP(Recepcion_MP iRMP) {
+            object[] results = this.Invoke("GrabarRecepcion_MP", new object[] {
+                        iRMP});
+            return ((Recepcion_MP)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GrabarRecepcion_MPAsync(Recepcion_MP iRMP) {
+            this.GrabarRecepcion_MPAsync(iRMP, null);
+        }
+        
+        /// <remarks/>
+        public void GrabarRecepcion_MPAsync(Recepcion_MP iRMP, object userState) {
+            if ((this.GrabarRecepcion_MPOperationCompleted == null)) {
+                this.GrabarRecepcion_MPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGrabarRecepcion_MPOperationCompleted);
+            }
+            this.InvokeAsync("GrabarRecepcion_MP", new object[] {
+                        iRMP}, this.GrabarRecepcion_MPOperationCompleted, userState);
+        }
+        
+        private void OnGrabarRecepcion_MPOperationCompleted(object arg) {
+            if ((this.GrabarRecepcion_MPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GrabarRecepcion_MPCompleted(this, new GrabarRecepcion_MPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarSolicitudMaterial", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public Solicitud_Material GuardarSolicitudMaterial(Solicitud_Material solicitud_Material, string terminal, int totem) {
             object[] results = this.Invoke("GuardarSolicitudMaterial", new object[] {
@@ -1197,6 +2794,35 @@ namespace EstadosdePagos.WsOperacion {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarSolicitudMaterial_CierreAut", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarSolicitudMaterial_CierreAut(int totem) {
+            object[] results = this.Invoke("ListarSolicitudMaterial_CierreAut", new object[] {
+                        totem});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarSolicitudMaterial_CierreAutAsync(int totem) {
+            this.ListarSolicitudMaterial_CierreAutAsync(totem, null);
+        }
+        
+        /// <remarks/>
+        public void ListarSolicitudMaterial_CierreAutAsync(int totem, object userState) {
+            if ((this.ListarSolicitudMaterial_CierreAutOperationCompleted == null)) {
+                this.ListarSolicitudMaterial_CierreAutOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarSolicitudMaterial_CierreAutOperationCompleted);
+            }
+            this.InvokeAsync("ListarSolicitudMaterial_CierreAut", new object[] {
+                        totem}, this.ListarSolicitudMaterial_CierreAutOperationCompleted, userState);
+        }
+        
+        private void OnListarSolicitudMaterial_CierreAutOperationCompleted(object arg) {
+            if ((this.ListarSolicitudMaterial_CierreAutCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarSolicitudMaterial_CierreAutCompleted(this, new ListarSolicitudMaterial_CierreAutCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DevolucionDeMP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string DevolucionDeMP(string Det_Id, string NroBarras, string Kilos, string IdUsuario) {
             object[] results = this.Invoke("DevolucionDeMP", new object[] {
@@ -1389,6 +3015,39 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ObtenerResumenSMP_PorTurnoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ObtenerResumenSMP_PorTurnoCompleted(this, new ObtenerResumenSMP_PorTurnoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerResumenSMP_PorTurno_Totem", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerResumenSMP_PorTurno_Totem(string iFechaIni, string iFechaFin, string iIdTotem) {
+            object[] results = this.Invoke("ObtenerResumenSMP_PorTurno_Totem", new object[] {
+                        iFechaIni,
+                        iFechaFin,
+                        iIdTotem});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerResumenSMP_PorTurno_TotemAsync(string iFechaIni, string iFechaFin, string iIdTotem) {
+            this.ObtenerResumenSMP_PorTurno_TotemAsync(iFechaIni, iFechaFin, iIdTotem, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerResumenSMP_PorTurno_TotemAsync(string iFechaIni, string iFechaFin, string iIdTotem, object userState) {
+            if ((this.ObtenerResumenSMP_PorTurno_TotemOperationCompleted == null)) {
+                this.ObtenerResumenSMP_PorTurno_TotemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerResumenSMP_PorTurno_TotemOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerResumenSMP_PorTurno_Totem", new object[] {
+                        iFechaIni,
+                        iFechaFin,
+                        iIdTotem}, this.ObtenerResumenSMP_PorTurno_TotemOperationCompleted, userState);
+        }
+        
+        private void OnObtenerResumenSMP_PorTurno_TotemOperationCompleted(object arg) {
+            if ((this.ObtenerResumenSMP_PorTurno_TotemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerResumenSMP_PorTurno_TotemCompleted(this, new ObtenerResumenSMP_PorTurno_TotemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2556,6 +4215,151 @@ namespace EstadosdePagos.WsOperacion {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerTotelaciaExtra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public double ObtenerTotelaciaExtra() {
+            object[] results = this.Invoke("ObtenerTotelaciaExtra", new object[0]);
+            return ((double)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerTotelaciaExtraAsync() {
+            this.ObtenerTotelaciaExtraAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerTotelaciaExtraAsync(object userState) {
+            if ((this.ObtenerTotelaciaExtraOperationCompleted == null)) {
+                this.ObtenerTotelaciaExtraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerTotelaciaExtraOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerTotelaciaExtra", new object[0], this.ObtenerTotelaciaExtraOperationCompleted, userState);
+        }
+        
+        private void OnObtenerTotelaciaExtraOperationCompleted(object arg) {
+            if ((this.ObtenerTotelaciaExtraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerTotelaciaExtraCompleted(this, new ObtenerTotelaciaExtraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPesoMaxBasculaMovil", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string ObtenerPesoMaxBasculaMovil() {
+            object[] results = this.Invoke("ObtenerPesoMaxBasculaMovil", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerPesoMaxBasculaMovilAsync() {
+            this.ObtenerPesoMaxBasculaMovilAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerPesoMaxBasculaMovilAsync(object userState) {
+            if ((this.ObtenerPesoMaxBasculaMovilOperationCompleted == null)) {
+                this.ObtenerPesoMaxBasculaMovilOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPesoMaxBasculaMovilOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerPesoMaxBasculaMovil", new object[0], this.ObtenerPesoMaxBasculaMovilOperationCompleted, userState);
+        }
+        
+        private void OnObtenerPesoMaxBasculaMovilOperationCompleted(object arg) {
+            if ((this.ObtenerPesoMaxBasculaMovilCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerPesoMaxBasculaMovilCompleted(this, new ObtenerPesoMaxBasculaMovilCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ValidaUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool ValidaUsuario(string IUser, string iPs) {
+            object[] results = this.Invoke("ValidaUsuario", new object[] {
+                        IUser,
+                        iPs});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ValidaUsuarioAsync(string IUser, string iPs) {
+            this.ValidaUsuarioAsync(IUser, iPs, null);
+        }
+        
+        /// <remarks/>
+        public void ValidaUsuarioAsync(string IUser, string iPs, object userState) {
+            if ((this.ValidaUsuarioOperationCompleted == null)) {
+                this.ValidaUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnValidaUsuarioOperationCompleted);
+            }
+            this.InvokeAsync("ValidaUsuario", new object[] {
+                        IUser,
+                        iPs}, this.ValidaUsuarioOperationCompleted, userState);
+        }
+        
+        private void OnValidaUsuarioOperationCompleted(object arg) {
+            if ((this.ValidaUsuarioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ValidaUsuarioCompleted(this, new ValidaUsuarioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosPorIdDespacho", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosPorIdDespacho(string IdDespacho, string iViaje, string idPesajeC) {
+            object[] results = this.Invoke("ObtenerDatosPorIdDespacho", new object[] {
+                        IdDespacho,
+                        iViaje,
+                        idPesajeC});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosPorIdDespachoAsync(string IdDespacho, string iViaje, string idPesajeC) {
+            this.ObtenerDatosPorIdDespachoAsync(IdDespacho, iViaje, idPesajeC, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosPorIdDespachoAsync(string IdDespacho, string iViaje, string idPesajeC, object userState) {
+            if ((this.ObtenerDatosPorIdDespachoOperationCompleted == null)) {
+                this.ObtenerDatosPorIdDespachoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosPorIdDespachoOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosPorIdDespacho", new object[] {
+                        IdDespacho,
+                        iViaje,
+                        idPesajeC}, this.ObtenerDatosPorIdDespachoOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosPorIdDespachoOperationCompleted(object arg) {
+            if ((this.ObtenerDatosPorIdDespachoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosPorIdDespachoCompleted(this, new ObtenerDatosPorIdDespachoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosGuiasSinVincular", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosGuiasSinVincular() {
+            object[] results = this.Invoke("ObtenerDatosGuiasSinVincular", new object[0]);
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosGuiasSinVincularAsync() {
+            this.ObtenerDatosGuiasSinVincularAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosGuiasSinVincularAsync(object userState) {
+            if ((this.ObtenerDatosGuiasSinVincularOperationCompleted == null)) {
+                this.ObtenerDatosGuiasSinVincularOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosGuiasSinVincularOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosGuiasSinVincular", new object[0], this.ObtenerDatosGuiasSinVincularOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosGuiasSinVincularOperationCompleted(object arg) {
+            if ((this.ObtenerDatosGuiasSinVincularCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosGuiasSinVincularCompleted(this, new ObtenerDatosGuiasSinVincularCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GrabarDatosPesajeCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public PesajeCamion GrabarDatosPesajeCamion(PesajeCamion iObjPC) {
             object[] results = this.Invoke("GrabarDatosPesajeCamion", new object[] {
@@ -2581,6 +4385,151 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.GrabarDatosPesajeCamionCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GrabarDatosPesajeCamionCompleted(this, new GrabarDatosPesajeCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerCamionesEnPlanta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerCamionesEnPlanta() {
+            object[] results = this.Invoke("ObtenerCamionesEnPlanta", new object[0]);
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerCamionesEnPlantaAsync() {
+            this.ObtenerCamionesEnPlantaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerCamionesEnPlantaAsync(object userState) {
+            if ((this.ObtenerCamionesEnPlantaOperationCompleted == null)) {
+                this.ObtenerCamionesEnPlantaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerCamionesEnPlantaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerCamionesEnPlanta", new object[0], this.ObtenerCamionesEnPlantaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerCamionesEnPlantaOperationCompleted(object arg) {
+            if ((this.ObtenerCamionesEnPlantaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerCamionesEnPlantaCompleted(this, new ObtenerCamionesEnPlantaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDetallePesaje", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDetallePesaje(string iIdDetalleP) {
+            object[] results = this.Invoke("ObtenerDetallePesaje", new object[] {
+                        iIdDetalleP});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetallePesajeAsync(string iIdDetalleP) {
+            this.ObtenerDetallePesajeAsync(iIdDetalleP, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetallePesajeAsync(string iIdDetalleP, object userState) {
+            if ((this.ObtenerDetallePesajeOperationCompleted == null)) {
+                this.ObtenerDetallePesajeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDetallePesajeOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDetallePesaje", new object[] {
+                        iIdDetalleP}, this.ObtenerDetallePesajeOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDetallePesajeOperationCompleted(object arg) {
+            if ((this.ObtenerDetallePesajeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDetallePesajeCompleted(this, new ObtenerDetallePesajeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SacarITDespacho", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet SacarITDespacho(string iIdDetalleP, string iCodigo) {
+            object[] results = this.Invoke("SacarITDespacho", new object[] {
+                        iIdDetalleP,
+                        iCodigo});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SacarITDespachoAsync(string iIdDetalleP, string iCodigo) {
+            this.SacarITDespachoAsync(iIdDetalleP, iCodigo, null);
+        }
+        
+        /// <remarks/>
+        public void SacarITDespachoAsync(string iIdDetalleP, string iCodigo, object userState) {
+            if ((this.SacarITDespachoOperationCompleted == null)) {
+                this.SacarITDespachoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSacarITDespachoOperationCompleted);
+            }
+            this.InvokeAsync("SacarITDespacho", new object[] {
+                        iIdDetalleP,
+                        iCodigo}, this.SacarITDespachoOperationCompleted, userState);
+        }
+        
+        private void OnSacarITDespachoOperationCompleted(object arg) {
+            if ((this.SacarITDespachoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SacarITDespachoCompleted(this, new SacarITDespachoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminaRegistroCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet EliminaRegistroCamion(string iIdPesaje) {
+            object[] results = this.Invoke("EliminaRegistroCamion", new object[] {
+                        iIdPesaje});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminaRegistroCamionAsync(string iIdPesaje) {
+            this.EliminaRegistroCamionAsync(iIdPesaje, null);
+        }
+        
+        /// <remarks/>
+        public void EliminaRegistroCamionAsync(string iIdPesaje, object userState) {
+            if ((this.EliminaRegistroCamionOperationCompleted == null)) {
+                this.EliminaRegistroCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminaRegistroCamionOperationCompleted);
+            }
+            this.InvokeAsync("EliminaRegistroCamion", new object[] {
+                        iIdPesaje}, this.EliminaRegistroCamionOperationCompleted, userState);
+        }
+        
+        private void OnEliminaRegistroCamionOperationCompleted(object arg) {
+            if ((this.EliminaRegistroCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminaRegistroCamionCompleted(this, new EliminaRegistroCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CierraCicloCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet CierraCicloCamion(string iIdPesaje) {
+            object[] results = this.Invoke("CierraCicloCamion", new object[] {
+                        iIdPesaje});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CierraCicloCamionAsync(string iIdPesaje) {
+            this.CierraCicloCamionAsync(iIdPesaje, null);
+        }
+        
+        /// <remarks/>
+        public void CierraCicloCamionAsync(string iIdPesaje, object userState) {
+            if ((this.CierraCicloCamionOperationCompleted == null)) {
+                this.CierraCicloCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCierraCicloCamionOperationCompleted);
+            }
+            this.InvokeAsync("CierraCicloCamion", new object[] {
+                        iIdPesaje}, this.CierraCicloCamionOperationCompleted, userState);
+        }
+        
+        private void OnCierraCicloCamionOperationCompleted(object arg) {
+            if ((this.CierraCicloCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CierraCicloCamionCompleted(this, new CierraCicloCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2664,6 +4613,428 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ObtenerPesoTaraPorPatenteCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ObtenerPesoTaraPorPatenteCompleted(this, new ObtenerPesoTaraPorPatenteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosPesajeCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosPesajeCamion(string iId) {
+            object[] results = this.Invoke("ObtenerDatosPesajeCamion", new object[] {
+                        iId});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosPesajeCamionAsync(string iId) {
+            this.ObtenerDatosPesajeCamionAsync(iId, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosPesajeCamionAsync(string iId, object userState) {
+            if ((this.ObtenerDatosPesajeCamionOperationCompleted == null)) {
+                this.ObtenerDatosPesajeCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosPesajeCamionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosPesajeCamion", new object[] {
+                        iId}, this.ObtenerDatosPesajeCamionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosPesajeCamionOperationCompleted(object arg) {
+            if ((this.ObtenerDatosPesajeCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosPesajeCamionCompleted(this, new ObtenerDatosPesajeCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosResumen_PesajeCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosResumen_PesajeCamion(string iIdPesajeCam) {
+            object[] results = this.Invoke("ObtenerDatosResumen_PesajeCamion", new object[] {
+                        iIdPesajeCam});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosResumen_PesajeCamionAsync(string iIdPesajeCam) {
+            this.ObtenerDatosResumen_PesajeCamionAsync(iIdPesajeCam, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosResumen_PesajeCamionAsync(string iIdPesajeCam, object userState) {
+            if ((this.ObtenerDatosResumen_PesajeCamionOperationCompleted == null)) {
+                this.ObtenerDatosResumen_PesajeCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosResumen_PesajeCamionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosResumen_PesajeCamion", new object[] {
+                        iIdPesajeCam}, this.ObtenerDatosResumen_PesajeCamionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosResumen_PesajeCamionOperationCompleted(object arg) {
+            if ((this.ObtenerDatosResumen_PesajeCamionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosResumen_PesajeCamionCompleted(this, new ObtenerDatosResumen_PesajeCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PersistePesajeBM", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public TipoBasculaMovil[] PersistePesajeBM(TipoBasculaMovil[] iListBm) {
+            object[] results = this.Invoke("PersistePesajeBM", new object[] {
+                        iListBm});
+            return ((TipoBasculaMovil[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PersistePesajeBMAsync(TipoBasculaMovil[] iListBm) {
+            this.PersistePesajeBMAsync(iListBm, null);
+        }
+        
+        /// <remarks/>
+        public void PersistePesajeBMAsync(TipoBasculaMovil[] iListBm, object userState) {
+            if ((this.PersistePesajeBMOperationCompleted == null)) {
+                this.PersistePesajeBMOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPersistePesajeBMOperationCompleted);
+            }
+            this.InvokeAsync("PersistePesajeBM", new object[] {
+                        iListBm}, this.PersistePesajeBMOperationCompleted, userState);
+        }
+        
+        private void OnPersistePesajeBMOperationCompleted(object arg) {
+            if ((this.PersistePesajeBMCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PersistePesajeBMCompleted(this, new PersistePesajeBMCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GrabarProduccionExterna", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GrabarProduccionExterna(string IdPaquete, string iExterno, int IdUser) {
+            object[] results = this.Invoke("GrabarProduccionExterna", new object[] {
+                        IdPaquete,
+                        iExterno,
+                        IdUser});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GrabarProduccionExternaAsync(string IdPaquete, string iExterno, int IdUser) {
+            this.GrabarProduccionExternaAsync(IdPaquete, iExterno, IdUser, null);
+        }
+        
+        /// <remarks/>
+        public void GrabarProduccionExternaAsync(string IdPaquete, string iExterno, int IdUser, object userState) {
+            if ((this.GrabarProduccionExternaOperationCompleted == null)) {
+                this.GrabarProduccionExternaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGrabarProduccionExternaOperationCompleted);
+            }
+            this.InvokeAsync("GrabarProduccionExterna", new object[] {
+                        IdPaquete,
+                        iExterno,
+                        IdUser}, this.GrabarProduccionExternaOperationCompleted, userState);
+        }
+        
+        private void OnGrabarProduccionExternaOperationCompleted(object arg) {
+            if ((this.GrabarProduccionExternaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GrabarProduccionExternaCompleted(this, new GrabarProduccionExternaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GrabarNoConformidadProdExt", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GrabarNoConformidadProdExt(string IdPaquete, string iDescrip, int IdUser) {
+            object[] results = this.Invoke("GrabarNoConformidadProdExt", new object[] {
+                        IdPaquete,
+                        iDescrip,
+                        IdUser});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GrabarNoConformidadProdExtAsync(string IdPaquete, string iDescrip, int IdUser) {
+            this.GrabarNoConformidadProdExtAsync(IdPaquete, iDescrip, IdUser, null);
+        }
+        
+        /// <remarks/>
+        public void GrabarNoConformidadProdExtAsync(string IdPaquete, string iDescrip, int IdUser, object userState) {
+            if ((this.GrabarNoConformidadProdExtOperationCompleted == null)) {
+                this.GrabarNoConformidadProdExtOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGrabarNoConformidadProdExtOperationCompleted);
+            }
+            this.InvokeAsync("GrabarNoConformidadProdExt", new object[] {
+                        IdPaquete,
+                        iDescrip,
+                        IdUser}, this.GrabarNoConformidadProdExtOperationCompleted, userState);
+        }
+        
+        private void OnGrabarNoConformidadProdExtOperationCompleted(object arg) {
+            if ((this.GrabarNoConformidadProdExtCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GrabarNoConformidadProdExtCompleted(this, new GrabarNoConformidadProdExtCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDetalleRecepcion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDetalleRecepcion(string iFecha) {
+            object[] results = this.Invoke("ObtenerDetalleRecepcion", new object[] {
+                        iFecha});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalleRecepcionAsync(string iFecha) {
+            this.ObtenerDetalleRecepcionAsync(iFecha, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDetalleRecepcionAsync(string iFecha, object userState) {
+            if ((this.ObtenerDetalleRecepcionOperationCompleted == null)) {
+                this.ObtenerDetalleRecepcionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDetalleRecepcionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDetalleRecepcion", new object[] {
+                        iFecha}, this.ObtenerDetalleRecepcionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDetalleRecepcionOperationCompleted(object arg) {
+            if ((this.ObtenerDetalleRecepcionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDetalleRecepcionCompleted(this, new ObtenerDetalleRecepcionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PersisteEnviosProdEx", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet PersisteEnviosProdEx(ListaDataSet lDts) {
+            object[] results = this.Invoke("PersisteEnviosProdEx", new object[] {
+                        lDts});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PersisteEnviosProdExAsync(ListaDataSet lDts) {
+            this.PersisteEnviosProdExAsync(lDts, null);
+        }
+        
+        /// <remarks/>
+        public void PersisteEnviosProdExAsync(ListaDataSet lDts, object userState) {
+            if ((this.PersisteEnviosProdExOperationCompleted == null)) {
+                this.PersisteEnviosProdExOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPersisteEnviosProdExOperationCompleted);
+            }
+            this.InvokeAsync("PersisteEnviosProdEx", new object[] {
+                        lDts}, this.PersisteEnviosProdExOperationCompleted, userState);
+        }
+        
+        private void OnPersisteEnviosProdExOperationCompleted(object arg) {
+            if ((this.PersisteEnviosProdExCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PersisteEnviosProdExCompleted(this, new PersisteEnviosProdExCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerEnviosSinRecepcion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerEnviosSinRecepcion(string iTipo, string iFechaIni, string iFechaFin) {
+            object[] results = this.Invoke("ObtenerEnviosSinRecepcion", new object[] {
+                        iTipo,
+                        iFechaIni,
+                        iFechaFin});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerEnviosSinRecepcionAsync(string iTipo, string iFechaIni, string iFechaFin) {
+            this.ObtenerEnviosSinRecepcionAsync(iTipo, iFechaIni, iFechaFin, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerEnviosSinRecepcionAsync(string iTipo, string iFechaIni, string iFechaFin, object userState) {
+            if ((this.ObtenerEnviosSinRecepcionOperationCompleted == null)) {
+                this.ObtenerEnviosSinRecepcionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEnviosSinRecepcionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerEnviosSinRecepcion", new object[] {
+                        iTipo,
+                        iFechaIni,
+                        iFechaFin}, this.ObtenerEnviosSinRecepcionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerEnviosSinRecepcionOperationCompleted(object arg) {
+            if ((this.ObtenerEnviosSinRecepcionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerEnviosSinRecepcionCompleted(this, new ObtenerEnviosSinRecepcionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerEnviosParaRecepcion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerEnviosParaRecepcion(string iFechaIni) {
+            object[] results = this.Invoke("ObtenerEnviosParaRecepcion", new object[] {
+                        iFechaIni});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerEnviosParaRecepcionAsync(string iFechaIni) {
+            this.ObtenerEnviosParaRecepcionAsync(iFechaIni, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerEnviosParaRecepcionAsync(string iFechaIni, object userState) {
+            if ((this.ObtenerEnviosParaRecepcionOperationCompleted == null)) {
+                this.ObtenerEnviosParaRecepcionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEnviosParaRecepcionOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerEnviosParaRecepcion", new object[] {
+                        iFechaIni}, this.ObtenerEnviosParaRecepcionOperationCompleted, userState);
+        }
+        
+        private void OnObtenerEnviosParaRecepcionOperationCompleted(object arg) {
+            if ((this.ObtenerEnviosParaRecepcionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerEnviosParaRecepcionCompleted(this, new ObtenerEnviosParaRecepcionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosIniciales_PE", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosIniciales_PE(string iTipo, string iIdO) {
+            object[] results = this.Invoke("ObtenerDatosIniciales_PE", new object[] {
+                        iTipo,
+                        iIdO});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosIniciales_PEAsync(string iTipo, string iIdO) {
+            this.ObtenerDatosIniciales_PEAsync(iTipo, iIdO, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosIniciales_PEAsync(string iTipo, string iIdO, object userState) {
+            if ((this.ObtenerDatosIniciales_PEOperationCompleted == null)) {
+                this.ObtenerDatosIniciales_PEOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosIniciales_PEOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosIniciales_PE", new object[] {
+                        iTipo,
+                        iIdO}, this.ObtenerDatosIniciales_PEOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosIniciales_PEOperationCompleted(object arg) {
+            if ((this.ObtenerDatosIniciales_PECompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosIniciales_PECompleted(this, new ObtenerDatosIniciales_PECompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerIt_PorObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerIt_PorObra(string iIdObra) {
+            object[] results = this.Invoke("ObtenerIt_PorObra", new object[] {
+                        iIdObra});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerIt_PorObraAsync(string iIdObra) {
+            this.ObtenerIt_PorObraAsync(iIdObra, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerIt_PorObraAsync(string iIdObra, object userState) {
+            if ((this.ObtenerIt_PorObraOperationCompleted == null)) {
+                this.ObtenerIt_PorObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerIt_PorObraOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerIt_PorObra", new object[] {
+                        iIdObra}, this.ObtenerIt_PorObraOperationCompleted, userState);
+        }
+        
+        private void OnObtenerIt_PorObraOperationCompleted(object arg) {
+            if ((this.ObtenerIt_PorObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerIt_PorObraCompleted(this, new ObtenerIt_PorObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerIt_PorObra_ProdEx", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerIt_PorObra_ProdEx(string iIdObra, string iProdEx) {
+            object[] results = this.Invoke("ObtenerIt_PorObra_ProdEx", new object[] {
+                        iIdObra,
+                        iProdEx});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerIt_PorObra_ProdExAsync(string iIdObra, string iProdEx) {
+            this.ObtenerIt_PorObra_ProdExAsync(iIdObra, iProdEx, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerIt_PorObra_ProdExAsync(string iIdObra, string iProdEx, object userState) {
+            if ((this.ObtenerIt_PorObra_ProdExOperationCompleted == null)) {
+                this.ObtenerIt_PorObra_ProdExOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerIt_PorObra_ProdExOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerIt_PorObra_ProdEx", new object[] {
+                        iIdObra,
+                        iProdEx}, this.ObtenerIt_PorObra_ProdExOperationCompleted, userState);
+        }
+        
+        private void OnObtenerIt_PorObra_ProdExOperationCompleted(object arg) {
+            if ((this.ObtenerIt_PorObra_ProdExCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerIt_PorObra_ProdExCompleted(this, new ObtenerIt_PorObra_ProdExCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerEtiquetasPorViaje", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerEtiquetasPorViaje(string iCodigo) {
+            object[] results = this.Invoke("ObtenerEtiquetasPorViaje", new object[] {
+                        iCodigo});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetasPorViajeAsync(string iCodigo) {
+            this.ObtenerEtiquetasPorViajeAsync(iCodigo, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetasPorViajeAsync(string iCodigo, object userState) {
+            if ((this.ObtenerEtiquetasPorViajeOperationCompleted == null)) {
+                this.ObtenerEtiquetasPorViajeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEtiquetasPorViajeOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerEtiquetasPorViaje", new object[] {
+                        iCodigo}, this.ObtenerEtiquetasPorViajeOperationCompleted, userState);
+        }
+        
+        private void OnObtenerEtiquetasPorViajeOperationCompleted(object arg) {
+            if ((this.ObtenerEtiquetasPorViajeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerEtiquetasPorViajeCompleted(this, new ObtenerEtiquetasPorViajeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RevisaRN", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string RevisaRN(string iIdObra) {
+            object[] results = this.Invoke("RevisaRN", new object[] {
+                        iIdObra});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RevisaRNAsync(string iIdObra) {
+            this.RevisaRNAsync(iIdObra, null);
+        }
+        
+        /// <remarks/>
+        public void RevisaRNAsync(string iIdObra, object userState) {
+            if ((this.RevisaRNOperationCompleted == null)) {
+                this.RevisaRNOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRevisaRNOperationCompleted);
+            }
+            this.InvokeAsync("RevisaRN", new object[] {
+                        iIdObra}, this.RevisaRNOperationCompleted, userState);
+        }
+        
+        private void OnRevisaRNOperationCompleted(object arg) {
+            if ((this.RevisaRNCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RevisaRNCompleted(this, new RevisaRNCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2850,841 +5221,6 @@ namespace EstadosdePagos.WsOperacion {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/obtenerIdRC_PorColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet obtenerIdRC_PorColada(string etiqueta_colada) {
-            object[] results = this.Invoke("obtenerIdRC_PorColada", new object[] {
-                        etiqueta_colada});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void obtenerIdRC_PorColadaAsync(string etiqueta_colada) {
-            this.obtenerIdRC_PorColadaAsync(etiqueta_colada, null);
-        }
-        
-        /// <remarks/>
-        public void obtenerIdRC_PorColadaAsync(string etiqueta_colada, object userState) {
-            if ((this.obtenerIdRC_PorColadaOperationCompleted == null)) {
-                this.obtenerIdRC_PorColadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnobtenerIdRC_PorColadaOperationCompleted);
-            }
-            this.InvokeAsync("obtenerIdRC_PorColada", new object[] {
-                        etiqueta_colada}, this.obtenerIdRC_PorColadaOperationCompleted, userState);
-        }
-        
-        private void OnobtenerIdRC_PorColadaOperationCompleted(object arg) {
-            if ((this.obtenerIdRC_PorColadaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.obtenerIdRC_PorColadaCompleted(this, new obtenerIdRC_PorColadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarDespachoColadaBodegaMP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Bodega_MP GuardarDespachoColadaBodegaMP(Despacho_Bodega_MP despacho_Bodega_MP, string terminal) {
-            object[] results = this.Invoke("GuardarDespachoColadaBodegaMP", new object[] {
-                        despacho_Bodega_MP,
-                        terminal});
-            return ((Despacho_Bodega_MP)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GuardarDespachoColadaBodegaMPAsync(Despacho_Bodega_MP despacho_Bodega_MP, string terminal) {
-            this.GuardarDespachoColadaBodegaMPAsync(despacho_Bodega_MP, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void GuardarDespachoColadaBodegaMPAsync(Despacho_Bodega_MP despacho_Bodega_MP, string terminal, object userState) {
-            if ((this.GuardarDespachoColadaBodegaMPOperationCompleted == null)) {
-                this.GuardarDespachoColadaBodegaMPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGuardarDespachoColadaBodegaMPOperationCompleted);
-            }
-            this.InvokeAsync("GuardarDespachoColadaBodegaMP", new object[] {
-                        despacho_Bodega_MP,
-                        terminal}, this.GuardarDespachoColadaBodegaMPOperationCompleted, userState);
-        }
-        
-        private void OnGuardarDespachoColadaBodegaMPOperationCompleted(object arg) {
-            if ((this.GuardarDespachoColadaBodegaMPCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GuardarDespachoColadaBodegaMPCompleted(this, new GuardarDespachoColadaBodegaMPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AsociarEtiquetaColadaaBodegaMP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Bodega_MP AsociarEtiquetaColadaaBodegaMP(int idDespacho, string etiqueta_colada, string usuario, string terminal) {
-            object[] results = this.Invoke("AsociarEtiquetaColadaaBodegaMP", new object[] {
-                        idDespacho,
-                        etiqueta_colada,
-                        usuario,
-                        terminal});
-            return ((Despacho_Bodega_MP)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void AsociarEtiquetaColadaaBodegaMPAsync(int idDespacho, string etiqueta_colada, string usuario, string terminal) {
-            this.AsociarEtiquetaColadaaBodegaMPAsync(idDespacho, etiqueta_colada, usuario, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void AsociarEtiquetaColadaaBodegaMPAsync(int idDespacho, string etiqueta_colada, string usuario, string terminal, object userState) {
-            if ((this.AsociarEtiquetaColadaaBodegaMPOperationCompleted == null)) {
-                this.AsociarEtiquetaColadaaBodegaMPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAsociarEtiquetaColadaaBodegaMPOperationCompleted);
-            }
-            this.InvokeAsync("AsociarEtiquetaColadaaBodegaMP", new object[] {
-                        idDespacho,
-                        etiqueta_colada,
-                        usuario,
-                        terminal}, this.AsociarEtiquetaColadaaBodegaMPOperationCompleted, userState);
-        }
-        
-        private void OnAsociarEtiquetaColadaaBodegaMPOperationCompleted(object arg) {
-            if ((this.AsociarEtiquetaColadaaBodegaMPCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AsociarEtiquetaColadaaBodegaMPCompleted(this, new AsociarEtiquetaColadaaBodegaMPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerMotivosExcepcionProduccion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerMotivosExcepcionProduccion() {
-            object[] results = this.Invoke("ObtenerMotivosExcepcionProduccion", new object[0]);
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerMotivosExcepcionProduccionAsync() {
-            this.ObtenerMotivosExcepcionProduccionAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerMotivosExcepcionProduccionAsync(object userState) {
-            if ((this.ObtenerMotivosExcepcionProduccionOperationCompleted == null)) {
-                this.ObtenerMotivosExcepcionProduccionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerMotivosExcepcionProduccionOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerMotivosExcepcionProduccion", new object[0], this.ObtenerMotivosExcepcionProduccionOperationCompleted, userState);
-        }
-        
-        private void OnObtenerMotivosExcepcionProduccionOperationCompleted(object arg) {
-            if ((this.ObtenerMotivosExcepcionProduccionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerMotivosExcepcionProduccionCompleted(this, new ObtenerMotivosExcepcionProduccionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPieza", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerPieza(int idPieza) {
-            object[] results = this.Invoke("ObtenerPieza", new object[] {
-                        idPieza});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezaAsync(int idPieza) {
-            this.ObtenerPiezaAsync(idPieza, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezaAsync(int idPieza, object userState) {
-            if ((this.ObtenerPiezaOperationCompleted == null)) {
-                this.ObtenerPiezaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezaOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerPieza", new object[] {
-                        idPieza}, this.ObtenerPiezaOperationCompleted, userState);
-        }
-        
-        private void OnObtenerPiezaOperationCompleted(object arg) {
-            if ((this.ObtenerPiezaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerPiezaCompleted(this, new ObtenerPiezaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistrarPasoaProduccionPieza", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Pieza RegistrarPasoaProduccionPieza(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser) {
-            object[] results = this.Invoke("RegistrarPasoaProduccionPieza", new object[] {
-                        pieza,
-                        maquina,
-                        usuario,
-                        terminal,
-                        iCant,
-                        iIdUser});
-            return ((Pieza)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void RegistrarPasoaProduccionPiezaAsync(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser) {
-            this.RegistrarPasoaProduccionPiezaAsync(pieza, maquina, usuario, terminal, iCant, iIdUser, null);
-        }
-        
-        /// <remarks/>
-        public void RegistrarPasoaProduccionPiezaAsync(Pieza pieza, int maquina, string usuario, string terminal, int iCant, int iIdUser, object userState) {
-            if ((this.RegistrarPasoaProduccionPiezaOperationCompleted == null)) {
-                this.RegistrarPasoaProduccionPiezaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistrarPasoaProduccionPiezaOperationCompleted);
-            }
-            this.InvokeAsync("RegistrarPasoaProduccionPieza", new object[] {
-                        pieza,
-                        maquina,
-                        usuario,
-                        terminal,
-                        iCant,
-                        iIdUser}, this.RegistrarPasoaProduccionPiezaOperationCompleted, userState);
-        }
-        
-        private void OnRegistrarPasoaProduccionPiezaOperationCompleted(object arg) {
-            if ((this.RegistrarPasoaProduccionPiezaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RegistrarPasoaProduccionPiezaCompleted(this, new RegistrarPasoaProduccionPiezaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPiezaProduccion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerPiezaProduccion(string etiqueta_pieza) {
-            object[] results = this.Invoke("ObtenerPiezaProduccion", new object[] {
-                        etiqueta_pieza});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezaProduccionAsync(string etiqueta_pieza) {
-            this.ObtenerPiezaProduccionAsync(etiqueta_pieza, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezaProduccionAsync(string etiqueta_pieza, object userState) {
-            if ((this.ObtenerPiezaProduccionOperationCompleted == null)) {
-                this.ObtenerPiezaProduccionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezaProduccionOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerPiezaProduccion", new object[] {
-                        etiqueta_pieza}, this.ObtenerPiezaProduccionOperationCompleted, userState);
-        }
-        
-        private void OnObtenerPiezaProduccionOperationCompleted(object arg) {
-            if ((this.ObtenerPiezaProduccionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerPiezaProduccionCompleted(this, new ObtenerPiezaProduccionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarDespachoPiezaBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Bodega_Acopio GuardarDespachoPiezaBodegaAcopio(Despacho_Bodega_Acopio despacho_Bodega_Acopio, string terminal) {
-            object[] results = this.Invoke("GuardarDespachoPiezaBodegaAcopio", new object[] {
-                        despacho_Bodega_Acopio,
-                        terminal});
-            return ((Despacho_Bodega_Acopio)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GuardarDespachoPiezaBodegaAcopioAsync(Despacho_Bodega_Acopio despacho_Bodega_Acopio, string terminal) {
-            this.GuardarDespachoPiezaBodegaAcopioAsync(despacho_Bodega_Acopio, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void GuardarDespachoPiezaBodegaAcopioAsync(Despacho_Bodega_Acopio despacho_Bodega_Acopio, string terminal, object userState) {
-            if ((this.GuardarDespachoPiezaBodegaAcopioOperationCompleted == null)) {
-                this.GuardarDespachoPiezaBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGuardarDespachoPiezaBodegaAcopioOperationCompleted);
-            }
-            this.InvokeAsync("GuardarDespachoPiezaBodegaAcopio", new object[] {
-                        despacho_Bodega_Acopio,
-                        terminal}, this.GuardarDespachoPiezaBodegaAcopioOperationCompleted, userState);
-        }
-        
-        private void OnGuardarDespachoPiezaBodegaAcopioOperationCompleted(object arg) {
-            if ((this.GuardarDespachoPiezaBodegaAcopioCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GuardarDespachoPiezaBodegaAcopioCompleted(this, new GuardarDespachoPiezaBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AsociarEtiquetaPiezaaBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Bodega_Acopio AsociarEtiquetaPiezaaBodegaAcopio(int idDespacho, string etiqueta_pieza, string usuario, string terminal) {
-            object[] results = this.Invoke("AsociarEtiquetaPiezaaBodegaAcopio", new object[] {
-                        idDespacho,
-                        etiqueta_pieza,
-                        usuario,
-                        terminal});
-            return ((Despacho_Bodega_Acopio)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void AsociarEtiquetaPiezaaBodegaAcopioAsync(int idDespacho, string etiqueta_pieza, string usuario, string terminal) {
-            this.AsociarEtiquetaPiezaaBodegaAcopioAsync(idDespacho, etiqueta_pieza, usuario, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void AsociarEtiquetaPiezaaBodegaAcopioAsync(int idDespacho, string etiqueta_pieza, string usuario, string terminal, object userState) {
-            if ((this.AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted == null)) {
-                this.AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAsociarEtiquetaPiezaaBodegaAcopioOperationCompleted);
-            }
-            this.InvokeAsync("AsociarEtiquetaPiezaaBodegaAcopio", new object[] {
-                        idDespacho,
-                        etiqueta_pieza,
-                        usuario,
-                        terminal}, this.AsociarEtiquetaPiezaaBodegaAcopioOperationCompleted, userState);
-        }
-        
-        private void OnAsociarEtiquetaPiezaaBodegaAcopioOperationCompleted(object arg) {
-            if ((this.AsociarEtiquetaPiezaaBodegaAcopioCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AsociarEtiquetaPiezaaBodegaAcopioCompleted(this, new AsociarEtiquetaPiezaaBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SP_VERIFICA_VIAJE_DESPACHO", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string SP_VERIFICA_VIAJE_DESPACHO(string iViaje) {
-            object[] results = this.Invoke("SP_VERIFICA_VIAJE_DESPACHO", new object[] {
-                        iViaje});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void SP_VERIFICA_VIAJE_DESPACHOAsync(string iViaje) {
-            this.SP_VERIFICA_VIAJE_DESPACHOAsync(iViaje, null);
-        }
-        
-        /// <remarks/>
-        public void SP_VERIFICA_VIAJE_DESPACHOAsync(string iViaje, object userState) {
-            if ((this.SP_VERIFICA_VIAJE_DESPACHOOperationCompleted == null)) {
-                this.SP_VERIFICA_VIAJE_DESPACHOOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSP_VERIFICA_VIAJE_DESPACHOOperationCompleted);
-            }
-            this.InvokeAsync("SP_VERIFICA_VIAJE_DESPACHO", new object[] {
-                        iViaje}, this.SP_VERIFICA_VIAJE_DESPACHOOperationCompleted, userState);
-        }
-        
-        private void OnSP_VERIFICA_VIAJE_DESPACHOOperationCompleted(object arg) {
-            if ((this.SP_VERIFICA_VIAJE_DESPACHOCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SP_VERIFICA_VIAJE_DESPACHOCompleted(this, new SP_VERIFICA_VIAJE_DESPACHOCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GuardarDespachoPiezaCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Camion GuardarDespachoPiezaCamion(Despacho_Camion despacho_Camion, string terminal) {
-            object[] results = this.Invoke("GuardarDespachoPiezaCamion", new object[] {
-                        despacho_Camion,
-                        terminal});
-            return ((Despacho_Camion)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GuardarDespachoPiezaCamionAsync(Despacho_Camion despacho_Camion, string terminal) {
-            this.GuardarDespachoPiezaCamionAsync(despacho_Camion, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void GuardarDespachoPiezaCamionAsync(Despacho_Camion despacho_Camion, string terminal, object userState) {
-            if ((this.GuardarDespachoPiezaCamionOperationCompleted == null)) {
-                this.GuardarDespachoPiezaCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGuardarDespachoPiezaCamionOperationCompleted);
-            }
-            this.InvokeAsync("GuardarDespachoPiezaCamion", new object[] {
-                        despacho_Camion,
-                        terminal}, this.GuardarDespachoPiezaCamionOperationCompleted, userState);
-        }
-        
-        private void OnGuardarDespachoPiezaCamionOperationCompleted(object arg) {
-            if ((this.GuardarDespachoPiezaCamionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GuardarDespachoPiezaCamionCompleted(this, new GuardarDespachoPiezaCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AsociarEtiquetaPiezaaCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Camion AsociarEtiquetaPiezaaCamion(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string terminal) {
-            object[] results = this.Invoke("AsociarEtiquetaPiezaaCamion", new object[] {
-                        idDespacho,
-                        etiqueta_colada,
-                        etiqueta_pieza,
-                        usuario,
-                        terminal});
-            return ((Despacho_Camion)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void AsociarEtiquetaPiezaaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string terminal) {
-            this.AsociarEtiquetaPiezaaCamionAsync(idDespacho, etiqueta_colada, etiqueta_pieza, usuario, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void AsociarEtiquetaPiezaaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string terminal, object userState) {
-            if ((this.AsociarEtiquetaPiezaaCamionOperationCompleted == null)) {
-                this.AsociarEtiquetaPiezaaCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAsociarEtiquetaPiezaaCamionOperationCompleted);
-            }
-            this.InvokeAsync("AsociarEtiquetaPiezaaCamion", new object[] {
-                        idDespacho,
-                        etiqueta_colada,
-                        etiqueta_pieza,
-                        usuario,
-                        terminal}, this.AsociarEtiquetaPiezaaCamionOperationCompleted, userState);
-        }
-        
-        private void OnAsociarEtiquetaPiezaaCamionOperationCompleted(object arg) {
-            if ((this.AsociarEtiquetaPiezaaCamionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AsociarEtiquetaPiezaaCamionCompleted(this, new AsociarEtiquetaPiezaaCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarDespachoCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ListarDespachoCamion(System.DateTime fecha) {
-            object[] results = this.Invoke("ListarDespachoCamion", new object[] {
-                        fecha});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarDespachoCamionAsync(System.DateTime fecha) {
-            this.ListarDespachoCamionAsync(fecha, null);
-        }
-        
-        /// <remarks/>
-        public void ListarDespachoCamionAsync(System.DateTime fecha, object userState) {
-            if ((this.ListarDespachoCamionOperationCompleted == null)) {
-                this.ListarDespachoCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarDespachoCamionOperationCompleted);
-            }
-            this.InvokeAsync("ListarDespachoCamion", new object[] {
-                        fecha}, this.ListarDespachoCamionOperationCompleted, userState);
-        }
-        
-        private void OnListarDespachoCamionOperationCompleted(object arg) {
-            if ((this.ListarDespachoCamionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarDespachoCamionCompleted(this, new ListarDespachoCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VbDespachoCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Camion VbDespachoCamion(int idDespacho, string usuario, string obs, string terminal) {
-            object[] results = this.Invoke("VbDespachoCamion", new object[] {
-                        idDespacho,
-                        usuario,
-                        obs,
-                        terminal});
-            return ((Despacho_Camion)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void VbDespachoCamionAsync(int idDespacho, string usuario, string obs, string terminal) {
-            this.VbDespachoCamionAsync(idDespacho, usuario, obs, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void VbDespachoCamionAsync(int idDespacho, string usuario, string obs, string terminal, object userState) {
-            if ((this.VbDespachoCamionOperationCompleted == null)) {
-                this.VbDespachoCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVbDespachoCamionOperationCompleted);
-            }
-            this.InvokeAsync("VbDespachoCamion", new object[] {
-                        idDespacho,
-                        usuario,
-                        obs,
-                        terminal}, this.VbDespachoCamionOperationCompleted, userState);
-        }
-        
-        private void OnVbDespachoCamionOperationCompleted(object arg) {
-            if ((this.VbDespachoCamionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.VbDespachoCamionCompleted(this, new VbDespachoCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerTodasObrasVigentes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerTodasObrasVigentes() {
-            object[] results = this.Invoke("ObtenerTodasObrasVigentes", new object[0]);
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerTodasObrasVigentesAsync() {
-            this.ObtenerTodasObrasVigentesAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerTodasObrasVigentesAsync(object userState) {
-            if ((this.ObtenerTodasObrasVigentesOperationCompleted == null)) {
-                this.ObtenerTodasObrasVigentesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerTodasObrasVigentesOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerTodasObrasVigentes", new object[0], this.ObtenerTodasObrasVigentesOperationCompleted, userState);
-        }
-        
-        private void OnObtenerTodasObrasVigentesOperationCompleted(object arg) {
-            if ((this.ObtenerTodasObrasVigentesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerTodasObrasVigentesCompleted(this, new ObtenerTodasObrasVigentesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerViajesPorObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerViajesPorObra(string iIdObra) {
-            object[] results = this.Invoke("ObtenerViajesPorObra", new object[] {
-                        iIdObra});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerViajesPorObraAsync(string iIdObra) {
-            this.ObtenerViajesPorObraAsync(iIdObra, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerViajesPorObraAsync(string iIdObra, object userState) {
-            if ((this.ObtenerViajesPorObraOperationCompleted == null)) {
-                this.ObtenerViajesPorObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerViajesPorObraOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerViajesPorObra", new object[] {
-                        iIdObra}, this.ObtenerViajesPorObraOperationCompleted, userState);
-        }
-        
-        private void OnObtenerViajesPorObraOperationCompleted(object arg) {
-            if ((this.ObtenerViajesPorObraCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerViajesPorObraCompleted(this, new ObtenerViajesPorObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPiezasDespacho", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public PiezaTipoB[] ObtenerPiezasDespacho(string iCodViaje, string iIdIt) {
-            object[] results = this.Invoke("ObtenerPiezasDespacho", new object[] {
-                        iCodViaje,
-                        iIdIt});
-            return ((PiezaTipoB[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezasDespachoAsync(string iCodViaje, string iIdIt) {
-            this.ObtenerPiezasDespachoAsync(iCodViaje, iIdIt, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezasDespachoAsync(string iCodViaje, string iIdIt, object userState) {
-            if ((this.ObtenerPiezasDespachoOperationCompleted == null)) {
-                this.ObtenerPiezasDespachoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezasDespachoOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerPiezasDespacho", new object[] {
-                        iCodViaje,
-                        iIdIt}, this.ObtenerPiezasDespachoOperationCompleted, userState);
-        }
-        
-        private void OnObtenerPiezasDespachoOperationCompleted(object arg) {
-            if ((this.ObtenerPiezasDespachoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerPiezasDespachoCompleted(this, new ObtenerPiezasDespachoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ValidarRN", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string ValidarRN(string iIdObra, int iNroRN) {
-            object[] results = this.Invoke("ValidarRN", new object[] {
-                        iIdObra,
-                        iNroRN});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ValidarRNAsync(string iIdObra, int iNroRN) {
-            this.ValidarRNAsync(iIdObra, iNroRN, null);
-        }
-        
-        /// <remarks/>
-        public void ValidarRNAsync(string iIdObra, int iNroRN, object userState) {
-            if ((this.ValidarRNOperationCompleted == null)) {
-                this.ValidarRNOperationCompleted = new System.Threading.SendOrPostCallback(this.OnValidarRNOperationCompleted);
-            }
-            this.InvokeAsync("ValidarRN", new object[] {
-                        iIdObra,
-                        iNroRN}, this.ValidarRNOperationCompleted, userState);
-        }
-        
-        private void OnValidarRNOperationCompleted(object arg) {
-            if ((this.ValidarRNCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ValidarRNCompleted(this, new ValidarRNCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerColadasPorNro", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerColadasPorNro(string colada) {
-            object[] results = this.Invoke("ObtenerColadasPorNro", new object[] {
-                        colada});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerColadasPorNroAsync(string colada) {
-            this.ObtenerColadasPorNroAsync(colada, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerColadasPorNroAsync(string colada, object userState) {
-            if ((this.ObtenerColadasPorNroOperationCompleted == null)) {
-                this.ObtenerColadasPorNroOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerColadasPorNroOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerColadasPorNro", new object[] {
-                        colada}, this.ObtenerColadasPorNroOperationCompleted, userState);
-        }
-        
-        private void OnObtenerColadasPorNroOperationCompleted(object arg) {
-            if ((this.ObtenerColadasPorNroCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerColadasPorNroCompleted(this, new ObtenerColadasPorNroCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPiezasDespachoCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerPiezasDespachoCamion(int idDespachoCamion) {
-            object[] results = this.Invoke("ObtenerPiezasDespachoCamion", new object[] {
-                        idDespachoCamion});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezasDespachoCamionAsync(int idDespachoCamion) {
-            this.ObtenerPiezasDespachoCamionAsync(idDespachoCamion, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerPiezasDespachoCamionAsync(int idDespachoCamion, object userState) {
-            if ((this.ObtenerPiezasDespachoCamionOperationCompleted == null)) {
-                this.ObtenerPiezasDespachoCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPiezasDespachoCamionOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerPiezasDespachoCamion", new object[] {
-                        idDespachoCamion}, this.ObtenerPiezasDespachoCamionOperationCompleted, userState);
-        }
-        
-        private void OnObtenerPiezasDespachoCamionOperationCompleted(object arg) {
-            if ((this.ObtenerPiezasDespachoCamionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerPiezasDespachoCamionCompleted(this, new ObtenerPiezasDespachoCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VbDespachoPiezaCamion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Despacho_Camion VbDespachoPiezaCamion(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string obs, string terminal) {
-            object[] results = this.Invoke("VbDespachoPiezaCamion", new object[] {
-                        idDespacho,
-                        etiqueta_colada,
-                        etiqueta_pieza,
-                        usuario,
-                        obs,
-                        terminal});
-            return ((Despacho_Camion)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void VbDespachoPiezaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string obs, string terminal) {
-            this.VbDespachoPiezaCamionAsync(idDespacho, etiqueta_colada, etiqueta_pieza, usuario, obs, terminal, null);
-        }
-        
-        /// <remarks/>
-        public void VbDespachoPiezaCamionAsync(int idDespacho, string etiqueta_colada, string etiqueta_pieza, string usuario, string obs, string terminal, object userState) {
-            if ((this.VbDespachoPiezaCamionOperationCompleted == null)) {
-                this.VbDespachoPiezaCamionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnVbDespachoPiezaCamionOperationCompleted);
-            }
-            this.InvokeAsync("VbDespachoPiezaCamion", new object[] {
-                        idDespacho,
-                        etiqueta_colada,
-                        etiqueta_pieza,
-                        usuario,
-                        obs,
-                        terminal}, this.VbDespachoPiezaCamionOperationCompleted, userState);
-        }
-        
-        private void OnVbDespachoPiezaCamionOperationCompleted(object arg) {
-            if ((this.VbDespachoPiezaCamionCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.VbDespachoPiezaCamionCompleted(this, new VbDespachoPiezaCamionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarDespachoBodegaMP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ListarDespachoBodegaMP(int idBodega) {
-            object[] results = this.Invoke("ListarDespachoBodegaMP", new object[] {
-                        idBodega});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarDespachoBodegaMPAsync(int idBodega) {
-            this.ListarDespachoBodegaMPAsync(idBodega, null);
-        }
-        
-        /// <remarks/>
-        public void ListarDespachoBodegaMPAsync(int idBodega, object userState) {
-            if ((this.ListarDespachoBodegaMPOperationCompleted == null)) {
-                this.ListarDespachoBodegaMPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarDespachoBodegaMPOperationCompleted);
-            }
-            this.InvokeAsync("ListarDespachoBodegaMP", new object[] {
-                        idBodega}, this.ListarDespachoBodegaMPOperationCompleted, userState);
-        }
-        
-        private void OnListarDespachoBodegaMPOperationCompleted(object arg) {
-            if ((this.ListarDespachoBodegaMPCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarDespachoBodegaMPCompleted(this, new ListarDespachoBodegaMPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarDespachoBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ListarDespachoBodegaAcopio(int idBodega) {
-            object[] results = this.Invoke("ListarDespachoBodegaAcopio", new object[] {
-                        idBodega});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarDespachoBodegaAcopioAsync(int idBodega) {
-            this.ListarDespachoBodegaAcopioAsync(idBodega, null);
-        }
-        
-        /// <remarks/>
-        public void ListarDespachoBodegaAcopioAsync(int idBodega, object userState) {
-            if ((this.ListarDespachoBodegaAcopioOperationCompleted == null)) {
-                this.ListarDespachoBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarDespachoBodegaAcopioOperationCompleted);
-            }
-            this.InvokeAsync("ListarDespachoBodegaAcopio", new object[] {
-                        idBodega}, this.ListarDespachoBodegaAcopioOperationCompleted, userState);
-        }
-        
-        private void OnListarDespachoBodegaAcopioOperationCompleted(object arg) {
-            if ((this.ListarDespachoBodegaAcopioCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarDespachoBodegaAcopioCompleted(this, new ListarDespachoBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarPiezasNoDespachadasBodegaAcopio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ListarPiezasNoDespachadasBodegaAcopio(int idMaquina) {
-            object[] results = this.Invoke("ListarPiezasNoDespachadasBodegaAcopio", new object[] {
-                        idMaquina});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarPiezasNoDespachadasBodegaAcopioAsync(int idMaquina) {
-            this.ListarPiezasNoDespachadasBodegaAcopioAsync(idMaquina, null);
-        }
-        
-        /// <remarks/>
-        public void ListarPiezasNoDespachadasBodegaAcopioAsync(int idMaquina, object userState) {
-            if ((this.ListarPiezasNoDespachadasBodegaAcopioOperationCompleted == null)) {
-                this.ListarPiezasNoDespachadasBodegaAcopioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarPiezasNoDespachadasBodegaAcopioOperationCompleted);
-            }
-            this.InvokeAsync("ListarPiezasNoDespachadasBodegaAcopio", new object[] {
-                        idMaquina}, this.ListarPiezasNoDespachadasBodegaAcopioOperationCompleted, userState);
-        }
-        
-        private void OnListarPiezasNoDespachadasBodegaAcopioOperationCompleted(object arg) {
-            if ((this.ListarPiezasNoDespachadasBodegaAcopioCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarPiezasNoDespachadasBodegaAcopioCompleted(this, new ListarPiezasNoDespachadasBodegaAcopioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosProduccionPorColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerDatosProduccionPorColada(string EtiquetaColada) {
-            object[] results = this.Invoke("ObtenerDatosProduccionPorColada", new object[] {
-                        EtiquetaColada});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerDatosProduccionPorColadaAsync(string EtiquetaColada) {
-            this.ObtenerDatosProduccionPorColadaAsync(EtiquetaColada, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerDatosProduccionPorColadaAsync(string EtiquetaColada, object userState) {
-            if ((this.ObtenerDatosProduccionPorColadaOperationCompleted == null)) {
-                this.ObtenerDatosProduccionPorColadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosProduccionPorColadaOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerDatosProduccionPorColada", new object[] {
-                        EtiquetaColada}, this.ObtenerDatosProduccionPorColadaOperationCompleted, userState);
-        }
-        
-        private void OnObtenerDatosProduccionPorColadaOperationCompleted(object arg) {
-            if ((this.ObtenerDatosProduccionPorColadaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerDatosProduccionPorColadaCompleted(this, new ObtenerDatosProduccionPorColadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDetalleProduccionPorColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerDetalleProduccionPorColada(string EtiquetaColada) {
-            object[] results = this.Invoke("ObtenerDetalleProduccionPorColada", new object[] {
-                        EtiquetaColada});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerDetalleProduccionPorColadaAsync(string EtiquetaColada) {
-            this.ObtenerDetalleProduccionPorColadaAsync(EtiquetaColada, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerDetalleProduccionPorColadaAsync(string EtiquetaColada, object userState) {
-            if ((this.ObtenerDetalleProduccionPorColadaOperationCompleted == null)) {
-                this.ObtenerDetalleProduccionPorColadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDetalleProduccionPorColadaOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerDetalleProduccionPorColada", new object[] {
-                        EtiquetaColada}, this.ObtenerDetalleProduccionPorColadaOperationCompleted, userState);
-        }
-        
-        private void OnObtenerDetalleProduccionPorColadaOperationCompleted(object arg) {
-            if ((this.ObtenerDetalleProduccionPorColadaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerDetalleProduccionPorColadaCompleted(this, new ObtenerDetalleProduccionPorColadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerResumanPiezasPorViaje", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ObtenerResumanPiezasPorViaje(string iCodViaje) {
-            object[] results = this.Invoke("ObtenerResumanPiezasPorViaje", new object[] {
-                        iCodViaje});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerResumanPiezasPorViajeAsync(string iCodViaje) {
-            this.ObtenerResumanPiezasPorViajeAsync(iCodViaje, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerResumanPiezasPorViajeAsync(string iCodViaje, object userState) {
-            if ((this.ObtenerResumanPiezasPorViajeOperationCompleted == null)) {
-                this.ObtenerResumanPiezasPorViajeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerResumanPiezasPorViajeOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerResumanPiezasPorViaje", new object[] {
-                        iCodViaje}, this.ObtenerResumanPiezasPorViajeOperationCompleted, userState);
-        }
-        
-        private void OnObtenerResumanPiezasPorViajeOperationCompleted(object arg) {
-            if ((this.ObtenerResumanPiezasPorViajeCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerResumanPiezasPorViajeCompleted(this, new ObtenerResumanPiezasPorViajeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -3703,8 +5239,8 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3719,7 +5255,7 @@ namespace EstadosdePagos.WsOperacion {
         
         private string mensajeErrorField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.Data.DataSet _dataSet {
             get {
                 return this._dataSetField;
@@ -3729,7 +5265,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _error {
             get {
                 return this._errorField;
@@ -3739,7 +5275,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.Data.DataSet DataSet {
             get {
                 return this.dataSetField;
@@ -3749,7 +5285,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string MensajeError {
             get {
                 return this.mensajeErrorField;
@@ -3760,521 +5296,8 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class TipoDetallePaquetesPieza {
-        
-        private int idField;
-        
-        private int idPiezaField;
-        
-        private int idMovField;
-        
-        private int nroPaqField;
-        
-        private int totalPaqField;
-        
-        private int nroPiezasField;
-        
-        private double kgsPaqueteField;
-        
-        private string estadoField;
-        
-        private int oPCIONField;
-        
-        private string errField;
-        
-        private string etiquetaField;
-        
-        /// <comentarios/>
-        public int Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int IdPieza {
-            get {
-                return this.idPiezaField;
-            }
-            set {
-                this.idPiezaField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int IdMov {
-            get {
-                return this.idMovField;
-            }
-            set {
-                this.idMovField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int NroPaq {
-            get {
-                return this.nroPaqField;
-            }
-            set {
-                this.nroPaqField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int TotalPaq {
-            get {
-                return this.totalPaqField;
-            }
-            set {
-                this.totalPaqField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int NroPiezas {
-            get {
-                return this.nroPiezasField;
-            }
-            set {
-                this.nroPiezasField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public double KgsPaquete {
-            get {
-                return this.kgsPaqueteField;
-            }
-            set {
-                this.kgsPaqueteField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int OPCION {
-            get {
-                return this.oPCIONField;
-            }
-            set {
-                this.oPCIONField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Err {
-            get {
-                return this.errField;
-            }
-            set {
-                this.errField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Etiqueta {
-            get {
-                return this.etiquetaField;
-            }
-            set {
-                this.etiquetaField = value;
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Despacho_Camion {
-        
-        private int idField;
-        
-        private string camionField;
-        
-        private string obra_DestinoField;
-        
-        private string usuarioField;
-        
-        private System.DateTime fechaField;
-        
-        private string obsField;
-        
-        private string usuario_VbField;
-        
-        private System.DateTime fecha_VbField;
-        
-        private string obs_VbField;
-        
-        private string codigoViajeField;
-        
-        private TipoDetallePaquetesPieza[] listaPaquetesField;
-        
-        private string mensajeErrorField;
-        
-        /// <comentarios/>
-        public int Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Camion {
-            get {
-                return this.camionField;
-            }
-            set {
-                this.camionField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Obra_Destino {
-            get {
-                return this.obra_DestinoField;
-            }
-            set {
-                this.obra_DestinoField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public System.DateTime Fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Obs {
-            get {
-                return this.obsField;
-            }
-            set {
-                this.obsField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Usuario_Vb {
-            get {
-                return this.usuario_VbField;
-            }
-            set {
-                this.usuario_VbField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public System.DateTime Fecha_Vb {
-            get {
-                return this.fecha_VbField;
-            }
-            set {
-                this.fecha_VbField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Obs_Vb {
-            get {
-                return this.obs_VbField;
-            }
-            set {
-                this.obs_VbField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string CodigoViaje {
-            get {
-                return this.codigoViajeField;
-            }
-            set {
-                this.codigoViajeField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public TipoDetallePaquetesPieza[] ListaPaquetes {
-            get {
-                return this.listaPaquetesField;
-            }
-            set {
-                this.listaPaquetesField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string MensajeError {
-            get {
-                return this.mensajeErrorField;
-            }
-            set {
-                this.mensajeErrorField = value;
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Despacho_Bodega_Acopio {
-        
-        private int idField;
-        
-        private int bodega_IdField;
-        
-        private string usuarioField;
-        
-        private System.DateTime fechaField;
-        
-        private string obsField;
-        
-        private string mensajeErrorField;
-        
-        /// <comentarios/>
-        public int Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int Bodega_Id {
-            get {
-                return this.bodega_IdField;
-            }
-            set {
-                this.bodega_IdField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public System.DateTime Fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Obs {
-            get {
-                return this.obsField;
-            }
-            set {
-                this.obsField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string MensajeError {
-            get {
-                return this.mensajeErrorField;
-            }
-            set {
-                this.mensajeErrorField = value;
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Pieza {
-        
-        private string coladaField;
-        
-        private string etiquetaField;
-        
-        private string estadoField;
-        
-        private string mensajeErrorField;
-        
-        /// <comentarios/>
-        public string Colada {
-            get {
-                return this.coladaField;
-            }
-            set {
-                this.coladaField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Etiqueta {
-            get {
-                return this.etiquetaField;
-            }
-            set {
-                this.etiquetaField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string MensajeError {
-            get {
-                return this.mensajeErrorField;
-            }
-            set {
-                this.mensajeErrorField = value;
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Despacho_Bodega_MP {
-        
-        private int idField;
-        
-        private int bodega_IdField;
-        
-        private string usuarioField;
-        
-        private System.DateTime fechaField;
-        
-        private string obsField;
-        
-        private string mensajeErrorField;
-        
-        /// <comentarios/>
-        public int Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public int Bodega_Id {
-            get {
-                return this.bodega_IdField;
-            }
-            set {
-                this.bodega_IdField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public System.DateTime Fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string Obs {
-            get {
-                return this.obsField;
-            }
-            set {
-                this.obsField = value;
-            }
-        }
-        
-        /// <comentarios/>
-        public string MensajeError {
-            get {
-                return this.mensajeErrorField;
-            }
-            set {
-                this.mensajeErrorField = value;
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4297,7 +5320,7 @@ namespace EstadosdePagos.WsOperacion {
         
         private string mensajeErrorField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -4307,7 +5330,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Colada {
             get {
                 return this.coladaField;
@@ -4317,7 +5340,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario {
             get {
                 return this.usuarioField;
@@ -4327,7 +5350,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha {
             get {
                 return this.fechaField;
@@ -4337,7 +5360,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Camion {
             get {
                 return this.camionField;
@@ -4347,7 +5370,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Etiqueta_colada {
             get {
                 return this.etiqueta_coladaField;
@@ -4357,7 +5380,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Estado {
             get {
                 return this.estadoField;
@@ -4367,7 +5390,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string MensajeError {
             get {
                 return this.mensajeErrorField;
@@ -4378,8 +5401,137 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TipoBasculaMovil {
+        
+        private int idField;
+        
+        private int idPaqueteField;
+        
+        private int idUsuarioField;
+        
+        private string estadoField;
+        
+        private string fechaRegistroField;
+        
+        private string turnoField;
+        
+        private int idTotemField;
+        
+        private int idSucursalField;
+        
+        private int idDespachoCamField;
+        
+        private string errorsField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdPaquete {
+            get {
+                return this.idPaqueteField;
+            }
+            set {
+                this.idPaqueteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FechaRegistro {
+            get {
+                return this.fechaRegistroField;
+            }
+            set {
+                this.fechaRegistroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Turno {
+            get {
+                return this.turnoField;
+            }
+            set {
+                this.turnoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdTotem {
+            get {
+                return this.idTotemField;
+            }
+            set {
+                this.idTotemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdSucursal {
+            get {
+                return this.idSucursalField;
+            }
+            set {
+                this.idSucursalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdDespachoCam {
+            get {
+                return this.idDespachoCamField;
+            }
+            set {
+                this.idDespachoCamField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Errors {
+            get {
+                return this.errorsField;
+            }
+            set {
+                this.errorsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4408,7 +5560,21 @@ namespace EstadosdePagos.WsOperacion {
         
         private string errorsField;
         
-        /// <comentarios/>
+        private string idCorrelativoField;
+        
+        private string nroEstrobosField;
+        
+        private string nroCuartonesField;
+        
+        private string kgsEstrobosField;
+        
+        private string kgsCuartonesField;
+        
+        private string usuarioAutorizaField;
+        
+        private string obsAutorizacionField;
+        
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -4418,7 +5584,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Patente {
             get {
                 return this.patenteField;
@@ -4428,7 +5594,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int PesoTara {
             get {
                 return this.pesoTaraField;
@@ -4438,7 +5604,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FechaTara {
             get {
                 return this.fechaTaraField;
@@ -4448,7 +5614,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdUserTara {
             get {
                 return this.idUserTaraField;
@@ -4458,7 +5624,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int PesoBruto {
             get {
                 return this.pesoBrutoField;
@@ -4468,7 +5634,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FechaPesoBruto {
             get {
                 return this.fechaPesoBrutoField;
@@ -4478,7 +5644,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdUserPesoBruto {
             get {
                 return this.idUserPesoBrutoField;
@@ -4488,7 +5654,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdDespachoCam {
             get {
                 return this.idDespachoCamField;
@@ -4498,7 +5664,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Estado {
             get {
                 return this.estadoField;
@@ -4508,7 +5674,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string errors {
             get {
                 return this.errorsField;
@@ -4517,10 +5683,80 @@ namespace EstadosdePagos.WsOperacion {
                 this.errorsField = value;
             }
         }
+        
+        /// <remarks/>
+        public string IdCorrelativo {
+            get {
+                return this.idCorrelativoField;
+            }
+            set {
+                this.idCorrelativoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string NroEstrobos {
+            get {
+                return this.nroEstrobosField;
+            }
+            set {
+                this.nroEstrobosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string NroCuartones {
+            get {
+                return this.nroCuartonesField;
+            }
+            set {
+                this.nroCuartonesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string KgsEstrobos {
+            get {
+                return this.kgsEstrobosField;
+            }
+            set {
+                this.kgsEstrobosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string KgsCuartones {
+            get {
+                return this.kgsCuartonesField;
+            }
+            set {
+                this.kgsCuartonesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string UsuarioAutoriza {
+            get {
+                return this.usuarioAutorizaField;
+            }
+            set {
+                this.usuarioAutorizaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ObsAutorizacion {
+            get {
+                return this.obsAutorizacionField;
+            }
+            set {
+                this.obsAutorizacionField = value;
+            }
+        }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4541,7 +5777,7 @@ namespace EstadosdePagos.WsOperacion {
         
         private string mensajeErrorField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Obra {
             get {
                 return this.obraField;
@@ -4551,7 +5787,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -4561,7 +5797,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Guia_despacho {
             get {
                 return this.guia_despachoField;
@@ -4571,7 +5807,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string It {
             get {
                 return this.itField;
@@ -4581,7 +5817,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Etiqueta {
             get {
                 return this.etiquetaField;
@@ -4591,7 +5827,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Kgs {
             get {
                 return this.kgsField;
@@ -4601,7 +5837,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string MensajeError {
             get {
                 return this.mensajeErrorField;
@@ -4612,8 +5848,8 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4664,7 +5900,7 @@ namespace EstadosdePagos.WsOperacion {
         
         private string mensajeErrorField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Obra {
             get {
                 return this.obraField;
@@ -4674,7 +5910,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -4684,7 +5920,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario {
             get {
                 return this.usuarioField;
@@ -4694,7 +5930,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_creacion {
             get {
                 return this.fecha_creacionField;
@@ -4704,7 +5940,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_reporte {
             get {
                 return this.fecha_reporteField;
@@ -4714,7 +5950,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario_mod_admin {
             get {
                 return this.usuario_mod_adminField;
@@ -4724,7 +5960,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_mod_admin {
             get {
                 return this.fecha_mod_adminField;
@@ -4734,7 +5970,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_envio_clte {
             get {
                 return this.fecha_envio_clteField;
@@ -4744,7 +5980,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_mod_clte {
             get {
                 return this.fecha_mod_clteField;
@@ -4754,7 +5990,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_aprobado_clte {
             get {
                 return this.fecha_aprobado_clteField;
@@ -4764,7 +6000,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_envio_facturacion {
             get {
                 return this.fecha_envio_facturacionField;
@@ -4774,7 +6010,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario_creacion_fact_inet {
             get {
                 return this.usuario_creacion_fact_inetField;
@@ -4784,7 +6020,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_creacion_fact_inet {
             get {
                 return this.fecha_creacion_fact_inetField;
@@ -4794,7 +6030,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Numero_fact_inet {
             get {
                 return this.numero_fact_inetField;
@@ -4804,7 +6040,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_envio_fact_clte {
             get {
                 return this.fecha_envio_fact_clteField;
@@ -4814,7 +6050,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_venc_fact_clte {
             get {
                 return this.fecha_venc_fact_clteField;
@@ -4824,7 +6060,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario_daxcobrado {
             get {
                 return this.usuario_daxcobradoField;
@@ -4834,7 +6070,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_cobro {
             get {
                 return this.fecha_cobroField;
@@ -4844,7 +6080,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Estado {
             get {
                 return this.estadoField;
@@ -4854,7 +6090,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Correlativo {
             get {
                 return this.correlativoField;
@@ -4864,7 +6100,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_prox_presentacion {
             get {
                 return this.fecha_prox_presentacionField;
@@ -4874,7 +6110,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string MensajeError {
             get {
                 return this.mensajeErrorField;
@@ -4885,8 +6121,8 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4929,7 +6165,9 @@ namespace EstadosdePagos.WsOperacion {
         
         private int kilos_RecepcionadosField;
         
-        /// <comentarios/>
+        private string es_RecuperadoField;
+        
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -4939,7 +6177,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Producto {
             get {
                 return this.productoField;
@@ -4949,7 +6187,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Diametro {
             get {
                 return this.diametroField;
@@ -4959,7 +6197,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Largo {
             get {
                 return this.largoField;
@@ -4969,7 +6207,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Origen {
             get {
                 return this.origenField;
@@ -4979,7 +6217,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Tipo {
             get {
                 return this.tipoField;
@@ -4989,7 +6227,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Cantidad {
             get {
                 return this.cantidadField;
@@ -4999,7 +6237,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario_Recep {
             get {
                 return this.usuario_RecepField;
@@ -5009,7 +6247,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_Recep {
             get {
                 return this.fecha_RecepField;
@@ -5019,7 +6257,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Cantidad_Recep {
             get {
                 return this.cantidad_RecepField;
@@ -5029,7 +6267,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Obs_Recep {
             get {
                 return this.obs_RecepField;
@@ -5039,7 +6277,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario_Cierre {
             get {
                 return this.usuario_CierreField;
@@ -5049,7 +6287,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha_Cierre {
             get {
                 return this.fecha_CierreField;
@@ -5059,7 +6297,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Inet_Msg {
             get {
                 return this.inet_MsgField;
@@ -5069,7 +6307,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Inet_Fecha {
             get {
                 return this.inet_FechaField;
@@ -5079,7 +6317,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string MensajeError {
             get {
                 return this.mensajeErrorField;
@@ -5089,7 +6327,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Kilos {
             get {
                 return this.kilosField;
@@ -5099,7 +6337,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Kilos_Recepcionados {
             get {
                 return this.kilos_RecepcionadosField;
@@ -5108,10 +6346,20 @@ namespace EstadosdePagos.WsOperacion {
                 this.kilos_RecepcionadosField = value;
             }
         }
+        
+        /// <remarks/>
+        public string Es_Recuperado {
+            get {
+                return this.es_RecuperadoField;
+            }
+            set {
+                this.es_RecuperadoField = value;
+            }
+        }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5130,7 +6378,7 @@ namespace EstadosdePagos.WsOperacion {
         
         private string mensajeErrorField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -5140,7 +6388,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Usuario {
             get {
                 return this.usuarioField;
@@ -5150,7 +6398,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha {
             get {
                 return this.fechaField;
@@ -5160,7 +6408,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Totem {
             get {
                 return this.totemField;
@@ -5170,7 +6418,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Completa {
             get {
                 return this.completaField;
@@ -5180,7 +6428,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string MensajeError {
             get {
                 return this.mensajeErrorField;
@@ -5191,8 +6439,206 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Detalle_Recepcion_MP {
+        
+        private int idField;
+        
+        private int idRecepcionMPField;
+        
+        private string codMaterialField;
+        
+        private int kgsField;
+        
+        private string idEtiquetaAzaField;
+        
+        private string fechaEntrega_OCField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdRecepcionMP {
+            get {
+                return this.idRecepcionMPField;
+            }
+            set {
+                this.idRecepcionMPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CodMaterial {
+            get {
+                return this.codMaterialField;
+            }
+            set {
+                this.codMaterialField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Kgs {
+            get {
+                return this.kgsField;
+            }
+            set {
+                this.kgsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string IdEtiquetaAza {
+            get {
+                return this.idEtiquetaAzaField;
+            }
+            set {
+                this.idEtiquetaAzaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FechaEntrega_OC {
+            get {
+                return this.fechaEntrega_OCField;
+            }
+            set {
+                this.fechaEntrega_OCField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Recepcion_MP {
+        
+        private int idRecepcionMPField;
+        
+        private int nroGDField;
+        
+        private int sucCodField;
+        
+        private int ocField;
+        
+        private string fechaGDField;
+        
+        private int idUserGrabaField;
+        
+        private string fechaGrabaField;
+        
+        private Detalle_Recepcion_MP[] detalleField;
+        
+        private int kgsGDField;
+        
+        /// <remarks/>
+        public int IdRecepcionMP {
+            get {
+                return this.idRecepcionMPField;
+            }
+            set {
+                this.idRecepcionMPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int NroGD {
+            get {
+                return this.nroGDField;
+            }
+            set {
+                this.nroGDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SucCod {
+            get {
+                return this.sucCodField;
+            }
+            set {
+                this.sucCodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int OC {
+            get {
+                return this.ocField;
+            }
+            set {
+                this.ocField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FechaGD {
+            get {
+                return this.fechaGDField;
+            }
+            set {
+                this.fechaGDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdUserGraba {
+            get {
+                return this.idUserGrabaField;
+            }
+            set {
+                this.idUserGrabaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FechaGraba {
+            get {
+                return this.fechaGrabaField;
+            }
+            set {
+                this.fechaGrabaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Detalle_Recepcion_MP[] Detalle {
+            get {
+                return this.detalleField;
+            }
+            set {
+                this.detalleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int KgsGD {
+            get {
+                return this.kgsGDField;
+            }
+            set {
+                this.kgsGDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5213,7 +6659,7 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.DateTime fechaField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -5223,7 +6669,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id_EP {
             get {
                 return this.id_EPField;
@@ -5233,7 +6679,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Servicio {
             get {
                 return this.servicioField;
@@ -5243,7 +6689,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int ValorKgs {
             get {
                 return this.valorKgsField;
@@ -5253,7 +6699,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int TotalKgs {
             get {
                 return this.totalKgsField;
@@ -5263,7 +6709,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdUsuarioGenera {
             get {
                 return this.idUsuarioGeneraField;
@@ -5273,7 +6719,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha {
             get {
                 return this.fechaField;
@@ -5284,8 +6730,8 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5308,7 +6754,7 @@ namespace EstadosdePagos.WsOperacion {
         
         private EP_GeneradoDetalle[] detalleField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id {
             get {
                 return this.idField;
@@ -5318,7 +6764,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Id_EP {
             get {
                 return this.id_EPField;
@@ -5328,7 +6774,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int TotalKgs_EP {
             get {
                 return this.totalKgs_EPField;
@@ -5338,7 +6784,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int TotalValor_EP {
             get {
                 return this.totalValor_EPField;
@@ -5348,7 +6794,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdUsuarioGenera {
             get {
                 return this.idUsuarioGeneraField;
@@ -5358,7 +6804,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdObra {
             get {
                 return this.idObraField;
@@ -5368,7 +6814,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime Fecha {
             get {
                 return this.fechaField;
@@ -5378,7 +6824,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public EP_GeneradoDetalle[] Detalle {
             get {
                 return this.detalleField;
@@ -5389,8 +6835,161 @@ namespace EstadosdePagos.WsOperacion {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TipoEtiquetaAza {
+        
+        private string loteField;
+        
+        private string fechaFabricacionField;
+        
+        private int bultoField;
+        
+        private string productoField;
+        
+        private int diamField;
+        
+        private string codigoField;
+        
+        private int pesoBultoField;
+        
+        private int idField;
+        
+        private int idColadaField;
+        
+        private int largoField;
+        
+        private int kgsProducidosField;
+        
+        private string errorsField;
+        
+        /// <remarks/>
+        public string Lote {
+            get {
+                return this.loteField;
+            }
+            set {
+                this.loteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FechaFabricacion {
+            get {
+                return this.fechaFabricacionField;
+            }
+            set {
+                this.fechaFabricacionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Bulto {
+            get {
+                return this.bultoField;
+            }
+            set {
+                this.bultoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Diam {
+            get {
+                return this.diamField;
+            }
+            set {
+                this.diamField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int PesoBulto {
+            get {
+                return this.pesoBultoField;
+            }
+            set {
+                this.pesoBultoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IdColada {
+            get {
+                return this.idColadaField;
+            }
+            set {
+                this.idColadaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Largo {
+            get {
+                return this.largoField;
+            }
+            set {
+                this.largoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int KgsProducidos {
+            get {
+                return this.kgsProducidosField;
+            }
+            set {
+                this.kgsProducidosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Errors {
+            get {
+                return this.errorsField;
+            }
+            set {
+                this.errorsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5457,7 +7056,13 @@ namespace EstadosdePagos.WsOperacion {
         
         private string fueImpresaField;
         
-        /// <comentarios/>
+        private string ordenCompraField;
+        
+        private string esVaPero_NoVaField;
+        
+        private string tieneConectorField;
+        
+        /// <remarks/>
         public string id {
             get {
                 return this.idField;
@@ -5467,7 +7072,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string EtiquetaLateral {
             get {
                 return this.etiquetaLateralField;
@@ -5477,7 +7082,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CantEtiq {
             get {
                 return this.cantEtiqField;
@@ -5487,7 +7092,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PesoEtiq {
             get {
                 return this.pesoEtiqField;
@@ -5497,7 +7102,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FiguraB {
             get {
                 return this.figuraBField;
@@ -5507,7 +7112,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string PiezasXEtiq {
             get {
                 return this.piezasXEtiqField;
@@ -5517,7 +7122,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroPaquetes {
             get {
                 return this.nroPaquetesField;
@@ -5527,7 +7132,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Obra {
             get {
                 return this.obraField;
@@ -5537,7 +7142,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Figura {
             get {
                 return this.figuraField;
@@ -5547,7 +7152,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Nivel {
             get {
                 return this.nivelField;
@@ -5557,7 +7162,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Elemento {
             get {
                 return this.elementoField;
@@ -5567,7 +7172,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Plano {
             get {
                 return this.planoField;
@@ -5577,7 +7182,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Ubicacion {
             get {
                 return this.ubicacionField;
@@ -5587,7 +7192,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Peso {
             get {
                 return this.pesoField;
@@ -5597,7 +7202,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Paquete {
             get {
                 return this.paqueteField;
@@ -5607,7 +7212,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Cantidad {
             get {
                 return this.cantidadField;
@@ -5617,7 +7222,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Diametro {
             get {
                 return this.diametroField;
@@ -5627,7 +7232,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Largo {
             get {
                 return this.largoField;
@@ -5637,7 +7242,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Marca {
             get {
                 return this.marcaField;
@@ -5647,7 +7252,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string CodigoIt {
             get {
                 return this.codigoItField;
@@ -5657,7 +7262,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Pieza {
             get {
                 return this.piezaField;
@@ -5667,7 +7272,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string ValoresVar {
             get {
                 return this.valoresVarField;
@@ -5677,7 +7282,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int Orden {
             get {
                 return this.ordenField;
@@ -5687,7 +7292,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdDetallePieza {
             get {
                 return this.idDetallePiezaField;
@@ -5697,7 +7302,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroPiezasVAR {
             get {
                 return this.nroPiezasVARField;
@@ -5707,7 +7312,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
         public byte[] Imagen {
             get {
@@ -5718,7 +7323,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string Colada {
             get {
                 return this.coladaField;
@@ -5728,7 +7333,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string NroCertificado {
             get {
                 return this.nroCertificadoField;
@@ -5738,7 +7343,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int IdForma {
             get {
                 return this.idFormaField;
@@ -5748,7 +7353,7 @@ namespace EstadosdePagos.WsOperacion {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string FueImpresa {
             get {
                 return this.fueImpresaField;
@@ -5757,1860 +7362,557 @@ namespace EstadosdePagos.WsOperacion {
                 this.fueImpresaField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerDatosConsultaGenericaCompletedEventHandler(object sender, ObtenerDatosConsultaGenericaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerDatosConsultaGenericaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerDatosConsultaGenericaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerDetallePiezasPorViajeCompletedEventHandler(object sender, ObtenerDetallePiezasPorViajeCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerDetallePiezasPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerDetallePiezasPorViajeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public PiezaTipoB[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((PiezaTipoB[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ConsultarITRecepcionCompletedEventHandler(object sender, ConsultarITRecepcionCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ConsultarITRecepcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ConsultarITRecepcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarITEtiquetaRecepcionadaCompletedEventHandler(object sender, RegistrarITEtiquetaRecepcionadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarITEtiquetaRecepcionadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarITEtiquetaRecepcionadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void Obtener_DatosDeDespachoCamionCompletedEventHandler(object sender, Obtener_DatosDeDespachoCamionCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class Obtener_DatosDeDespachoCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal Obtener_DatosDeDespachoCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void CierreDescargaITCompletedEventHandler(object sender, CierreDescargaITCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class CierreDescargaITCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal CierreDescargaITCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerParametroCompletedEventHandler(object sender, ObtenerParametroCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerParametroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerParametroCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerParametroTOCompletedEventHandler(object sender, ObtenerParametroTOCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerParametroTOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerParametroTOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPExcel_ResumenObraCompletedEventHandler(object sender, ListarEPExcel_ResumenObraCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPExcel_ResumenObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarEPExcel_ResumenObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPExcel_ResumenEpGeneradosxObraCompletedEventHandler(object sender, ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPExcel_ResumenGuiasxObraCompletedEventHandler(object sender, ListarEPExcel_ResumenGuiasxObraCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPExcel_ResumenGuiasxObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarEPExcel_ResumenGuiasxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerDatosObraParaEPCompletedEventHandler(object sender, ObtenerDatosObraParaEPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerDatosObraParaEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerDatosObraParaEPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void EnviarCorreoNotificacion_NCCompletedEventHandler(object sender, EnviarCorreoNotificacion_NCCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EnviarCorreoNotificacion_NCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal EnviarCorreoNotificacion_NCCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void GrabaEP_GeneradoCompletedEventHandler(object sender, GrabaEP_GeneradoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GrabaEP_GeneradoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GrabaEP_GeneradoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public EP_Generado Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((EP_Generado)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void GuardarSolicitudMaterialCompletedEventHandler(object sender, GuardarSolicitudMaterialCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GuardarSolicitudMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GuardarSolicitudMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Solicitud_Material Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Solicitud_Material)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void AsociarProductosaSolicitudCompletedEventHandler(object sender, AsociarProductosaSolicitudCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AsociarProductosaSolicitudCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AsociarProductosaSolicitudCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Solicitud_Material_Detalle Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Solicitud_Material_Detalle)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarSolicitudMaterial_RecepcionCompletedEventHandler(object sender, ListarSolicitudMaterial_RecepcionCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarSolicitudMaterial_RecepcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarSolicitudMaterial_RecepcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void GuardarRecepcionMaterialCompletedEventHandler(object sender, GuardarRecepcionMaterialCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GuardarRecepcionMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GuardarRecepcionMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Solicitud_Material_Detalle Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Solicitud_Material_Detalle)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void AnularRecepcionMaterialCompletedEventHandler(object sender, AnularRecepcionMaterialCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AnularRecepcionMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AnularRecepcionMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Solicitud_Material_Detalle Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Solicitud_Material_Detalle)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarSolicitudMaterial_CierreCompletedEventHandler(object sender, ListarSolicitudMaterial_CierreCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarSolicitudMaterial_CierreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarSolicitudMaterial_CierreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void DevolucionDeMPCompletedEventHandler(object sender, DevolucionDeMPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class DevolucionDeMPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal DevolucionDeMPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void GuardarCierreMaterialCompletedEventHandler(object sender, GuardarCierreMaterialCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GuardarCierreMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GuardarCierreMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Solicitud_Material_Detalle Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Solicitud_Material_Detalle)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarLogProductoCompletedEventHandler(object sender, ListarLogProductoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarLogProductoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarLogProductoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerSolicitudesMP_PorTotemCompletedEventHandler(object sender, ObtenerSolicitudesMP_PorTotemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerSolicitudesMP_PorTotemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerSolicitudesMP_PorTotemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void AnularDetalleSolicitudMateriaPrimaCompletedEventHandler(object sender, AnularDetalleSolicitudMateriaPrimaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AnularDetalleSolicitudMateriaPrimaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AnularDetalleSolicitudMateriaPrimaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerResumenSMP_PorTurnoCompletedEventHandler(object sender, ObtenerResumenSMP_PorTurnoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerResumenSMP_PorTurnoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerResumenSMP_PorTurnoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerResumenSMP_PorSolIdCompletedEventHandler(object sender, ObtenerResumenSMP_PorSolIdCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerResumenSMP_PorSolIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerResumenSMP_PorSolIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerTablaConDestinatariosMAIL_EPCompletedEventHandler(object sender, ObtenerTablaConDestinatariosMAIL_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerTablaConDestinatariosMAIL_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerTablaConDestinatariosMAIL_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ValorKiloSuministro_EPCompletedEventHandler(object sender, ValorKiloSuministro_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ValorKiloSuministro_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ValorKiloSuministro_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerTecnicosActivosCompletedEventHandler(object sender, ObtenerTecnicosActivosCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerTecnicosActivosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerTecnicosActivosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerObrasActivasCompletedEventHandler(object sender, ObtenerObrasActivasCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerObrasActivasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerObrasActivasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerObrasActivas_EPCompletedEventHandler(object sender, ObtenerObrasActivas_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerObrasActivas_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerObrasActivas_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerGuiasEnrteFechas_EPCompletedEventHandler(object sender, ObtenerGuiasEnrteFechas_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerGuiasEnrteFechas_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerGuiasEnrteFechas_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerGuiasDesdeInicio_EPCompletedEventHandler(object sender, ObtenerGuiasDesdeInicio_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerGuiasDesdeInicio_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerGuiasDesdeInicio_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerITPorGuiaCabecera_EPCompletedEventHandler(object sender, ObtenerITPorGuiaCabecera_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerITPorGuiaCabecera_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerITPorGuiaCabecera_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerITPorGuiaDetalle_EPCompletedEventHandler(object sender, ObtenerITPorGuiaDetalle_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerITPorGuiaDetalle_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerITPorGuiaDetalle_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerEtiquetasPorViajeYGuia_EPCompletedEventHandler(object sender, ObtenerEtiquetasPorViajeYGuia_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerEtiquetasPorViajeYGuia_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerEtiquetasPorViajeYGuia_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEstadoPagosPendientesCompletedEventHandler(object sender, ListarEstadoPagosPendientesCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEstadoPagosPendientesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarEstadoPagosPendientesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPCompletedEventHandler(object sender, RegistrarEPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarEPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEstadoPagoCompletedEventHandler(object sender, ListarEstadoPagoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEstadoPagoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarEstadoPagoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarObraEPNoAprobadoCompletedEventHandler(object sender, ListarObraEPNoAprobadoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarObraEPNoAprobadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarObraEPNoAprobadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void EliminarEPCreacionEtiquetaxEPCompletedEventHandler(object sender, EliminarEPCreacionEtiquetaxEPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EliminarEPCreacionEtiquetaxEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal EliminarEPCreacionEtiquetaxEPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventHandler(object sender, EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void EliminarEPCreacionEtiquetaxITCompletedEventHandler(object sender, EliminarEPCreacionEtiquetaxITCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EliminarEPCreacionEtiquetaxITCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal EliminarEPCreacionEtiquetaxITCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPCreacionEtiquetaCompletedEventHandler(object sender, RegistrarEPCreacionEtiquetaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPCreacionEtiquetaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarEPCreacionEtiquetaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPCambiosGdEnviadaaClteCompletedEventHandler(object sender, RegistrarEPCambiosGdEnviadaaClteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPCambiosGdEnviadaaClteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarEPCambiosGdEnviadaaClteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventHandler(object sender, RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPResumenGuiaDespachoxEpCompletedEventHandler(object sender, ListarEPResumenGuiaDespachoxEpCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPResumenGuiaDespachoxEpCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarEPResumenGuiaDespachoxEpCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public string OrdenCompra {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.ordenCompraField;
             }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventHandler(object sender, ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPGeneracionReporteCompletedEventHandler(object sender, RegistrarEPGeneracionReporteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPGeneracionReporteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarEPGeneracionReporteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Estado_Pago Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
+            set {
+                this.ordenCompraField = value;
             }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPEnvioaClienteCompletedEventHandler(object sender, RegistrarEPEnvioaClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPEnvioaClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarEPEnvioaClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
         }
         
         /// <remarks/>
-        public Estado_Pago Result {
+        public string EsVaPero_NoVa {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
+                return this.esVaPero_NoVaField;
             }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPAprobacionClienteCompletedEventHandler(object sender, RegistrarEPAprobacionClienteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPAprobacionClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RegistrarEPAprobacionClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+            set {
+                this.esVaPero_NoVaField = value;
+            }
         }
         
         /// <remarks/>
-        public Estado_Pago Result {
+        public string TieneConector {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
+                return this.tieneConectorField;
+            }
+            set {
+                this.tieneConectorField = value;
             }
         }
     }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPTrazabiidadCompletedEventHandler(object sender, ListarEPTrazabiidadCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPTrazabiidadCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TipoDetallePaquetesPieza {
         
-        private object[] results;
+        private int idField;
         
-        internal ListarEPTrazabiidadCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
+        private int idPiezaField;
+        
+        private int idMovField;
+        
+        private int nroPaqField;
+        
+        private int totalPaqField;
         
+        private int nroPiezasField;
+        
+        private double kgsPaqueteField;
+        
+        private string estadoField;
+        
+        private int oPCIONField;
+        
+        private string errField;
+        
+        private string etiquetaField;
+        
         /// <remarks/>
-        public ListaDataSet Result {
+        public int Id {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.idField;
             }
+            set {
+                this.idField = value;
+            }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPComentarioCompletedEventHandler(object sender, RegistrarEPComentarioCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPComentarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
-        
-        internal RegistrarEPComentarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public int IdPieza {
+            get {
+                return this.idPiezaField;
+            }
+            set {
+                this.idPiezaField = value;
+            }
         }
         
         /// <remarks/>
-        public Estado_Pago Result {
+        public int IdMov {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
+                return this.idMovField;
+            }
+            set {
+                this.idMovField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPComentarioCompletedEventHandler(object sender, ListarEPComentarioCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPComentarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
         
-        internal ListarEPComentarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public int NroPaq {
+            get {
+                return this.nroPaqField;
+            }
+            set {
+                this.nroPaqField = value;
+            }
         }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public int TotalPaq {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.totalPaqField;
             }
+            set {
+                this.totalPaqField = value;
+            }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPAdjuntoCompletedEventHandler(object sender, RegistrarEPAdjuntoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPAdjuntoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
-        
-        internal RegistrarEPAdjuntoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public int NroPiezas {
+            get {
+                return this.nroPiezasField;
+            }
+            set {
+                this.nroPiezasField = value;
+            }
         }
         
         /// <remarks/>
-        public Estado_Pago Result {
+        public double KgsPaquete {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
+                return this.kgsPaqueteField;
+            }
+            set {
+                this.kgsPaqueteField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPAdjuntoCompletedEventHandler(object sender, ListarEPAdjuntoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPAdjuntoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
         
-        internal ListarEPAdjuntoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public string Estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+            }
         }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public int OPCION {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.oPCIONField;
             }
+            set {
+                this.oPCIONField = value;
+            }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarEPFacturacionCompletedEventHandler(object sender, ListarEPFacturacionCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarEPFacturacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
-        
-        internal ListarEPFacturacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public string Err {
+            get {
+                return this.errField;
+            }
+            set {
+                this.errField = value;
+            }
         }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public string Etiqueta {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.etiquetaField;
+            }
+            set {
+                this.etiquetaField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPIngresadaINETCompletedEventHandler(object sender, RegistrarEPIngresadaINETCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPIngresadaINETCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Despacho_Camion {
         
-        private object[] results;
+        private int idField;
         
-        internal RegistrarEPIngresadaINETCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
+        private string camionField;
+        
+        private string obra_DestinoField;
+        
+        private string usuarioField;
+        
+        private System.DateTime fechaField;
+        
+        private string obsField;
+        
+        private string usuario_VbField;
         
+        private System.DateTime fecha_VbField;
+        
+        private string obs_VbField;
+        
+        private string codigoViajeField;
+        
+        private TipoDetallePaquetesPieza[] listaPaquetesField;
+        
+        private string mensajeErrorField;
+        
         /// <remarks/>
-        public Estado_Pago Result {
+        public int Id {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
+                return this.idField;
+            }
+            set {
+                this.idField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void RegistrarEPCobradaCompletedEventHandler(object sender, RegistrarEPCobradaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RegistrarEPCobradaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
         
-        internal RegistrarEPCobradaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public string Camion {
+            get {
+                return this.camionField;
+            }
+            set {
+                this.camionField = value;
+            }
         }
         
         /// <remarks/>
-        public Estado_Pago Result {
+        public string Obra_Destino {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Estado_Pago)(this.results[0]));
+                return this.obra_DestinoField;
             }
+            set {
+                this.obra_DestinoField = value;
+            }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerEmpresaPor_EPCompletedEventHandler(object sender, ObtenerEmpresaPor_EPCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerEmpresaPor_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
+        /// <remarks/>
+        public string Usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+            }
+        }
         
-        internal ObtenerEmpresaPor_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
         }
         
         /// <remarks/>
-        public string Result {
+        public string Obs {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return this.obsField;
+            }
+            set {
+                this.obsField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void GrabarDatosPesajeCamionCompletedEventHandler(object sender, GrabarDatosPesajeCamionCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GrabarDatosPesajeCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
+        /// <remarks/>
+        public string Usuario_Vb {
+            get {
+                return this.usuario_VbField;
+            }
+            set {
+                this.usuario_VbField = value;
+            }
+        }
         
-        internal GrabarDatosPesajeCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public System.DateTime Fecha_Vb {
+            get {
+                return this.fecha_VbField;
+            }
+            set {
+                this.fecha_VbField = value;
+            }
         }
         
         /// <remarks/>
-        public PesajeCamion Result {
+        public string Obs_Vb {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((PesajeCamion)(this.results[0]));
+                return this.obs_VbField;
             }
+            set {
+                this.obs_VbField = value;
+            }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerPatentesParaDespachoCompletedEventHandler(object sender, ObtenerPatentesParaDespachoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerPatentesParaDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
+        /// <remarks/>
+        public string CodigoViaje {
+            get {
+                return this.codigoViajeField;
+            }
+            set {
+                this.codigoViajeField = value;
+            }
+        }
         
-        internal ObtenerPatentesParaDespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public TipoDetallePaquetesPieza[] ListaPaquetes {
+            get {
+                return this.listaPaquetesField;
+            }
+            set {
+                this.listaPaquetesField = value;
+            }
         }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public string MensajeError {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.mensajeErrorField;
+            }
+            set {
+                this.mensajeErrorField = value;
             }
         }
     }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerPatentesParaCalculoCargaCompletedEventHandler(object sender, ObtenerPatentesParaCalculoCargaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerPatentesParaCalculoCargaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Despacho_Bodega_Acopio {
         
-        private object[] results;
+        private int idField;
         
-        internal ObtenerPatentesParaCalculoCargaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
+        private int bodega_IdField;
+        
+        private string usuarioField;
+        
+        private System.DateTime fechaField;
+        
+        private string obsField;
         
+        private string mensajeErrorField;
+        
         /// <remarks/>
-        public ListaDataSet Result {
+        public int Id {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.idField;
+            }
+            set {
+                this.idField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerPesoTaraPorPatenteCompletedEventHandler(object sender, ObtenerPesoTaraPorPatenteCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerPesoTaraPorPatenteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
         
-        internal ObtenerPesoTaraPorPatenteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public int Bodega_Id {
+            get {
+                return this.bodega_IdField;
+            }
+            set {
+                this.bodega_IdField = value;
+            }
         }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public string Usuario {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.usuarioField;
             }
+            set {
+                this.usuarioField = value;
+            }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void GuardarRecepcion_ColadaCompletedEventHandler(object sender, GuardarRecepcion_ColadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GuardarRecepcion_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
+        /// <remarks/>
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
+        }
         
-        internal GuardarRecepcion_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public string Obs {
+            get {
+                return this.obsField;
+            }
+            set {
+                this.obsField = value;
+            }
         }
         
         /// <remarks/>
-        public Recepcion_Colada Result {
+        public string MensajeError {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Recepcion_Colada)(this.results[0]));
+                return this.mensajeErrorField;
+            }
+            set {
+                this.mensajeErrorField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void DesactivarRecepcion_ColadaCompletedEventHandler(object sender, DesactivarRecepcion_ColadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class DesactivarRecepcion_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Pieza {
         
-        private object[] results;
+        private string coladaField;
         
-        internal DesactivarRecepcion_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
+        private string etiquetaField;
+        
+        private string estadoField;
         
+        private string mensajeErrorField;
+        
         /// <remarks/>
-        public Recepcion_Colada Result {
+        public string Colada {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Recepcion_Colada)(this.results[0]));
+                return this.coladaField;
+            }
+            set {
+                this.coladaField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarRecepcionColadaCompletedEventHandler(object sender, ListarRecepcionColadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarRecepcionColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
+        /// <remarks/>
+        public string Etiqueta {
+            get {
+                return this.etiquetaField;
+            }
+            set {
+                this.etiquetaField = value;
+            }
+        }
         
-        internal ListarRecepcionColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public string Estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+            }
         }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public string MensajeError {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.mensajeErrorField;
             }
+            set {
+                this.mensajeErrorField = value;
+            }
         }
     }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ListarRecepcionColadaPorBodegaCompletedEventHandler(object sender, ListarRecepcionColadaPorBodegaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarRecepcionColadaPorBodegaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class Despacho_Bodega_MP {
         
-        private object[] results;
+        private int idField;
         
-        internal ListarRecepcionColadaPorBodegaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
+        private int bodega_IdField;
+        
+        private string usuarioField;
+        
+        private System.DateTime fechaField;
         
+        private string obsField;
+        
+        private string mensajeErrorField;
+        
         /// <remarks/>
-        public ListaDataSet Result {
+        public int Id {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.idField;
             }
+            set {
+                this.idField = value;
+            }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ImprimirRecepcion_ColadaCompletedEventHandler(object sender, ImprimirRecepcion_ColadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ImprimirRecepcion_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
-        
-        internal ImprimirRecepcion_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public int Bodega_Id {
+            get {
+                return this.bodega_IdField;
+            }
+            set {
+                this.bodega_IdField = value;
+            }
         }
         
         /// <remarks/>
-        public Recepcion_Colada Result {
+        public string Usuario {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((Recepcion_Colada)(this.results[0]));
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void ObtenerRecepcionxEtiqueta_ColadaCompletedEventHandler(object sender, ObtenerRecepcionxEtiqueta_ColadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerRecepcionxEtiqueta_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
-        private object[] results;
+        /// <remarks/>
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
+        }
         
-        internal ObtenerRecepcionxEtiqueta_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        /// <remarks/>
+        public string Obs {
+            get {
+                return this.obsField;
+            }
+            set {
+                this.obsField = value;
+            }
         }
         
         /// <remarks/>
-        public ListaDataSet Result {
+        public string MensajeError {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
+                return this.mensajeErrorField;
+            }
+            set {
+                this.mensajeErrorField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void obtenerIdRC_PorColadaCompletedEventHandler(object sender, obtenerIdRC_PorColadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class obtenerIdRC_PorColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7632,11 +7934,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GuardarDespachoColadaBodegaMPCompletedEventHandler(object sender, GuardarDespachoColadaBodegaMPCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GuardarDespachoColadaBodegaMPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7658,11 +7960,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void AsociarEtiquetaColadaaBodegaMPCompletedEventHandler(object sender, AsociarEtiquetaColadaaBodegaMPCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AsociarEtiquetaColadaaBodegaMPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7684,11 +7986,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerMotivosExcepcionProduccionCompletedEventHandler(object sender, ObtenerMotivosExcepcionProduccionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerMotivosExcepcionProduccionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7710,11 +8012,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezaCompletedEventHandler(object sender, ObtenerPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7736,11 +8038,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void RegistrarPasoaProduccionPiezaCompletedEventHandler(object sender, RegistrarPasoaProduccionPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RegistrarPasoaProduccionPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7762,11 +8064,37 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarPasoaProduccionPieza_V_AZACompletedEventHandler(object sender, RegistrarPasoaProduccionPieza_V_AZACompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarPasoaProduccionPieza_V_AZACompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarPasoaProduccionPieza_V_AZACompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Pieza Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Pieza)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezaProduccionCompletedEventHandler(object sender, ObtenerPiezaProduccionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezaProduccionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7788,11 +8116,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GuardarDespachoPiezaBodegaAcopioCompletedEventHandler(object sender, GuardarDespachoPiezaBodegaAcopioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GuardarDespachoPiezaBodegaAcopioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7814,11 +8142,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void AsociarEtiquetaPiezaaBodegaAcopioCompletedEventHandler(object sender, AsociarEtiquetaPiezaaBodegaAcopioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AsociarEtiquetaPiezaaBodegaAcopioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7840,11 +8168,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void SP_VERIFICA_VIAJE_DESPACHOCompletedEventHandler(object sender, SP_VERIFICA_VIAJE_DESPACHOCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SP_VERIFICA_VIAJE_DESPACHOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7866,11 +8194,37 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GuardarDespachoCamionCompletedEventHandler(object sender, GuardarDespachoCamionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GuardarDespachoCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GuardarDespachoCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Despacho_Camion Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Despacho_Camion)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GuardarDespachoPiezaCamionCompletedEventHandler(object sender, GuardarDespachoPiezaCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GuardarDespachoPiezaCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7892,11 +8246,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void AsociarEtiquetaPiezaaCamionCompletedEventHandler(object sender, AsociarEtiquetaPiezaaCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AsociarEtiquetaPiezaaCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7918,11 +8272,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListarDespachoCamionCompletedEventHandler(object sender, ListarDespachoCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarDespachoCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7944,11 +8298,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void VbDespachoCamionCompletedEventHandler(object sender, VbDespachoCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class VbDespachoCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7970,11 +8324,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerTodasObrasVigentesCompletedEventHandler(object sender, ObtenerTodasObrasVigentesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTodasObrasVigentesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -7996,11 +8350,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerViajesPorObraCompletedEventHandler(object sender, ObtenerViajesPorObraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerViajesPorObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8022,11 +8376,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezasDespachoCompletedEventHandler(object sender, ObtenerPiezasDespachoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8048,11 +8402,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ValidarRNCompletedEventHandler(object sender, ValidarRNCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ValidarRNCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8074,11 +8428,37 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void PersisteColadaCompletedEventHandler(object sender, PersisteColadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PersisteColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PersisteColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerColadasPorNroCompletedEventHandler(object sender, ObtenerColadasPorNroCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerColadasPorNroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8100,11 +8480,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerPiezasDespachoCamionCompletedEventHandler(object sender, ObtenerPiezasDespachoCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasDespachoCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8126,11 +8506,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void VbDespachoPiezaCamionCompletedEventHandler(object sender, VbDespachoPiezaCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class VbDespachoPiezaCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8152,11 +8532,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListarDespachoBodegaMPCompletedEventHandler(object sender, ListarDespachoBodegaMPCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarDespachoBodegaMPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8178,11 +8558,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListarDespachoBodegaAcopioCompletedEventHandler(object sender, ListarDespachoBodegaAcopioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarDespachoBodegaAcopioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8204,11 +8584,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListarPiezasNoDespachadasBodegaAcopioCompletedEventHandler(object sender, ListarPiezasNoDespachadasBodegaAcopioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarPiezasNoDespachadasBodegaAcopioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8230,11 +8610,11 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDatosProduccionPorColadaCompletedEventHandler(object sender, ObtenerDatosProduccionPorColadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosProduccionPorColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8256,11 +8636,115 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void PersistirEtiquetaAZACompletedEventHandler(object sender, PersistirEtiquetaAZACompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PersistirEtiquetaAZACompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PersistirEtiquetaAZACompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public TipoEtiquetaAza Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((TipoEtiquetaAza)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void Obtener_MPCompletedEventHandler(object sender, Obtener_MPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Obtener_MPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Obtener_MPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDetalle_OC_AzaCompletedEventHandler(object sender, ObtenerDetalle_OC_AzaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDetalle_OC_AzaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDetalle_OC_AzaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void VerificaNroGuiaDespachoCompletedEventHandler(object sender, VerificaNroGuiaDespachoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class VerificaNroGuiaDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal VerificaNroGuiaDespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerDetalleProduccionPorColadaCompletedEventHandler(object sender, ObtenerDetalleProduccionPorColadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDetalleProduccionPorColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8282,11 +8766,37 @@ namespace EstadosdePagos.WsOperacion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDetalleProduccionPorColadaQrCompletedEventHandler(object sender, ObtenerDetalleProduccionPorColadaQrCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDetalleProduccionPorColadaQrCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDetalleProduccionPorColadaQrCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ObtenerResumanPiezasPorViajeCompletedEventHandler(object sender, ObtenerResumanPiezasPorViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerResumanPiezasPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -8294,6 +8804,2788 @@ namespace EstadosdePagos.WsOperacion {
         private object[] results;
         
         internal ObtenerResumanPiezasPorViajeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosConsultaGenericaCompletedEventHandler(object sender, ObtenerDatosConsultaGenericaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosConsultaGenericaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosConsultaGenericaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDetallePiezasPorViajeCompletedEventHandler(object sender, ObtenerDetallePiezasPorViajeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDetallePiezasPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDetallePiezasPorViajeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PiezaTipoB[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PiezaTipoB[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ConsultarITRecepcionCompletedEventHandler(object sender, ConsultarITRecepcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultarITRecepcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultarITRecepcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarITEtiquetaRecepcionadaCompletedEventHandler(object sender, RegistrarITEtiquetaRecepcionadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarITEtiquetaRecepcionadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarITEtiquetaRecepcionadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void Obtener_DatosDeDespachoCamionCompletedEventHandler(object sender, Obtener_DatosDeDespachoCamionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Obtener_DatosDeDespachoCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Obtener_DatosDeDespachoCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void CierreDescargaITCompletedEventHandler(object sender, CierreDescargaITCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CierreDescargaITCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CierreDescargaITCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerParametroCompletedEventHandler(object sender, ObtenerParametroCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerParametroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerParametroCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerParametroTOCompletedEventHandler(object sender, ObtenerParametroTOCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerParametroTOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerParametroTOCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPExcel_ResumenObraCompletedEventHandler(object sender, ListarEPExcel_ResumenObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPExcel_ResumenObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPExcel_ResumenObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPExcel_ResumenEpGeneradosxObraCompletedEventHandler(object sender, ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPExcel_ResumenGuiasxObraCompletedEventHandler(object sender, ListarEPExcel_ResumenGuiasxObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPExcel_ResumenGuiasxObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPExcel_ResumenGuiasxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosObraParaEPCompletedEventHandler(object sender, ObtenerDatosObraParaEPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosObraParaEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosObraParaEPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void EnviarCorreoNotificacion_NCCompletedEventHandler(object sender, EnviarCorreoNotificacion_NCCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EnviarCorreoNotificacion_NCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EnviarCorreoNotificacion_NCCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GrabaEP_GeneradoCompletedEventHandler(object sender, GrabaEP_GeneradoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GrabaEP_GeneradoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GrabaEP_GeneradoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public EP_Generado Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((EP_Generado)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosInicialesCompletedEventHandler(object sender, ObtenerDatosInicialesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosInicialesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosInicialesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GrabarChequeoMaquinaCompletedEventHandler(object sender, GrabarChequeoMaquinaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GrabarChequeoMaquinaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GrabarChequeoMaquinaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void VerificaChequeoCompletedEventHandler(object sender, VerificaChequeoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class VerificaChequeoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal VerificaChequeoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerSupervisoresCompletedEventHandler(object sender, ObtenerSupervisoresCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerSupervisoresCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerSupervisoresCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosParaEnvioMailCompletedEventHandler(object sender, ObtenerDatosParaEnvioMailCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosParaEnvioMailCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosParaEnvioMailCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void IntegraBodegasINETCompletedEventHandler(object sender, IntegraBodegasINETCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class IntegraBodegasINETCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal IntegraBodegasINETCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerResumenGD_ParaExcelCompletedEventHandler(object sender, ObtenerResumenGD_ParaExcelCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerResumenGD_ParaExcelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerResumenGD_ParaExcelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerEtiquetaCompletedEventHandler(object sender, ObtenerEtiquetaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEtiquetaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEtiquetaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public TipoEtiquetaAza Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((TipoEtiquetaAza)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerAsignacionITMaqCompletedEventHandler(object sender, ObtenerAsignacionITMaqCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerAsignacionITMaqCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerAsignacionITMaqCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GrabarRecepcion_MPCompletedEventHandler(object sender, GrabarRecepcion_MPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GrabarRecepcion_MPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GrabarRecepcion_MPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Recepcion_MP Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Recepcion_MP)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GuardarSolicitudMaterialCompletedEventHandler(object sender, GuardarSolicitudMaterialCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GuardarSolicitudMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GuardarSolicitudMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Solicitud_Material Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Solicitud_Material)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void AsociarProductosaSolicitudCompletedEventHandler(object sender, AsociarProductosaSolicitudCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AsociarProductosaSolicitudCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AsociarProductosaSolicitudCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Solicitud_Material_Detalle Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Solicitud_Material_Detalle)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarSolicitudMaterial_RecepcionCompletedEventHandler(object sender, ListarSolicitudMaterial_RecepcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarSolicitudMaterial_RecepcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarSolicitudMaterial_RecepcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GuardarRecepcionMaterialCompletedEventHandler(object sender, GuardarRecepcionMaterialCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GuardarRecepcionMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GuardarRecepcionMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Solicitud_Material_Detalle Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Solicitud_Material_Detalle)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void AnularRecepcionMaterialCompletedEventHandler(object sender, AnularRecepcionMaterialCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AnularRecepcionMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AnularRecepcionMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Solicitud_Material_Detalle Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Solicitud_Material_Detalle)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarSolicitudMaterial_CierreCompletedEventHandler(object sender, ListarSolicitudMaterial_CierreCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarSolicitudMaterial_CierreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarSolicitudMaterial_CierreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarSolicitudMaterial_CierreAutCompletedEventHandler(object sender, ListarSolicitudMaterial_CierreAutCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarSolicitudMaterial_CierreAutCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarSolicitudMaterial_CierreAutCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void DevolucionDeMPCompletedEventHandler(object sender, DevolucionDeMPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DevolucionDeMPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DevolucionDeMPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GuardarCierreMaterialCompletedEventHandler(object sender, GuardarCierreMaterialCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GuardarCierreMaterialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GuardarCierreMaterialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Solicitud_Material_Detalle Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Solicitud_Material_Detalle)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarLogProductoCompletedEventHandler(object sender, ListarLogProductoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarLogProductoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarLogProductoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerSolicitudesMP_PorTotemCompletedEventHandler(object sender, ObtenerSolicitudesMP_PorTotemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerSolicitudesMP_PorTotemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerSolicitudesMP_PorTotemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void AnularDetalleSolicitudMateriaPrimaCompletedEventHandler(object sender, AnularDetalleSolicitudMateriaPrimaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AnularDetalleSolicitudMateriaPrimaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AnularDetalleSolicitudMateriaPrimaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerResumenSMP_PorTurnoCompletedEventHandler(object sender, ObtenerResumenSMP_PorTurnoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerResumenSMP_PorTurnoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerResumenSMP_PorTurnoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerResumenSMP_PorTurno_TotemCompletedEventHandler(object sender, ObtenerResumenSMP_PorTurno_TotemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerResumenSMP_PorTurno_TotemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerResumenSMP_PorTurno_TotemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerResumenSMP_PorSolIdCompletedEventHandler(object sender, ObtenerResumenSMP_PorSolIdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerResumenSMP_PorSolIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerResumenSMP_PorSolIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerTablaConDestinatariosMAIL_EPCompletedEventHandler(object sender, ObtenerTablaConDestinatariosMAIL_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerTablaConDestinatariosMAIL_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerTablaConDestinatariosMAIL_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ValorKiloSuministro_EPCompletedEventHandler(object sender, ValorKiloSuministro_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ValorKiloSuministro_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ValorKiloSuministro_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerTecnicosActivosCompletedEventHandler(object sender, ObtenerTecnicosActivosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerTecnicosActivosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerTecnicosActivosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerObrasActivasCompletedEventHandler(object sender, ObtenerObrasActivasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerObrasActivasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerObrasActivasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerObrasActivas_EPCompletedEventHandler(object sender, ObtenerObrasActivas_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerObrasActivas_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerObrasActivas_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerGuiasEnrteFechas_EPCompletedEventHandler(object sender, ObtenerGuiasEnrteFechas_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerGuiasEnrteFechas_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerGuiasEnrteFechas_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerGuiasDesdeInicio_EPCompletedEventHandler(object sender, ObtenerGuiasDesdeInicio_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerGuiasDesdeInicio_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerGuiasDesdeInicio_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerITPorGuiaCabecera_EPCompletedEventHandler(object sender, ObtenerITPorGuiaCabecera_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerITPorGuiaCabecera_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerITPorGuiaCabecera_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerITPorGuiaDetalle_EPCompletedEventHandler(object sender, ObtenerITPorGuiaDetalle_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerITPorGuiaDetalle_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerITPorGuiaDetalle_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerEtiquetasPorViajeYGuia_EPCompletedEventHandler(object sender, ObtenerEtiquetasPorViajeYGuia_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEtiquetasPorViajeYGuia_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEtiquetasPorViajeYGuia_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEstadoPagosPendientesCompletedEventHandler(object sender, ListarEstadoPagosPendientesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEstadoPagosPendientesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEstadoPagosPendientesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPCompletedEventHandler(object sender, RegistrarEPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEstadoPagoCompletedEventHandler(object sender, ListarEstadoPagoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEstadoPagoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEstadoPagoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarObraEPNoAprobadoCompletedEventHandler(object sender, ListarObraEPNoAprobadoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarObraEPNoAprobadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarObraEPNoAprobadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void EliminarEPCreacionEtiquetaxEPCompletedEventHandler(object sender, EliminarEPCreacionEtiquetaxEPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarEPCreacionEtiquetaxEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarEPCreacionEtiquetaxEPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventHandler(object sender, EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarEPCreacionEtiquetaxGuia_DespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void EliminarEPCreacionEtiquetaxITCompletedEventHandler(object sender, EliminarEPCreacionEtiquetaxITCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarEPCreacionEtiquetaxITCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarEPCreacionEtiquetaxITCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPCreacionEtiquetaCompletedEventHandler(object sender, RegistrarEPCreacionEtiquetaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPCreacionEtiquetaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPCreacionEtiquetaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPCambiosGdEnviadaaClteCompletedEventHandler(object sender, RegistrarEPCambiosGdEnviadaaClteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPCambiosGdEnviadaaClteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPCambiosGdEnviadaaClteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventHandler(object sender, RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPCambiosEtiquetaEnviadaaClteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPResumenGuiaDespachoxEpCompletedEventHandler(object sender, ListarEPResumenGuiaDespachoxEpCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPResumenGuiaDespachoxEpCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPResumenGuiaDespachoxEpCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventHandler(object sender, ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPGeneracionReporteCompletedEventHandler(object sender, RegistrarEPGeneracionReporteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPGeneracionReporteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPGeneracionReporteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPEnvioaClienteCompletedEventHandler(object sender, RegistrarEPEnvioaClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPEnvioaClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPEnvioaClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPAprobacionClienteCompletedEventHandler(object sender, RegistrarEPAprobacionClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPAprobacionClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPAprobacionClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPTrazabiidadCompletedEventHandler(object sender, ListarEPTrazabiidadCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPTrazabiidadCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPTrazabiidadCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPComentarioCompletedEventHandler(object sender, RegistrarEPComentarioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPComentarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPComentarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPComentarioCompletedEventHandler(object sender, ListarEPComentarioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPComentarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPComentarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPAdjuntoCompletedEventHandler(object sender, RegistrarEPAdjuntoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPAdjuntoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPAdjuntoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPAdjuntoCompletedEventHandler(object sender, ListarEPAdjuntoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPAdjuntoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPAdjuntoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarEPFacturacionCompletedEventHandler(object sender, ListarEPFacturacionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPFacturacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPFacturacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPIngresadaINETCompletedEventHandler(object sender, RegistrarEPIngresadaINETCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPIngresadaINETCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPIngresadaINETCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RegistrarEPCobradaCompletedEventHandler(object sender, RegistrarEPCobradaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistrarEPCobradaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistrarEPCobradaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Estado_Pago Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Estado_Pago)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerEmpresaPor_EPCompletedEventHandler(object sender, ObtenerEmpresaPor_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEmpresaPor_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEmpresaPor_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerTotelaciaExtraCompletedEventHandler(object sender, ObtenerTotelaciaExtraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerTotelaciaExtraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerTotelaciaExtraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerPesoMaxBasculaMovilCompletedEventHandler(object sender, ObtenerPesoMaxBasculaMovilCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerPesoMaxBasculaMovilCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerPesoMaxBasculaMovilCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ValidaUsuarioCompletedEventHandler(object sender, ValidaUsuarioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ValidaUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ValidaUsuarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosPorIdDespachoCompletedEventHandler(object sender, ObtenerDatosPorIdDespachoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosPorIdDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosPorIdDespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosGuiasSinVincularCompletedEventHandler(object sender, ObtenerDatosGuiasSinVincularCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosGuiasSinVincularCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosGuiasSinVincularCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GrabarDatosPesajeCamionCompletedEventHandler(object sender, GrabarDatosPesajeCamionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GrabarDatosPesajeCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GrabarDatosPesajeCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PesajeCamion Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PesajeCamion)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerCamionesEnPlantaCompletedEventHandler(object sender, ObtenerCamionesEnPlantaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerCamionesEnPlantaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerCamionesEnPlantaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDetallePesajeCompletedEventHandler(object sender, ObtenerDetallePesajeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDetallePesajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDetallePesajeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void SacarITDespachoCompletedEventHandler(object sender, SacarITDespachoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SacarITDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SacarITDespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void EliminaRegistroCamionCompletedEventHandler(object sender, EliminaRegistroCamionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminaRegistroCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminaRegistroCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void CierraCicloCamionCompletedEventHandler(object sender, CierraCicloCamionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CierraCicloCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CierraCicloCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerPatentesParaDespachoCompletedEventHandler(object sender, ObtenerPatentesParaDespachoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerPatentesParaDespachoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerPatentesParaDespachoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerPatentesParaCalculoCargaCompletedEventHandler(object sender, ObtenerPatentesParaCalculoCargaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerPatentesParaCalculoCargaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerPatentesParaCalculoCargaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerPesoTaraPorPatenteCompletedEventHandler(object sender, ObtenerPesoTaraPorPatenteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerPesoTaraPorPatenteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerPesoTaraPorPatenteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosPesajeCamionCompletedEventHandler(object sender, ObtenerDatosPesajeCamionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosPesajeCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosPesajeCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosResumen_PesajeCamionCompletedEventHandler(object sender, ObtenerDatosResumen_PesajeCamionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosResumen_PesajeCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosResumen_PesajeCamionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void PersistePesajeBMCompletedEventHandler(object sender, PersistePesajeBMCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PersistePesajeBMCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PersistePesajeBMCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public TipoBasculaMovil[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((TipoBasculaMovil[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GrabarProduccionExternaCompletedEventHandler(object sender, GrabarProduccionExternaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GrabarProduccionExternaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GrabarProduccionExternaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GrabarNoConformidadProdExtCompletedEventHandler(object sender, GrabarNoConformidadProdExtCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GrabarNoConformidadProdExtCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GrabarNoConformidadProdExtCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDetalleRecepcionCompletedEventHandler(object sender, ObtenerDetalleRecepcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDetalleRecepcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDetalleRecepcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void PersisteEnviosProdExCompletedEventHandler(object sender, PersisteEnviosProdExCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PersisteEnviosProdExCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PersisteEnviosProdExCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerEnviosSinRecepcionCompletedEventHandler(object sender, ObtenerEnviosSinRecepcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEnviosSinRecepcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEnviosSinRecepcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerEnviosParaRecepcionCompletedEventHandler(object sender, ObtenerEnviosParaRecepcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEnviosParaRecepcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEnviosParaRecepcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerDatosIniciales_PECompletedEventHandler(object sender, ObtenerDatosIniciales_PECompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosIniciales_PECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosIniciales_PECompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerIt_PorObraCompletedEventHandler(object sender, ObtenerIt_PorObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerIt_PorObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerIt_PorObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerIt_PorObra_ProdExCompletedEventHandler(object sender, ObtenerIt_PorObra_ProdExCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerIt_PorObra_ProdExCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerIt_PorObra_ProdExCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerEtiquetasPorViajeCompletedEventHandler(object sender, ObtenerEtiquetasPorViajeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEtiquetasPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEtiquetasPorViajeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void RevisaRNCompletedEventHandler(object sender, RevisaRNCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RevisaRNCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RevisaRNCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void GuardarRecepcion_ColadaCompletedEventHandler(object sender, GuardarRecepcion_ColadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GuardarRecepcion_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GuardarRecepcion_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Recepcion_Colada Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Recepcion_Colada)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void DesactivarRecepcion_ColadaCompletedEventHandler(object sender, DesactivarRecepcion_ColadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DesactivarRecepcion_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DesactivarRecepcion_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Recepcion_Colada Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Recepcion_Colada)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarRecepcionColadaCompletedEventHandler(object sender, ListarRecepcionColadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarRecepcionColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarRecepcionColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarRecepcionColadaPorBodegaCompletedEventHandler(object sender, ListarRecepcionColadaPorBodegaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarRecepcionColadaPorBodegaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarRecepcionColadaPorBodegaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ImprimirRecepcion_ColadaCompletedEventHandler(object sender, ImprimirRecepcion_ColadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ImprimirRecepcion_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ImprimirRecepcion_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Recepcion_Colada Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Recepcion_Colada)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ObtenerRecepcionxEtiqueta_ColadaCompletedEventHandler(object sender, ObtenerRecepcionxEtiqueta_ColadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerRecepcionxEtiqueta_ColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerRecepcionxEtiqueta_ColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Btn_Buscar = new System.Windows.Forms.Button();
             this.DTG = new System.Windows.Forms.DataGridView();
             this.Btn_Imprimir = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Tx_codigo = new System.Windows.Forms.TextBox();
             this.Lbl_msg = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DTG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,6 +107,11 @@
             this.Lbl_msg.TabIndex = 6;
             this.Lbl_msg.Text = "label2";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 60000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Frm_Tmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +127,8 @@
             this.Name = "Frm_Tmp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario para Impresion de PL";
+            this.Activated += new System.EventHandler(this.Frm_Tmp_Activated);
+            this.Load += new System.EventHandler(this.Frm_Tmp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DTG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,5 +144,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Tx_codigo;
         private System.Windows.Forms.Label Lbl_msg;
+        private System.Windows.Forms.Timer timer1;
     }
 }

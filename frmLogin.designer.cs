@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.chkRecordarUsuario = new System.Windows.Forms.CheckBox();
             this.chkRecordarClave = new System.Windows.Forms.CheckBox();
+            this.Btn_imprimePL = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -67,7 +68,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(230, 20);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Text = "nbustos";
+            this.txtUsuario.Text = "Dopazo";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
@@ -79,7 +80,7 @@
             this.txtClave.PasswordChar = 'X';
             this.txtClave.Size = new System.Drawing.Size(230, 20);
             this.txtClave.TabIndex = 1;
-            this.txtClave.Text = "nbtorres";
+            this.txtClave.Text = "opazo.2020";
             this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
             this.txtClave.Leave += new System.EventHandler(this.txtClave_Leave);
             // 
@@ -124,11 +125,22 @@
             this.chkRecordarClave.Text = "Recordar mi contraseña";
             this.chkRecordarClave.UseVisualStyleBackColor = true;
             // 
+            // Btn_imprimePL
+            // 
+            this.Btn_imprimePL.Location = new System.Drawing.Point(167, 138);
+            this.Btn_imprimePL.Name = "Btn_imprimePL";
+            this.Btn_imprimePL.Size = new System.Drawing.Size(75, 23);
+            this.Btn_imprimePL.TabIndex = 14;
+            this.Btn_imprimePL.Text = "Imprime PL";
+            this.Btn_imprimePL.UseVisualStyleBackColor = true;
+            this.Btn_imprimePL.Click += new System.EventHandler(this.Btn_imprimePL_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(258, 212);
+            this.Controls.Add(this.Btn_imprimePL);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.chkRecordarClave);
@@ -144,6 +156,8 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Activated += new System.EventHandler(this.frmLogin_Activated);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.Shown += new System.EventHandler(this.frmLogin_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,6 +174,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkRecordarUsuario;
         private System.Windows.Forms.CheckBox chkRecordarClave;
+        private System.Windows.Forms.Button Btn_imprimePL;
     }
 }
 
