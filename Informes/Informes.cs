@@ -239,8 +239,50 @@ namespace EstadosdePagos.Informes
                 throw exc;
             }
 
-            //**************************************************************************
+        }
 
+        public void ImprimirInforme_Automatico(string iViaje, Boolean iEliminaArchivo, string iPathDestino)
+        {
+            string iIdIt = ""; string iIdObra = ""; Dts_PL lDtsPortada = new Dts_PL();
+            Dts_PL lDtsDetalle = new Dts_PL(); Char Delimitador = '/'; Utils lComun = new Utils();
+            FrmVisualizador lFrmInf = new FrmVisualizador();
+            try
+            {
+                String[] lPartes = iViaje.Split(Delimitador);
+                if (lPartes.Length > 0)
+                {
+                    if (lComun.Val(lPartes[1]) == 1)
+                    {
+                        lDtsPortada = CargaDatosPortada_ViajeOriginal(iViaje);
+                        lFrmInf.InicializaInforme("P", lDtsPortada, iViaje, iEliminaArchivo);
+                        lFrmInf.GeneraPdf_Automatico(iPathDestino);
+                        lDtsDetalle = CargaDatosDetalleViajeOriginal(iViaje);
+                        lFrmInf.InicializaInforme("D", lDtsDetalle, iViaje, iEliminaArchivo);
+                        lFrmInf.GeneraPdf_Automatico(iPathDestino);
+                        lFrmInf.Close();
+                        lFrmInf.Dispose();
+                    }
+                    else
+                    {
+                        //CargaDatosDetalle_ViajeSaldo
+                        lDtsPortada = CargaDatosPortada_ViajeSaldo(iViaje);
+                        //lDtsPortada = CargaDatosDetalle_ViajeSaldo(iViaje);
+                        lFrmInf.InicializaInforme("P", lDtsPortada, iViaje, iEliminaArchivo);
+                        lFrmInf.GeneraPdf_Automatico(iPathDestino);
+                        lDtsDetalle = CargaDatosDetalle_ViajeSaldo(iViaje);
+                        lFrmInf.InicializaInforme("D", lDtsDetalle, iViaje, iEliminaArchivo);
+                        lFrmInf.GeneraPdf_Automatico(iPathDestino);
+                        lFrmInf.Close();
+                        lFrmInf.Dispose();
+                    }
+                }
+
+            }
+            catch (Exception exc)
+            {
+                //MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw exc;
+            }
 
         }
 

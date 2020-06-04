@@ -124,6 +124,11 @@ namespace EstadosdePagos
         {
             Informes.Frm_Tmp lFrm = new Informes.Frm_Tmp();
             lFrm.ShowDialog(this);
+
+
+
+
+
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

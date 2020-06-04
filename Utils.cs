@@ -945,6 +945,9 @@ namespace EstadosdePagos
             File.Copy(iOrigen, iDestino);
         }
 
+
+
+
         public string generarEP_V2(string ep_obra, string obra, Int32 ep_id, int accion, ref ProgressBar Pb, ref Label Lbl_PB, string carpeta, Int32 correlativo) //1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente
         {
             string error = "", valorKiloSuministro = "", destinatarios = "", dir_guiaDespacho = "", dir_it = "", archivo = "";
@@ -1040,7 +1043,7 @@ namespace EstadosdePagos
                 totalGuiasDespacho = view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows.Count;
 
                 lSiglaOBra = view[0]["IT"].ToString().Substring(0, 3);
-                lPathDestino = Path.Combine(selectedPath, correlativo.ToString ());
+                lPathDestino = Path.Combine(selectedPath, lSiglaOBra, correlativo.ToString ());
                 lPathDestinoLocal = Path.Combine(selectedPath);
                 if (Directory.Exists(lPathDestino) == false)
                     Directory.CreateDirectory(lPathDestino);
@@ -1055,15 +1058,11 @@ namespace EstadosdePagos
                       
                         archivo = row[COLUMNNAME_GUIA_DESPACHO].ToString() + ".pdf";
                        
-                        // if (fs.FileExists(dir_guiaDespacho + archivo)) Path.Combine(dir_guiaDespacho, archivo )
-                        if (fs.FileExists(Path.Combine(dir_guiaDespacho, archivo)))
+                       if (fs.FileExists(Path.Combine(dir_guiaDespacho, archivo)))
                         {
                             listArchivosGuiasDespacho.Add(archivo);
-
-                            // CopiarArchivo(Path.Combine(dir_guiaDespacho, archivo), Path.Combine(selectedPath, archivo, lSiglaObra));
                             CopiarArchivo(Path.Combine(dir_guiaDespacho, archivo), Path.Combine(lPathDestino, archivo));
-                        }
-                           
+                        } 
                         else
                             archivoFaltantesGD.Append(" -> " + archivo + "\n");
                     }
@@ -1125,8 +1124,8 @@ namespace EstadosdePagos
 
                         // if (ExisteArchivo(archivo.ToString(), lPathArchivo) == false)
                         //Primero P
-                        archivo = row[COLUMNNAME_IT].ToString() + "P.PDF";
-                        archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
+                        archivo = row[COLUMNNAME_IT].ToString().Replace("/", "_")  + "P.PDF";
+                  //      archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
                         if (fs.FileExists(Path.Combine(dir_it , lSiglaOBra, archivo)))
                         {
                             listArchivosIT.Add(archivo);
@@ -1137,8 +1136,8 @@ namespace EstadosdePagos
                             archivoFaltantesIT.Append(" -> " + archivo + "\n");
                         }
                         //Primero D
-                        archivo = row[COLUMNNAME_IT].ToString() + "D.PDF";
-                        archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
+                        archivo = row[COLUMNNAME_IT].ToString().Replace("/", "_") + "D.PDF";
+                        //archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
                         if (fs.FileExists(Path.Combine(dir_it, lSiglaOBra, archivo)))
                         {
                             listArchivosIT.Add(archivo);
@@ -1148,18 +1147,6 @@ namespace EstadosdePagos
                         {
                             archivoFaltantesIT.Append(" -> " + archivo + "\n");
                         }
-
-
-                        //if (ExisteArchivo(archivo.ToString(), lPathArchivo) == true)
-                        //{
-                        //    //if (fs.FileExists(dir_it + archivo))
-                        //    listArchivosIT.Add(archivo);
-                        //    CopiarArchivo(lPathArchivo, Path.Combine(lPathDestino, archivo));
-                        //}
-                        //else
-                        //{
-                        //    archivoFaltantesIT.Append(" -> " + archivo + "\n");
-                        //}
 
                     }
                     if (archivoFaltantesIT.ToString().Length > 0)
@@ -1230,16 +1217,10 @@ namespace EstadosdePagos
                         selectedPath = seleccionarCarpeta();
 
                     //*****************************************************************ZOna de Cambio  **************************************//
-                    GeneraExcel_EP(accion, ep_obra, correlativo, ep_id);
+                    GeneraExcel_EP(accion, ep_obra, correlativo, ep_id, lPathDestino);
+                    GrabarArchivoLog(lPathDestino, sb  );
 
-                    //if (!selectedPath.Equals(""))
-                    //{
 
-                       
-
-                    //}
-                    //else
-                    //    validacion.Insert(0, "El usuario seleciono el botón Cancelar");
                 }
                 else
                     validacion.Insert(0, "Faltan los siguientes datos requeridos:\n\n");
@@ -1253,8 +1234,66 @@ namespace EstadosdePagos
             return validacion.ToString();
         }
 
+        private void GrabarArchivoLog(string lPathDestino, StringBuilder lDatos)
+        {
+            string path = Path .Combine (lPathDestino ,"Log.txt")  ; // @"c:\temp\MyTest.txt";
+            if (!File.Exists(path))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write (lDatos.ToString());
+                }
+            }
+        }
 
-        private void GeneraExcel_EP(int accion, string ep_obra, Int32 correlativo,int  ep_id)
+        private string ObtenerNombreMes(int iMes)
+        {
+            string lNombreMes = "";
+            switch (iMes)
+            {
+                case 1:
+                    lNombreMes = "Enero";
+                    break;
+                case 2:
+                    lNombreMes = "Febrero";
+                    break;
+                case 3:
+                    lNombreMes = "Marzo";
+                    break;
+                case 4:
+                    lNombreMes = "Abril";
+                    break;
+                case 5:
+                    lNombreMes = "Mayo";
+                    break;
+                case 6:
+                    lNombreMes = "Junio";
+                    break;
+                case 7:
+                    lNombreMes = "Julio";
+                    break;
+                case 8:
+                    lNombreMes = "Agosto";
+                    break;
+                case 9:
+                    lNombreMes = "Septiembre";
+                    break;
+                case 10:
+                    lNombreMes = "Octubre";
+                    break;
+                case 11:
+                    lNombreMes = "Noviembre";
+                    break;
+                case 12:
+                    lNombreMes = "Diciembre";
+                    break;
+
+            }
+            return lNombreMes;
+        }
+
+        private void GeneraExcel_EP(int accion, string ep_obra, Int32 correlativo,int  ep_id , string lPathDest)
         {
             string selectedPath = ""; long  totalKilos = 0;string obra = "";
             WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
@@ -1266,10 +1305,12 @@ namespace EstadosdePagos
             WsOperacion.Operacion ws = new WsOperacion.Operacion();string lRangoEx = "";
             DataTable dtResumenxGuiaDespacho = null;int i = 0;DataTable lTbl = new DataTable();
             string error = ""; string lPathDestino = ""; DataTable ltblServicios = new DataTable();
-            string lHora = "";
+            string lHora = ""; int lTotalCD = 0; int lFE = 0; string lSubTitulo = "";
+            string lValorSum = "0"; string lValorPrep = "0";
             try
             {
-                lPathDestino = Path.Combine (ConfigurationManager.AppSettings["PathLocal"].ToString(),correlativo.ToString () );
+                lPathDestino = lPathDest;
+                    //Path.Combine (ConfigurationManager.AppSettings["PathLocal"].ToString(),correlativo.ToString () );
 
                 //Anexa el nombre de la carpeta a generar
                 //selectedPath = selectedPath + (!su.Right(Application.StartupPath, 1).Equals("\\") ? "\\" : "") + carpeta;
@@ -1306,22 +1347,41 @@ namespace EstadosdePagos
                     {
                         //LLenaremos primero el detalle de la pestaña de  Resumen GD, de la plantilla
                         //Hoja: Resumen
-                        (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
+                        (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[2]).Select();
 
                         //listaDataSetOp = wsOperacion.ListarEPExcel_ResumenObra(ep_obra);
+
+                        lSubTitulo = string.Concat("EP N°", correlativo, "- ", ObtenerNombreMes(DateTime.Now.Month) , " ", DateTime.Now.Year.ToString());
+                        excelSheet.Range["A5"].Value = lSubTitulo.ToString();
+
+                        lTotalCD = 0; lFE = 0;
                         lCont = 7;
                         for (i = 0; i < ltblDatos.Rows.Count; i++)
                         {
                             lDatos = wsOperacion.ObtenerResumenGD_ParaExcel(ltblDatos.Rows[i]["IT"].ToString());
                             if ((lDatos.MensajeError.Equals("")) &&(lDatos.DataSet.Tables.Count > 0))
                             {
+
                                 lTbl = lDatos.DataSet.Tables[0].Copy();
+                               
                                 foreach (DataRow row in lTbl.Rows)
                                 {
                                     lRangoEx = string.Concat ("A",lCont .ToString ()); excelSheet.Range[lRangoEx].Value = row["Codigo"].ToString();
                                     lRangoEx = string.Concat("B", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["NroGuiaInet"].ToString();
                                     lRangoEx = string.Concat("C", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["FechaGuiaInet"].ToString();
                                     lRangoEx = string.Concat("D", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["TipoGuia_Inet"].ToString();
+
+                                    switch (row["TipoGuia_Inet"].ToString())
+                                    {
+                                        // int lTotalCD = 0; int lFE = 0;
+                                        case "Sumin C&D":
+                                            lTotalCD = lTotalCD + Val(row["Kgs_Diam"].ToString());
+                                            break;
+                                        case "Sumin":
+                                            lFE = lFE + Val(row["Kgs_Diam"].ToString());
+                                            break;
+                                    }
+
                                     switch (row["Diametro"].ToString())
                                     {
                                         case "8":
@@ -1361,6 +1421,10 @@ namespace EstadosdePagos
                                 lCont++;
                             }
                         }
+                        // actualizamos los Totales.
+                        excelSheet.Range["Q5"].Value = lFE.ToString();
+                        excelSheet.Range["R5"].Value = lTotalCD.ToString();
+
 
                         //Sigue todo como estaba
                         // se comenta por pruebas 
@@ -1368,6 +1432,8 @@ namespace EstadosdePagos
                         listaDataSetOp = wsOperacion.ListarEPExcel_ResumenObra(ep_obra);
                         if (listaDataSetOp.MensajeError.Equals(""))
                         {
+                            lValorSum = listaDataSetOp.DataSet.Tables[0].Rows[0]["VALOR_S"].ToString();
+                            lValorPrep = listaDataSetOp.DataSet.Tables[0].Rows[0]["VALOR_P"].ToString();
                             foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
                             {
                                 excelSheet.Range["D6"].Value = "ORDEN DE COMPRA N° " + row["ORDEN_COMPRA"].ToString();
@@ -1392,8 +1458,8 @@ namespace EstadosdePagos
                                     //}
                                     //else
                                     //{
-                                        excelSheet.Range["G11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Sumunistro
-                                        excelSheet.Range["G12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Preparacion
+                                    excelSheet.Range["G11"].Value = lValorSum;// listaDataTMP.DataSet.Tables[0].Rows[0]["VALOR_S"].ToString(); //Sumunistro
+                                    excelSheet.Range["G12"].Value = lValorPrep; // listaDataTMP.DataSet.Tables[0].Rows[0]["VALOR_P"].ToString(); //Preparacion
                                     //}
                                     //
                                     excelSheet.Range["BE11"].Value = totalKilos;  //Sumunistro
@@ -1501,31 +1567,7 @@ namespace EstadosdePagos
                         excelSheet.Range["BC11"].Value = totalKilosCobrados;
 
                         excelSheet.Range["BD11"].Value = totalCobrado;
-                        //EP actual
-                        // se comenta por modificaciones 06-12-2017
-                        //excelSheet.Range["BD11"].Value = totalKilos;
-                        //excelSheet.Range["BE11"].Value = totalaCobrar;
-
-                        //Hoja: Detalle Guias
-                        //(excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
-                        //ExcelApp.Range rng = excelSheet.get_Range("B8", "A1000");
-                        //rng.EntireRow.Delete(ExcelApp.XlDirection.xlUp);
-
-                        //fila = 8;
-                        //listaDataSetOp = wsOperacion.ListarEPExcel_ResumenGuiasxObra(ep_obra);
-                        //if (listaDataSetOp.MensajeError.Equals(""))
-                        //{
-                        //    foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
-                        //    {
-                        //        excelSheet.Cells[fila, 1] = row["FECHA"].ToString();
-                        //        excelSheet.Cells[fila, 2] = row["DESCRIPCION"].ToString();
-                        //        excelSheet.Cells[fila, 3] = row["GUIA_DESPACHO"].ToString();
-                        //        excelSheet.Cells[fila, 4] = row["KILOS"].ToString();
-                        //        fila++;
-                        //    }
-                        //}
-                        //else
-                        //    error = listaDataSetOp.MensajeError.ToString();
+                                
 
                         (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
                         excelWorkBook.Save();
@@ -1554,26 +1596,7 @@ namespace EstadosdePagos
 
 
                     fs.shell(lPathDestino);
-                    //if (generarArchivoEP(selectedPath, sb.ToString()))
-                    //{
-                    //1-Vista preliminar
-                    //2-Generar el reporte
-                    //if (accion.Equals(1) || accion.Equals(2))
-                    //{
-                    //    if (listArchivosGuiasDespacho.Count > 0)
-                    //        copiarArchivosLista(dir_guiaDespacho, selectedPath, listArchivosGuiasDespacho, "G");
-                    //    if (listArchivosIT.Count > 0)
-                    //        copiarArchivosLista(dir_it, selectedPath, listArchivosIT, "I");
-                    //    fs.shell(selectedPath); //Abre la carpeta de destino
-                    //}
-                    //else if (accion.Equals(3))
-                    //{ //3-Envio al cliente
-                    //  //enviarCorreo(destinatarios, selectedPath);
-                    //    enviarCorreoNotificacionInterna("EP_ENVIADOA_CLIENTE", ep_obra, ep_id, "", "", obra); //utils.
-                    //                                                                                          //Envio a cliente -> Se comenta porque no esta claro si el asunto y cuerpo se generará desde aqui o en la funcion de envio.
-                    //                                                                                          //enviarCorreoNotificacionaObra("CLIENTE", "asunto", Convert.ToInt32(ep_obra), "cuerpo", ep_id);
-                    //}
-                    //}
+
                 }
                 else
                     error = string.Concat(error, Environment.NewLine, fs.error.Message.ToString());
@@ -1657,7 +1680,13 @@ namespace EstadosdePagos
             lInf.ImprimirInforme(iViaje, iEliminaArchivo, iPathDestino);
         }
 
+        public void CreaInforme_Autom(string iViaje, Boolean iEliminaArchivo, string iPathDestino)
+        {
+            Informes.Informes lInf = new Informes.Informes();
+            lInf.ImprimirInforme_Automatico(iViaje, iEliminaArchivo, iPathDestino);
+        }
 
+        //
 
         public Boolean EsNumero(string iDato)
         {

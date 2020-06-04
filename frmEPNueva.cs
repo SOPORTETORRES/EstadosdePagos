@@ -237,7 +237,7 @@ namespace EstadosdePagos
                         //else
                         //    error = result.MensajeError;
                         //--2017-01-11
-                        if (_ep_id.Equals(0))
+                        if ((_ep_id.Equals(0)) && (txtDiaPresentEP.Text!=""))
                             dtpFechaPresentEP.Value = Convert.ToDateTime(txtDiaPresentEP.Text + DateTime.Now.AddMonths(1).ToString("-MM-yyyy"));
                         else {
                             wsOperacion = new WsOperacion.Operacion();
