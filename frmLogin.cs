@@ -138,7 +138,7 @@ namespace EstadosdePagos
 
         private void frmLogin_Activated(object sender, EventArgs e)
         {
-            //Btn_imprimePL_Click(null, null);
+            Btn_imprimePL_Click(null, null);
         }
     }
 }

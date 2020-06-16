@@ -11,6 +11,7 @@ namespace EstadosdePagos.Informes
     public partial class Frm_Tmp : Form
     {
         private Boolean mEstaProcesando = false;
+        private string mTipoejecucion = "";
         public Frm_Tmp()
         {
             InitializeComponent();
@@ -52,8 +53,14 @@ namespace EstadosdePagos.Informes
              
             if (DTG.Rows.Count > 0)
             {
-                Tx_codigo.Text = DTG.Rows[e.RowIndex].Cells["Codigo"].Value.ToString();
+                if (mTipoejecucion == "REPARA")
+                {
+                    Lbl_NroAtencion.Text = DTG.Rows[e.RowIndex].Cells["NroAtencion"].Value.ToString();
+                    lbl_NombreObra .Text = DTG.Rows[e.RowIndex].Cells["Obra"].Value.ToString();
+                }
 
+                else
+                    Tx_codigo.Text = DTG.Rows[e.RowIndex].Cells["Codigo"].Value.ToString();
             }
         }
 
@@ -63,7 +70,7 @@ namespace EstadosdePagos.Informes
             if (DTG.Rows.Count > 0)
             {
                 mEstaProcesando = true;
-                for (i = 0; i <2 ; i++)
+                for (i = 0; i <10 ; i++)
                 {
                     Tx_codigo.Text = DTG.Rows[i].Cells["Codigo"].Value.ToString();
                     lNroImpresos = DTG.Rows[i].Cells["Impreso"].Value.ToString();
@@ -109,7 +116,7 @@ namespace EstadosdePagos.Informes
 
         private void Frm_Tmp_Activated(object sender, EventArgs e)
         {
-            ImprimeAutomatico();
+            //ImprimeAutomatico();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -154,7 +161,8 @@ namespace EstadosdePagos.Informes
             lSql = " select p.TotalKgs TotalKgsOK  , p1.TotalKgs , p.TotalKgs - p1.TotalKgs Dif , p1.idmov , p.id IdPTB, p1.Id IdPieza";
             lSql = string.Concat(lSql, "  from  piezastipoB p , hojadespiece hd , piezas P1   ");
             lSql = string.Concat(lSql, " where p.id_hd=hd.id and  p.id=P1.idpiezatipoB and   year(p.fecha)=2020 ");
-            lSql = string.Concat(lSql, "   and   idobra=772 and   p.TotalKgs <> p1.TotalKgs  "); //and p.id in (1948818,1948816, 1948810, 1948811, 1948812 ) ");
+            lSql = string.Concat(lSql, "   and   idobra=682 and   p.TotalKgs <> p1.TotalKgs   and p1.Estado <>'00'  "); //and p.id in (1948818,1948816, 1948810, 1948811, 1948812 ) ");
+            lSql = string.Concat(lSql, " and p.Fecha > getdate()-400   ");
 
             lDts = lDal.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
@@ -187,9 +195,96 @@ namespace EstadosdePagos.Informes
 
         }
 
+        private void RevisaObrasVarias_porCliente()
+        {
+            string lSql = ""; DataSet lDts = new DataSet(); WsMensajeria.Ws_To lDal = new WsMensajeria.Ws_To();
+            DataTable lTbl = new DataTable(); int i = 0; int lDif = 0; DataTable lTbl2 = new DataTable();
+
+            lSql = " select   AteNum NroFactura, a.AteNumRea NroAtencion,AteGlo , a.AteFchDoc,a.CliCod ,a.DocCod, ";
+            lSql = string.Concat(lSql, " convert(varchar(10),AteFchDoc,103) FechaDoc , p.BarCod     ");
+        //    lSql = string.Concat(lSql, "    convert(varchar,convert(int,AtePrcBar)) AtePrcBar ,convert(varchar,convert(int,AteQxP)) AteQxP    ");
+            lSql = string.Concat(lSql, "  from torresocaranza.dbo.ATECLIEN a, torresocaranza.dbo.ATECLIE2 a3, torresocaranza.dbo.ATECLI2 a2,   ");
+            lSql = string.Concat(lSql, "   torresocaranza.dbo.PRODVENT p   where    a2.BarCod in ('SUM.OBRASVARIAS','PREP.OBRASVARIAS')  ");
+            lSql = string.Concat(lSql, "   and Year(a.AteFchDoc)>2018  ");
+            lSql = string.Concat(lSql, "    and a.AteNumRea =a3.AteNumRea and AteTotNom ='Neto Afecto' and a.DocCod =a2.DocCod and a.AteNumRea =a2.AteNumRea ");
+            lSql = string.Concat(lSql, "    and a.DocCod  not in   ( select DocCod from torresocaranza.dbo.TIPDOC  where DOCCODSII =61)    ");
+            lSql = string.Concat(lSql, "    and  p.BarCod=a2.BarCod  order by AteNum,AteGlo  ");
+ 
+            lDts = lDal.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                lTbl = lDts.Tables[0];
+                lTbl.Columns.Add("Obra", Type.GetType("System.String"));
+                for (i = 0; i < lTbl.Rows.Count; i++)
+                {
+                    lTbl.Rows[i]["Obra"] = obtenerNombre(lTbl.Rows[i]["CliCod"].ToString (), lTbl.Rows[i]["AteGlo"].ToString());                   
+                }
+                DTG.DataSource = lTbl;
+
+
+                for (i = 0; i < DTG.Rows.Count-1; i++)
+                {
+                    if ((DTG.Rows[i].Cells[8].Value.ToString().Trim().Length  > 1))
+                    {
+                        if (DTG.Rows[i].Cells["AteGlo"].Value.ToString().IndexOf(DTG.Rows[i].Cells[8].Value.ToString()) > -1)
+                        {
+                            DTG.Rows[i].Cells["AteGlo"].Style.BackColor = Color.LightGreen;
+                        }               
+                    }
+                    else
+                        DTG.Rows[i].Cells["AteGlo"].Style.BackColor = Color.LightSalmon;
+
+                }
+
+            }
+        }
+
+        private string obtenerNombre(string irut, string iAteGlosa )
+        {
+            string lRes = "";
+            string lSql = ""; DataSet lDts = new DataSet(); WsMensajeria.Ws_To lDal = new WsMensajeria.Ws_To();
+            DataTable lTbl = new DataTable();
+
+            string[] separators = { " " };
+            string[] lPartes = iAteGlosa.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
+
+            lSql = string .Concat (" select nombre from obras where rutcliente like '%",irut , "%'"  );
+            lSql = string.Concat(lSql , " ", "and codigo_inet = '63VARIOS' and nombre like '%", lPartes [1].ToString (),"%'");
+
+
+            lDts = lDal.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                lTbl = lDts.Tables[0];
+
+                lRes = lTbl.Rows[0][0].ToString();
+
+
+            }
+
+            return lRes;
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
-            ReparaDiferenciaKgs();
+            mTipoejecucion = "REPARA";
+            RevisaObrasVarias_porCliente();
+          //  ReparaDiferenciaKgs();
+
+        }
+
+        private void Btn_OK_Click(object sender, EventArgs e)
+        {
+            string lSql = ""; DataSet lDts = new DataSet(); WsMensajeria.Ws_To lDal = new WsMensajeria.Ws_To();
+            if (Lbl_NroAtencion.Text.Length > 0)
+            {
+                lSql = string.Concat ("  update torresocaranza.dbo.ATECLIEN set  ateglo='Obra ",lbl_NombreObra .Text );
+                lSql = string.Concat(lSql , "'  where    AteNumRea=", Lbl_NroAtencion.Text);
+                lDts = lDal.ObtenerDatos(lSql);
+
+                MessageBox.Show("Registros actualizados ");
+            }
         }
     }
 }

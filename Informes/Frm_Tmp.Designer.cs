@@ -38,12 +38,17 @@
             this.Lbl_msg = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_OK = new System.Windows.Forms.Button();
+            this.Lbl_NroAtencion = new System.Windows.Forms.Label();
+            this.lbl_NombreObra = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DTG)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(519, 12);
+            this.Btn_Buscar.Location = new System.Drawing.Point(222, 12);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(97, 44);
             this.Btn_Buscar.TabIndex = 0;
@@ -59,13 +64,13 @@
             this.DTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DTG.Location = new System.Drawing.Point(12, 79);
             this.DTG.Name = "DTG";
-            this.DTG.Size = new System.Drawing.Size(833, 333);
+            this.DTG.Size = new System.Drawing.Size(1155, 333);
             this.DTG.TabIndex = 1;
             this.DTG.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTG_CellDoubleClick);
             // 
             // Btn_Imprimir
             // 
-            this.Btn_Imprimir.Location = new System.Drawing.Point(622, 12);
+            this.Btn_Imprimir.Location = new System.Drawing.Point(325, 12);
             this.Btn_Imprimir.Name = "Btn_Imprimir";
             this.Btn_Imprimir.Size = new System.Drawing.Size(97, 44);
             this.Btn_Imprimir.TabIndex = 2;
@@ -75,7 +80,7 @@
             // 
             // Btn_Salir
             // 
-            this.Btn_Salir.Location = new System.Drawing.Point(725, 12);
+            this.Btn_Salir.Location = new System.Drawing.Point(428, 12);
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(97, 44);
             this.Btn_Salir.TabIndex = 3;
@@ -115,19 +120,60 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(337, 12);
+            this.button1.Location = new System.Drawing.Point(766, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 44);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Buscar";
+            this.button1.Text = "Repara";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbl_NombreObra);
+            this.groupBox1.Controls.Add(this.Lbl_NroAtencion);
+            this.groupBox1.Controls.Add(this.Btn_OK);
+            this.groupBox1.Location = new System.Drawing.Point(876, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(280, 75);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // Btn_OK
+            // 
+            this.Btn_OK.Location = new System.Drawing.Point(233, 13);
+            this.Btn_OK.Name = "Btn_OK";
+            this.Btn_OK.Size = new System.Drawing.Size(41, 28);
+            this.Btn_OK.TabIndex = 9;
+            this.Btn_OK.Text = "OK";
+            this.Btn_OK.UseVisualStyleBackColor = true;
+            this.Btn_OK.Click += new System.EventHandler(this.Btn_OK_Click);
+            // 
+            // Lbl_NroAtencion
+            // 
+            this.Lbl_NroAtencion.AutoSize = true;
+            this.Lbl_NroAtencion.Location = new System.Drawing.Point(7, 20);
+            this.Lbl_NroAtencion.Name = "Lbl_NroAtencion";
+            this.Lbl_NroAtencion.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_NroAtencion.TabIndex = 10;
+            this.Lbl_NroAtencion.Text = "label2";
+            // 
+            // lbl_NombreObra
+            // 
+            this.lbl_NombreObra.AutoSize = true;
+            this.lbl_NombreObra.Location = new System.Drawing.Point(7, 43);
+            this.lbl_NombreObra.Name = "lbl_NombreObra";
+            this.lbl_NombreObra.Size = new System.Drawing.Size(35, 13);
+            this.lbl_NombreObra.TabIndex = 11;
+            this.lbl_NombreObra.Text = "label3";
             // 
             // Frm_Tmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 413);
+            this.ClientSize = new System.Drawing.Size(1169, 413);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Lbl_msg);
             this.Controls.Add(this.Tx_codigo);
@@ -142,6 +188,8 @@
             this.Activated += new System.EventHandler(this.Frm_Tmp_Activated);
             this.Load += new System.EventHandler(this.Frm_Tmp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DTG)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +206,9 @@
         private System.Windows.Forms.Label Lbl_msg;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_NombreObra;
+        private System.Windows.Forms.Label Lbl_NroAtencion;
+        private System.Windows.Forms.Button Btn_OK;
     }
 }

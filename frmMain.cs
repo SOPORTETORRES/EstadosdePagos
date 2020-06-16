@@ -424,7 +424,8 @@ namespace EstadosdePagos
                             Cursor.Current = Cursors.WaitCursor;
                             try
                             {
-                                if (utils.generarEP(ep_obra, obra, ep_id, 2, ref Pb  , ref Lbl_PB , carpeta, correlativo).Equals("")) //2-Generar el reporte
+                                // if (utils.generarEP(ep_obra, obra, ep_id, 2, ref Pb  , ref Lbl_PB , carpeta, correlativo).Equals("")) //2-Generar el reporte
+                                if (utils.generarEP_V2(ep_obra, obra, ep_id, 1, ref Pb, ref Lbl_PB, carpeta, correlativo).Equals("")) //2-Generar el reporte
                                 {
                                     WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
                                     WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();
@@ -449,8 +450,8 @@ namespace EstadosdePagos
                             Cursor.Current = Cursors.WaitCursor;
                             try
                             {
-                                if (utils.generarEP(ep_obra, obra, ep_id, 3,ref Pb , ref Lbl_PB,carpeta ,correlativo ).Equals("")) //3-Envio al cliente
-                                {
+                                //if (utils.generarEP(ep_obra, obra, ep_id, 3,ref Pb , ref Lbl_PB,carpeta ,correlativo ).Equals("")) //3-Envio al cliente
+                                //{
                                     WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
                                     WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();
                                     estado_Pago = wsOperacion.RegistrarEPEnvioaCliente(ep_obra, ep_id, Program.currentUser.Login, Program.currentUser.ComputerName);
@@ -458,7 +459,7 @@ namespace EstadosdePagos
                                         btnActualizar.PerformClick();
                                     else
                                         MessageBox.Show(estado_Pago.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
+                                //}
                             }
                             catch (Exception exc)
                             {
