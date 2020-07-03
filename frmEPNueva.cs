@@ -174,6 +174,7 @@ namespace EstadosdePagos
                                     //cargarInfoObrayGuiaDespacho_INET();
                                     //RevisaDatosCargados();
             RevisaGrilla();
+            CargaDatosObra(this._ep_obra);
         }
 
 
@@ -511,22 +512,37 @@ namespace EstadosdePagos
 
         private void CargaDatosObra(string idObra)
         {
-            //WsOperacion.Operacion ws = new WsOperacion.Operacion();
+            ////string valorKiloSuministro = wsOperacion.ValorKiloSuministro_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+            WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+            string lSql = ""; DataTable lTbl = new DataTable(); int i = 0;  
 
-            //int i = 0; Utils lCom = new Utils(); int j = 0;
-            //for (i = 0; i < dgvGuiasDespacho.RowCount; i++)
-            //{
-            //    // if (lCom.EsNumero(dgvGuiasDespacho.Rows[i].Cells["Kgsguia"].Value.ToString()) == false)
-            //    if (dgvGuiasDespacho.Rows[i].Cells["Kgsguia"].Value.ToString().Trim().Length == 0)
-            //    {
-            //        for (j = 1; j < dgvGuiasDespacho.ColumnCount; j++)
-            //            dgvGuiasDespacho.Rows[i].Cells[j].Style.BackColor = Color.LightSalmon;
-            //        ws.o
-            //    }
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                lSql = string.Concat(" Select * from Obras Where id=",this ._ep_obra);
+                lDts = lPx.ObtenerDatos(lSql);
+                if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                {
+                    lTbl = lDts.Tables[0].Copy();
+                    txtDiaPresentEP.Text = lTbl.Rows[0]["DiaPresentacion_EP"].ToString();
+                    lblFechaCreacion.Text = lTbl.Rows[0]["FechaCrea"].ToString();
+                    string valorKiloSuministro = wsOperacion.ValorKiloSuministro_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
+                    lblValorKiloSuministro.Text = valorKiloSuministro;
 
+                    lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", this._ep_id, ", 0 ,' ',' ',0,'','','',7");
+                    lDts = lPx.ObtenerDatos(lSql);
+                    if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                    {
+                        Lbl_totalOtros.Text =   (Convert.ToInt32(lDts.Tables[0].Rows[0][0].ToString())).ToString("#,##0");
+                        //(Convert.ToInt32(lMontoExc)).ToString("#,##0");
+                    }
+                }
+            }
+            catch (Exception iEx)
+            {
 
-            //}
-
+            }
         }
            
 
@@ -1058,6 +1074,20 @@ namespace EstadosdePagos
         private void Btn_ObtenerKgsSel_Click(object sender, EventArgs e)
         {
            tx_KgsSeleccionado .Text = TotalKilosSeleccionados();
+        }
+
+        private void Btn_Otros_Click(object sender, EventArgs e)
+        {
+            frmEP_otros lFrm = new frmEP_otros();
+            lFrm.IniciaForm(this .Ep_obra ,this .lblObra.Text , this .Ep_id.ToString () );
+            lFrm.ShowDialog();
+
+            CargaDatosObra(Ep_obra);
+        }
+
+        private void Lbl_totalOtros_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

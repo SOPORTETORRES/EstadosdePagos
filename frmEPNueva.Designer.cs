@@ -50,9 +50,6 @@
             this.lblObra = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDiaPresentEP = new System.Windows.Forms.TextBox();
@@ -70,6 +67,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.tx_KgsSeleccionado = new System.Windows.Forms.TextBox();
             this.Btn_ObtenerKgsSel = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.Btn_Otros = new System.Windows.Forms.Button();
+            this.Lbl_totalOtros = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Dtg_OtrasGuias = new System.Windows.Forms.DataGridView();
             this.tabCrecionEP.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDespacho)).BeginInit();
@@ -78,6 +82,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEtiquetas)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dtg_OtrasGuias)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCrecionEP
@@ -87,10 +93,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabCrecionEP.Controls.Add(this.tabPage1);
             this.tabCrecionEP.Controls.Add(this.tabPage2);
+            this.tabCrecionEP.Controls.Add(this.tabPage3);
             this.tabCrecionEP.Location = new System.Drawing.Point(7, 175);
             this.tabCrecionEP.Name = "tabCrecionEP";
             this.tabCrecionEP.SelectedIndex = 0;
-            this.tabCrecionEP.Size = new System.Drawing.Size(749, 399);
+            this.tabCrecionEP.Size = new System.Drawing.Size(788, 399);
             this.tabCrecionEP.TabIndex = 26;
             // 
             // tabPage1
@@ -100,7 +107,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(741, 373);
+            this.tabPage1.Size = new System.Drawing.Size(780, 373);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Seleccion de las Guias de despacho";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -115,7 +122,7 @@
             this.dgvGuiasDespacho.MultiSelect = false;
             this.dgvGuiasDespacho.Name = "dgvGuiasDespacho";
             this.dgvGuiasDespacho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGuiasDespacho.Size = new System.Drawing.Size(735, 367);
+            this.dgvGuiasDespacho.Size = new System.Drawing.Size(774, 367);
             this.dgvGuiasDespacho.TabIndex = 8;
             this.dgvGuiasDespacho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDespacho_CellContentClick);
             this.dgvGuiasDespacho.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDespacho_CellValueChanged);
@@ -130,7 +137,7 @@
             this.panel2.Controls.Add(this.lblRegistrosGDespacho);
             this.panel2.Location = new System.Drawing.Point(3, 230);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(735, 232);
+            this.panel2.Size = new System.Drawing.Size(774, 232);
             this.panel2.TabIndex = 9;
             // 
             // label9
@@ -166,7 +173,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(741, 373);
+            this.tabPage2.Size = new System.Drawing.Size(780, 373);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Etiquetas";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -181,7 +188,7 @@
             this.dgvEtiquetas.MultiSelect = false;
             this.dgvEtiquetas.Name = "dgvEtiquetas";
             this.dgvEtiquetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEtiquetas.Size = new System.Drawing.Size(735, 307);
+            this.dgvEtiquetas.Size = new System.Drawing.Size(774, 307);
             this.dgvEtiquetas.TabIndex = 9;
             this.dgvEtiquetas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtiquetas_CellContentClick);
             this.dgvEtiquetas.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtiquetas_CellValueChanged);
@@ -192,7 +199,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(3, 341);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(735, 29);
+            this.panel3.Size = new System.Drawing.Size(774, 29);
             this.panel3.TabIndex = 10;
             // 
             // lblRegistrosEtiquetas
@@ -215,7 +222,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(735, 31);
+            this.panel1.Size = new System.Drawing.Size(774, 31);
             this.panel1.TabIndex = 0;
             // 
             // btnDesmarcarTodo
@@ -314,47 +321,6 @@
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Obra:";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Image = global::EstadosdePagos.Properties.Resources.cancelar;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(533, 587);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 23);
-            this.btnCancelar.TabIndex = 19;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Enabled = false;
-            this.btnAceptar.Image = global::EstadosdePagos.Properties.Resources.aceptar;
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(440, 587);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(87, 23);
-            this.btnAceptar.TabIndex = 18;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.Enabled = false;
-            this.btnGuardar.Image = global::EstadosdePagos.Properties.Resources.guardar;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(310, 587);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(87, 23);
-            this.btnGuardar.TabIndex = 27;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label5
             // 
@@ -505,18 +471,105 @@
             // 
             this.Btn_ObtenerKgsSel.Location = new System.Drawing.Point(393, 152);
             this.Btn_ObtenerKgsSel.Name = "Btn_ObtenerKgsSel";
-            this.Btn_ObtenerKgsSel.Size = new System.Drawing.Size(114, 19);
+            this.Btn_ObtenerKgsSel.Size = new System.Drawing.Size(114, 25);
             this.Btn_ObtenerKgsSel.TabIndex = 43;
             this.Btn_ObtenerKgsSel.Text = "Kilos Seleccionados";
-            this.Btn_ObtenerKgsSel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_ObtenerKgsSel.UseVisualStyleBackColor = true;
             this.Btn_ObtenerKgsSel.Click += new System.EventHandler(this.Btn_ObtenerKgsSel_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.Image = global::EstadosdePagos.Properties.Resources.guardar;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(349, 587);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(87, 23);
+            this.btnGuardar.TabIndex = 27;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Image = global::EstadosdePagos.Properties.Resources.cancelar;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(572, 587);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(87, 23);
+            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.Enabled = false;
+            this.btnAceptar.Image = global::EstadosdePagos.Properties.Resources.aceptar;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.Location = new System.Drawing.Point(479, 587);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(87, 23);
+            this.btnAceptar.TabIndex = 18;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // Btn_Otros
+            // 
+            this.Btn_Otros.Location = new System.Drawing.Point(533, 153);
+            this.Btn_Otros.Name = "Btn_Otros";
+            this.Btn_Otros.Size = new System.Drawing.Size(114, 25);
+            this.Btn_Otros.TabIndex = 44;
+            this.Btn_Otros.Text = "Otros Conceptos";
+            this.Btn_Otros.UseVisualStyleBackColor = true;
+            this.Btn_Otros.Click += new System.EventHandler(this.Btn_Otros_Click);
+            // 
+            // Lbl_totalOtros
+            // 
+            this.Lbl_totalOtros.AutoSize = true;
+            this.Lbl_totalOtros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_totalOtros.Location = new System.Drawing.Point(663, 159);
+            this.Lbl_totalOtros.Name = "Lbl_totalOtros";
+            this.Lbl_totalOtros.Size = new System.Drawing.Size(40, 13);
+            this.Lbl_totalOtros.TabIndex = 45;
+            this.Lbl_totalOtros.Text = "(dato)";
+            this.Lbl_totalOtros.Click += new System.EventHandler(this.Lbl_totalOtros_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.Dtg_OtrasGuias);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(780, 373);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Otro tipo de Guías";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // Dtg_OtrasGuias
+            // 
+            this.Dtg_OtrasGuias.AllowUserToAddRows = false;
+            this.Dtg_OtrasGuias.AllowUserToDeleteRows = false;
+            this.Dtg_OtrasGuias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dtg_OtrasGuias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Dtg_OtrasGuias.Location = new System.Drawing.Point(3, 3);
+            this.Dtg_OtrasGuias.MultiSelect = false;
+            this.Dtg_OtrasGuias.Name = "Dtg_OtrasGuias";
+            this.Dtg_OtrasGuias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dtg_OtrasGuias.Size = new System.Drawing.Size(774, 367);
+            this.Dtg_OtrasGuias.TabIndex = 9;
             // 
             // frmEPNueva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 615);
+            this.ClientSize = new System.Drawing.Size(803, 615);
+            this.Controls.Add(this.Lbl_totalOtros);
+            this.Controls.Add(this.Btn_Otros);
             this.Controls.Add(this.Btn_ObtenerKgsSel);
             this.Controls.Add(this.tx_KgsSeleccionado);
             this.Controls.Add(this.label13);
@@ -561,6 +614,8 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Dtg_OtrasGuias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,5 +664,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tx_KgsSeleccionado;
         private System.Windows.Forms.Button Btn_ObtenerKgsSel;
+        private System.Windows.Forms.Button Btn_Otros;
+        private System.Windows.Forms.Label Lbl_totalOtros;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView Dtg_OtrasGuias;
     }
 }

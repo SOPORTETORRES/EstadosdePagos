@@ -12,9 +12,25 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Roberto Becerra\TO\Desarrollo\Publicaciones\EP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -39,6 +55,24 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonLibrary2">
@@ -77,6 +111,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -93,6 +128,12 @@
     </Compile>
     <Compile Include="frmEPLog.Designer.cs">
       <DependentUpon>frmEPLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEP_otros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEP_otros.Designer.cs">
+      <DependentUpon>frmEP_otros.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFactCobrada.cs">
       <SubType>Form</SubType>
@@ -141,6 +182,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Incobrable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Incobrable.Designer.cs">
+      <DependentUpon>Frm_Incobrable.cs</DependentUpon>
     </Compile>
     <Compile Include="Informes\Dts_PL.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -204,6 +251,9 @@
     <EmbeddedResource Include="frmEPLog.resx">
       <DependentUpon>frmEPLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEP_otros.resx">
+      <DependentUpon>frmEP_otros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFactCobrada.resx">
       <DependentUpon>frmFactCobrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Incobrable.resx">
+      <DependentUpon>Frm_Incobrable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\FrmVisualizador.resx">
       <DependentUpon>FrmVisualizador.cs</DependentUpon>
@@ -270,6 +323,7 @@
     <None Include="Informes\Dts_PL.xss">
       <DependentUpon>Dts_PL.xsd</DependentUpon>
     </None>
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -486,7 +540,98 @@
       <CachedSettingsPropName>EstadosdePagos_WsOperacion_Operacion</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.10.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 R2 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.arm">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28ARM%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Bibliotecas en tiempo de ejecución de Visual C++ "14" %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Runtime de Microsoft Visual Studio 2010 Tools para Office %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>

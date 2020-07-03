@@ -544,7 +544,28 @@ namespace EstadosdePagos
 
         private void btnCrearEP_Click(object sender, EventArgs e)
         {
-            ejecutarAccion("btnCrearEP");
+            string lTx = "¿El E.P a generar Contiene Guías?";
+
+            if (MessageBox.Show  (lTx , "Avisos Sistema",MessageBoxButtons.YesNo ,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1)==DialogResult.Yes )
+            {
+                ejecutarAccion("btnCrearEP");
+            }
+            else
+            {
+                DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
+                String ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
+                String obra = currentRow.Cells["OBRA"].Value.ToString();
+                Int32 ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
+                String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+                Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
+                String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
+
+                frmEP_otros lFrm = new frmEP_otros();
+                lFrm.IniciaForm(ep_obra, obra, ep_id.ToString());
+                lFrm.ShowDialog();
+            }
+
+           
         }
 
         private void btnVerReporteEP_Click(object sender, EventArgs e)

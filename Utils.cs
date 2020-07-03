@@ -946,7 +946,105 @@ namespace EstadosdePagos
         }
 
 
+        private string OBtenerPath_EGD(string iDato)
+        {
+            string lRes = "";string lCodSuc = ""; string lFecha = "";
+            string[] separators = { "|" }; string[] separators2 = { "/" };
+            string[] lPartes = iDato.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            lCodSuc = lPartes[0];
+            lFecha = lPartes[1];
 
+            switch (lPartes[0])
+            {
+                case "1":  // Santiago
+                    lRes = @"U:\Guías TO (Stgo)\2020\";
+                    break;
+                case "2":  //Calama 
+                    lPartes = lFecha.Split(separators2, StringSplitOptions.RemoveEmptyEntries);
+
+                    if (lPartes[1].ToString().Equals ("01"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("02"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("03"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("04"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("05"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("06"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("07"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("08"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("09"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("10"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("11"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                    if (lPartes[1].ToString().Equals("12"))
+                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+
+                
+                    break;
+              
+                case "3": //Coronel
+                    lPartes = lFecha.Split(separators2, StringSplitOptions.RemoveEmptyEntries);
+
+                    if (lPartes[1].ToString().Equals("01"))
+                        lRes = @"U:\Guías Coronel\Coronel 2020\ENERO 2020\";
+
+                    if (lPartes[1].ToString().Equals("02"))
+                        lRes = @"U:\Guías TO (Calama)\2020\FEBRERO 2020\";
+
+                    if (lPartes[1].ToString().Equals("03"))
+                        lRes = @"U:\Guías TO (Calama)\2020\MARZO 2020\";
+
+                    if (lPartes[1].ToString().Equals("04"))
+                        lRes = @"U:\Guías TO (Calama)\2020\ABRIL 2020\";
+
+                    if (lPartes[1].ToString().Equals("05"))
+                        lRes = @"U:\Guías TO (Calama)\2020\MARZO 2020\";
+
+                    if (lPartes[1].ToString().Equals("06"))
+                        lRes = @"U:\Guías TO (Calama)\2020\JUNIO 2020\";
+
+                    if (lPartes[1].ToString().Equals("07"))
+                        lRes = @"U:\Guías TO (Calama)\2020\JULIO 2020\";
+
+                    if (lPartes[1].ToString().Equals("08"))
+                        lRes = @"U:\Guías TO (Calama)\2020\AGOSTO 2020\";
+
+                    if (lPartes[1].ToString().Equals("09"))
+                        lRes = @"U:\Guías TO (Calama)\2020\SEPTIEMBRE 2020\";
+
+                    if (lPartes[1].ToString().Equals("10"))
+                        lRes = @"U:\Guías TO (Calama)\2020\NOVIEMBRE 2020\";
+
+                    if (lPartes[1].ToString().Equals("11"))
+                        lRes = @"U:\Guías TO (Calama)\2020\NOVIEMBRE 2020\";
+
+                    if (lPartes[1].ToString().Equals("12"))
+                        lRes = @"U:\Guías TO (Calama)\2020\DICIEMBRE 2020\";
+                   
+                    break;
+                         
+            }
+            return lRes;
+        }
 
         public string generarEP_V2(string ep_obra, string obra, Int32 ep_id, int accion, ref ProgressBar Pb, ref Label Lbl_PB, string carpeta, Int32 correlativo) //1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente
         {
@@ -961,6 +1059,7 @@ namespace EstadosdePagos
             int totalGuiasDespacho = 0, totalITs = 0, totalEtiquetas = 0, totalKilos = 0;            DataView view = null;
             DataTable dtResumenxGuiaDespacho = null;            WsOperacion.EP_Generado lEP = new WsOperacion.EP_Generado();
             string lPathDestino = ""; string lPathDestinoLocal = "";string lPathServer = "";string lSiglaOBra = "";
+            string lCodSucINET = "0";string lTmp = "";
             //Verifica si existe la informacion necesaria para generar el informe
             try
             {
@@ -1051,11 +1150,17 @@ namespace EstadosdePagos
                 Lbl_PB.Text = " Revisando Guías de Despacho   . . . "; Lbl_PB.Refresh();
                 //Pb.Maximum  = totalGuiasDespacho; Pb.Minimum = 1; Pb.Value  = 1;
 
+           
+               
                 if (!dir_guiaDespacho.Equals(""))
                 {
                     foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
                     {
-                      
+                       // lCodSucINET
+                            lTmp = ws.ObtenerSucursal_PorNroGuiaDespacho(row[COLUMNNAME_GUIA_DESPACHO].ToString());
+
+                        dir_guiaDespacho = OBtenerPath_EGD(lTmp);
+
                         archivo = row[COLUMNNAME_GUIA_DESPACHO].ToString() + ".pdf";
                        
                        if (fs.FileExists(Path.Combine(dir_guiaDespacho, archivo)))
@@ -1291,6 +1396,25 @@ namespace EstadosdePagos
 
             }
             return lNombreMes;
+        }
+
+        private string ObtenerTotalOtros(string iEP)
+        {
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+            WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+            string lSql = ""; DataTable lTbl = new DataTable(); int i = 0;
+
+
+            string lRes = "0";
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','',7");
+            lDts = lPx.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                lRes = (Convert.ToInt32(lDts.Tables[0].Rows[0][0].ToString())).ToString("#,##0");
+                //(Convert.ToInt32(lMontoExc)).ToString("#,##0");
+            }
+
+            return lRes;
         }
 
         private void GeneraExcel_EP(int accion, string ep_obra, Int32 correlativo,int  ep_id , string lPathDest)
@@ -1536,7 +1660,10 @@ namespace EstadosdePagos
                         lTmp = !EsNumero(excelSheet.Range["BE12"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE12"].Value.ToString());
                         lDetEP.TotalKgs = lTmp;
                         lList_DetEP[1] = (lDetEP);
-                        //Otros 
+                        //*****************************   Otros   ******************************************
+                        string lTotalOtros = ObtenerTotalOtros(ep_id.ToString ());
+                        excelSheet.Range["H13"].Value = lTotalOtros;
+                        excelSheet.Range["BC13"].Value = 0;
                         lDetEP = new WsOperacion.EP_GeneradoDetalle();
                         lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Otros";
                         lTmp = !EsNumero(excelSheet.Range["G13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G13"].Value.ToString());

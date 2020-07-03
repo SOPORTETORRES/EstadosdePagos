@@ -36,20 +36,20 @@ namespace EstadosdePagos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:55038/WS/Operacion.asmx")]
-        public string EstadosdePagos_WsOperacion_Operacion {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/Test/ws/ws_sesion.asmx")]
+        public string EstadosdePagos_WsSesion_Sesion1 {
             get {
-                return ((string)(this["EstadosdePagos_WsOperacion_Operacion"]));
+                return ((string)(this["EstadosdePagos_WsSesion_Sesion1"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/Test/ws/ws_sesion.asmx")]
-        public string EstadosdePagos_WsSesion_Sesion1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/Test/WS/Operacion.asmx")]
+        public string EstadosdePagos_WsOperacion_Operacion {
             get {
-                return ((string)(this["EstadosdePagos_WsSesion_Sesion1"]));
+                return ((string)(this["EstadosdePagos_WsOperacion_Operacion"]));
             }
         }
     }
