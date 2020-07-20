@@ -78,6 +78,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
             this.tabGuiasDespacho = new System.Windows.Forms.TabControl();
+            this.Btn_ContratosObra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -218,7 +219,7 @@
             this.btnModEPxObsClte.Image = global::EstadosdePagos.Properties.Resources.formulario_editar;
             this.btnModEPxObsClte.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModEPxObsClte.Name = "btnModEPxObsClte";
-            this.btnModEPxObsClte.Size = new System.Drawing.Size(153, 22);
+            this.btnModEPxObsClte.Size = new System.Drawing.Size(154, 22);
             this.btnModEPxObsClte.Text = "Modificar x Obs. Cliente";
             this.btnModEPxObsClte.Click += new System.EventHandler(this.btnModEPxObsClte_Click);
             // 
@@ -255,7 +256,7 @@
             this.btnTrazabilidadEP.Image = global::EstadosdePagos.Properties.Resources.information;
             this.btnTrazabilidadEP.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTrazabilidadEP.Name = "btnTrazabilidadEP";
-            this.btnTrazabilidadEP.Size = new System.Drawing.Size(90, 22);
+            this.btnTrazabilidadEP.Size = new System.Drawing.Size(89, 22);
             this.btnTrazabilidadEP.Text = "Trazabilidad";
             this.btnTrazabilidadEP.Click += new System.EventHandler(this.btnTrazabilidadEP_Click);
             // 
@@ -269,7 +270,7 @@
             this.btnExcel.Image = global::EstadosdePagos.Properties.Resources.exportar_excel;
             this.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(99, 22);
+            this.btnExcel.Size = new System.Drawing.Size(101, 22);
             this.btnExcel.Text = "Exportar Excel";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
@@ -283,7 +284,7 @@
             this.btnSalir.Image = global::EstadosdePagos.Properties.Resources.salir;
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(49, 22);
+            this.btnSalir.Size = new System.Drawing.Size(49, 20);
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -314,7 +315,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(142, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(141, 17);
             this.toolStripStatusLabel1.Text = "Total guia(s) despacho(s):";
             // 
             // lblTotalGuiasDespacho
@@ -327,7 +328,7 @@
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(95, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(94, 17);
             this.toolStripStatusLabel3.Text = "Total etiqueta(s):";
             // 
             // lblTotalEtiquetas
@@ -340,7 +341,7 @@
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(71, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(70, 17);
             this.toolStripStatusLabel2.Text = "Total kilo(s):";
             // 
             // lblTotalKilos
@@ -352,6 +353,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Btn_ContratosObra);
             this.panel1.Controls.Add(this.Gb_Estado);
             this.panel1.Controls.Add(this.Btn_imprimePL);
             this.panel1.Controls.Add(this.btnDestinatariosObra);
@@ -375,7 +377,7 @@
             // 
             this.Gb_Estado.Controls.Add(this.Lbl_PB);
             this.Gb_Estado.Controls.Add(this.Pb);
-            this.Gb_Estado.Location = new System.Drawing.Point(601, 18);
+            this.Gb_Estado.Location = new System.Drawing.Point(706, 13);
             this.Gb_Estado.Name = "Gb_Estado";
             this.Gb_Estado.Size = new System.Drawing.Size(461, 63);
             this.Gb_Estado.TabIndex = 15;
@@ -410,9 +412,9 @@
             // 
             // btnDestinatariosObra
             // 
-            this.btnDestinatariosObra.Location = new System.Drawing.Point(819, 95);
+            this.btnDestinatariosObra.Location = new System.Drawing.Point(809, 93);
             this.btnDestinatariosObra.Name = "btnDestinatariosObra";
-            this.btnDestinatariosObra.Size = new System.Drawing.Size(127, 23);
+            this.btnDestinatariosObra.Size = new System.Drawing.Size(108, 23);
             this.btnDestinatariosObra.TabIndex = 12;
             this.btnDestinatariosObra.Text = "Destinatarios Obra";
             this.btnDestinatariosObra.UseVisualStyleBackColor = true;
@@ -561,6 +563,16 @@
             this.tabGuiasDespacho.Size = new System.Drawing.Size(1179, 202);
             this.tabGuiasDespacho.TabIndex = 8;
             // 
+            // Btn_ContratosObra
+            // 
+            this.Btn_ContratosObra.Location = new System.Drawing.Point(544, 13);
+            this.Btn_ContratosObra.Name = "Btn_ContratosObra";
+            this.Btn_ContratosObra.Size = new System.Drawing.Size(78, 35);
+            this.Btn_ContratosObra.TabIndex = 16;
+            this.Btn_ContratosObra.Text = "Contratos Obras";
+            this.Btn_ContratosObra.UseVisualStyleBackColor = true;
+            this.Btn_ContratosObra.Click += new System.EventHandler(this.Btn__Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -644,5 +656,6 @@
         private System.Windows.Forms.GroupBox Gb_Estado;
         private System.Windows.Forms.Label Lbl_PB;
         private System.Windows.Forms.ProgressBar Pb;
+        private System.Windows.Forms.Button Btn_ContratosObra;
     }
 }

@@ -29,6 +29,22 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Cmb_Concepto = new System.Windows.Forms.ComboBox();
+            this.Cmb_Unidades = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Tx_saldo = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Tx_CantTotal = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Chk_Contrato = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Tx_cantidad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Tx_Unidad = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Tx_PU = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Tx_IdEP = new System.Windows.Forms.TextBox();
             this.Tx_total = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,9 +60,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Dtg_Resultado = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Tx_IdEP = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Resultado)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +70,15 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.Cmb_Concepto);
+            this.groupBox1.Controls.Add(this.Cmb_Unidades);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.Tx_cantidad);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.Tx_Unidad);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.Tx_PU);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.Tx_IdEP);
             this.groupBox1.Controls.Add(this.Tx_total);
@@ -72,11 +96,163 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(8, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(917, 125);
+            this.groupBox1.Size = new System.Drawing.Size(1071, 125);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingreso de Datos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // Cmb_Concepto
+            // 
+            this.Cmb_Concepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_Concepto.FormattingEnabled = true;
+            this.Cmb_Concepto.Location = new System.Drawing.Point(7, 90);
+            this.Cmb_Concepto.Name = "Cmb_Concepto";
+            this.Cmb_Concepto.Size = new System.Drawing.Size(478, 21);
+            this.Cmb_Concepto.TabIndex = 24;
+            this.Cmb_Concepto.SelectedIndexChanged += new System.EventHandler(this.Cmb_Concepto_SelectedIndexChanged);
+            // 
+            // Cmb_Unidades
+            // 
+            this.Cmb_Unidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_Unidades.FormattingEnabled = true;
+            this.Cmb_Unidades.Location = new System.Drawing.Point(563, 89);
+            this.Cmb_Unidades.Name = "Cmb_Unidades";
+            this.Cmb_Unidades.Size = new System.Drawing.Size(48, 21);
+            this.Cmb_Unidades.TabIndex = 23;
+            this.Cmb_Unidades.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Tx_saldo);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.Tx_CantTotal);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.Chk_Contrato);
+            this.groupBox3.Location = new System.Drawing.Point(715, 16);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(175, 98);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Contrato";
+            // 
+            // Tx_saldo
+            // 
+            this.Tx_saldo.Enabled = false;
+            this.Tx_saldo.Location = new System.Drawing.Point(93, 67);
+            this.Tx_saldo.Name = "Tx_saldo";
+            this.Tx_saldo.Size = new System.Drawing.Size(77, 20);
+            this.Tx_saldo.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(105, 50);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Saldo";
+            // 
+            // Tx_CantTotal
+            // 
+            this.Tx_CantTotal.Enabled = false;
+            this.Tx_CantTotal.Location = new System.Drawing.Point(10, 67);
+            this.Tx_CantTotal.Name = "Tx_CantTotal";
+            this.Tx_CantTotal.Size = new System.Drawing.Size(77, 20);
+            this.Tx_CantTotal.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 50);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Cantidad Total";
+            // 
+            // Chk_Contrato
+            // 
+            this.Chk_Contrato.AutoSize = true;
+            this.Chk_Contrato.Checked = true;
+            this.Chk_Contrato.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Chk_Contrato.Location = new System.Drawing.Point(41, 22);
+            this.Chk_Contrato.Name = "Chk_Contrato";
+            this.Chk_Contrato.Size = new System.Drawing.Size(82, 17);
+            this.Chk_Contrato.TabIndex = 21;
+            this.Chk_Contrato.Text = "En Contrato";
+            this.Chk_Contrato.UseVisualStyleBackColor = true;
+            this.Chk_Contrato.CheckedChanged += new System.EventHandler(this.Chk_Contrato_CheckedChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(634, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Cantidad";
+            // 
+            // Tx_cantidad
+            // 
+            this.Tx_cantidad.Location = new System.Drawing.Point(635, 89);
+            this.Tx_cantidad.Name = "Tx_cantidad";
+            this.Tx_cantidad.Size = new System.Drawing.Size(47, 20);
+            this.Tx_cantidad.TabIndex = 19;
+            this.Tx_cantidad.Text = "0";
+            this.Tx_cantidad.Validating += new System.ComponentModel.CancelEventHandler(this.Tx_cantidad_Validating);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(567, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Unidad";
+            // 
+            // Tx_Unidad
+            // 
+            this.Tx_Unidad.Location = new System.Drawing.Point(373, 68);
+            this.Tx_Unidad.Name = "Tx_Unidad";
+            this.Tx_Unidad.Size = new System.Drawing.Size(40, 20);
+            this.Tx_Unidad.TabIndex = 17;
+            this.Tx_Unidad.Text = "Kg";
+            this.Tx_Unidad.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(501, 71);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "$ PU";
+            // 
+            // Tx_PU
+            // 
+            this.Tx_PU.Location = new System.Drawing.Point(500, 89);
+            this.Tx_PU.Name = "Tx_PU";
+            this.Tx_PU.Size = new System.Drawing.Size(40, 20);
+            this.Tx_PU.TabIndex = 15;
+            this.Tx_PU.Text = "0";
+            this.Tx_PU.Validating += new System.ComponentModel.CancelEventHandler(this.Tx_PU_Validating);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(567, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Id EP";
+            // 
+            // Tx_IdEP
+            // 
+            this.Tx_IdEP.Location = new System.Drawing.Point(564, 38);
+            this.Tx_IdEP.Name = "Tx_IdEP";
+            this.Tx_IdEP.ReadOnly = true;
+            this.Tx_IdEP.Size = new System.Drawing.Size(40, 20);
+            this.Tx_IdEP.TabIndex = 13;
             // 
             // Tx_total
             // 
@@ -114,7 +290,7 @@
             // 
             // Btn_eliminar
             // 
-            this.Btn_eliminar.Location = new System.Drawing.Point(829, 12);
+            this.Btn_eliminar.Location = new System.Drawing.Point(990, 11);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(75, 46);
             this.Btn_eliminar.TabIndex = 8;
@@ -124,7 +300,7 @@
             // 
             // Btn_Salir
             // 
-            this.Btn_Salir.Location = new System.Drawing.Point(832, 69);
+            this.Btn_Salir.Location = new System.Drawing.Point(993, 68);
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(72, 46);
             this.Btn_Salir.TabIndex = 7;
@@ -134,7 +310,7 @@
             // 
             // Btn_Grabar
             // 
-            this.Btn_Grabar.Location = new System.Drawing.Point(735, 12);
+            this.Btn_Grabar.Location = new System.Drawing.Point(896, 11);
             this.Btn_Grabar.Name = "Btn_Grabar";
             this.Btn_Grabar.Size = new System.Drawing.Size(75, 46);
             this.Btn_Grabar.TabIndex = 6;
@@ -144,19 +320,20 @@
             // 
             // Tx_Importe
             // 
-            this.Tx_Importe.Location = new System.Drawing.Point(586, 89);
+            this.Tx_Importe.Location = new System.Drawing.Point(902, 88);
             this.Tx_Importe.Name = "Tx_Importe";
-            this.Tx_Importe.Size = new System.Drawing.Size(77, 20);
+            this.Tx_Importe.Size = new System.Drawing.Size(73, 20);
             this.Tx_Importe.TabIndex = 5;
+            this.Tx_Importe.Text = "0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(583, 68);
+            this.label3.Location = new System.Drawing.Point(899, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Ingrese Importe";
+            this.label3.Text = "Total Concepto";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Tx_obra
@@ -180,7 +357,7 @@
             // 
             this.Tx_Concepto.Location = new System.Drawing.Point(6, 89);
             this.Tx_Concepto.Name = "Tx_Concepto";
-            this.Tx_Concepto.Size = new System.Drawing.Size(559, 20);
+            this.Tx_Concepto.Size = new System.Drawing.Size(481, 20);
             this.Tx_Concepto.TabIndex = 1;
             this.Tx_Concepto.TextChanged += new System.EventHandler(this.Tx_Concepto_TextChanged);
             // 
@@ -200,43 +377,28 @@
             this.groupBox2.Controls.Add(this.Dtg_Resultado);
             this.groupBox2.Location = new System.Drawing.Point(5, 135);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(923, 329);
+            this.groupBox2.Size = new System.Drawing.Size(1077, 329);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Items Ingresados";
             // 
             // Dtg_Resultado
             // 
+            this.Dtg_Resultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Dtg_Resultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtg_Resultado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Dtg_Resultado.Location = new System.Drawing.Point(3, 16);
             this.Dtg_Resultado.Name = "Dtg_Resultado";
-            this.Dtg_Resultado.Size = new System.Drawing.Size(917, 310);
+            this.Dtg_Resultado.Size = new System.Drawing.Size(1071, 310);
             this.Dtg_Resultado.TabIndex = 0;
             this.Dtg_Resultado.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Resultado_CellContentDoubleClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(567, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Id EP";
-            // 
-            // Tx_IdEP
-            // 
-            this.Tx_IdEP.Location = new System.Drawing.Point(564, 38);
-            this.Tx_IdEP.Name = "Tx_IdEP";
-            this.Tx_IdEP.ReadOnly = true;
-            this.Tx_IdEP.Size = new System.Drawing.Size(40, 20);
-            this.Tx_IdEP.TabIndex = 13;
             // 
             // frmEP_otros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 467);
+            this.ClientSize = new System.Drawing.Size(1088, 415);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmEP_otros";
@@ -245,6 +407,8 @@
             this.Load += new System.EventHandler(this.frmEP_otros_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Resultado)).EndInit();
             this.ResumeLayout(false);
@@ -271,5 +435,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox Tx_IdEP;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox Tx_CantTotal;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox Chk_Contrato;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Tx_cantidad;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox Tx_Unidad;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox Tx_PU;
+        private System.Windows.Forms.ComboBox Cmb_Unidades;
+        private System.Windows.Forms.ComboBox Cmb_Concepto;
+        private System.Windows.Forms.TextBox Tx_saldo;
+        private System.Windows.Forms.Label label11;
     }
 }

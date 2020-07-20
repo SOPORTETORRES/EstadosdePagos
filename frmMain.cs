@@ -1004,9 +1004,20 @@ namespace EstadosdePagos
 
         }
 
-        
-      
+        private void Btn__Click(object sender, EventArgs e)
+        {
 
-       
+            DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
+            String ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
+            String obra = currentRow.Cells["OBRA"].Value.ToString();
+            Int32 ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
+            String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+            Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
+            String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
+
+            Frm_ContratosObra lfrm = new Frm_ContratosObra();
+            lfrm.IniciaForm(ep_obra, obra);
+            lfrm.ShowDialog();
+        }
     }
 }

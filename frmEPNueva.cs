@@ -530,7 +530,7 @@ namespace EstadosdePagos
                     string valorKiloSuministro = wsOperacion.ValorKiloSuministro_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
                     lblValorKiloSuministro.Text = valorKiloSuministro;
 
-                    lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", this._ep_id, ", 0 ,' ',' ',0,'','','',7");
+                    lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", this._ep_id, ", 0 ,' ',' ',0,0,'',0,'','','',7");
                     lDts = lPx.ObtenerDatos(lSql);
                     if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                     {

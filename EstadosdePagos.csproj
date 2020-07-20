@@ -183,6 +183,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ContratosObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ContratosObra.Designer.cs">
+      <DependentUpon>Frm_ContratosObra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Incobrable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ContratosObra.resx">
+      <DependentUpon>Frm_ContratosObra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Incobrable.resx">
       <DependentUpon>Frm_Incobrable.cs</DependentUpon>
