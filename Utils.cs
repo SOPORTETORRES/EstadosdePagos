@@ -417,524 +417,524 @@ namespace EstadosdePagos
         /// <param name="ep_id">Id del EP</param>
         /// <param name="accion">Acciona realizar: 1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente</param>
         /// <returns>string, Vacio si no hubo errores o errores encontrados dentro de la generacion</returns>
-        public string generarEP(string ep_obra, string obra, Int32 ep_id, int accion, ref ProgressBar Pb, ref Label Lbl_PB, string carpeta, Int32 correlativo) //1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente
-        {
-            string error = "", valorKiloSuministro = "", destinatarios = "", dir_guiaDespacho = "", dir_it = "", archivo = "";
-            StringBuilder sb = new StringBuilder();
-            StringBuilder validacion = new StringBuilder();
-            StringBuilder archivoFaltantesGD = new StringBuilder();
-            StringBuilder archivoFaltantesIT = new StringBuilder();
-            List<string> listArchivosGuiasDespacho = new List<string>();
-            List<string> listArchivosIT = new List<string>();
-            string selectedPath = "";
-            WsOperacion.Operacion ws = new WsOperacion.Operacion();
-            WsOperacion.ListaDataSet listaDataSetTo = new WsOperacion.ListaDataSet();
-            WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
-            WsOperacion.ListaDataSet listaDataSetOp = new WsOperacion.ListaDataSet();
-            WsOperacion.ListaDataSet listaDataTMP = new WsOperacion.ListaDataSet();
-            string validarFiles_GuiaDespacho = "0";
-            Result result = null;
-            DataRow[] rows = null;string lEmpresa = "";
-            int totalGuiasDespacho = 0, totalITs = 0, totalEtiquetas = 0, totalKilos = 0 ;
-            DataView view = null;
-            DataTable dtResumenxGuiaDespacho = null;
-            WsOperacion.EP_Generado lEP = new WsOperacion.EP_Generado();
+        //public string generarEP(string ep_obra, string obra, Int32 ep_id, int accion, ref ProgressBar Pb, ref Label Lbl_PB, string carpeta, Int32 correlativo) //1-Vista preliminar, 2-Generar el reporte, 3-Envio al cliente
+        //{
+        //    string error = "", valorKiloSuministro = "", destinatarios = "", dir_guiaDespacho = "", dir_it = "", archivo = "";
+        //    StringBuilder sb = new StringBuilder();
+        //    StringBuilder validacion = new StringBuilder();
+        //    StringBuilder archivoFaltantesGD = new StringBuilder();
+        //    StringBuilder archivoFaltantesIT = new StringBuilder();
+        //    List<string> listArchivosGuiasDespacho = new List<string>();
+        //    List<string> listArchivosIT = new List<string>();
+        //    string selectedPath = "";
+        //    WsOperacion.Operacion ws = new WsOperacion.Operacion();
+        //    WsOperacion.ListaDataSet listaDataSetTo = new WsOperacion.ListaDataSet();
+        //    WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+        //    WsOperacion.ListaDataSet listaDataSetOp = new WsOperacion.ListaDataSet();
+        //    WsOperacion.ListaDataSet listaDataTMP = new WsOperacion.ListaDataSet();
+        //    string validarFiles_GuiaDespacho = "0";
+        //    Result result = null;
+        //    DataRow[] rows = null;string lEmpresa = "";
+        //    int totalGuiasDespacho = 0, totalITs = 0, totalEtiquetas = 0, totalKilos = 0 ;
+        //    DataView view = null;
+        //    DataTable dtResumenxGuiaDespacho = null;
+        //    WsOperacion.EP_Generado lEP = new WsOperacion.EP_Generado();
 
-            //Verifica si existe la informacion necesaria para generar el informe
-            try
-            {
-                lEP.Id_EP = correlativo;
-                Lbl_PB.Text = "Inicializando Variables . . . "; Lbl_PB.Refresh();
+        //    //Verifica si existe la informacion necesaria para generar el informe
+        //    try
+        //    {
+        //        lEP.Id_EP = correlativo;
+        //        Lbl_PB.Text = "Inicializando Variables . . . "; Lbl_PB.Refresh();
 
-                //Encabezado
-                sb.Append("Obra: " + obra + "\n");
-                sb.Append("EP: " + ep_id.ToString() + "\n\n");
+        //        //Encabezado
+        //        sb.Append("Obra: " + obra + "\n");
+        //        sb.Append("EP: " + ep_id.ToString() + "\n\n");
 
-                //Actualiza la informacion del detalle EP: dgvDetalle
+        //        //Actualiza la informacion del detalle EP: dgvDetalle
                
-                listaDataSetOp = wsOperacion.ListarEPResumenGuiaDespachoxEp(ep_id); //GD /IT /Etiquetas /Kilos
-                if (listaDataSetOp.MensajeError.Equals(""))
-                    dtResumenxGuiaDespacho = listaDataSetOp.DataSet.Tables[0];
-                else
-                    error = listaDataSetOp.MensajeError.ToString();
+        //        listaDataSetOp = wsOperacion.ListarEPResumenGuiaDespachoxEp(ep_id); //GD /IT /Etiquetas /Kilos
+        //        if (listaDataSetOp.MensajeError.Equals(""))
+        //            dtResumenxGuiaDespacho = listaDataSetOp.DataSet.Tables[0];
+        //        else
+        //            error = listaDataSetOp.MensajeError.ToString();
 
 
-                //Valor kilo suministro
-                valorKiloSuministro = ws.ValorKiloSuministro_EP(ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
-                if (valorKiloSuministro.Equals("") && Program.ENVIRONMENT.Equals("DEBUG"))
-                    valorKiloSuministro = "100";
-                sb.Append("Valor kilo suministro de la obra $: " + (valorKiloSuministro.Trim().Equals("") ? "(No definido)" : valorKiloSuministro) + "\n\n");
+        //        //Valor kilo suministro
+        //        valorKiloSuministro = ws.ValorKiloSuministro_EP(ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
+        //        if (valorKiloSuministro.Equals("") && Program.ENVIRONMENT.Equals("DEBUG"))
+        //            valorKiloSuministro = "100";
+        //        sb.Append("Valor kilo suministro de la obra $: " + (valorKiloSuministro.Trim().Equals("") ? "(No definido)" : valorKiloSuministro) + "\n\n");
 
-                //Obtiene los destinatarios de la obra
-                result = obtenerDestinatariosObra(ep_obra); //utils
-                if (result.MensajeError.Equals(""))
-                {
-                    destinatarios = result.StringValue;
-                    if (destinatarios.Equals("") && Program.ENVIRONMENT.Equals("DEBUG"))
-                        destinatarios = "rbecerra@torresocaranza.cl";
-                    sb.Append("Destinatarios del envio del EP (Cliente): " + destinatarios + "\n\n");
-                }
-                else
-                    error = result.MensajeError;
+        //        //Obtiene los destinatarios de la obra
+        //        result = obtenerDestinatariosObra(ep_obra); //utils
+        //        if (result.MensajeError.Equals(""))
+        //        {
+        //            destinatarios = result.StringValue;
+        //            if (destinatarios.Equals("") && Program.ENVIRONMENT.Equals("DEBUG"))
+        //                destinatarios = "rbecerra@torresocaranza.cl";
+        //            sb.Append("Destinatarios del envio del EP (Cliente): " + destinatarios + "\n\n");
+        //        }
+        //        else
+        //            error = result.MensajeError;
 
-                // Debemos Saber a que empresa estamos haciendo el EP, ya que el  directorio esta por Empresa.
-                lEmpresa = ws.ObtenerEmpresaPor_EP(ep_obra);
+        //        // Debemos Saber a que empresa estamos haciendo el EP, ya que el  directorio esta por Empresa.
+        //        lEmpresa = ws.ObtenerEmpresaPor_EP(ep_obra);
 
-                Lbl_PB.Text = " Obteniendo Parametros Generales  . . . "; Lbl_PB.Refresh();
+        //        Lbl_PB.Text = " Obteniendo Parametros Generales  . . . "; Lbl_PB.Refresh();
 
-                ///---GUIAS DE DESPACHO---///
-                //Obtiene el directorio donde se almacenan las imagenes de las guias de despacho
-                result = obtenerParametro("EP_DIRECTORIO", "DIR_GUIADESPACHO"); //utils
-                if (result.MensajeError.Equals(""))
-                {
-                    rows = result.DataRows;
-                    if (rows.Length > 0)
-                    {
-                        dir_guiaDespacho = rows[0]["Par_Alf1"].ToString();
-                        dir_guiaDespacho += (!su.Right(dir_guiaDespacho, 1).Equals("\\") ? "\\" : "");
-                        //dir_guiaDespacho = string.Concat(dir_guiaDespacho, lEmpresa, "\\");
-                    }
-                }
-                else
-                    error = result.MensajeError;
-                sb.Append("Directorio con las imagenes de guias de despacho: " + (dir_guiaDespacho.Trim().Equals("") ? "(No definido)" : dir_guiaDespacho) + "\n\n");
+        //        ///---GUIAS DE DESPACHO---///
+        //        //Obtiene el directorio donde se almacenan las imagenes de las guias de despacho
+        //        result = obtenerParametro("EP_DIRECTORIO", "DIR_GUIADESPACHO"); //utils
+        //        if (result.MensajeError.Equals(""))
+        //        {
+        //            rows = result.DataRows;
+        //            if (rows.Length > 0)
+        //            {
+        //                dir_guiaDespacho = rows[0]["Par_Alf1"].ToString();
+        //                dir_guiaDespacho += (!su.Right(dir_guiaDespacho, 1).Equals("\\") ? "\\" : "");
+        //                //dir_guiaDespacho = string.Concat(dir_guiaDespacho, lEmpresa, "\\");
+        //            }
+        //        }
+        //        else
+        //            error = result.MensajeError;
+        //        sb.Append("Directorio con las imagenes de guias de despacho: " + (dir_guiaDespacho.Trim().Equals("") ? "(No definido)" : dir_guiaDespacho) + "\n\n");
 
-                //Obtiene el parametro que indica si las imagenes digitalizadas de las guias de despacho son requeridas o no (0-No, 1-Si)
-                if (!Program.ENVIRONMENT.Equals("DEBUG"))
-                {
-                    result = obtenerParametro("EP_REQUIRED", "FILES_GUIADESPACHO"); //utils
-                    if (result.MensajeError.Equals(""))
-                    {
-                        rows = result.DataRows;
-                        if (rows.Length > 0)
-                            validarFiles_GuiaDespacho = rows[0]["par_num1"].ToString();
-                    }
-                    else
-                        error = result.MensajeError;
-                }
+        //        //Obtiene el parametro que indica si las imagenes digitalizadas de las guias de despacho son requeridas o no (0-No, 1-Si)
+        //        if (!Program.ENVIRONMENT.Equals("DEBUG"))
+        //        {
+        //            result = obtenerParametro("EP_REQUIRED", "FILES_GUIADESPACHO"); //utils
+        //            if (result.MensajeError.Equals(""))
+        //            {
+        //                rows = result.DataRows;
+        //                if (rows.Length > 0)
+        //                    validarFiles_GuiaDespacho = rows[0]["par_num1"].ToString();
+        //            }
+        //            else
+        //                error = result.MensajeError;
+        //        }
 
-                //Obtiene la cantidad de GDs y verifica si el reporte cuenta con las imagenes de las guias de despacho
-                view = new DataView(dtResumenxGuiaDespacho);
-                totalGuiasDespacho = view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows.Count;
+        //        //Obtiene la cantidad de GDs y verifica si el reporte cuenta con las imagenes de las guias de despacho
+        //        view = new DataView(dtResumenxGuiaDespacho);
+        //        totalGuiasDespacho = view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows.Count;
 
-                Lbl_PB.Text = " Revisando Guías de Despacho   . . . "; Lbl_PB.Refresh();
-                //Pb.Maximum  = totalGuiasDespacho; Pb.Minimum = 1; Pb.Value  = 1;
+        //        Lbl_PB.Text = " Revisando Guías de Despacho   . . . "; Lbl_PB.Refresh();
+        //        //Pb.Maximum  = totalGuiasDespacho; Pb.Minimum = 1; Pb.Value  = 1;
 
-                if (!dir_guiaDespacho.Equals(""))
-                {
-                    foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
-                    {
-                        //    if (Pb.Value < Pb.Maximum)
-                        //      Pb.Value = Pb.Value+1;
-                        //    else
-                        //        Pb.Value = Pb.Value-1;
-
-
-                        archivo = row[COLUMNNAME_GUIA_DESPACHO].ToString() + ".pdf";
-                        if (fs.FileExists(dir_guiaDespacho + archivo))
-                            listArchivosGuiasDespacho.Add(archivo);
-                        else
-                            archivoFaltantesGD.Append(" -> " + archivo + "\n");
-                    }
-
-                    if (archivoFaltantesGD.ToString().Length > 0)
-                        sb.Append("Faltan los siguientes archivos gds :\n");
-                    sb.Append(archivoFaltantesGD);
-                }
-
-                ///---ITs---///
-                //Obtiene el directorio donde se almacenan los PDF de las its
-                result = obtenerParametro("EP_DIRECTORIO", "DIR_IT"); //utils
-                if (result.MensajeError.Equals(""))
-                {
-                    rows = result.DataRows;
-                    if (rows.Length > 0)
-                    { 
-                        dir_it = rows[0]["Par_Alf1"].ToString();
-                        dir_it += (!su.Right(dir_it, 1).Equals("\\") ? "\\" : "");
-                    }
-                }
-                else
-                    error = result.MensajeError;
-                sb.Append("Directorio con las ITs: " + (dir_it.Trim().Equals("") ? "(No definido)" : dir_it) + "\n\n");
+        //        if (!dir_guiaDespacho.Equals(""))
+        //        {
+        //            foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
+        //            {
+        //                //    if (Pb.Value < Pb.Maximum)
+        //                //      Pb.Value = Pb.Value+1;
+        //                //    else
+        //                //        Pb.Value = Pb.Value-1;
 
 
-                // Recorremos la tabla con las IT, si no estan las creamos
-                Lbl_PB.Text = " Revisando las IT    . . . "; Lbl_PB.Refresh();
-                Pb.Maximum = dtResumenxGuiaDespacho.Rows.Count; Pb.Minimum = 1; Pb.Value = 1;
+        //                archivo = row[COLUMNNAME_GUIA_DESPACHO].ToString() + ".pdf";
+        //                if (fs.FileExists(dir_guiaDespacho + archivo))
+        //                    listArchivosGuiasDespacho.Add(archivo);
+        //                else
+        //                    archivoFaltantesGD.Append(" -> " + archivo + "\n");
+        //            }
 
-                int i = 0; string lPathArchivo = dir_it;
-                for (i = 0; i < dtResumenxGuiaDespacho.Rows.Count; i++)
-                {
-                    if (Pb.Value < Pb.Maximum)
-                        Pb.Value = Pb.Value+1;
-                    else
-                        if (Pb.Value > Pb.Minimum )
-                        Pb.Value = Pb.Value-1;
+        //            if (archivoFaltantesGD.ToString().Length > 0)
+        //                sb.Append("Faltan los siguientes archivos gds :\n");
+        //            sb.Append(archivoFaltantesGD);
+        //        }
 
-                    Pb.Refresh();
-                    //por cada IT, debe haber una portada y un detalle 
+        //        ///---ITs---///
+        //        //Obtiene el directorio donde se almacenan los PDF de las its
+        //        result = obtenerParametro("EP_DIRECTORIO", "DIR_IT"); //utils
+        //        if (result.MensajeError.Equals(""))
+        //        {
+        //            rows = result.DataRows;
+        //            if (rows.Length > 0)
+        //            { 
+        //                dir_it = rows[0]["Par_Alf1"].ToString();
+        //                dir_it += (!su.Right(dir_it, 1).Equals("\\") ? "\\" : "");
+        //            }
+        //        }
+        //        else
+        //            error = result.MensajeError;
+        //        sb.Append("Directorio con las ITs: " + (dir_it.Trim().Equals("") ? "(No definido)" : dir_it) + "\n\n");
 
-                //  Hay que descaomentar estas lineas y establecer una PathDestino 
-                    //if (ExisteArchivo(dtResumenxGuiaDespacho.Rows[i]["It"].ToString(), lPathArchivo) ==false)
-                    //        CreaInforme(dtResumenxGuiaDespacho.Rows [i]["It"].ToString(), true );
-                }
 
-                //Obtiene la cantidad de ITs y verifica si el reporte cuenta con los archivos PDFs de las ITs
-                view = new DataView(dtResumenxGuiaDespacho);
-                totalITs = view.ToTable(true, COLUMNNAME_IT).Rows.Count;
+        //        // Recorremos la tabla con las IT, si no estan las creamos
+        //        Lbl_PB.Text = " Revisando las IT    . . . "; Lbl_PB.Refresh();
+        //        Pb.Maximum = dtResumenxGuiaDespacho.Rows.Count; Pb.Minimum = 1; Pb.Value = 1;
 
-                if (!dir_it.Equals(""))
-                {
-                    foreach (DataRow row in view.ToTable(true, COLUMNNAME_IT).Rows)
-                    {
-                        archivo = row[COLUMNNAME_IT].ToString() + ".PDF";
-                        //Parche para los nombres de las ITS 
-                        archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
-                        //debemos revisar 2 archivos por IT
-                        lPathArchivo = string.Concat(dir_it, archivo);
-                        if (ExisteArchivo(archivo.ToString(), lPathArchivo) == false)
-                            //if (fs.FileExists(dir_it + archivo))
-                            listArchivosIT.Add(archivo);
-                        else
-                        {   
-                            archivoFaltantesIT.Append(" -> " + archivo + "\n");
-                        }
+        //        int i = 0; string lPathArchivo = dir_it;
+        //        for (i = 0; i < dtResumenxGuiaDespacho.Rows.Count; i++)
+        //        {
+        //            if (Pb.Value < Pb.Maximum)
+        //                Pb.Value = Pb.Value+1;
+        //            else
+        //                if (Pb.Value > Pb.Minimum )
+        //                Pb.Value = Pb.Value-1;
+
+        //            Pb.Refresh();
+        //            //por cada IT, debe haber una portada y un detalle 
+
+        //        //  Hay que descaomentar estas lineas y establecer una PathDestino 
+        //            //if (ExisteArchivo(dtResumenxGuiaDespacho.Rows[i]["It"].ToString(), lPathArchivo) ==false)
+        //            //        CreaInforme(dtResumenxGuiaDespacho.Rows [i]["It"].ToString(), true );
+        //        }
+
+        //        //Obtiene la cantidad de ITs y verifica si el reporte cuenta con los archivos PDFs de las ITs
+        //        view = new DataView(dtResumenxGuiaDespacho);
+        //        totalITs = view.ToTable(true, COLUMNNAME_IT).Rows.Count;
+
+        //        if (!dir_it.Equals(""))
+        //        {
+        //            foreach (DataRow row in view.ToTable(true, COLUMNNAME_IT).Rows)
+        //            {
+        //                archivo = row[COLUMNNAME_IT].ToString() + ".PDF";
+        //                //Parche para los nombres de las ITS 
+        //                archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
+        //                //debemos revisar 2 archivos por IT
+        //                lPathArchivo = string.Concat(dir_it, archivo);
+        //                if (ExisteArchivo(archivo.ToString(), lPathArchivo) == false)
+        //                    //if (fs.FileExists(dir_it + archivo))
+        //                    listArchivosIT.Add(archivo);
+        //                else
+        //                {   
+        //                    archivoFaltantesIT.Append(" -> " + archivo + "\n");
+        //                }
                             
-                    }
-                    if (archivoFaltantesIT.ToString().Length > 0)
-                        sb.Append("Faltan los siguientes archivos its :\n");
-                    sb.Append(archivoFaltantesIT);
-                }
+        //            }
+        //            if (archivoFaltantesIT.ToString().Length > 0)
+        //                sb.Append("Faltan los siguientes archivos its :\n");
+        //            sb.Append(archivoFaltantesIT);
+        //        }
 
-                ///--------///
-                //Resumen
-                //Obtiene la cantidad de etiquetas y kilos totales x EP
-                foreach (DataRow row in dtResumenxGuiaDespacho.Rows)
-                {
-                    totalEtiquetas += Convert.ToInt32(row[COLUMNNAME_N_ETIQUETAS].ToString());
-                    totalKilos += Convert.ToInt32(row[COLUMNNAME_TOTAL_KGS].ToString());
-                }
-                sb.Append("\nTotal guia(s) despacho(s): " + totalGuiasDespacho.ToString("N0") + "\n");
-                sb.Append("\nTotal it(s): " + totalITs.ToString("N0") + "\n");
-                sb.Append("Total etiqueta(s): " + totalEtiquetas.ToString("N0") + "\n");
-                sb.Append("Total kilo(s): " + totalKilos.ToString("N0") + "\n\n");
-                sb.Append("Total $$$ a cobrar: " + (totalKilos * (valorKiloSuministro.Equals("") ? 0 : Convert.ToInt32(valorKiloSuministro))).ToString("N0"));
-                //MessageBox.Show(sb.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception exc)
-            {
-                error = exc.Message;
-            }
+        //        ///--------///
+        //        //Resumen
+        //        //Obtiene la cantidad de etiquetas y kilos totales x EP
+        //        foreach (DataRow row in dtResumenxGuiaDespacho.Rows)
+        //        {
+        //            totalEtiquetas += Convert.ToInt32(row[COLUMNNAME_N_ETIQUETAS].ToString());
+        //            totalKilos += Convert.ToInt32(row[COLUMNNAME_TOTAL_KGS].ToString());
+        //        }
+        //        sb.Append("\nTotal guia(s) despacho(s): " + totalGuiasDespacho.ToString("N0") + "\n");
+        //        sb.Append("\nTotal it(s): " + totalITs.ToString("N0") + "\n");
+        //        sb.Append("Total etiqueta(s): " + totalEtiquetas.ToString("N0") + "\n");
+        //        sb.Append("Total kilo(s): " + totalKilos.ToString("N0") + "\n\n");
+        //        sb.Append("Total $$$ a cobrar: " + (totalKilos * (valorKiloSuministro.Equals("") ? 0 : Convert.ToInt32(valorKiloSuministro))).ToString("N0"));
+        //        //MessageBox.Show(sb.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception exc)
+        //    {
+        //        error = exc.Message;
+        //    }
 
-            if (error.Equals(""))
-            {
-                if (valorKiloSuministro.Equals("") || valorKiloSuministro.Equals("0"))
-                    validacion.Append(" - Valor kilo suministro de la obra\n");
-                if (destinatarios.Equals(""))
-                    validacion.Append(" - Destinatarios de correo del reporte (cliente)\n");
-                if (dir_guiaDespacho.Equals(""))
-                    validacion.Append(" - Directorio de las guias de despacho digitalizadas\n");
+        //    if (error.Equals(""))
+        //    {
+        //        if (valorKiloSuministro.Equals("") || valorKiloSuministro.Equals("0"))
+        //            validacion.Append(" - Valor kilo suministro de la obra\n");
+        //        if (destinatarios.Equals(""))
+        //            validacion.Append(" - Destinatarios de correo del reporte (cliente)\n");
+        //        if (dir_guiaDespacho.Equals(""))
+        //            validacion.Append(" - Directorio de las guias de despacho digitalizadas\n");
 
-                //ESPECIFICA SI LAS GDESPACHO SON REQUERIDAS AL MOMENTO DE GENERAR LA EP
-                if (validarFiles_GuiaDespacho.Equals("1"))
-                {
-                    //2-Generar el reporte
-                    //3-Envio al cliente
-                    if (accion.Equals(2) || accion.Equals(3))
-                    {
-                        if (!dir_guiaDespacho.Equals("") && (listArchivosGuiasDespacho.Count < totalGuiasDespacho))
-                            if (!archivoFaltantesGD.ToString().Equals(""))
-                                validacion.Append(" - Archivos digitalizados de guias de despacho:\n\n" + archivoFaltantesGD.ToString());
-                    }
-                }
+        //        //ESPECIFICA SI LAS GDESPACHO SON REQUERIDAS AL MOMENTO DE GENERAR LA EP
+        //        if (validarFiles_GuiaDespacho.Equals("1"))
+        //        {
+        //            //2-Generar el reporte
+        //            //3-Envio al cliente
+        //            if (accion.Equals(2) || accion.Equals(3))
+        //            {
+        //                if (!dir_guiaDespacho.Equals("") && (listArchivosGuiasDespacho.Count < totalGuiasDespacho))
+        //                    if (!archivoFaltantesGD.ToString().Equals(""))
+        //                        validacion.Append(" - Archivos digitalizados de guias de despacho:\n\n" + archivoFaltantesGD.ToString());
+        //            }
+        //        }
 
-                if (validacion.Length == 0)
-                {
-                    //1-Vista preliminar -> Genera una carpeta temporal para "mostrar" el reporte y las imagenes de las guias de despacho
-                    //3-Envio al cliente -> Genera una carpeta temporal para "enviar" el reporte y las imagenes de las guias de despacho por correo
-                    if (accion.Equals(1) || accion.Equals(3))
-                    {
-                        selectedPath = Path.GetTempPath() + DateTime.Now.ToString("yyyyMMdd_HHmmss");
-                        if (!fs.DirectoryExists(selectedPath))
-                        {
-                            fs.createDirectory(selectedPath);
-                            if (fs.error != null)
-                            {
-                                validacion.Append(fs.error.Message);
-                                selectedPath = "";
-                            }
-                        }
-                    }
-                    else
-                        selectedPath = seleccionarCarpeta();
+        //        if (validacion.Length == 0)
+        //        {
+        //            //1-Vista preliminar -> Genera una carpeta temporal para "mostrar" el reporte y las imagenes de las guias de despacho
+        //            //3-Envio al cliente -> Genera una carpeta temporal para "enviar" el reporte y las imagenes de las guias de despacho por correo
+        //            if (accion.Equals(1) || accion.Equals(3))
+        //            {
+        //                selectedPath = Path.GetTempPath() + DateTime.Now.ToString("yyyyMMdd_HHmmss");
+        //                if (!fs.DirectoryExists(selectedPath))
+        //                {
+        //                    fs.createDirectory(selectedPath);
+        //                    if (fs.error != null)
+        //                    {
+        //                        validacion.Append(fs.error.Message);
+        //                        selectedPath = "";
+        //                    }
+        //                }
+        //            }
+        //            else
+        //                selectedPath = seleccionarCarpeta();
 
-                    //*****************************************************************ZOna de Cambio  **************************************//
-                    if (!selectedPath.Equals(""))
-                    {
-                        try
-                        {
-                            //Anexa el nombre de la carpeta a generar
-                            selectedPath = selectedPath + (!su.Right(Application.StartupPath, 1).Equals("\\") ? "\\" : "") + carpeta;
-                            if (!fs.DirectoryExists(selectedPath))
-                                fs.createDirectory(selectedPath);
+        //            //*****************************************************************ZOna de Cambio  **************************************//
+        //            if (!selectedPath.Equals(""))
+        //            {
+        //                try
+        //                {
+        //                    //Anexa el nombre de la carpeta a generar
+        //                    selectedPath = selectedPath + (!su.Right(Application.StartupPath, 1).Equals("\\") ? "\\" : "") + carpeta;
+        //                    if (!fs.DirectoryExists(selectedPath))
+        //                        fs.createDirectory(selectedPath);
 
-                            //Obtenemos el Objeto Obra para poder cargar la planilla excel
-                            listaDataTMP = ws.ObtenerDatosObraParaEP(ep_obra);
+        //                    //Obtenemos el Objeto Obra para poder cargar la planilla excel
+        //                    listaDataTMP = ws.ObtenerDatosObraParaEP(ep_obra);
                             
 
-                            //Copia la plantilla al directorio de destino
-                            string plantillaEP = Application.StartupPath + (!su.Right(Application.StartupPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
-                            string outputEP = selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
-                            string outputEPPdf = selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.pdf";
-                            if (fs.FileExists(plantillaEP))
-                                fs.copyFile(plantillaEP, outputEP);
+        //                    //Copia la plantilla al directorio de destino
+        //                    string plantillaEP = Application.StartupPath + (!su.Right(Application.StartupPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
+        //                    string outputEP = selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
+        //                    string outputEPPdf = selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.pdf";
+        //                    if (fs.FileExists(plantillaEP))
+        //                        fs.copyFile(plantillaEP, outputEP);
 
-                            if (fs.error == null)
-                            {
-                                //Inserta los datos en el excel de salida
-                                object paramMissing = Type.Missing;
-                                ExcelApp.Application excelApplication = new ExcelApp.Application();
-                                excelApplication.DisplayAlerts = false;
-                                excelApplication.Visible = true;
-                                ExcelApp.Workbook excelWorkBook = excelApplication.Workbooks.Open(outputEP); //.Add(paramMissing);
-                                ExcelApp.Worksheet excelSheet = null;
-                                DataTable ltblServicios = new DataTable ();
-                                if (listaDataTMP.DataSet.Tables.Count  > 1)
-                                    ltblServicios = listaDataTMP.DataSet.Tables["ServiciosObra"].Copy();
+        //                    if (fs.error == null)
+        //                    {
+        //                        //Inserta los datos en el excel de salida
+        //                        object paramMissing = Type.Missing;
+        //                        ExcelApp.Application excelApplication = new ExcelApp.Application();
+        //                        excelApplication.DisplayAlerts = false;
+        //                        excelApplication.Visible = true;
+        //                        ExcelApp.Workbook excelWorkBook = excelApplication.Workbooks.Open(outputEP); //.Add(paramMissing);
+        //                        ExcelApp.Worksheet excelSheet = null;
+        //                        DataTable ltblServicios = new DataTable ();
+        //                        if (listaDataTMP.DataSet.Tables.Count  > 1)
+        //                            ltblServicios = listaDataTMP.DataSet.Tables["ServiciosObra"].Copy();
 
 
-                                if (excelWorkBook != null)
-                                {
-                                    //Hoja: Resumen
-                                    (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
-                                    listaDataSetOp = wsOperacion.ListarEPExcel_ResumenObra(ep_obra);
-                                    if (listaDataSetOp.MensajeError.Equals(""))
-                                    {
-                                        foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
-                                        {
-                                            excelSheet.Range["D6"].Value = "ORDEN DE COMPRA N° " + row["ORDEN_COMPRA"].ToString();
-                                            excelSheet.Range["F11"].Value = row["UNIDAD"].ToString();
-                                            excelSheet.Range["F12"].Value = row["UNIDAD"].ToString();
-                                            excelSheet.Range["F13"].Value = row["UNIDAD"].ToString();
-                                            excelSheet.Range["BH29"].Value = Program.currentUser.Name;  //row["NOMBREUSUARIO"].ToString(); //Program.currentUser.Name;
-                                            excelSheet.Range["E25"].Value = row["CLIENTE"].ToString();
-                                            excelSheet.Range["E27"].Value = row["RUTCliente"].ToString();
-                                            excelSheet.Range["E29"].Value = row["CentroCOSTO"].ToString();
+        //                        if (excelWorkBook != null)
+        //                        {
+        //                            //Hoja: Resumen
+        //                            (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
+        //                            listaDataSetOp = wsOperacion.ListarEPExcel_ResumenObra(ep_obra);
+        //                            if (listaDataSetOp.MensajeError.Equals(""))
+        //                            {
+        //                                foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
+        //                                {
+        //                                    excelSheet.Range["D6"].Value = "ORDEN DE COMPRA N° " + row["ORDEN_COMPRA"].ToString();
+        //                                    excelSheet.Range["F11"].Value = row["UNIDAD"].ToString();
+        //                                    excelSheet.Range["F12"].Value = row["UNIDAD"].ToString();
+        //                                    excelSheet.Range["F13"].Value = row["UNIDAD"].ToString();
+        //                                    excelSheet.Range["BH29"].Value = Program.currentUser.Name;  //row["NOMBREUSUARIO"].ToString(); //Program.currentUser.Name;
+        //                                    excelSheet.Range["E25"].Value = row["CLIENTE"].ToString();
+        //                                    excelSheet.Range["E27"].Value = row["RUTCliente"].ToString();
+        //                                    excelSheet.Range["E29"].Value = row["CentroCOSTO"].ToString();
 
-                                            if ((listaDataTMP.DataSet.Tables.Count > 0) && (listaDataTMP.DataSet.Tables[0].Rows.Count > 0))
-                                            {
-                                                excelSheet.Range["E11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
-                                                excelSheet.Range["E12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
-                                                excelSheet.Range["E13"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
+        //                                    if ((listaDataTMP.DataSet.Tables.Count > 0) && (listaDataTMP.DataSet.Tables[0].Rows.Count > 0))
+        //                                    {
+        //                                        excelSheet.Range["E11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
+        //                                        excelSheet.Range["E12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
+        //                                        excelSheet.Range["E13"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
                                    
-                                                if (ltblServicios != null)
-                                                {
-                                                    excelSheet.Range["G11"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Suministro"); //Sumunistro
-                                                    excelSheet.Range["G12"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Preparacion"); //Preparacion
-                                                }
-                                                else
-                                                {
-                                                    excelSheet.Range["G11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Sumunistro
-                                                    excelSheet.Range["G12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Preparacion
-                                                }
+        //                                        if (ltblServicios != null)
+        //                                        {
+        //                                            excelSheet.Range["G11"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Suministro"); //Sumunistro
+        //                                            excelSheet.Range["G12"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Preparacion"); //Preparacion
+        //                                        }
+        //                                        else
+        //                                        {
+        //                                            excelSheet.Range["G11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Sumunistro
+        //                                            excelSheet.Range["G12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString(); //Preparacion
+        //                                        }
 
 
-                                                //
-                                                excelSheet.Range["BE11"].Value = totalKilos;  //Sumunistro
+        //                                        //
+        //                                        excelSheet.Range["BE11"].Value = totalKilos;  //Sumunistro
                                                 
-                                                 excelSheet.Range["BE12"].Value = RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  // si la IT es tipo TP 
-                                                //excelSheet.Range["BE12"].Value = totalKilos;  // si la IT es tipo TP 
-                                                //No se incluye en la linea de cobro de preparación==> TotalKilos - Kilos de la Guia 
-                                               // excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
-                                            }
-                                        }
-                                    }
-                                    else
-                                        error = listaDataSetOp.MensajeError.ToString();
+        //                                         excelSheet.Range["BE12"].Value = RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  // si la IT es tipo TP 
+        //                                        //excelSheet.Range["BE12"].Value = totalKilos;  // si la IT es tipo TP 
+        //                                        //No se incluye en la linea de cobro de preparación==> TotalKilos - Kilos de la Guia 
+        //                                       // excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
+        //                                    }
+        //                                }
+        //                            }
+        //                            else
+        //                                error = listaDataSetOp.MensajeError.ToString();
 
-                                    excelSheet.Range["BC5"].Value = "Obra " + obra;
-                                    excelSheet.Range["BE6"].Value = "ESTADO DE PAGO ACTUAL N° " + correlativo;
+        //                            excelSheet.Range["BC5"].Value = "Obra " + obra;
+        //                            excelSheet.Range["BE6"].Value = "ESTADO DE PAGO ACTUAL N° " + correlativo;
 
-                                    //EP generados (Todos)
-                                    int fila = 11;
-                                    int columna = 9;
-                                    Int64 kilos = 0, total = 0, correl = 0;
-                                    Int64 totalKilosCobrados = 0, totalCobrado = 0;
-                                    listaDataSetOp = wsOperacion.ListarEPExcel_ResumenEpGeneradosxObra(ep_obra);
-                                    if (listaDataSetOp.MensajeError.Equals(""))
-                                    {
-                                        foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
-                                        {
-                                            //row["CORRELATIVO"].ToString();
-                                            kilos = !EsNumero(row["KILOS"].ToString()) ? 0 : Convert.ToInt32(row["KILOS"].ToString());
-                                            total = !EsNumero(row["TOTAL_$$$"].ToString()) ? 0 : Convert.ToInt32(row["TOTAL_$$$"].ToString());
-                                            correl = !EsNumero(row["CORRELATIVO"].ToString()) ? 0 : Convert.ToInt32(row["CORRELATIVO"].ToString());
+        //                            //EP generados (Todos)
+        //                            int fila = 11;
+        //                            int columna = 9;
+        //                            Int64 kilos = 0, total = 0, correl = 0;
+        //                            Int64 totalKilosCobrados = 0, totalCobrado = 0;
+        //                            listaDataSetOp = wsOperacion.ListarEPExcel_ResumenEpGeneradosxObra(ep_obra);
+        //                            if (listaDataSetOp.MensajeError.Equals(""))
+        //                            {
+        //                                foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
+        //                                {
+        //                                    //row["CORRELATIVO"].ToString();
+        //                                    kilos = !EsNumero(row["KILOS"].ToString()) ? 0 : Convert.ToInt32(row["KILOS"].ToString());
+        //                                    total = !EsNumero(row["TOTAL_$$$"].ToString()) ? 0 : Convert.ToInt32(row["TOTAL_$$$"].ToString());
+        //                                    correl = !EsNumero(row["CORRELATIVO"].ToString()) ? 0 : Convert.ToInt32(row["CORRELATIVO"].ToString());
 
-                                            excelSheet.Cells[11, columna] = kilos;
-                                            excelSheet.Cells[11, columna + 1] = total;
+        //                                    excelSheet.Cells[11, columna] = kilos;
+        //                                    excelSheet.Cells[11, columna + 1] = total;
 
-                                            if (correlativo != correl) //Acumula los EP cobrados, sin incluir el EP actual
-                                            {
-                                                totalKilosCobrados += kilos;
-                                                totalCobrado += total;
-                                            }
-                                            columna = columna + 2;
-                                        }
-                                    }
-                                    else
-                                        error = listaDataSetOp.MensajeError.ToString();
+        //                                    if (correlativo != correl) //Acumula los EP cobrados, sin incluir el EP actual
+        //                                    {
+        //                                        totalKilosCobrados += kilos;
+        //                                        totalCobrado += total;
+        //                                    }
+        //                                    columna = columna + 2;
+        //                                }
+        //                            }
+        //                            else
+        //                                error = listaDataSetOp.MensajeError.ToString();
 
-                                    //LLenamos el Objeto con los totales del EP **********************************************+
-                                    int lTmp = 0;
-                                    lTmp = !EsNumero(excelSheet.Range["BE14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE14"].Value.ToString());
-                                    lEP.TotalKgs_EP = lTmp;
-                                    lTmp = !EsNumero(excelSheet.Range["BF14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BF14"].Value.ToString());
-                                    lEP.TotalValor_EP  = lTmp;
-                                    lTmp = !EsNumero(ep_obra.ToString()) ? 0 : Convert.ToInt32(ep_obra.ToString());
-                                    lEP.IdObra = lTmp;
+        //                            //LLenamos el Objeto con los totales del EP **********************************************+
+        //                            int lTmp = 0;
+        //                            lTmp = !EsNumero(excelSheet.Range["BE14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE14"].Value.ToString());
+        //                            lEP.TotalKgs_EP = lTmp;
+        //                            lTmp = !EsNumero(excelSheet.Range["BF14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BF14"].Value.ToString());
+        //                            lEP.TotalValor_EP  = lTmp;
+        //                            lTmp = !EsNumero(ep_obra.ToString()) ? 0 : Convert.ToInt32(ep_obra.ToString());
+        //                            lEP.IdObra = lTmp;
 
-                                    //List<WsOperacion.EP_GeneradoDetalle> lList_DetEP = new List<WsOperacion.EP_GeneradoDetalle>() ;
-                                    WsOperacion.EP_GeneradoDetalle[] lList_DetEP = new WsOperacion.EP_GeneradoDetalle[3];
+        //                            //List<WsOperacion.EP_GeneradoDetalle> lList_DetEP = new List<WsOperacion.EP_GeneradoDetalle>() ;
+        //                            WsOperacion.EP_GeneradoDetalle[] lList_DetEP = new WsOperacion.EP_GeneradoDetalle[3];
 
-                                    WsOperacion.EP_GeneradoDetalle lDetEP = new WsOperacion.EP_GeneradoDetalle();
-                                    //Suministro
-                                    lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Suministro";
-                                    lTmp = !EsNumero(excelSheet.Range["G11"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G11"].Value.ToString());
-                                    lDetEP.ValorKgs = lTmp;
-                                    lTmp = !EsNumero(excelSheet.Range["BE11"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE11"].Value.ToString());
-                                    lDetEP.TotalKgs   = lTmp;
-                                    lList_DetEP[0]=lDetEP;
-                                    //Preparacion
-                                    lDetEP = new WsOperacion.EP_GeneradoDetalle();
-                                    lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Preparacion";
-                                    lTmp = !EsNumero(excelSheet.Range["G12"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G12"].Value.ToString());
-                                    lDetEP.ValorKgs = lTmp;
-                                    lTmp = !EsNumero(excelSheet.Range["BE12"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE12"].Value.ToString());
-                                    lDetEP.TotalKgs = lTmp;
-                                    lList_DetEP[1]=(lDetEP);
-                                    //Otros 
-                                    lDetEP = new WsOperacion.EP_GeneradoDetalle();
-                                    lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Otros";
-                                    lTmp = !EsNumero(excelSheet.Range["G13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G13"].Value.ToString());
-                                    lDetEP.ValorKgs = lTmp;
-                                    lTmp = !EsNumero(excelSheet.Range["BE13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE13"].Value.ToString());
-                                    lDetEP.TotalKgs = lTmp;
-                                    lList_DetEP[2]=(lDetEP);
-                                    //Persistimos los regitros
-                                    //Falta la llamada a  la Ws por la persistencia de datos, con try cath para evitar la visualizacion de Excel
-                                    try
-                                    {
-                                        lEP.Detalle = lList_DetEP;
-                                        lEP = ws.GrabaEP_Generado(lEP);
+        //                            WsOperacion.EP_GeneradoDetalle lDetEP = new WsOperacion.EP_GeneradoDetalle();
+        //                            //Suministro
+        //                            lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Suministro";
+        //                            lTmp = !EsNumero(excelSheet.Range["G11"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G11"].Value.ToString());
+        //                            lDetEP.ValorKgs = lTmp;
+        //                            lTmp = !EsNumero(excelSheet.Range["BE11"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE11"].Value.ToString());
+        //                            lDetEP.TotalKgs   = lTmp;
+        //                            lList_DetEP[0]=lDetEP;
+        //                            //Preparacion
+        //                            lDetEP = new WsOperacion.EP_GeneradoDetalle();
+        //                            lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Preparacion";
+        //                            lTmp = !EsNumero(excelSheet.Range["G12"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G12"].Value.ToString());
+        //                            lDetEP.ValorKgs = lTmp;
+        //                            lTmp = !EsNumero(excelSheet.Range["BE12"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE12"].Value.ToString());
+        //                            lDetEP.TotalKgs = lTmp;
+        //                            lList_DetEP[1]=(lDetEP);
+        //                            //Otros 
+        //                            lDetEP = new WsOperacion.EP_GeneradoDetalle();
+        //                            lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Otros";
+        //                            lTmp = !EsNumero(excelSheet.Range["G13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G13"].Value.ToString());
+        //                            lDetEP.ValorKgs = lTmp;
+        //                            lTmp = !EsNumero(excelSheet.Range["BE13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE13"].Value.ToString());
+        //                            lDetEP.TotalKgs = lTmp;
+        //                            lList_DetEP[2]=(lDetEP);
+        //                            //Persistimos los regitros
+        //                            //Falta la llamada a  la Ws por la persistencia de datos, con try cath para evitar la visualizacion de Excel
+        //                            try
+        //                            {
+        //                                lEP.Detalle = lList_DetEP;
+        //                                lEP = ws.GrabaEP_Generado(lEP);
 
-                                    }
-                                    catch (Exception exc)
-                                    {
-                                        MessageBox.Show(string.Concat("Ha Ocurrido el siguiente error: ", exc.Message.ToString()), "Avisos Sistema");
-                                    }
+        //                            }
+        //                            catch (Exception exc)
+        //                            {
+        //                                MessageBox.Show(string.Concat("Ha Ocurrido el siguiente error: ", exc.Message.ToString()), "Avisos Sistema");
+        //                            }
 
-                                    // Falta de MModificacion
-                                    //Fin  carga Obj EP
+        //                            // Falta de MModificacion
+        //                            //Fin  carga Obj EP
 
-                                    //EP anteriores
-                                    excelSheet.Range["BC11"].Value = totalKilosCobrados;
+        //                            //EP anteriores
+        //                            excelSheet.Range["BC11"].Value = totalKilosCobrados;
                                     
-                                    excelSheet.Range["BD11"].Value = totalCobrado;
-                                    //EP actual
-                                    // se comenta por modificaciones 06-12-2017
-                                    //excelSheet.Range["BD11"].Value = totalKilos;
-                                    //excelSheet.Range["BE11"].Value = totalaCobrar;
+        //                            excelSheet.Range["BD11"].Value = totalCobrado;
+        //                            //EP actual
+        //                            // se comenta por modificaciones 06-12-2017
+        //                            //excelSheet.Range["BD11"].Value = totalKilos;
+        //                            //excelSheet.Range["BE11"].Value = totalaCobrar;
 
-                                    //Hoja: Detalle Guias
-                                    (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
-                                    ExcelApp.Range rng = excelSheet.get_Range("B8", "A1000");
-                                    rng.EntireRow.Delete(ExcelApp.XlDirection.xlUp);
+        //                            //Hoja: Detalle Guias
+        //                            (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
+        //                            ExcelApp.Range rng = excelSheet.get_Range("B8", "A1000");
+        //                            rng.EntireRow.Delete(ExcelApp.XlDirection.xlUp);
 
-                                    fila = 8;
-                                    listaDataSetOp = wsOperacion.ListarEPExcel_ResumenGuiasxObra(ep_obra);
-                                    if (listaDataSetOp.MensajeError.Equals(""))
-                                    {
-                                        foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
-                                        {
-                                            excelSheet.Cells[fila, 1] = row["FECHA"].ToString();
-                                            excelSheet.Cells[fila, 2] = row["DESCRIPCION"].ToString();
-                                            excelSheet.Cells[fila, 3] = row["GUIA_DESPACHO"].ToString();
-                                            excelSheet.Cells[fila, 4] = row["KILOS"].ToString();
-                                            fila++;
-                                        }
-                                    }
-                                    else
-                                        error = listaDataSetOp.MensajeError.ToString();
+        //                            fila = 8;
+        //                            listaDataSetOp = wsOperacion.ListarEPExcel_ResumenGuiasxObra(ep_obra);
+        //                            if (listaDataSetOp.MensajeError.Equals(""))
+        //                            {
+        //                                foreach (DataRow row in listaDataSetOp.DataSet.Tables[0].Rows)
+        //                                {
+        //                                    excelSheet.Cells[fila, 1] = row["FECHA"].ToString();
+        //                                    excelSheet.Cells[fila, 2] = row["DESCRIPCION"].ToString();
+        //                                    excelSheet.Cells[fila, 3] = row["GUIA_DESPACHO"].ToString();
+        //                                    excelSheet.Cells[fila, 4] = row["KILOS"].ToString();
+        //                                    fila++;
+        //                                }
+        //                            }
+        //                            else
+        //                                error = listaDataSetOp.MensajeError.ToString();
 
-                                    (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
-                                    excelWorkBook.Save();
-                                    excelWorkBook.ExportAsFixedFormat(ExcelApp.XlFixedFormatType.xlTypePDF, outputEPPdf);
-                                }
-                                excelWorkBook.Close(false);
-                                excelApplication.Quit();
+        //                            (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
+        //                            excelWorkBook.Save();
+        //                            excelWorkBook.ExportAsFixedFormat(ExcelApp.XlFixedFormatType.xlTypePDF, outputEPPdf);
+        //                        }
+        //                        excelWorkBook.Close(false);
+        //                        excelApplication.Quit();
 
-                                if (excelSheet != null)
-                                {
-                                    while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelSheet) != 0) { }
-                                    excelSheet = null;
-                                }
-                                if (excelWorkBook != null)
-                                {
-                                    while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelWorkBook) != 0) { }
-                                    excelWorkBook = null;
-                                }
-                                if (excelApplication != null)
-                                {
-                                    while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApplication) != 0) { }
-                                    excelApplication = null;
-                                }
-                                GC.Collect();
-                                GC.WaitForPendingFinalizers();
+        //                        if (excelSheet != null)
+        //                        {
+        //                            while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelSheet) != 0) { }
+        //                            excelSheet = null;
+        //                        }
+        //                        if (excelWorkBook != null)
+        //                        {
+        //                            while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelWorkBook) != 0) { }
+        //                            excelWorkBook = null;
+        //                        }
+        //                        if (excelApplication != null)
+        //                        {
+        //                            while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApplication) != 0) { }
+        //                            excelApplication = null;
+        //                        }
+        //                        GC.Collect();
+        //                        GC.WaitForPendingFinalizers();
 
-                                //if (generarArchivoEP(selectedPath, sb.ToString()))
-                                //{
-                                //1-Vista preliminar
-                                //2-Generar el reporte
-                                if (accion.Equals(1) || accion.Equals(2))
-                                {
-                                    if (listArchivosGuiasDespacho.Count > 0)
-                                        copiarArchivosLista(dir_guiaDespacho, selectedPath, listArchivosGuiasDespacho,"G");
-                                    if (listArchivosIT.Count > 0)
-                                        copiarArchivosLista(dir_it, selectedPath, listArchivosIT,"I");
-                                    fs.shell(selectedPath); //Abre la carpeta de destino
-                                }
-                                else if (accion.Equals(3))
-                                { //3-Envio al cliente
-                                    //enviarCorreo(destinatarios, selectedPath);
-                                    enviarCorreoNotificacionInterna("EP_ENVIADOA_CLIENTE", ep_obra, ep_id, "", "", obra); //utils.
-                                    //Envio a cliente -> Se comenta porque no esta claro si el asunto y cuerpo se generará desde aqui o en la funcion de envio.
-                                    //enviarCorreoNotificacionaObra("CLIENTE", "asunto", Convert.ToInt32(ep_obra), "cuerpo", ep_id);
-                                }
-                                //}
-                            }
-                            else
-                                validacion.Append(fs.error.Message);
-                        }
-                        catch (Exception exc)
-                        {
-                            validacion.Append(exc.Message);
-                        }
-                    }
-                    else
-                        validacion.Insert(0, "El usuario seleciono el botón Cancelar");
-                }
-                else
-                    validacion.Insert(0, "Faltan los siguientes datos requeridos:\n\n");
-            }
-            else
-                validacion.Append(error);
+        //                        //if (generarArchivoEP(selectedPath, sb.ToString()))
+        //                        //{
+        //                        //1-Vista preliminar
+        //                        //2-Generar el reporte
+        //                        if (accion.Equals(1) || accion.Equals(2))
+        //                        {
+        //                            if (listArchivosGuiasDespacho.Count > 0)
+        //                                copiarArchivosLista(dir_guiaDespacho, selectedPath, listArchivosGuiasDespacho,"G");
+        //                            if (listArchivosIT.Count > 0)
+        //                                copiarArchivosLista(dir_it, selectedPath, listArchivosIT,"I");
+        //                            fs.shell(selectedPath); //Abre la carpeta de destino
+        //                        }
+        //                        else if (accion.Equals(3))
+        //                        { //3-Envio al cliente
+        //                            //enviarCorreo(destinatarios, selectedPath);
+        //                            enviarCorreoNotificacionInterna("EP_ENVIADOA_CLIENTE", ep_obra, ep_id, "", "", obra); //utils.
+        //                            //Envio a cliente -> Se comenta porque no esta claro si el asunto y cuerpo se generará desde aqui o en la funcion de envio.
+        //                            //enviarCorreoNotificacionaObra("CLIENTE", "asunto", Convert.ToInt32(ep_obra), "cuerpo", ep_id);
+        //                        }
+        //                        //}
+        //                    }
+        //                    else
+        //                        validacion.Append(fs.error.Message);
+        //                }
+        //                catch (Exception exc)
+        //                {
+        //                    validacion.Append(exc.Message);
+        //                }
+        //            }
+        //            else
+        //                validacion.Insert(0, "El usuario seleciono el botón Cancelar");
+        //        }
+        //        else
+        //            validacion.Insert(0, "Faltan los siguientes datos requeridos:\n\n");
+        //    }
+        //    else
+        //        validacion.Append(error);
 
-            if (validacion.Length != 0)
-                MessageBox.Show(validacion.ToString(), "Utils", MessageBoxButtons.OK, MessageBoxIcon.Error); //this.Text
+        //    if (validacion.Length != 0)
+        //        MessageBox.Show(validacion.ToString(), "Utils", MessageBoxButtons.OK, MessageBoxIcon.Error); //this.Text
 
-            return validacion.ToString();
-        }
+        //    return validacion.ToString();
+        //}
 
 
         private void CopiarArchivo(string iOrigen, string iDestino)
@@ -1140,8 +1140,10 @@ namespace EstadosdePagos
                 //Obtiene la cantidad de GDs y verifica si el reporte cuenta con las imagenes de las guias de despacho
                 view = new DataView(dtResumenxGuiaDespacho);
                 totalGuiasDespacho = view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows.Count;
+                if (totalGuiasDespacho>0)
+                    lSiglaOBra = view[0]["IT"].ToString().Substring(0, 3);
 
-                lSiglaOBra = view[0]["IT"].ToString().Substring(0, 3);
+
                 lPathDestino = Path.Combine(selectedPath, lSiglaOBra, correlativo.ToString ());
                 lPathDestinoLocal = Path.Combine(selectedPath);
                 if (Directory.Exists(lPathDestino) == false)
@@ -1216,7 +1218,8 @@ namespace EstadosdePagos
 
                 //Obtiene la cantidad de ITs y verifica si el reporte cuenta con los archivos PDFs de las ITs
                 view = new DataView(dtResumenxGuiaDespacho);
-                totalITs = view.ToTable(true, COLUMNNAME_IT).Rows.Count;
+                if (view .Count >0)
+                      totalITs = view.ToTable(true, COLUMNNAME_IT).Rows.Count;
 
                 if (!dir_it.Equals(""))
                 {
@@ -1417,9 +1420,30 @@ namespace EstadosdePagos
             return lRes;
         }
 
+        private DataTable  ObtenerTablaTotalOtros(string iEP)
+        {
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+            WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+            string lSql = ""; DataTable lTbl = new DataTable(); int i = 0;
+
+
+            string lRes = "0";
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','',14");
+            lDts = lPx.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                //lRes = (Convert.ToInt32(lDts.Tables[0].Rows[0][0].ToString())).ToString("#,##0");
+                //(Convert.ToInt32(lMontoExc)).ToString("#,##0");
+                lTbl= lDts.Tables[0].Copy ();
+            }
+
+            return lTbl;
+        }
+
+
         private void GeneraExcel_EP(int accion, string ep_obra, Int32 correlativo,int  ep_id , string lPathDest)
         {
-            string selectedPath = ""; long  totalKilos = 0;string obra = "";
+            string selectedPath = ""; string obra = "";
             WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
             WsOperacion.ListaDataSet listaDataSetOp = new WsOperacion.ListaDataSet();
             WsOperacion.ListaDataSet listaDataTMP = new WsOperacion.ListaDataSet();
@@ -1431,6 +1455,7 @@ namespace EstadosdePagos
             string error = ""; string lPathDestino = ""; DataTable ltblServicios = new DataTable();
             string lHora = ""; int lTotalCD = 0; int lFE = 0; string lSubTitulo = "";
             string lValorSum = "0"; string lValorPrep = "0";
+            long totalKgSum = 0; long totalKgPrep = 0;
             try
             {
                 lPathDestino = lPathDest;
@@ -1449,6 +1474,7 @@ namespace EstadosdePagos
                 lHora = DateTime.Now.ToShortTimeString().Replace (":","_");
                 //Copia la plantilla al directorio de destino
                 string plantillaEP = Path.Combine (Application.StartupPath ,  "PlantillaEP.xls");
+                string lNombreArchivo = string.Concat("EP_NRO_", correlativo, "_Estado_");
                 string outputEP = Path.Combine(lPathDestino,string.Concat ("PlantillaEP_", lHora,".xls"));  //selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
                 string outputEPPdf = Path.Combine(lPathDestino, "PlantillaEP.Pdf");
                 if (fs.FileExists(plantillaEP))
@@ -1463,7 +1489,7 @@ namespace EstadosdePagos
                     excelApplication.Visible = true;
                     ExcelApp.Workbook excelWorkBook = excelApplication.Workbooks.Open(outputEP); //.Add(paramMissing);
                     ExcelApp.Worksheet excelSheet = null;
-                    DataTable ltblDatos = new DataTable();
+                    DataTable ltblDatos = new DataTable(); DataTable ltblDatosPor_IT = new DataTable();
                     ltblDatos = listaDataSetOp.DataSet.Tables[0].Copy();
 
 
@@ -1574,25 +1600,22 @@ namespace EstadosdePagos
                                     excelSheet.Range["E11"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
                                     excelSheet.Range["E12"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
                                     excelSheet.Range["E13"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
-
-                                    //if (ltblServicios != null)
-                                    //{
-                                    //    excelSheet.Range["G11"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Suministro"); //Sumunistro
-                                    //    excelSheet.Range["G12"].Value = ObtenerPrecioUnitarioPorServicio(ltblServicios, "Preparacion"); //Preparacion
-                                    //}
-                                    //else
-                                    //{
                                     excelSheet.Range["G11"].Value = lValorSum;// listaDataTMP.DataSet.Tables[0].Rows[0]["VALOR_S"].ToString(); //Sumunistro
                                     excelSheet.Range["G12"].Value = lValorPrep; // listaDataTMP.DataSet.Tables[0].Rows[0]["VALOR_P"].ToString(); //Preparacion
-                                    //}
                                     //
-                                    excelSheet.Range["BE11"].Value = totalKilos;  //Sumunistro
+                                   
                                     listaDataSetOp = wsOperacion.ListarEPResumenGuiaDespachoxEp(ep_id); //GD /IT /Etiquetas /Kilos
                                     if (listaDataSetOp.MensajeError.Equals(""))
                                         dtResumenxGuiaDespacho = listaDataSetOp.DataSet.Tables[0];
-                                    excelSheet.Range["BE12"].Value = RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  // si la IT es tipo TP 
-                                                                                                                     //excelSheet.Range["BE12"].Value = totalKilos;  // si la IT es tipo TP                                                                                                                      //No se incluye en la linea de cobro de preparación==> TotalKilos - Kilos de la Guia 
-                                                                                                                     // excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
+
+                                    totalKgSum = long.Parse (RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho,"FE"));
+                                    totalKgPrep = long.Parse(RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho, "F"));
+
+                                    excelSheet.Range["BE12"].Value = totalKgSum;  // si la IT es tipo TP 
+                                    excelSheet.Range["BE11"].Value = totalKgPrep; // RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  //totalKilos;  //Sumunistro
+                                                                                 //excelSheet.Range["BE12"].Value = totalKilos;  // si la IT es tipo TP                                                                                                                      //No se incluye en la linea de cobro de preparación==> TotalKilos - Kilos de la Guia 
+                                                                                 // excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
+                                    //long totalKgSum = 0; long totalKgPrep = 0;
                                 }
                             }
                         }
@@ -1634,12 +1657,7 @@ namespace EstadosdePagos
 
                         //LLenamos el Objeto con los totales del EP **********************************************+
                         int lTmp = 0;
-                        lTmp = !EsNumero(excelSheet.Range["BE14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE14"].Value.ToString());
-                        lEP.TotalKgs_EP = lTmp;
-                        lTmp = !EsNumero(excelSheet.Range["BF14"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BF14"].Value.ToString());
-                        lEP.TotalValor_EP = lTmp;
-                        lTmp = !EsNumero(ep_obra.ToString()) ? 0 : Convert.ToInt32(ep_obra.ToString());
-                        lEP.IdObra = lTmp;
+                    
 
                         //List<WsOperacion.EP_GeneradoDetalle> lList_DetEP = new List<WsOperacion.EP_GeneradoDetalle>() ;
                         WsOperacion.EP_GeneradoDetalle[] lList_DetEP = new WsOperacion.EP_GeneradoDetalle[3];
@@ -1661,44 +1679,97 @@ namespace EstadosdePagos
                         lDetEP.TotalKgs = lTmp;
                         lList_DetEP[1] = (lDetEP);
                         //*****************************   Otros   ******************************************
-                        string lTotalOtros = ObtenerTotalOtros(ep_id.ToString ());
-                        excelSheet.Range["H13"].Value = lTotalOtros;
-                        excelSheet.Range["BC13"].Value = 0;
-                        lDetEP = new WsOperacion.EP_GeneradoDetalle();
-                        lDetEP.Id_EP = lEP.Id_EP; lDetEP.Servicio = "Otros";
-                        lTmp = !EsNumero(excelSheet.Range["G13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["G13"].Value.ToString());
-                        lDetEP.ValorKgs = lTmp;
-                        lTmp = !EsNumero(excelSheet.Range["BE13"].Value.ToString()) ? 0 : Convert.ToInt32(excelSheet.Range["BE13"].Value.ToString());
-                        lDetEP.TotalKgs = lTmp;
-                        lList_DetEP[2] = (lDetEP);
-                        //Persistimos los regitros
+                        DataTable  lTblOtros = ObtenerTablaTotalOtros(ep_id.ToString ());
+                        String lRango = "";string lDesc = "";
+                        if (lTblOtros.Rows.Count > 0)
+                        {
+                            for (i = 0; i < lTblOtros.Rows.Count; i++)
+                            {
+                                lRango = string.Concat("D", (13 + i).ToString());
+                                lDesc = lTblOtros.Rows[i]["Descripcion"].ToString();
+                                excelSheet.Range[lRango].Value = lDesc;
 
-                        //  Se debe revisar
-                        //Falta la llamada a  la Ws por la persistencia de datos, con try cath para evitar la visualizacion de Excel
-                        //try
-                        //{
-                        //    lEP.Detalle = lList_DetEP;
-                        //    lEP = ws.GrabaEP_Generado(lEP);
+                                lRango = string.Concat("E", (13 + i).ToString());
+                                if (lTblOtros.Rows[i]["Contrato"].ToString().ToUpper().Equals("S"))
+                                     excelSheet.Range[lRango].Value = lTblOtros.Rows[i]["TotalContrato"].ToString();
+                                else
+                                    excelSheet.Range[lRango].Value = lTblOtros.Rows[i]["Cantidad"].ToString();
 
-                        //}
-                        //catch (Exception exc)
-                        //{
-                        //    MessageBox.Show(string.Concat("Ha Ocurrido el siguiente error: ", exc.Message.ToString()), "Avisos Sistema");
-                        //}
+                                lRango = string.Concat("F", (13 + i).ToString());
+                                excelSheet.Range[lRango].Value = lTblOtros.Rows[i]["Unidad"].ToString();
 
-                        // Falta de MModificacion
-                        //Fin  carga Obj EP
+                                lRango = string.Concat("G", (13 + i).ToString());
+                                excelSheet.Range[lRango].Value = lTblOtros.Rows[i]["PrecioUnitario"].ToString();
+                                lRango = string.Concat("BE", (13 + i).ToString());
+                                excelSheet.Range[lRango].Value = lTblOtros.Rows[i]["Cantidad"].ToString();
 
-                        //EP anteriores
+                            }
+                        }
+                        
 
                         excelSheet.Range["BC11"].Value = totalKilosCobrados;
+                        excelSheet.Range["BC12"].Value = totalKilosCobrados;
 
                         excelSheet.Range["BD11"].Value = totalCobrado;
-                                
+
+
+                        // debemos  llenar la Informacion de la Nueva Pestaña
+                        //•Se agrega hoja llamada “BD”, la cual debe contener las siguientes columnas desde sistema, acotadas para el EP
+                        //actual: Plano, Nivel, Elemento, Figura, Referencia, Marca, id pieza, Cant, Diam, 
+                        //Largo Total(y todos los largos parciales), Kg, Nro Etiqueta, IT, Viaje, Nro Guía, Fecha Guía.
+                        (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
+                        for (i = 0; i < ltblDatos.Rows.Count; i++)
+                        {
+                            lDatos = wsOperacion.ObtenerBD_ParaExcel(ltblDatos.Rows[i]["IT"].ToString());
+                            if ((lDatos.MensajeError.Equals("")) && (lDatos.DataSet.Tables.Count > 0))
+                            {
+
+                                lTbl = lDatos.DataSet.Tables[0].Copy();
+                                lCont = 4;
+                                foreach (DataRow row in lTbl.Rows)
+                                {
+                                    lRangoEx = string.Concat("A", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Plano"].ToString();
+                                    lRangoEx = string.Concat("B", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Nivel"].ToString();
+                                    lRangoEx = string.Concat("C", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Elemento"].ToString();
+                                    lRangoEx = string.Concat("D", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Figura"].ToString();
+                                    lRangoEx = string.Concat("E", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Referencia"].ToString();
+                                    lRangoEx = string.Concat("F", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Marca"].ToString();
+                                    lRangoEx = string.Concat("G", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IdPieza"].ToString();
+                                    lRangoEx = string.Concat("H", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["NroPiezas"].ToString();
+
+                                    lRangoEx = string.Concat("I", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Diametro"].ToString();
+                                    lRangoEx = string.Concat("J", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Largo"].ToString();
+                                    lRangoEx = string.Concat("K", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["A"].ToString();
+                                    lRangoEx = string.Concat("L", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["B"].ToString();
+                                    lRangoEx = string.Concat("M", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["C"].ToString();
+                                    lRangoEx = string.Concat("N", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["D"].ToString();
+                                    lRangoEx = string.Concat("O", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["E"].ToString();
+                                    lRangoEx = string.Concat("P", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["F"].ToString();
+                                    lRangoEx = string.Concat("Q", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["G"].ToString();
+                                    lRangoEx = string.Concat("R", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["H"].ToString();
+                                    lRangoEx = string.Concat("S", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["I"].ToString();
+                                    lRangoEx = string.Concat("T", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["J"].ToString();
+                                    lRangoEx = string.Concat("U", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["K"].ToString();
+                                    lRangoEx = string.Concat("V", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["L"].ToString();
+                                    lRangoEx = string.Concat("W", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["N"].ToString();
+
+                                    lRangoEx = string.Concat("X", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["TOTAL_kGS"].ToString();
+                                    lRangoEx = string.Concat("Y", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Etiqueta"].ToString();
+                                    lRangoEx = string.Concat("Z", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IT"].ToString();
+                                    lRangoEx = string.Concat("AA", lCont.ToString()); excelSheet.Range[lRangoEx].Value = "";
+                                    lRangoEx = string.Concat("AB", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["NroGuiaINET"].ToString();
+                                    lRangoEx = string.Concat("AC", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Fecha_GD"].ToString();
+                                    lCont++;
+                                }
+                             
+                            }
+                        }
+
+
 
                         (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
                         excelWorkBook.Save();
-                        excelWorkBook.ExportAsFixedFormat(ExcelApp.XlFixedFormatType.xlTypePDF, outputEPPdf);
+                        //excelWorkBook.ExportAsFixedFormat(ExcelApp.XlFixedFormatType.xlTypePDF, outputEPPdf);
                     }
                     excelWorkBook.Close(false);
                     excelApplication.Quit();
@@ -1754,19 +1825,24 @@ namespace EstadosdePagos
             return lRes;
         }
 
-        private string RevisaTiposDeGuiaINET(DataTable iTbl )
+        private string RevisaTiposDeGuiaINET(DataTable iTbl , string iTipoGuia )
         {
              int i = 0; int lTotal = 0;int lTotalTP = 0;
             for (i = 0; i < iTbl.Rows.Count; i++)
             {
-                lTotal = lTotal + int.Parse (iTbl.Rows[i]["Total_Kgs"].ToString ());
-                if (iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("TP"))
+                //lTotal = lTotal + int.Parse (iTbl.Rows[i]["Total_Kgs"].ToString ());
+                if (iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("FE"))
+                {
+                    lTotalTP = lTotalTP + int.Parse(iTbl.Rows[i]["Total_Kgs"].ToString());
+                }
+                if (iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("F"))
                 {
                     lTotalTP = lTotalTP + int.Parse(iTbl.Rows[i]["Total_Kgs"].ToString());
                 }
             }
-             
-            return (lTotal- lTotalTP).ToString ();
+
+            // return (lTotal- lTotalTP).ToString ();
+            return lTotalTP.ToString();
         }
 
 
@@ -1835,6 +1911,10 @@ namespace EstadosdePagos
             int lRes = 0;
             try
             {
+                if ((iDato.IndexOf(".") > -1))  //|| (iDato.IndexOf(",") > -1))
+                {
+                    iDato = iDato.Replace(".", "");
+                }
                 lRes= int.Parse (iDato);
 
             }
@@ -1864,6 +1944,42 @@ namespace EstadosdePagos
             catch (Exception exc)
             {
                 lRes = false;
+            }
+            return lRes;
+        }
+
+        public Boolean ServicioEnEP(string iServicio, string  idObra)
+        {
+            Boolean lRes = false;   string lSql = ""; DataTable lTbTmp = new DataTable();
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,",idObra,", ' ',0,0,'", iServicio,"','','',13");
+            lDts = lPx.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                lTbTmp = lDts.Tables[0].Copy();
+                if (lTbTmp.Rows.Count > 0)
+                {
+                    lRes = true;
+                }                
+            }
+            return lRes;
+        }
+
+        public Boolean EliminarRegistro(string iServicio, string idObra,string iCantidad, string iUnidad)
+        {
+            Boolean lRes = false; string lSql = ""; DataTable lTbTmp = new DataTable();
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, ", ' ',0,0,'", iServicio, "','",iCantidad ,"','",iUnidad ,"',14");
+            lDts = lPx.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                lTbTmp = lDts.Tables[0].Copy();
+                if (lTbTmp.Rows.Count > 0)
+                {
+                    lRes = true;
+                }
             }
             return lRes;
         }

@@ -359,6 +359,7 @@
             this.Tx_Concepto.Name = "Tx_Concepto";
             this.Tx_Concepto.Size = new System.Drawing.Size(481, 20);
             this.Tx_Concepto.TabIndex = 1;
+            this.Tx_Concepto.Visible = false;
             this.Tx_Concepto.TextChanged += new System.EventHandler(this.Tx_Concepto_TextChanged);
             // 
             // label1

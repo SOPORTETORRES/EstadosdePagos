@@ -165,5 +165,10 @@ namespace EstadosdePagos
                     MessageBox.Show("El archivo '" + archivo + "' no existe.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnAgregarComentario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

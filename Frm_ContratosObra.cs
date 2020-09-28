@@ -70,18 +70,17 @@ namespace EstadosdePagos
                     lTotal = 0;
                     for (i = 0; i < lTbl.Rows.Count; i++)
                     {
-                        lTotal = lTotal + int.Parse(lTbl.Rows[i]["Par2"].ToString());
+                        lTotal = lTotal + int.Parse(lTbl.Rows[i]["Cantidad"].ToString());
                     }
-                    //Tx_total.Text = lTotal.ToString("#,##0");
 
                     Dtg_Datos.Columns[0].Width = 60;
-                    Dtg_Datos.Columns[1].Width = 60;
-                    Dtg_Datos.Columns[2].Width = 70;
-                    Dtg_Datos.Columns[3].Width = 400;
+                    Dtg_Datos.Columns[1].Width = 200;
+                    Dtg_Datos.Columns[2].Width = 100;
+                    Dtg_Datos.Columns[3].Width = 100;
                 }
 
 
-                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",' ' ,0,0, '','','',12");
+                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",' ' ,0,0, '','','',15");
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                 {
@@ -90,31 +89,6 @@ namespace EstadosdePagos
                     Cmb_Unidades.ValueMember = "Par1";
                     Cmb_Unidades.DataSource = lTbTmp.Copy();
                 }
-
-                //lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',' ',0,0,'',0,'','','',11");
-                //lDts = lPx.ObtenerDatos(lSql);
-                //if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
-                //{
-                //    lTbTmp = new DataTable();
-                //    lTbTmp = lDts.Tables[0].Copy();
-                //    Cmb_Concepto.DisplayMember = "Par1";
-                //    Cmb_Concepto.ValueMember = "Par1";
-                //    Cmb_Concepto.DataSource = lTbTmp.Copy(); ;
-                //}
-
-
-                //lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',' ',0,0,'',0,'','','',13");
-                //lDts = lPx.ObtenerDatos(lSql);
-                //if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
-                //{
-                //    lTbTmp = new DataTable();
-                //    lTbTmp = lDts.Tables[0].Copy();
-                //    Tx_CantTotal.Text = lTbTmp.Rows[0]["Par2"].ToString();
-                //}
-                //int lSaldo = 0;
-
-                //lSaldo = lUti.Val(Tx_CantTotal.Text) - lUti.Val(Tx_total.Text.Replace(".", ""));
-                //Tx_saldo.Text = lSaldo.ToString();
 
             }
             catch (Exception iEx)
@@ -183,6 +157,42 @@ namespace EstadosdePagos
         private void Frm_ContratosObra_Load(object sender, EventArgs e)
         {
             MuestraDatos();
+        }
+
+        private void Dtg_Datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int lIndex = e.RowIndex; string lUnidad = ""; Utils lUt = new Utils(); 
+
+            if (lIndex > -1)
+            {
+                Tx_Servicio.Text = Dtg_Datos.Rows[lIndex].Cells["Servicio"].Value.ToString();
+                Tx_CantidadTotal .Text = Dtg_Datos.Rows[lIndex].Cells["Cantidad"].Value.ToString();
+                lUnidad= Dtg_Datos.Rows[lIndex].Cells["Unidad"].Value.ToString();
+                Cmb_Unidades.SelectedValue  = lUnidad;
+
+                if (lUt.ServicioEnEP(Tx_Servicio.Text, mIdObra) == false)
+                    Btn_Eliminar.Enabled = true;
+                else
+                    Btn_Eliminar.Enabled = false ;
+
+
+            }
+        }
+
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta Seguro que desea eliminar el registro Seleccionado?", "Avisos Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Utils lUt = new Utils(); Boolean lRes = false;
+                lRes=lUt.EliminarRegistro(Tx_Servicio.Text, mIdObra, Tx_CantidadTotal.Text, Cmb_Unidades.SelectedValue.ToString ());
+                if (lRes == true)
+                    MessageBox.Show("Se han eliminado los datos.", "Avisos Sistema", MessageBoxButtons.OK);
+                else
+                    MessageBox.Show("Hubo un problema, NO se pudieron eliminar los datos.", "Avisos Sistema", MessageBoxButtons.OK);
+
+                MuestraDatos();
+            }
+
         }
     }
 

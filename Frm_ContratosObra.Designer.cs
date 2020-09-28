@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Tx_Obra = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Tx_CantidadTotal = new System.Windows.Forms.TextBox();
+            this.Tx_Servicio = new System.Windows.Forms.TextBox();
+            this.Btn_Salir = new System.Windows.Forms.Button();
+            this.Btn_Grabar = new System.Windows.Forms.Button();
             this.Cmb_Unidades = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Btn_Grabar = new System.Windows.Forms.Button();
-            this.Btn_Salir = new System.Windows.Forms.Button();
+            this.Tx_CantidadTotal = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Tx_Obra = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Dtg_Datos = new System.Windows.Forms.DataGridView();
-            this.Tx_Servicio = new System.Windows.Forms.TextBox();
+            this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Datos)).BeginInit();
@@ -48,6 +49,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Btn_Eliminar);
             this.groupBox1.Controls.Add(this.Tx_Servicio);
             this.groupBox1.Controls.Add(this.Btn_Salir);
             this.groupBox1.Controls.Add(this.Btn_Grabar);
@@ -60,54 +62,38 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(5, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(642, 118);
+            this.groupBox1.Size = new System.Drawing.Size(670, 118);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Obra y Contrato";
             // 
-            // label1
+            // Tx_Servicio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Obra Seleccionada";
+            this.Tx_Servicio.BackColor = System.Drawing.Color.White;
+            this.Tx_Servicio.Location = new System.Drawing.Point(124, 51);
+            this.Tx_Servicio.Name = "Tx_Servicio";
+            this.Tx_Servicio.Size = new System.Drawing.Size(365, 20);
+            this.Tx_Servicio.TabIndex = 28;
             // 
-            // Tx_Obra
+            // Btn_Salir
             // 
-            this.Tx_Obra.BackColor = System.Drawing.Color.White;
-            this.Tx_Obra.Location = new System.Drawing.Point(124, 21);
-            this.Tx_Obra.Name = "Tx_Obra";
-            this.Tx_Obra.ReadOnly = true;
-            this.Tx_Obra.Size = new System.Drawing.Size(365, 20);
-            this.Tx_Obra.TabIndex = 1;
+            this.Btn_Salir.Location = new System.Drawing.Point(600, 16);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(60, 42);
+            this.Btn_Salir.TabIndex = 27;
+            this.Btn_Salir.Text = "Salir";
+            this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
-            // label2
+            // Btn_Grabar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Indique el  Servicio";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Cantidad Total";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // Tx_CantidadTotal
-            // 
-            this.Tx_CantidadTotal.Location = new System.Drawing.Point(124, 83);
-            this.Tx_CantidadTotal.Name = "Tx_CantidadTotal";
-            this.Tx_CantidadTotal.Size = new System.Drawing.Size(107, 20);
-            this.Tx_CantidadTotal.TabIndex = 5;
+            this.Btn_Grabar.Location = new System.Drawing.Point(521, 16);
+            this.Btn_Grabar.Name = "Btn_Grabar";
+            this.Btn_Grabar.Size = new System.Drawing.Size(62, 42);
+            this.Btn_Grabar.TabIndex = 26;
+            this.Btn_Grabar.Text = "Grabar";
+            this.Btn_Grabar.UseVisualStyleBackColor = true;
+            this.Btn_Grabar.Click += new System.EventHandler(this.Btn_Grabar_Click);
             // 
             // Cmb_Unidades
             // 
@@ -128,25 +114,49 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Unidad";
             // 
-            // Btn_Grabar
+            // Tx_CantidadTotal
             // 
-            this.Btn_Grabar.Location = new System.Drawing.Point(540, 11);
-            this.Btn_Grabar.Name = "Btn_Grabar";
-            this.Btn_Grabar.Size = new System.Drawing.Size(75, 42);
-            this.Btn_Grabar.TabIndex = 26;
-            this.Btn_Grabar.Text = "Grabar";
-            this.Btn_Grabar.UseVisualStyleBackColor = true;
-            this.Btn_Grabar.Click += new System.EventHandler(this.Btn_Grabar_Click);
+            this.Tx_CantidadTotal.Location = new System.Drawing.Point(124, 83);
+            this.Tx_CantidadTotal.Name = "Tx_CantidadTotal";
+            this.Tx_CantidadTotal.Size = new System.Drawing.Size(107, 20);
+            this.Tx_CantidadTotal.TabIndex = 5;
             // 
-            // Btn_Salir
+            // label3
             // 
-            this.Btn_Salir.Location = new System.Drawing.Point(540, 62);
-            this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(75, 42);
-            this.Btn_Salir.TabIndex = 27;
-            this.Btn_Salir.Text = "Salir";
-            this.Btn_Salir.UseVisualStyleBackColor = true;
-            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Cantidad Total";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Indique el  Servicio";
+            // 
+            // Tx_Obra
+            // 
+            this.Tx_Obra.BackColor = System.Drawing.Color.White;
+            this.Tx_Obra.Location = new System.Drawing.Point(124, 21);
+            this.Tx_Obra.Name = "Tx_Obra";
+            this.Tx_Obra.ReadOnly = true;
+            this.Tx_Obra.Size = new System.Drawing.Size(365, 20);
+            this.Tx_Obra.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Obra Seleccionada";
             // 
             // groupBox2
             // 
@@ -156,7 +166,7 @@
             this.groupBox2.Controls.Add(this.Dtg_Datos);
             this.groupBox2.Location = new System.Drawing.Point(6, 127);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(638, 299);
+            this.groupBox2.Size = new System.Drawing.Size(669, 299);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos  Ingresados ";
@@ -167,22 +177,25 @@
             this.Dtg_Datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Dtg_Datos.Location = new System.Drawing.Point(3, 16);
             this.Dtg_Datos.Name = "Dtg_Datos";
-            this.Dtg_Datos.Size = new System.Drawing.Size(632, 280);
+            this.Dtg_Datos.Size = new System.Drawing.Size(663, 280);
             this.Dtg_Datos.TabIndex = 0;
+            this.Dtg_Datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Datos_CellContentClick);
             // 
-            // Tx_Servicio
+            // Btn_Eliminar
             // 
-            this.Tx_Servicio.BackColor = System.Drawing.Color.White;
-            this.Tx_Servicio.Location = new System.Drawing.Point(124, 51);
-            this.Tx_Servicio.Name = "Tx_Servicio";
-            this.Tx_Servicio.Size = new System.Drawing.Size(365, 20);
-            this.Tx_Servicio.TabIndex = 28;
+            this.Btn_Eliminar.Location = new System.Drawing.Point(598, 64);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Size = new System.Drawing.Size(62, 42);
+            this.Btn_Eliminar.TabIndex = 29;
+            this.Btn_Eliminar.Text = "Eliminar";
+            this.Btn_Eliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
             // 
             // Frm_ContratosObra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 426);
+            this.ClientSize = new System.Drawing.Size(685, 426);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -213,5 +226,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView Dtg_Datos;
         private System.Windows.Forms.TextBox Tx_Servicio;
+        private System.Windows.Forms.Button Btn_Eliminar;
     }
 }

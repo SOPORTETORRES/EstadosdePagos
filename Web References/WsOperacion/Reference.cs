@@ -30,6 +30,8 @@ namespace EstadosdePagos.WsOperacion {
     [System.Web.Services.WebServiceBindingAttribute(Name="OperacionSoap", Namespace="http://tempuri.org/")]
     public partial class Operacion : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback ListarRecepcionColadaPorBodegaOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ImprimirRecepcion_ColadaOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerRecepcionxEtiqueta_ColadaOperationCompleted;
@@ -92,6 +94,8 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback PersistirEtiquetaAZAOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ObtenerEtiquetaAZAOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Obtener_MPOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerDetalle_OC_AzaOperationCompleted;
@@ -146,6 +150,8 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ObtenerResumenGD_ParaExcelOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ObtenerBD_ParaExcelOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ObtenerEtiquetaOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerAsignacionITMaqOperationCompleted;
@@ -197,6 +203,8 @@ namespace EstadosdePagos.WsOperacion {
         private System.Threading.SendOrPostCallback ObtenerGuiasEnrteFechas_EPOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerGuiasDesdeInicio_EPOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatos_EPOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerITPorGuiaCabecera_EPOperationCompleted;
         
@@ -316,8 +324,6 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ListarRecepcionColadaOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ListarRecepcionColadaPorBodegaOperationCompleted;
-        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -355,6 +361,9 @@ namespace EstadosdePagos.WsOperacion {
                 this.useDefaultCredentialsSetExplicitly = true;
             }
         }
+        
+        /// <remarks/>
+        public event ListarRecepcionColadaPorBodegaCompletedEventHandler ListarRecepcionColadaPorBodegaCompleted;
         
         /// <remarks/>
         public event ImprimirRecepcion_ColadaCompletedEventHandler ImprimirRecepcion_ColadaCompleted;
@@ -450,6 +459,9 @@ namespace EstadosdePagos.WsOperacion {
         public event PersistirEtiquetaAZACompletedEventHandler PersistirEtiquetaAZACompleted;
         
         /// <remarks/>
+        public event ObtenerEtiquetaAZACompletedEventHandler ObtenerEtiquetaAZACompleted;
+        
+        /// <remarks/>
         public event Obtener_MPCompletedEventHandler Obtener_MPCompleted;
         
         /// <remarks/>
@@ -531,6 +543,9 @@ namespace EstadosdePagos.WsOperacion {
         public event ObtenerResumenGD_ParaExcelCompletedEventHandler ObtenerResumenGD_ParaExcelCompleted;
         
         /// <remarks/>
+        public event ObtenerBD_ParaExcelCompletedEventHandler ObtenerBD_ParaExcelCompleted;
+        
+        /// <remarks/>
         public event ObtenerEtiquetaCompletedEventHandler ObtenerEtiquetaCompleted;
         
         /// <remarks/>
@@ -607,6 +622,9 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         public event ObtenerGuiasDesdeInicio_EPCompletedEventHandler ObtenerGuiasDesdeInicio_EPCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatos_EPCompletedEventHandler ObtenerDatos_EPCompleted;
         
         /// <remarks/>
         public event ObtenerITPorGuiaCabecera_EPCompletedEventHandler ObtenerITPorGuiaCabecera_EPCompleted;
@@ -786,7 +804,35 @@ namespace EstadosdePagos.WsOperacion {
         public event ListarRecepcionColadaCompletedEventHandler ListarRecepcionColadaCompleted;
         
         /// <remarks/>
-        public event ListarRecepcionColadaPorBodegaCompletedEventHandler ListarRecepcionColadaPorBodegaCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarRecepcionColadaPorBodega", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarRecepcionColadaPorBodega(System.DateTime fecha, string iBodega) {
+            object[] results = this.Invoke("ListarRecepcionColadaPorBodega", new object[] {
+                        fecha,
+                        iBodega});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarRecepcionColadaPorBodegaAsync(System.DateTime fecha, string iBodega) {
+            this.ListarRecepcionColadaPorBodegaAsync(fecha, iBodega, null);
+        }
+        
+        /// <remarks/>
+        public void ListarRecepcionColadaPorBodegaAsync(System.DateTime fecha, string iBodega, object userState) {
+            if ((this.ListarRecepcionColadaPorBodegaOperationCompleted == null)) {
+                this.ListarRecepcionColadaPorBodegaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarRecepcionColadaPorBodegaOperationCompleted);
+            }
+            this.InvokeAsync("ListarRecepcionColadaPorBodega", new object[] {
+                        fecha,
+                        iBodega}, this.ListarRecepcionColadaPorBodegaOperationCompleted, userState);
+        }
+        
+        private void OnListarRecepcionColadaPorBodegaOperationCompleted(object arg) {
+            if ((this.ListarRecepcionColadaPorBodegaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarRecepcionColadaPorBodegaCompleted(this, new ListarRecepcionColadaPorBodegaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ImprimirRecepcion_Colada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1728,30 +1774,63 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/PersistirEtiquetaAZA", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public TipoEtiquetaAza PersistirEtiquetaAZA(TipoEtiquetaAza EtiquetaColada) {
+        public TipoEtiquetaAza PersistirEtiquetaAZA(TipoEtiquetaAza EtiquetaColada, string iSucursal) {
             object[] results = this.Invoke("PersistirEtiquetaAZA", new object[] {
-                        EtiquetaColada});
+                        EtiquetaColada,
+                        iSucursal});
             return ((TipoEtiquetaAza)(results[0]));
         }
         
         /// <remarks/>
-        public void PersistirEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada) {
-            this.PersistirEtiquetaAZAAsync(EtiquetaColada, null);
+        public void PersistirEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada, string iSucursal) {
+            this.PersistirEtiquetaAZAAsync(EtiquetaColada, iSucursal, null);
         }
         
         /// <remarks/>
-        public void PersistirEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada, object userState) {
+        public void PersistirEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada, string iSucursal, object userState) {
             if ((this.PersistirEtiquetaAZAOperationCompleted == null)) {
                 this.PersistirEtiquetaAZAOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPersistirEtiquetaAZAOperationCompleted);
             }
             this.InvokeAsync("PersistirEtiquetaAZA", new object[] {
-                        EtiquetaColada}, this.PersistirEtiquetaAZAOperationCompleted, userState);
+                        EtiquetaColada,
+                        iSucursal}, this.PersistirEtiquetaAZAOperationCompleted, userState);
         }
         
         private void OnPersistirEtiquetaAZAOperationCompleted(object arg) {
             if ((this.PersistirEtiquetaAZACompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.PersistirEtiquetaAZACompleted(this, new PersistirEtiquetaAZACompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerEtiquetaAZA", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public TipoEtiquetaAza ObtenerEtiquetaAZA(TipoEtiquetaAza EtiquetaColada, string iSucursal) {
+            object[] results = this.Invoke("ObtenerEtiquetaAZA", new object[] {
+                        EtiquetaColada,
+                        iSucursal});
+            return ((TipoEtiquetaAza)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada, string iSucursal) {
+            this.ObtenerEtiquetaAZAAsync(EtiquetaColada, iSucursal, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetaAZAAsync(TipoEtiquetaAza EtiquetaColada, string iSucursal, object userState) {
+            if ((this.ObtenerEtiquetaAZAOperationCompleted == null)) {
+                this.ObtenerEtiquetaAZAOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEtiquetaAZAOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerEtiquetaAZA", new object[] {
+                        EtiquetaColada,
+                        iSucursal}, this.ObtenerEtiquetaAZAOperationCompleted, userState);
+        }
+        
+        private void OnObtenerEtiquetaAZAOperationCompleted(object arg) {
+            if ((this.ObtenerEtiquetaAZACompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerEtiquetaAZACompleted(this, new ObtenerEtiquetaAZACompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2567,6 +2646,35 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ObtenerResumenGD_ParaExcelCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ObtenerResumenGD_ParaExcelCompleted(this, new ObtenerResumenGD_ParaExcelCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerBD_ParaExcel", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerBD_ParaExcel(string iViaje) {
+            object[] results = this.Invoke("ObtenerBD_ParaExcel", new object[] {
+                        iViaje});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerBD_ParaExcelAsync(string iViaje) {
+            this.ObtenerBD_ParaExcelAsync(iViaje, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerBD_ParaExcelAsync(string iViaje, object userState) {
+            if ((this.ObtenerBD_ParaExcelOperationCompleted == null)) {
+                this.ObtenerBD_ParaExcelOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerBD_ParaExcelOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerBD_ParaExcel", new object[] {
+                        iViaje}, this.ObtenerBD_ParaExcelOperationCompleted, userState);
+        }
+        
+        private void OnObtenerBD_ParaExcelOperationCompleted(object arg) {
+            if ((this.ObtenerBD_ParaExcelCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerBD_ParaExcelCompleted(this, new ObtenerBD_ParaExcelCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3395,6 +3503,37 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ObtenerGuiasDesdeInicio_EPCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ObtenerGuiasDesdeInicio_EPCompleted(this, new ObtenerGuiasDesdeInicio_EPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatos_EP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatos_EP(string iIdObra, string idEP) {
+            object[] results = this.Invoke("ObtenerDatos_EP", new object[] {
+                        iIdObra,
+                        idEP});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatos_EPAsync(string iIdObra, string idEP) {
+            this.ObtenerDatos_EPAsync(iIdObra, idEP, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatos_EPAsync(string iIdObra, string idEP, object userState) {
+            if ((this.ObtenerDatos_EPOperationCompleted == null)) {
+                this.ObtenerDatos_EPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatos_EPOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatos_EP", new object[] {
+                        iIdObra,
+                        idEP}, this.ObtenerDatos_EPOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatos_EPOperationCompleted(object arg) {
+            if ((this.ObtenerDatos_EPCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatos_EPCompleted(this, new ObtenerDatos_EPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -5266,37 +5405,6 @@ namespace EstadosdePagos.WsOperacion {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarRecepcionColadaPorBodega", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ListaDataSet ListarRecepcionColadaPorBodega(System.DateTime fecha, string iBodega) {
-            object[] results = this.Invoke("ListarRecepcionColadaPorBodega", new object[] {
-                        fecha,
-                        iBodega});
-            return ((ListaDataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarRecepcionColadaPorBodegaAsync(System.DateTime fecha, string iBodega) {
-            this.ListarRecepcionColadaPorBodegaAsync(fecha, iBodega, null);
-        }
-        
-        /// <remarks/>
-        public void ListarRecepcionColadaPorBodegaAsync(System.DateTime fecha, string iBodega, object userState) {
-            if ((this.ListarRecepcionColadaPorBodegaOperationCompleted == null)) {
-                this.ListarRecepcionColadaPorBodegaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarRecepcionColadaPorBodegaOperationCompleted);
-            }
-            this.InvokeAsync("ListarRecepcionColadaPorBodega", new object[] {
-                        fecha,
-                        iBodega}, this.ListarRecepcionColadaPorBodegaOperationCompleted, userState);
-        }
-        
-        private void OnListarRecepcionColadaPorBodegaOperationCompleted(object arg) {
-            if ((this.ListarRecepcionColadaPorBodegaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarRecepcionColadaPorBodegaCompleted(this, new ListarRecepcionColadaPorBodegaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -5321,91 +5429,43 @@ namespace EstadosdePagos.WsOperacion {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Recepcion_Colada {
+    public partial class ListaDataSet {
         
-        private int idField;
+        private System.Data.DataSet _dataSetField;
         
-        private string coladaField;
+        private string _errorField;
         
-        private string usuarioField;
-        
-        private System.DateTime fechaField;
-        
-        private string camionField;
-        
-        private string etiqueta_coladaField;
-        
-        private string estadoField;
+        private System.Data.DataSet dataSetField;
         
         private string mensajeErrorField;
         
         /// <remarks/>
-        public int Id {
+        public System.Data.DataSet _dataSet {
             get {
-                return this.idField;
+                return this._dataSetField;
             }
             set {
-                this.idField = value;
+                this._dataSetField = value;
             }
         }
         
         /// <remarks/>
-        public string Colada {
+        public string _error {
             get {
-                return this.coladaField;
+                return this._errorField;
             }
             set {
-                this.coladaField = value;
+                this._errorField = value;
             }
         }
         
         /// <remarks/>
-        public string Usuario {
+        public System.Data.DataSet DataSet {
             get {
-                return this.usuarioField;
+                return this.dataSetField;
             }
             set {
-                this.usuarioField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime Fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Camion {
-            get {
-                return this.camionField;
-            }
-            set {
-                this.camionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Etiqueta_colada {
-            get {
-                return this.etiqueta_coladaField;
-            }
-            set {
-                this.etiqueta_coladaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
+                this.dataSetField = value;
             }
         }
         
@@ -8016,43 +8076,91 @@ namespace EstadosdePagos.WsOperacion {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class ListaDataSet {
+    public partial class Recepcion_Colada {
         
-        private System.Data.DataSet _dataSetField;
+        private int idField;
         
-        private string _errorField;
+        private string coladaField;
         
-        private System.Data.DataSet dataSetField;
+        private string usuarioField;
+        
+        private System.DateTime fechaField;
+        
+        private string camionField;
+        
+        private string etiqueta_coladaField;
+        
+        private string estadoField;
         
         private string mensajeErrorField;
         
         /// <remarks/>
-        public System.Data.DataSet _dataSet {
+        public int Id {
             get {
-                return this._dataSetField;
+                return this.idField;
             }
             set {
-                this._dataSetField = value;
+                this.idField = value;
             }
         }
         
         /// <remarks/>
-        public string _error {
+        public string Colada {
             get {
-                return this._errorField;
+                return this.coladaField;
             }
             set {
-                this._errorField = value;
+                this.coladaField = value;
             }
         }
         
         /// <remarks/>
-        public System.Data.DataSet DataSet {
+        public string Usuario {
             get {
-                return this.dataSetField;
+                return this.usuarioField;
             }
             set {
-                this.dataSetField = value;
+                this.usuarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Camion {
+            get {
+                return this.camionField;
+            }
+            set {
+                this.camionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Etiqueta_colada {
+            get {
+                return this.etiqueta_coladaField;
+            }
+            set {
+                this.etiqueta_coladaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
             }
         }
         
@@ -8063,6 +8171,32 @@ namespace EstadosdePagos.WsOperacion {
             }
             set {
                 this.mensajeErrorField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ListarRecepcionColadaPorBodegaCompletedEventHandler(object sender, ListarRecepcionColadaPorBodegaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarRecepcionColadaPorBodegaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarRecepcionColadaPorBodegaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
             }
         }
     }
@@ -8875,6 +9009,32 @@ namespace EstadosdePagos.WsOperacion {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerEtiquetaAZACompletedEventHandler(object sender, ObtenerEtiquetaAZACompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEtiquetaAZACompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEtiquetaAZACompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public TipoEtiquetaAza Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((TipoEtiquetaAza)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void Obtener_MPCompletedEventHandler(object sender, Obtener_MPCompletedEventArgs e);
     
     /// <remarks/>
@@ -9577,6 +9737,32 @@ namespace EstadosdePagos.WsOperacion {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerBD_ParaExcelCompletedEventHandler(object sender, ObtenerBD_ParaExcelCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerBD_ParaExcelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerBD_ParaExcelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerEtiquetaCompletedEventHandler(object sender, ObtenerEtiquetaCompletedEventArgs e);
     
     /// <remarks/>
@@ -10238,6 +10424,32 @@ namespace EstadosdePagos.WsOperacion {
         private object[] results;
         
         internal ObtenerGuiasDesdeInicio_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerDatos_EPCompletedEventHandler(object sender, ObtenerDatos_EPCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatos_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatos_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -11772,32 +11984,6 @@ namespace EstadosdePagos.WsOperacion {
         private object[] results;
         
         internal ListarRecepcionColadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ListaDataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ListaDataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ListarRecepcionColadaPorBodegaCompletedEventHandler(object sender, ListarRecepcionColadaPorBodegaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarRecepcionColadaPorBodegaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarRecepcionColadaPorBodegaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

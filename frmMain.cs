@@ -27,6 +27,8 @@ namespace EstadosdePagos
         private const string COLUMNNAME_N_ETIQUETAS = "N_ETIQUETAS";
         private const string COLUMNNAME_TOTAL_KGS = "TOTAL_KGS";
         private Utils utils = new Utils();
+        private Boolean  mEp_ContieneGuias = true;
+        //public static CurrentUser currentUser = new CurrentUser();
 
         public frmMain()
         {
@@ -350,6 +352,8 @@ namespace EstadosdePagos
         //    return validacion.ToString();
         //}
 
+             
+            
         private void ejecutarAccion(string accion)
         {
             if (dgvResumen.SelectedRows.Count > 0)
@@ -396,17 +400,21 @@ namespace EstadosdePagos
                 switch (accion)
                 {
                     case "btnCrearEP":
+                        Gb_Estado.Visible = true ;
+                        Gb_Estado.Refresh();
                         frmEPNueva frm0 = new frmEPNueva();
                         frm0.Empresa = cboEmpresa.Text;
                         frm0.Ep_id = ep_id;
                         frm0.Ep_obra = ep_obra;
                         frm0.Obra = obra;
                         frm0.TecnicoObra = tecnicoObra;
-                        frm0.CargaFormulario(ref Pb, ref  Lbl_PB);
+                        frm0.CargaFormulario(ref Pb, ref  Lbl_PB, mEp_ContieneGuias);
                         frm0.ShowDialog(this);
                         if (frm0.changed)
-                            btnActualizar.PerformClick();
+                                        actualizar();
                         frm0.Dispose();
+
+                        Gb_Estado.Visible = false;
                         break;
 
                     case "btnVerReporteEP":
@@ -431,7 +439,7 @@ namespace EstadosdePagos
                                     WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();
                                     estado_Pago = wsOperacion.RegistrarEPGeneracionReporte(ep_obra, ep_id, Program.currentUser.Login, Program.currentUser.ComputerName);
                                     if (estado_Pago.MensajeError.Equals(""))
-                                        btnActualizar.PerformClick();
+                                                    actualizar();
                                     else
                                         MessageBox.Show(estado_Pago.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
@@ -456,7 +464,7 @@ namespace EstadosdePagos
                                     WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();
                                     estado_Pago = wsOperacion.RegistrarEPEnvioaCliente(ep_obra, ep_id, Program.currentUser.Login, Program.currentUser.ComputerName);
                                     if (estado_Pago.MensajeError.Equals(""))
-                                        btnActualizar.PerformClick();
+                                                    actualizar();
                                     else
                                         MessageBox.Show(estado_Pago.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 //}
@@ -471,7 +479,7 @@ namespace EstadosdePagos
 
                     case "btnModEPxObsClte":
                         if (dgvResumen.CurrentRow != null)
-                            dgvResumen_DoubleClick(null, null);
+                            Carga_EP(ep_id.ToString ());
                         break;
 
                     case "btnComentSegEP":
@@ -482,7 +490,7 @@ namespace EstadosdePagos
                         frm5.TecnicoObra = tecnicoObra;
                         frm5.ShowDialog(this);
                         if (frm5.changed)
-                            btnActualizar.PerformClick();
+                                        actualizar();
                         frm5.Dispose();
                         break;
 
@@ -506,7 +514,7 @@ namespace EstadosdePagos
                                     frm8.TecnicoObra = tecnicoObra;
                                     frm8.ShowDialog(this);
                                     if (frm8.ok)
-                                        btnActualizar.PerformClick();
+                                                    actualizar();
                                     frm8.Dispose();
                                 }
                                 frm7.Dispose();
@@ -526,7 +534,7 @@ namespace EstadosdePagos
                         frm9.TecnicoObra = tecnicoObra;
                         frm9.ShowDialog(this);
                         if (frm9.changed)
-                            btnActualizar.PerformClick();
+                                        actualizar();
                         frm9.Dispose();
                         break;
 
@@ -548,24 +556,26 @@ namespace EstadosdePagos
 
             if (MessageBox.Show  (lTx , "Avisos Sistema",MessageBoxButtons.YesNo ,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1)==DialogResult.Yes )
             {
-                ejecutarAccion("btnCrearEP");
+                mEp_ContieneGuias =true ;
+                //ejecutarAccion("btnCrearEP");
             }
             else
             {
-                DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
-                String ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
-                String obra = currentRow.Cells["OBRA"].Value.ToString();
-                Int32 ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
-                String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
-                Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
-                String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
+                mEp_ContieneGuias = false ;
+                //DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
+                //String ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
+                //String obra = currentRow.Cells["OBRA"].Value.ToString();
+                //Int32 ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
+                //String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+                //Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
+                //String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
 
-                frmEP_otros lFrm = new frmEP_otros();
-                lFrm.IniciaForm(ep_obra, obra, ep_id.ToString());
-                lFrm.ShowDialog();
+                //frmEP_otros lFrm = new frmEP_otros();
+                //lFrm.IniciaForm(ep_obra, obra, ep_id.ToString() , Program .currentUser );
+                //lFrm.ShowDialog();
             }
+            ejecutarAccion("btnCrearEP");
 
-           
         }
 
         private void btnVerReporteEP_Click(object sender, EventArgs e)
@@ -686,7 +696,7 @@ namespace EstadosdePagos
                     {
                         cboTecnicoObra.SelectedValue = login;
                         cboTecnicoObra.Enabled = false;
-                        btnActualizar.PerformClick();
+                                    actualizar();
                     }
                     else
                     {
@@ -700,7 +710,7 @@ namespace EstadosdePagos
             {
                 if (cboTecnicoObra.Items.Count > 0)
                     cboTecnicoObra_SelectedIndexChanged(sender, e);
-                btnActualizar.PerformClick();
+                            actualizar();
             }
         }
 
@@ -860,7 +870,7 @@ namespace EstadosdePagos
             dgvDetalle.DataSource = null;
 
             if (!load && chkActualizar.Checked)
-                btnActualizar.PerformClick();
+                            actualizar();
         }
 
         private void cboFiltro_SelectedIndexChanged(object sender, EventArgs e)
@@ -906,7 +916,7 @@ namespace EstadosdePagos
 
             //tabGuiasDespacho.Visible = cboFiltro.SelectedIndex != 0;
             if (!load && chkActualizar.Checked)
-                btnActualizar.PerformClick();
+                            actualizar();
         }
 
         private void actualizarInfoDetalle(int ep_id) //ResumenGuiaDespachoxEp: agrupado x Gd/IT 
@@ -980,13 +990,40 @@ namespace EstadosdePagos
                 frm0.Obra = currentRow.Cells["OBRA"].Value.ToString();
                 frm0.TecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
                 frm0.Estado = currentRow.Cells["EP_ESTADO"].Value.ToString();
-                frm0.CargaFormulario(ref Pb, ref Lbl_PB);
+
+                if (frm0 .Ep_id >0 )
+                   frm0.CargarDatos_Ep (ref Pb, ref Lbl_PB, frm0.Ep_id.ToString ());
+                    else
+                frm0.CargaFormulario(ref Pb, ref Lbl_PB, mEp_ContieneGuias);
 
                 frm0.ShowDialog(this);
                 if (frm0.changed)
-                    btnActualizar.PerformClick();
+                                actualizar();
             }
         }
+
+        private void Carga_EP( string iNro_EP)
+        {
+            DataGridViewRow currentRow = dgvResumen.CurrentRow;
+            if (currentRow != null)
+            {
+                if (cboFiltro.SelectedIndex == 0 && !Program.currentUser.PerfilUsuario.Equals("")) //El usuario administrador no puede crear EP (Relacion: Obra vs Tecnico)
+                    return;
+
+                frmEPNueva frm0 = new frmEPNueva();
+                frm0.Ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
+                frm0.Ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
+                frm0.Obra = currentRow.Cells["OBRA"].Value.ToString();
+                frm0.TecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+                frm0.Estado = currentRow.Cells["EP_ESTADO"].Value.ToString();
+                frm0.CargarDatos_Ep(ref Pb, ref Lbl_PB, iNro_EP);
+
+                frm0.ShowDialog(this);
+                if (frm0.changed)
+                                actualizar();
+            }
+        }
+
 
         private void btnDestinatariosObra_Click(object sender, EventArgs e)
         {
@@ -1018,6 +1055,11 @@ namespace EstadosdePagos
             Frm_ContratosObra lfrm = new Frm_ContratosObra();
             lfrm.IniciaForm(ep_obra, obra);
             lfrm.ShowDialog();
+        }
+
+        private void dgvResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

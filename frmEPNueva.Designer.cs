@@ -46,6 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblGuiaDespacho = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Dtg_OtrasGuias = new System.Windows.Forms.DataGridView();
             this.lblTecnicoObra = new System.Windows.Forms.Label();
             this.lblObra = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.Btn_Otros = new System.Windows.Forms.Button();
             this.Lbl_totalOtros = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Dtg_OtrasGuias = new System.Windows.Forms.DataGridView();
             this.tabCrecionEP.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDespacho)).BeginInit();
@@ -284,6 +284,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Guia despacho:";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.Dtg_OtrasGuias);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(780, 373);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Otro tipo de Guías";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // Dtg_OtrasGuias
+            // 
+            this.Dtg_OtrasGuias.AllowUserToAddRows = false;
+            this.Dtg_OtrasGuias.AllowUserToDeleteRows = false;
+            this.Dtg_OtrasGuias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dtg_OtrasGuias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Dtg_OtrasGuias.Location = new System.Drawing.Point(3, 3);
+            this.Dtg_OtrasGuias.MultiSelect = false;
+            this.Dtg_OtrasGuias.Name = "Dtg_OtrasGuias";
+            this.Dtg_OtrasGuias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dtg_OtrasGuias.Size = new System.Drawing.Size(774, 367);
+            this.Dtg_OtrasGuias.TabIndex = 9;
+            // 
             // lblTecnicoObra
             // 
             this.lblTecnicoObra.AutoSize = true;
@@ -487,7 +511,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 23);
             this.btnGuardar.TabIndex = 27;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Grabar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -516,6 +540,7 @@
             this.btnAceptar.TabIndex = 18;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // Btn_Otros
@@ -538,30 +563,6 @@
             this.Lbl_totalOtros.TabIndex = 45;
             this.Lbl_totalOtros.Text = "(dato)";
             this.Lbl_totalOtros.Click += new System.EventHandler(this.Lbl_totalOtros_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.Dtg_OtrasGuias);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(780, 373);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Otro tipo de Guías";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // Dtg_OtrasGuias
-            // 
-            this.Dtg_OtrasGuias.AllowUserToAddRows = false;
-            this.Dtg_OtrasGuias.AllowUserToDeleteRows = false;
-            this.Dtg_OtrasGuias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtg_OtrasGuias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Dtg_OtrasGuias.Location = new System.Drawing.Point(3, 3);
-            this.Dtg_OtrasGuias.MultiSelect = false;
-            this.Dtg_OtrasGuias.Name = "Dtg_OtrasGuias";
-            this.Dtg_OtrasGuias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dtg_OtrasGuias.Size = new System.Drawing.Size(774, 367);
-            this.Dtg_OtrasGuias.TabIndex = 9;
             // 
             // frmEPNueva
             // 

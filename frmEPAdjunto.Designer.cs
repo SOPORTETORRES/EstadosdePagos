@@ -45,19 +45,31 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnAgregarAdjunto = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtAgregarComentario = new System.Windows.Forms.TextBox();
+            this.btnAgregarComentario = new System.Windows.Forms.Button();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvComentarios = new System.Windows.Forms.DataGridView();
+            this.txtVerComentario = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdjuntos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComentarios)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 189);
+            this.tabControl1.Location = new System.Drawing.Point(18, 162);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(418, 226);
+            this.tabControl1.Size = new System.Drawing.Size(360, 226);
             this.tabControl1.TabIndex = 26;
             // 
             // tabPage1
@@ -66,7 +78,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(410, 200);
+            this.tabPage1.Size = new System.Drawing.Size(352, 200);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Documentos adjuntos:";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -82,34 +94,36 @@
             this.dgvAdjuntos.Name = "dgvAdjuntos";
             this.dgvAdjuntos.ReadOnly = true;
             this.dgvAdjuntos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAdjuntos.Size = new System.Drawing.Size(404, 194);
+            this.dgvAdjuntos.Size = new System.Drawing.Size(346, 194);
             this.dgvAdjuntos.TabIndex = 8;
             this.dgvAdjuntos.DoubleClick += new System.EventHandler(this.dgvAdjuntos_DoubleClick);
             // 
             // lblTecnicoObra
             // 
-            this.lblTecnicoObra.AutoSize = true;
+            this.lblTecnicoObra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTecnicoObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTecnicoObra.Location = new System.Drawing.Point(111, 69);
+            this.lblTecnicoObra.Location = new System.Drawing.Point(227, 14);
             this.lblTecnicoObra.Name = "lblTecnicoObra";
-            this.lblTecnicoObra.Size = new System.Drawing.Size(40, 13);
-            this.lblTecnicoObra.TabIndex = 25;
+            this.lblTecnicoObra.Size = new System.Drawing.Size(164, 23);
+            this.lblTecnicoObra.TabIndex = 28;
             this.lblTecnicoObra.Text = "(dato)";
+            this.lblTecnicoObra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblObra
             // 
-            this.lblObra.AutoSize = true;
+            this.lblObra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblObra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObra.Location = new System.Drawing.Point(51, 42);
+            this.lblObra.Location = new System.Drawing.Point(450, 14);
             this.lblObra.Name = "lblObra";
-            this.lblObra.Size = new System.Drawing.Size(40, 13);
+            this.lblObra.Size = new System.Drawing.Size(395, 23);
             this.lblObra.TabIndex = 24;
             this.lblObra.Text = "(dato)";
+            this.lblObra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 69);
+            this.label3.Location = new System.Drawing.Point(138, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 22;
@@ -118,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 42);
+            this.label2.Location = new System.Drawing.Point(411, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 21;
@@ -128,23 +142,25 @@
             // 
             this.btnCancelar.Image = global::EstadosdePagos.Properties.Resources.salir;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(303, 421);
+            this.btnCancelar.Location = new System.Drawing.Point(326, 416);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(84, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(80, 34);
             this.btnCancelar.TabIndex = 19;
-            this.btnCancelar.Text = "Cerrar";
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblID
             // 
-            this.lblID.AutoSize = true;
+            this.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(51, 17);
+            this.lblID.Location = new System.Drawing.Point(46, 14);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(40, 13);
+            this.lblID.Size = new System.Drawing.Size(70, 23);
             this.lblID.TabIndex = 28;
             this.lblID.Text = "(dato)";
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -161,16 +177,16 @@
             this.groupBox1.Controls.Add(this.txtArchivo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnAgregarAdjunto);
-            this.groupBox1.Location = new System.Drawing.Point(12, 93);
+            this.groupBox1.Location = new System.Drawing.Point(18, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 90);
+            this.groupBox1.Size = new System.Drawing.Size(360, 90);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar documento";
             // 
             // btnExaminar
             // 
-            this.btnExaminar.Location = new System.Drawing.Point(383, 32);
+            this.btnExaminar.Location = new System.Drawing.Point(330, 33);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(27, 23);
             this.btnExaminar.TabIndex = 34;
@@ -183,7 +199,7 @@
             this.txtArchivo.Location = new System.Drawing.Point(13, 35);
             this.txtArchivo.Name = "txtArchivo";
             this.txtArchivo.ReadOnly = true;
-            this.txtArchivo.Size = new System.Drawing.Size(362, 20);
+            this.txtArchivo.Size = new System.Drawing.Size(311, 20);
             this.txtArchivo.TabIndex = 33;
             // 
             // label7
@@ -200,7 +216,7 @@
             this.btnAgregarAdjunto.Enabled = false;
             this.btnAgregarAdjunto.Image = global::EstadosdePagos.Properties.Resources.agregar;
             this.btnAgregarAdjunto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarAdjunto.Location = new System.Drawing.Point(291, 61);
+            this.btnAgregarAdjunto.Location = new System.Drawing.Point(192, 61);
             this.btnAgregarAdjunto.Name = "btnAgregarAdjunto";
             this.btnAgregarAdjunto.Size = new System.Drawing.Size(84, 23);
             this.btnAgregarAdjunto.TabIndex = 31;
@@ -213,17 +229,107 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 426);
+            this.label9.Location = new System.Drawing.Point(24, 399);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(281, 13);
             this.label9.TabIndex = 32;
             this.label9.Text = "Nota: Puede hacer doble clic sobre el archivo para abrirlo.";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtAgregarComentario);
+            this.groupBox2.Controls.Add(this.btnAgregarComentario);
+            this.groupBox2.Location = new System.Drawing.Point(418, 59);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(425, 102);
+            this.groupBox2.TabIndex = 33;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Agregar comentario";
+            // 
+            // txtAgregarComentario
+            // 
+            this.txtAgregarComentario.Location = new System.Drawing.Point(6, 19);
+            this.txtAgregarComentario.MaxLength = 500;
+            this.txtAgregarComentario.Multiline = true;
+            this.txtAgregarComentario.Name = "txtAgregarComentario";
+            this.txtAgregarComentario.Size = new System.Drawing.Size(413, 49);
+            this.txtAgregarComentario.TabIndex = 0;
+            // 
+            // btnAgregarComentario
+            // 
+            this.btnAgregarComentario.Enabled = false;
+            this.btnAgregarComentario.Image = global::EstadosdePagos.Properties.Resources.agregar;
+            this.btnAgregarComentario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarComentario.Location = new System.Drawing.Point(269, 74);
+            this.btnAgregarComentario.Name = "btnAgregarComentario";
+            this.btnAgregarComentario.Size = new System.Drawing.Size(84, 23);
+            this.btnAgregarComentario.TabIndex = 1;
+            this.btnAgregarComentario.Text = "Agregar";
+            this.btnAgregarComentario.UseVisualStyleBackColor = true;
+            this.btnAgregarComentario.Click += new System.EventHandler(this.btnAgregarComentario_Click);
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage2);
+            this.tabControl2.Location = new System.Drawing.Point(411, 167);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(431, 193);
+            this.tabControl2.TabIndex = 34;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgvComentarios);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(423, 167);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Comentarios ingresados:";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgvComentarios
+            // 
+            this.dgvComentarios.AllowUserToAddRows = false;
+            this.dgvComentarios.AllowUserToDeleteRows = false;
+            this.dgvComentarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComentarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvComentarios.Location = new System.Drawing.Point(3, 3);
+            this.dgvComentarios.MultiSelect = false;
+            this.dgvComentarios.Name = "dgvComentarios";
+            this.dgvComentarios.ReadOnly = true;
+            this.dgvComentarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvComentarios.Size = new System.Drawing.Size(417, 161);
+            this.dgvComentarios.TabIndex = 0;
+            // 
+            // txtVerComentario
+            // 
+            this.txtVerComentario.Location = new System.Drawing.Point(418, 379);
+            this.txtVerComentario.Multiline = true;
+            this.txtVerComentario.Name = "txtVerComentario";
+            this.txtVerComentario.ReadOnly = true;
+            this.txtVerComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtVerComentario.Size = new System.Drawing.Size(420, 49);
+            this.txtVerComentario.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(415, 363);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Comentario:";
+            // 
             // frmEPAdjunto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 452);
+            this.ClientSize = new System.Drawing.Size(854, 464);
+            this.Controls.Add(this.txtVerComentario);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblID);
@@ -240,13 +346,18 @@
             this.MinimizeBox = false;
             this.Name = "frmEPAdjunto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Adjuntos";
+            this.Text = "Formulario para agregar Comentarios y Archivos Adjuntos";
             this.Load += new System.EventHandler(this.frmEPAdjunto_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdjuntos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComentarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +381,13 @@
         private System.Windows.Forms.TextBox txtArchivo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtAgregarComentario;
+        private System.Windows.Forms.Button btnAgregarComentario;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dgvComentarios;
+        private System.Windows.Forms.TextBox txtVerComentario;
+        private System.Windows.Forms.Label label4;
     }
 }

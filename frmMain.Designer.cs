@@ -60,6 +60,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTotalKilos = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_ContratosObra = new System.Windows.Forms.Button();
             this.Gb_Estado = new System.Windows.Forms.GroupBox();
             this.Lbl_PB = new System.Windows.Forms.Label();
             this.Pb = new System.Windows.Forms.ProgressBar();
@@ -78,7 +79,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
             this.tabGuiasDespacho = new System.Windows.Forms.TabControl();
-            this.Btn_ContratosObra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -103,6 +103,7 @@
             this.dgvResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResumen.Size = new System.Drawing.Size(1174, 222);
             this.dgvResumen.TabIndex = 6;
+            this.dgvResumen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResumen_CellContentClick);
             this.dgvResumen.SelectionChanged += new System.EventHandler(this.dgvResumen_SelectionChanged);
             this.dgvResumen.DoubleClick += new System.EventHandler(this.dgvResumen_DoubleClick);
             // 
@@ -164,6 +165,7 @@
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(62, 22);
             this.btnActualizar.Text = "Buscar";
+            this.btnActualizar.Visible = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // toolStripSeparator3
@@ -373,6 +375,16 @@
             this.panel1.Size = new System.Drawing.Size(1179, 128);
             this.panel1.TabIndex = 7;
             // 
+            // Btn_ContratosObra
+            // 
+            this.Btn_ContratosObra.Location = new System.Drawing.Point(544, 13);
+            this.Btn_ContratosObra.Name = "Btn_ContratosObra";
+            this.Btn_ContratosObra.Size = new System.Drawing.Size(78, 35);
+            this.Btn_ContratosObra.TabIndex = 16;
+            this.Btn_ContratosObra.Text = "Contratos Obras";
+            this.Btn_ContratosObra.UseVisualStyleBackColor = true;
+            this.Btn_ContratosObra.Click += new System.EventHandler(this.Btn__Click);
+            // 
             // Gb_Estado
             // 
             this.Gb_Estado.Controls.Add(this.Lbl_PB);
@@ -383,6 +395,7 @@
             this.Gb_Estado.TabIndex = 15;
             this.Gb_Estado.TabStop = false;
             this.Gb_Estado.Text = "Estado de la Operación";
+            this.Gb_Estado.Visible = false;
             // 
             // Lbl_PB
             // 
@@ -562,16 +575,6 @@
             this.tabGuiasDespacho.SelectedIndex = 0;
             this.tabGuiasDespacho.Size = new System.Drawing.Size(1179, 202);
             this.tabGuiasDespacho.TabIndex = 8;
-            // 
-            // Btn_ContratosObra
-            // 
-            this.Btn_ContratosObra.Location = new System.Drawing.Point(544, 13);
-            this.Btn_ContratosObra.Name = "Btn_ContratosObra";
-            this.Btn_ContratosObra.Size = new System.Drawing.Size(78, 35);
-            this.Btn_ContratosObra.TabIndex = 16;
-            this.Btn_ContratosObra.Text = "Contratos Obras";
-            this.Btn_ContratosObra.UseVisualStyleBackColor = true;
-            this.Btn_ContratosObra.Click += new System.EventHandler(this.Btn__Click);
             // 
             // frmMain
             // 
