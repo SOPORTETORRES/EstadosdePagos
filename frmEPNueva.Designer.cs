@@ -74,6 +74,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.Btn_Otros = new System.Windows.Forms.Button();
             this.Lbl_totalOtros = new System.Windows.Forms.Label();
+            this.Btn_Adjunto = new System.Windows.Forms.Button();
             this.tabCrecionEP.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDespacho)).BeginInit();
@@ -504,7 +505,6 @@
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.Enabled = false;
             this.btnGuardar.Image = global::EstadosdePagos.Properties.Resources.guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(349, 587);
@@ -564,11 +564,22 @@
             this.Lbl_totalOtros.Text = "(dato)";
             this.Lbl_totalOtros.Click += new System.EventHandler(this.Lbl_totalOtros_Click);
             // 
+            // Btn_Adjunto
+            // 
+            this.Btn_Adjunto.Location = new System.Drawing.Point(220, 51);
+            this.Btn_Adjunto.Name = "Btn_Adjunto";
+            this.Btn_Adjunto.Size = new System.Drawing.Size(96, 25);
+            this.Btn_Adjunto.TabIndex = 46;
+            this.Btn_Adjunto.Text = "Agregar Adjunto";
+            this.Btn_Adjunto.UseVisualStyleBackColor = true;
+            this.Btn_Adjunto.Click += new System.EventHandler(this.Btn_Adjunto_Click);
+            // 
             // frmEPNueva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 615);
+            this.Controls.Add(this.Btn_Adjunto);
             this.Controls.Add(this.Lbl_totalOtros);
             this.Controls.Add(this.Btn_Otros);
             this.Controls.Add(this.Btn_ObtenerKgsSel);
@@ -669,5 +680,6 @@
         private System.Windows.Forms.Label Lbl_totalOtros;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView Dtg_OtrasGuias;
+        private System.Windows.Forms.Button Btn_Adjunto;
     }
 }

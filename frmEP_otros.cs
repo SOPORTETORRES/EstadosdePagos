@@ -369,6 +369,7 @@ namespace EstadosdePagos
                 Cmb_Unidades.Enabled = true;
                 Tx_saldo.Text = "0";
                 Tx_CantTotal.Text = "0";
+                Tx_PU.Enabled = true;
             }
                 
         }
@@ -387,6 +388,8 @@ namespace EstadosdePagos
                     this.Cmb_Unidades.SelectedValue  = lVista[0]["Unidad"].ToString();
                     this.Cmb_Unidades.Enabled = false;
                     Chk_Contrato.Checked = true;
+                    this.Tx_PU.Text = lVista[0]["PE"].ToString();
+                    this.Tx_PU.Enabled = false;
                 }
                 //Cargamos los datos del servicio seleccionado
                 if (mTblDatosObra.Rows.Count > 0)

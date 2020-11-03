@@ -141,6 +141,16 @@ namespace EstadosdePagos
                 if (tabCrecionEP.SelectedIndex == 0)
                 {
                     grabarSeleccionxGuiaDespacho();
+                    // Debe preguntar si desea agregar alguno otro cobro ( agregar OTROS)
+                    if (MessageBox.Show("¿Desea agregar algún otro cobro ?", "Avisos Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        Btn_Otros_Click(null, null);
+
+                    //Se debe preguntar si se desea agregar comentario y adjunto  formulario para agregar comentario y Adjunto
+                    // Mientras no se ingresese un comentarios y adjunto no se debe dejar continuar
+                    if (MessageBox .Show ("¿Desea adjuntar algún documento?","Avisos Sistema",MessageBoxButtons.YesNo ,MessageBoxIcon.Question)==DialogResult.Yes )
+                            CargaAdj_Comentario();
+
+
                     this.Close();
                 }
                    
@@ -186,6 +196,11 @@ namespace EstadosdePagos
             lTabTmp2 = tabCrecionEP.TabPages[2];
             tabCrecionEP.TabPages.Remove(lTabTmp);
             tabCrecionEP.TabPages.Remove(lTabTmp2);
+
+            if (lblID.Text.ToUpper().Equals("0"))
+                Btn_Otros.Enabled = false;
+            else
+                Btn_Otros.Enabled = true;
         }
 
 
@@ -735,9 +750,9 @@ namespace EstadosdePagos
                         {
                             Lbl_totalOtros.Text = (Convert.ToInt32(lDts.Tables[0].Rows[0][0].ToString())).ToString("#,##0");
                             if (Convert.ToInt32(lDts.Tables[0].Rows[0][0].ToString())>0)
-                                    { 
+                            { 
                                 btnGuardar.Enabled = true;
-                            btnAceptar.Enabled = true;
+                                btnAceptar.Enabled = true;
                             }
                         }
                     }
@@ -1330,5 +1345,24 @@ namespace EstadosdePagos
         {
 
         }
+
+        private void Btn_Adjunto_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea adjuntar algún documento?", "Avisos Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                CargaAdj_Comentario();
+
+        }
+
+        private void CargaAdj_Comentario()
+        {
+            frmEPAdjunto lFrmAdj = new frmEPAdjunto();
+            lFrmAdj.Ep_id = new Utils().Val(this._ep_id.ToString());
+            lFrmAdj.Ep_obra = this._ep_obra.ToString();
+            lFrmAdj.TecnicoObra = this._tecnicoObra;
+            lFrmAdj.Obra = this._obra;
+            lFrmAdj.ShowDialog(this);
+        }
+
+
     }
 }

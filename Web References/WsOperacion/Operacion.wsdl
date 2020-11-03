@@ -912,6 +912,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ListarEPExcel_AcumuladoAnteriorxObra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obra" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iEp_Act" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEPExcel_AcumuladoAnteriorxObraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarEPExcel_AcumuladoAnteriorxObraResult" type="tns:ListaDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ListarEPExcel_ResumenGuiasxObra">
         <s:complexType>
           <s:sequence>
@@ -2888,6 +2903,12 @@
   <wsdl:message name="ListarEPExcel_ResumenEpGeneradosxObraSoapOut">
     <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenEpGeneradosxObraResponse" />
   </wsdl:message>
+  <wsdl:message name="ListarEPExcel_AcumuladoAnteriorxObraSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_AcumuladoAnteriorxObra" />
+  </wsdl:message>
+  <wsdl:message name="ListarEPExcel_AcumuladoAnteriorxObraSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarEPExcel_AcumuladoAnteriorxObraResponse" />
+  </wsdl:message>
   <wsdl:message name="ListarEPExcel_ResumenGuiasxObraSoapIn">
     <wsdl:part name="parameters" element="tns:ListarEPExcel_ResumenGuiasxObra" />
   </wsdl:message>
@@ -3672,6 +3693,10 @@
     <wsdl:operation name="ListarEPExcel_ResumenEpGeneradosxObra">
       <wsdl:input message="tns:ListarEPExcel_ResumenEpGeneradosxObraSoapIn" />
       <wsdl:output message="tns:ListarEPExcel_ResumenEpGeneradosxObraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_AcumuladoAnteriorxObra">
+      <wsdl:input message="tns:ListarEPExcel_AcumuladoAnteriorxObraSoapIn" />
+      <wsdl:output message="tns:ListarEPExcel_AcumuladoAnteriorxObraSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ListarEPExcel_ResumenGuiasxObra">
       <wsdl:input message="tns:ListarEPExcel_ResumenGuiasxObraSoapIn" />
@@ -4502,6 +4527,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarEPExcel_ResumenEpGeneradosxObra">
       <soap:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenEpGeneradosxObra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_AcumuladoAnteriorxObra">
+      <soap:operation soapAction="http://tempuri.org/ListarEPExcel_AcumuladoAnteriorxObra" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -5828,6 +5862,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarEPExcel_ResumenEpGeneradosxObra">
       <soap12:operation soapAction="http://tempuri.org/ListarEPExcel_ResumenEpGeneradosxObra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPExcel_AcumuladoAnteriorxObra">
+      <soap12:operation soapAction="http://tempuri.org/ListarEPExcel_AcumuladoAnteriorxObra" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

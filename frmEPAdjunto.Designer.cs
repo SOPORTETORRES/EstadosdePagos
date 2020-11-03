@@ -66,10 +66,10 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(18, 162);
+            this.tabControl1.Location = new System.Drawing.Point(18, 136);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(360, 226);
+            this.tabControl1.Size = new System.Drawing.Size(381, 326);
             this.tabControl1.TabIndex = 26;
             // 
             // tabPage1
@@ -78,7 +78,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(352, 200);
+            this.tabPage1.Size = new System.Drawing.Size(373, 300);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Documentos adjuntos:";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             this.dgvAdjuntos.Name = "dgvAdjuntos";
             this.dgvAdjuntos.ReadOnly = true;
             this.dgvAdjuntos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAdjuntos.Size = new System.Drawing.Size(346, 194);
+            this.dgvAdjuntos.Size = new System.Drawing.Size(367, 294);
             this.dgvAdjuntos.TabIndex = 8;
             this.dgvAdjuntos.DoubleClick += new System.EventHandler(this.dgvAdjuntos_DoubleClick);
             // 
@@ -140,9 +140,10 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = global::EstadosdePagos.Properties.Resources.salir;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(326, 416);
+            this.btnCancelar.Location = new System.Drawing.Point(880, 96);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 34);
             this.btnCancelar.TabIndex = 19;
@@ -177,16 +178,16 @@
             this.groupBox1.Controls.Add(this.txtArchivo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnAgregarAdjunto);
-            this.groupBox1.Location = new System.Drawing.Point(18, 66);
+            this.groupBox1.Location = new System.Drawing.Point(18, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 90);
+            this.groupBox1.Size = new System.Drawing.Size(380, 69);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar documento";
             // 
             // btnExaminar
             // 
-            this.btnExaminar.Location = new System.Drawing.Point(330, 33);
+            this.btnExaminar.Location = new System.Drawing.Point(345, 33);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(27, 23);
             this.btnExaminar.TabIndex = 34;
@@ -199,7 +200,7 @@
             this.txtArchivo.Location = new System.Drawing.Point(13, 35);
             this.txtArchivo.Name = "txtArchivo";
             this.txtArchivo.ReadOnly = true;
-            this.txtArchivo.Size = new System.Drawing.Size(311, 20);
+            this.txtArchivo.Size = new System.Drawing.Size(326, 20);
             this.txtArchivo.TabIndex = 33;
             // 
             // label7
@@ -216,7 +217,7 @@
             this.btnAgregarAdjunto.Enabled = false;
             this.btnAgregarAdjunto.Image = global::EstadosdePagos.Properties.Resources.agregar;
             this.btnAgregarAdjunto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarAdjunto.Location = new System.Drawing.Point(192, 61);
+            this.btnAgregarAdjunto.Location = new System.Drawing.Point(255, 9);
             this.btnAgregarAdjunto.Name = "btnAgregarAdjunto";
             this.btnAgregarAdjunto.Size = new System.Drawing.Size(84, 23);
             this.btnAgregarAdjunto.TabIndex = 31;
@@ -229,7 +230,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 399);
+            this.label9.Location = new System.Drawing.Point(28, 465);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(281, 13);
             this.label9.TabIndex = 32;
@@ -239,9 +240,9 @@
             // 
             this.groupBox2.Controls.Add(this.txtAgregarComentario);
             this.groupBox2.Controls.Add(this.btnAgregarComentario);
-            this.groupBox2.Location = new System.Drawing.Point(418, 59);
+            this.groupBox2.Location = new System.Drawing.Point(419, 59);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(425, 102);
+            this.groupBox2.Size = new System.Drawing.Size(425, 82);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar comentario";
@@ -252,17 +253,16 @@
             this.txtAgregarComentario.MaxLength = 500;
             this.txtAgregarComentario.Multiline = true;
             this.txtAgregarComentario.Name = "txtAgregarComentario";
-            this.txtAgregarComentario.Size = new System.Drawing.Size(413, 49);
+            this.txtAgregarComentario.Size = new System.Drawing.Size(337, 56);
             this.txtAgregarComentario.TabIndex = 0;
             // 
             // btnAgregarComentario
             // 
-            this.btnAgregarComentario.Enabled = false;
             this.btnAgregarComentario.Image = global::EstadosdePagos.Properties.Resources.agregar;
             this.btnAgregarComentario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarComentario.Location = new System.Drawing.Point(269, 74);
+            this.btnAgregarComentario.Location = new System.Drawing.Point(344, 43);
             this.btnAgregarComentario.Name = "btnAgregarComentario";
-            this.btnAgregarComentario.Size = new System.Drawing.Size(84, 23);
+            this.btnAgregarComentario.Size = new System.Drawing.Size(77, 32);
             this.btnAgregarComentario.TabIndex = 1;
             this.btnAgregarComentario.Text = "Agregar";
             this.btnAgregarComentario.UseVisualStyleBackColor = true;
@@ -271,10 +271,10 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Location = new System.Drawing.Point(411, 167);
+            this.tabControl2.Location = new System.Drawing.Point(419, 140);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(431, 193);
+            this.tabControl2.Size = new System.Drawing.Size(431, 322);
             this.tabControl2.TabIndex = 34;
             // 
             // tabPage2
@@ -283,7 +283,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(423, 167);
+            this.tabPage2.Size = new System.Drawing.Size(423, 296);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Comentarios ingresados:";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -299,23 +299,24 @@
             this.dgvComentarios.Name = "dgvComentarios";
             this.dgvComentarios.ReadOnly = true;
             this.dgvComentarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvComentarios.Size = new System.Drawing.Size(417, 161);
+            this.dgvComentarios.Size = new System.Drawing.Size(417, 290);
             this.dgvComentarios.TabIndex = 0;
+            this.dgvComentarios.SelectionChanged += new System.EventHandler(this.dgvComentarios_SelectionChanged);
             // 
             // txtVerComentario
             // 
-            this.txtVerComentario.Location = new System.Drawing.Point(418, 379);
+            this.txtVerComentario.Location = new System.Drawing.Point(482, 465);
             this.txtVerComentario.Multiline = true;
             this.txtVerComentario.Name = "txtVerComentario";
             this.txtVerComentario.ReadOnly = true;
             this.txtVerComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtVerComentario.Size = new System.Drawing.Size(420, 49);
+            this.txtVerComentario.Size = new System.Drawing.Size(358, 49);
             this.txtVerComentario.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(415, 363);
+            this.label4.Location = new System.Drawing.Point(418, 483);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 36;
@@ -325,7 +326,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 464);
+            this.ClientSize = new System.Drawing.Size(972, 526);
+            this.ControlBox = false;
             this.Controls.Add(this.txtVerComentario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tabControl2);

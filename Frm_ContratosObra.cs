@@ -110,7 +110,7 @@ namespace EstadosdePagos
                 lConcepto = Tx_Servicio.Text;
 
                 lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",'", lConcepto, "','", lUtil.Val(Tx_CantidadTotal.Text.Replace(".", "")), "',0,'", Cmb_Unidades .SelectedValue , "','");
-                lSql = string.Concat(lSql, "' ,'',10 ");
+                lSql = string.Concat(lSql, Tx_PU .Text , "' ,'',10 ");
 
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))

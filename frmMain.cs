@@ -352,8 +352,28 @@ namespace EstadosdePagos
         //    return validacion.ToString();
         //}
 
-             
-            
+        private void CargaAdj_Comentario()
+        {
+            string obra = ""; string ep_obra = ""; string ep_Id = ""; string tecnicoObra = "";
+            if (dgvResumen.SelectedRows.Count > 0)
+            {
+                DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
+                  ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
+                  obra = currentRow.Cells["OBRA"].Value.ToString();
+                ep_Id =  currentRow.Cells[COLUMNNAME_ID].Value.ToString();
+
+                  tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+                Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
+                String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
+            }
+                frmEPAdjunto lFrmAdj = new frmEPAdjunto();
+            lFrmAdj.Ep_id = new Utils().Val(ep_Id.ToString());
+            lFrmAdj.Ep_obra = ep_obra.ToString();
+            lFrmAdj.TecnicoObra = tecnicoObra;
+            lFrmAdj.Obra =  obra ;
+            lFrmAdj.ShowDialog(this);
+        }
+
         private void ejecutarAccion(string accion)
         {
             if (dgvResumen.SelectedRows.Count > 0)
@@ -464,7 +484,12 @@ namespace EstadosdePagos
                                     WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();
                                     estado_Pago = wsOperacion.RegistrarEPEnvioaCliente(ep_obra, ep_id, Program.currentUser.Login, Program.currentUser.ComputerName);
                                     if (estado_Pago.MensajeError.Equals(""))
-                                                    actualizar();
+                                     {
+                                    // Se debe agregar la opcion de adjuntar
+                                        CargaAdj_Comentario();
+                                        actualizar();
+                                     }
+                                                 
                                     else
                                         MessageBox.Show(estado_Pago.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 //}
@@ -590,7 +615,9 @@ namespace EstadosdePagos
 
         private void btnEnviarEP_Click(object sender, EventArgs e)
         {
+
             ejecutarAccion("btnEnviarEP");
+
         }
 
         private void btnModEPxObsClte_Click(object sender, EventArgs e)
@@ -881,7 +908,7 @@ namespace EstadosdePagos
             {
                 case 0: //E.P por ingresar
                     btnCrearEP.Enabled = (Program.currentUser.PerfilUsuario.Equals("") ? true : false); //El usuario administrador no puede crear EP (Relacion: Obra vs Tecnico)
-                    btnReporteEP.Enabled = false;
+                    //btnReporteEP.Enabled = false;
                     btnEnviarEP.Enabled = false;
                     btnModEPxObsClte.Enabled = false;
                     btnAprobarEP.Enabled = false;

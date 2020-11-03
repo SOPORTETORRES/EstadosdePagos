@@ -128,6 +128,8 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ListarEPExcel_ResumenEpGeneradosxObraOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ListarEPExcel_AcumuladoAnteriorxObraOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ListarEPExcel_ResumenGuiasxObraOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerDatosObraParaEPOperationCompleted;
@@ -508,6 +510,9 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         public event ListarEPExcel_ResumenEpGeneradosxObraCompletedEventHandler ListarEPExcel_ResumenEpGeneradosxObraCompleted;
+        
+        /// <remarks/>
+        public event ListarEPExcel_AcumuladoAnteriorxObraCompletedEventHandler ListarEPExcel_AcumuladoAnteriorxObraCompleted;
         
         /// <remarks/>
         public event ListarEPExcel_ResumenGuiasxObraCompletedEventHandler ListarEPExcel_ResumenGuiasxObraCompleted;
@@ -2319,6 +2324,37 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ListarEPExcel_ResumenEpGeneradosxObraCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ListarEPExcel_ResumenEpGeneradosxObraCompleted(this, new ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarEPExcel_AcumuladoAnteriorxObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarEPExcel_AcumuladoAnteriorxObra(string obra, int iEp_Act) {
+            object[] results = this.Invoke("ListarEPExcel_AcumuladoAnteriorxObra", new object[] {
+                        obra,
+                        iEp_Act});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_AcumuladoAnteriorxObraAsync(string obra, int iEp_Act) {
+            this.ListarEPExcel_AcumuladoAnteriorxObraAsync(obra, iEp_Act, null);
+        }
+        
+        /// <remarks/>
+        public void ListarEPExcel_AcumuladoAnteriorxObraAsync(string obra, int iEp_Act, object userState) {
+            if ((this.ListarEPExcel_AcumuladoAnteriorxObraOperationCompleted == null)) {
+                this.ListarEPExcel_AcumuladoAnteriorxObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarEPExcel_AcumuladoAnteriorxObraOperationCompleted);
+            }
+            this.InvokeAsync("ListarEPExcel_AcumuladoAnteriorxObra", new object[] {
+                        obra,
+                        iEp_Act}, this.ListarEPExcel_AcumuladoAnteriorxObraOperationCompleted, userState);
+        }
+        
+        private void OnListarEPExcel_AcumuladoAnteriorxObraOperationCompleted(object arg) {
+            if ((this.ListarEPExcel_AcumuladoAnteriorxObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarEPExcel_AcumuladoAnteriorxObraCompleted(this, new ListarEPExcel_AcumuladoAnteriorxObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -9436,6 +9472,32 @@ namespace EstadosdePagos.WsOperacion {
         private object[] results;
         
         internal ListarEPExcel_ResumenEpGeneradosxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ListarEPExcel_AcumuladoAnteriorxObraCompletedEventHandler(object sender, ListarEPExcel_AcumuladoAnteriorxObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPExcel_AcumuladoAnteriorxObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPExcel_AcumuladoAnteriorxObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.Tx_Servicio = new System.Windows.Forms.TextBox();
             this.Btn_Salir = new System.Windows.Forms.Button();
             this.Btn_Grabar = new System.Windows.Forms.Button();
@@ -41,7 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Dtg_Datos = new System.Windows.Forms.DataGridView();
-            this.Btn_Eliminar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Tx_PU = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Datos)).BeginInit();
@@ -49,6 +51,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.Tx_PU);
             this.groupBox1.Controls.Add(this.Btn_Eliminar);
             this.groupBox1.Controls.Add(this.Tx_Servicio);
             this.groupBox1.Controls.Add(this.Btn_Salir);
@@ -62,22 +66,32 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(5, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(670, 118);
+            this.groupBox1.Size = new System.Drawing.Size(786, 118);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Obra y Contrato";
+            // 
+            // Btn_Eliminar
+            // 
+            this.Btn_Eliminar.Location = new System.Drawing.Point(718, 62);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Size = new System.Drawing.Size(62, 42);
+            this.Btn_Eliminar.TabIndex = 29;
+            this.Btn_Eliminar.Text = "Eliminar";
+            this.Btn_Eliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
             // 
             // Tx_Servicio
             // 
             this.Tx_Servicio.BackColor = System.Drawing.Color.White;
             this.Tx_Servicio.Location = new System.Drawing.Point(124, 51);
             this.Tx_Servicio.Name = "Tx_Servicio";
-            this.Tx_Servicio.Size = new System.Drawing.Size(365, 20);
+            this.Tx_Servicio.Size = new System.Drawing.Size(475, 20);
             this.Tx_Servicio.TabIndex = 28;
             // 
             // Btn_Salir
             // 
-            this.Btn_Salir.Location = new System.Drawing.Point(600, 16);
+            this.Btn_Salir.Location = new System.Drawing.Point(720, 14);
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(60, 42);
             this.Btn_Salir.TabIndex = 27;
@@ -87,7 +101,7 @@
             // 
             // Btn_Grabar
             // 
-            this.Btn_Grabar.Location = new System.Drawing.Point(521, 16);
+            this.Btn_Grabar.Location = new System.Drawing.Point(641, 14);
             this.Btn_Grabar.Name = "Btn_Grabar";
             this.Btn_Grabar.Size = new System.Drawing.Size(62, 42);
             this.Btn_Grabar.TabIndex = 26;
@@ -99,7 +113,7 @@
             // 
             this.Cmb_Unidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cmb_Unidades.FormattingEnabled = true;
-            this.Cmb_Unidades.Location = new System.Drawing.Point(301, 83);
+            this.Cmb_Unidades.Location = new System.Drawing.Point(340, 85);
             this.Cmb_Unidades.Name = "Cmb_Unidades";
             this.Cmb_Unidades.Size = new System.Drawing.Size(53, 21);
             this.Cmb_Unidades.TabIndex = 25;
@@ -108,7 +122,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(254, 86);
+            this.label7.Location = new System.Drawing.Point(293, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 24;
@@ -146,7 +160,7 @@
             this.Tx_Obra.Location = new System.Drawing.Point(124, 21);
             this.Tx_Obra.Name = "Tx_Obra";
             this.Tx_Obra.ReadOnly = true;
-            this.Tx_Obra.Size = new System.Drawing.Size(365, 20);
+            this.Tx_Obra.Size = new System.Drawing.Size(475, 20);
             this.Tx_Obra.TabIndex = 1;
             // 
             // label1
@@ -166,7 +180,7 @@
             this.groupBox2.Controls.Add(this.Dtg_Datos);
             this.groupBox2.Location = new System.Drawing.Point(6, 127);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(669, 299);
+            this.groupBox2.Size = new System.Drawing.Size(788, 299);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos  Ingresados ";
@@ -177,25 +191,32 @@
             this.Dtg_Datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Dtg_Datos.Location = new System.Drawing.Point(3, 16);
             this.Dtg_Datos.Name = "Dtg_Datos";
-            this.Dtg_Datos.Size = new System.Drawing.Size(663, 280);
+            this.Dtg_Datos.Size = new System.Drawing.Size(782, 280);
             this.Dtg_Datos.TabIndex = 0;
             this.Dtg_Datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Datos_CellContentClick);
             // 
-            // Btn_Eliminar
+            // label8
             // 
-            this.Btn_Eliminar.Location = new System.Drawing.Point(598, 64);
-            this.Btn_Eliminar.Name = "Btn_Eliminar";
-            this.Btn_Eliminar.Size = new System.Drawing.Size(62, 42);
-            this.Btn_Eliminar.TabIndex = 29;
-            this.Btn_Eliminar.Text = "Eliminar";
-            this.Btn_Eliminar.UseVisualStyleBackColor = true;
-            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(469, 89);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "$ PU";
+            // 
+            // Tx_PU
+            // 
+            this.Tx_PU.Location = new System.Drawing.Point(506, 86);
+            this.Tx_PU.Name = "Tx_PU";
+            this.Tx_PU.Size = new System.Drawing.Size(40, 20);
+            this.Tx_PU.TabIndex = 30;
+            this.Tx_PU.Text = "0";
             // 
             // Frm_ContratosObra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 426);
+            this.ClientSize = new System.Drawing.Size(804, 426);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -227,5 +248,7 @@
         private System.Windows.Forms.DataGridView Dtg_Datos;
         private System.Windows.Forms.TextBox Tx_Servicio;
         private System.Windows.Forms.Button Btn_Eliminar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox Tx_PU;
     }
 }
