@@ -6994,6 +6994,8 @@ namespace EstadosdePagos.WsOperacion {
         
         private string obsField;
         
+        private string idSucursalField;
+        
         /// <remarks/>
         public string Lote {
             get {
@@ -7171,6 +7173,16 @@ namespace EstadosdePagos.WsOperacion {
             }
             set {
                 this.obsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string IdSucursal {
+            get {
+                return this.idSucursalField;
+            }
+            set {
+                this.idSucursalField = value;
             }
         }
     }

@@ -24,12 +24,16 @@ namespace EstadosdePagos.WsMensajeria {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="Ws_ToSoap", Namespace="http://tempuri.org/")]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MarshalByRefObject))]
     public partial class Ws_To : System.Web.Services.Protocols.SoapHttpClientProtocol {
+        
+        private System.Threading.SendOrPostCallback ObtenerDtsPL_Original_ConDetOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Obtener_TX_Mail_AClienteOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerDtsPL_ConDet_NewOperationCompleted;
         
@@ -57,6 +61,10 @@ namespace EstadosdePagos.WsMensajeria {
         
         private System.Threading.SendOrPostCallback ObtenerPesoBechtellOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ObtenerPesoPorObraOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerPesoPorObra_ConDecimalesOperationCompleted;
+        
         private System.Threading.SendOrPostCallback DelPiezaTipoBOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerDatosControlCargaOperationCompleted;
@@ -75,11 +83,15 @@ namespace EstadosdePagos.WsMensajeria {
         
         private System.Threading.SendOrPostCallback ObtenerProductosPorMaquinaOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ObtenerObjetoINET_CalamaOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ObtenerObjetoINETOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerObjetoINETPorProductoOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerDtsPortada_PL_ItDespachadaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RevisionGuias_C_IOperationCompleted;
         
         private System.Threading.SendOrPostCallback GrabaImagenOperationCompleted;
         
@@ -163,6 +175,8 @@ namespace EstadosdePagos.WsMensajeria {
         
         private System.Threading.SendOrPostCallback ObtenerDtsCmbObrasOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ObtenerDatosConectoresOperationCompleted;
+        
         private System.Threading.SendOrPostCallback EliminaColadaOperationCompleted;
         
         private System.Threading.SendOrPostCallback CalcularNroPaquetesOperationCompleted;
@@ -245,8 +259,6 @@ namespace EstadosdePagos.WsMensajeria {
         
         private System.Threading.SendOrPostCallback ObtenerDtsPL_ConDetOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ObtenerDtsPL_Original_ConDetOperationCompleted;
-        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -284,6 +296,12 @@ namespace EstadosdePagos.WsMensajeria {
                 this.useDefaultCredentialsSetExplicitly = true;
             }
         }
+        
+        /// <remarks/>
+        public event ObtenerDtsPL_Original_ConDetCompletedEventHandler ObtenerDtsPL_Original_ConDetCompleted;
+        
+        /// <remarks/>
+        public event Obtener_TX_Mail_AClienteCompletedEventHandler Obtener_TX_Mail_AClienteCompleted;
         
         /// <remarks/>
         public event ObtenerDtsPL_ConDet_NewCompletedEventHandler ObtenerDtsPL_ConDet_NewCompleted;
@@ -325,6 +343,12 @@ namespace EstadosdePagos.WsMensajeria {
         public event ObtenerPesoBechtellCompletedEventHandler ObtenerPesoBechtellCompleted;
         
         /// <remarks/>
+        public event ObtenerPesoPorObraCompletedEventHandler ObtenerPesoPorObraCompleted;
+        
+        /// <remarks/>
+        public event ObtenerPesoPorObra_ConDecimalesCompletedEventHandler ObtenerPesoPorObra_ConDecimalesCompleted;
+        
+        /// <remarks/>
         public event DelPiezaTipoBCompletedEventHandler DelPiezaTipoBCompleted;
         
         /// <remarks/>
@@ -352,6 +376,9 @@ namespace EstadosdePagos.WsMensajeria {
         public event ObtenerProductosPorMaquinaCompletedEventHandler ObtenerProductosPorMaquinaCompleted;
         
         /// <remarks/>
+        public event ObtenerObjetoINET_CalamaCompletedEventHandler ObtenerObjetoINET_CalamaCompleted;
+        
+        /// <remarks/>
         public event ObtenerObjetoINETCompletedEventHandler ObtenerObjetoINETCompleted;
         
         /// <remarks/>
@@ -359,6 +386,9 @@ namespace EstadosdePagos.WsMensajeria {
         
         /// <remarks/>
         public event ObtenerDtsPortada_PL_ItDespachadaCompletedEventHandler ObtenerDtsPortada_PL_ItDespachadaCompleted;
+        
+        /// <remarks/>
+        public event RevisionGuias_C_ICompletedEventHandler RevisionGuias_C_ICompleted;
         
         /// <remarks/>
         public event GrabaImagenCompletedEventHandler GrabaImagenCompleted;
@@ -484,6 +514,9 @@ namespace EstadosdePagos.WsMensajeria {
         public event ObtenerDtsCmbObrasCompletedEventHandler ObtenerDtsCmbObrasCompleted;
         
         /// <remarks/>
+        public event ObtenerDatosConectoresCompletedEventHandler ObtenerDatosConectoresCompleted;
+        
+        /// <remarks/>
         public event EliminaColadaCompletedEventHandler EliminaColadaCompleted;
         
         /// <remarks/>
@@ -607,7 +640,74 @@ namespace EstadosdePagos.WsMensajeria {
         public event ObtenerDtsPL_ConDetCompletedEventHandler ObtenerDtsPL_ConDetCompleted;
         
         /// <remarks/>
-        public event ObtenerDtsPL_Original_ConDetCompletedEventHandler ObtenerDtsPL_Original_ConDetCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDtsPL_Original_ConDet", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Dts_PL ObtenerDtsPL_Original_ConDet(string iCodigoIt, string iIdIT, string iCodViaje, string iTipoImp, string IdObra, string iTipo) {
+            object[] results = this.Invoke("ObtenerDtsPL_Original_ConDet", new object[] {
+                        iCodigoIt,
+                        iIdIT,
+                        iCodViaje,
+                        iTipoImp,
+                        IdObra,
+                        iTipo});
+            return ((Dts_PL)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDtsPL_Original_ConDetAsync(string iCodigoIt, string iIdIT, string iCodViaje, string iTipoImp, string IdObra, string iTipo) {
+            this.ObtenerDtsPL_Original_ConDetAsync(iCodigoIt, iIdIT, iCodViaje, iTipoImp, IdObra, iTipo, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDtsPL_Original_ConDetAsync(string iCodigoIt, string iIdIT, string iCodViaje, string iTipoImp, string IdObra, string iTipo, object userState) {
+            if ((this.ObtenerDtsPL_Original_ConDetOperationCompleted == null)) {
+                this.ObtenerDtsPL_Original_ConDetOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDtsPL_Original_ConDetOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDtsPL_Original_ConDet", new object[] {
+                        iCodigoIt,
+                        iIdIT,
+                        iCodViaje,
+                        iTipoImp,
+                        IdObra,
+                        iTipo}, this.ObtenerDtsPL_Original_ConDetOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDtsPL_Original_ConDetOperationCompleted(object arg) {
+            if ((this.ObtenerDtsPL_Original_ConDetCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDtsPL_Original_ConDetCompleted(this, new ObtenerDtsPL_Original_ConDetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Obtener_TX_Mail_ACliente", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string Obtener_TX_Mail_ACliente(string iViaje, string IdObra) {
+            object[] results = this.Invoke("Obtener_TX_Mail_ACliente", new object[] {
+                        iViaje,
+                        IdObra});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Obtener_TX_Mail_AClienteAsync(string iViaje, string IdObra) {
+            this.Obtener_TX_Mail_AClienteAsync(iViaje, IdObra, null);
+        }
+        
+        /// <remarks/>
+        public void Obtener_TX_Mail_AClienteAsync(string iViaje, string IdObra, object userState) {
+            if ((this.Obtener_TX_Mail_AClienteOperationCompleted == null)) {
+                this.Obtener_TX_Mail_AClienteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtener_TX_Mail_AClienteOperationCompleted);
+            }
+            this.InvokeAsync("Obtener_TX_Mail_ACliente", new object[] {
+                        iViaje,
+                        IdObra}, this.Obtener_TX_Mail_AClienteOperationCompleted, userState);
+        }
+        
+        private void OnObtener_TX_Mail_AClienteOperationCompleted(object arg) {
+            if ((this.Obtener_TX_Mail_AClienteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Obtener_TX_Mail_AClienteCompleted(this, new Obtener_TX_Mail_AClienteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDtsPL_ConDet_New", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1055,6 +1155,76 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPesoPorObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ObtenerPesoPorObra(string iLargo, string iDiam, int iCant, int iIdObra) {
+            object[] results = this.Invoke("ObtenerPesoPorObra", new object[] {
+                        iLargo,
+                        iDiam,
+                        iCant,
+                        iIdObra});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerPesoPorObraAsync(string iLargo, string iDiam, int iCant, int iIdObra) {
+            this.ObtenerPesoPorObraAsync(iLargo, iDiam, iCant, iIdObra, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerPesoPorObraAsync(string iLargo, string iDiam, int iCant, int iIdObra, object userState) {
+            if ((this.ObtenerPesoPorObraOperationCompleted == null)) {
+                this.ObtenerPesoPorObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPesoPorObraOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerPesoPorObra", new object[] {
+                        iLargo,
+                        iDiam,
+                        iCant,
+                        iIdObra}, this.ObtenerPesoPorObraOperationCompleted, userState);
+        }
+        
+        private void OnObtenerPesoPorObraOperationCompleted(object arg) {
+            if ((this.ObtenerPesoPorObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerPesoPorObraCompleted(this, new ObtenerPesoPorObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerPesoPorObra_ConDecimales", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string ObtenerPesoPorObra_ConDecimales(string iLargo, string iDiam, int iCant, int iIdObra) {
+            object[] results = this.Invoke("ObtenerPesoPorObra_ConDecimales", new object[] {
+                        iLargo,
+                        iDiam,
+                        iCant,
+                        iIdObra});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerPesoPorObra_ConDecimalesAsync(string iLargo, string iDiam, int iCant, int iIdObra) {
+            this.ObtenerPesoPorObra_ConDecimalesAsync(iLargo, iDiam, iCant, iIdObra, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerPesoPorObra_ConDecimalesAsync(string iLargo, string iDiam, int iCant, int iIdObra, object userState) {
+            if ((this.ObtenerPesoPorObra_ConDecimalesOperationCompleted == null)) {
+                this.ObtenerPesoPorObra_ConDecimalesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerPesoPorObra_ConDecimalesOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerPesoPorObra_ConDecimales", new object[] {
+                        iLargo,
+                        iDiam,
+                        iCant,
+                        iIdObra}, this.ObtenerPesoPorObra_ConDecimalesOperationCompleted, userState);
+        }
+        
+        private void OnObtenerPesoPorObra_ConDecimalesOperationCompleted(object arg) {
+            if ((this.ObtenerPesoPorObra_ConDecimalesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerPesoPorObra_ConDecimalesCompleted(this, new ObtenerPesoPorObra_ConDecimalesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DelPiezaTipoB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int DelPiezaTipoB(string lArr, int iUser) {
             object[] results = this.Invoke("DelPiezaTipoB", new object[] {
@@ -1344,6 +1514,41 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerObjetoINET_Calama", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Objeto_WsINET ObtenerObjetoINET_Calama(System.Data.DataSet iDts, string iFechaMov, string iGlosa1, string iGlosa2) {
+            object[] results = this.Invoke("ObtenerObjetoINET_Calama", new object[] {
+                        iDts,
+                        iFechaMov,
+                        iGlosa1,
+                        iGlosa2});
+            return ((Objeto_WsINET)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerObjetoINET_CalamaAsync(System.Data.DataSet iDts, string iFechaMov, string iGlosa1, string iGlosa2) {
+            this.ObtenerObjetoINET_CalamaAsync(iDts, iFechaMov, iGlosa1, iGlosa2, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerObjetoINET_CalamaAsync(System.Data.DataSet iDts, string iFechaMov, string iGlosa1, string iGlosa2, object userState) {
+            if ((this.ObtenerObjetoINET_CalamaOperationCompleted == null)) {
+                this.ObtenerObjetoINET_CalamaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerObjetoINET_CalamaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerObjetoINET_Calama", new object[] {
+                        iDts,
+                        iFechaMov,
+                        iGlosa1,
+                        iGlosa2}, this.ObtenerObjetoINET_CalamaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerObjetoINET_CalamaOperationCompleted(object arg) {
+            if ((this.ObtenerObjetoINET_CalamaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerObjetoINET_CalamaCompleted(this, new ObtenerObjetoINET_CalamaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerObjetoINET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public Objeto_WsINET ObtenerObjetoINET(System.Data.DataSet iDts, string iFechaMov, string iGlosa1, string iGlosa2) {
             object[] results = this.Invoke("ObtenerObjetoINET", new object[] {
@@ -1443,6 +1648,33 @@ namespace EstadosdePagos.WsMensajeria {
             if ((this.ObtenerDtsPortada_PL_ItDespachadaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ObtenerDtsPortada_PL_ItDespachadaCompleted(this, new ObtenerDtsPortada_PL_ItDespachadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RevisionGuias_C_I", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string RevisionGuias_C_I() {
+            object[] results = this.Invoke("RevisionGuias_C_I", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RevisionGuias_C_IAsync() {
+            this.RevisionGuias_C_IAsync(null);
+        }
+        
+        /// <remarks/>
+        public void RevisionGuias_C_IAsync(object userState) {
+            if ((this.RevisionGuias_C_IOperationCompleted == null)) {
+                this.RevisionGuias_C_IOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRevisionGuias_C_IOperationCompleted);
+            }
+            this.InvokeAsync("RevisionGuias_C_I", new object[0], this.RevisionGuias_C_IOperationCompleted, userState);
+        }
+        
+        private void OnRevisionGuias_C_IOperationCompleted(object arg) {
+            if ((this.RevisionGuias_C_ICompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RevisionGuias_C_ICompleted(this, new RevisionGuias_C_ICompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2712,6 +2944,33 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosConectores", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet ObtenerDatosConectores() {
+            object[] results = this.Invoke("ObtenerDatosConectores", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosConectoresAsync() {
+            this.ObtenerDatosConectoresAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosConectoresAsync(object userState) {
+            if ((this.ObtenerDatosConectoresOperationCompleted == null)) {
+                this.ObtenerDatosConectoresOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosConectoresOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosConectores", new object[0], this.ObtenerDatosConectoresOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosConectoresOperationCompleted(object arg) {
+            if ((this.ObtenerDatosConectoresCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosConectoresCompleted(this, new ObtenerDatosConectoresCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminaColada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string EliminaColada(string iIdColada) {
             object[] results = this.Invoke("EliminaColada", new object[] {
@@ -3954,45 +4213,6 @@ namespace EstadosdePagos.WsMensajeria {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDtsPL_Original_ConDet", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Dts_PL ObtenerDtsPL_Original_ConDet(string iCodigoIt, string iIdIT, string iCodViaje, string iTipoImp, string IdObra, string iTipo) {
-            object[] results = this.Invoke("ObtenerDtsPL_Original_ConDet", new object[] {
-                        iCodigoIt,
-                        iIdIT,
-                        iCodViaje,
-                        iTipoImp,
-                        IdObra,
-                        iTipo});
-            return ((Dts_PL)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ObtenerDtsPL_Original_ConDetAsync(string iCodigoIt, string iIdIT, string iCodViaje, string iTipoImp, string IdObra, string iTipo) {
-            this.ObtenerDtsPL_Original_ConDetAsync(iCodigoIt, iIdIT, iCodViaje, iTipoImp, IdObra, iTipo, null);
-        }
-        
-        /// <remarks/>
-        public void ObtenerDtsPL_Original_ConDetAsync(string iCodigoIt, string iIdIT, string iCodViaje, string iTipoImp, string IdObra, string iTipo, object userState) {
-            if ((this.ObtenerDtsPL_Original_ConDetOperationCompleted == null)) {
-                this.ObtenerDtsPL_Original_ConDetOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDtsPL_Original_ConDetOperationCompleted);
-            }
-            this.InvokeAsync("ObtenerDtsPL_Original_ConDet", new object[] {
-                        iCodigoIt,
-                        iIdIT,
-                        iCodViaje,
-                        iTipoImp,
-                        IdObra,
-                        iTipo}, this.ObtenerDtsPL_Original_ConDetOperationCompleted, userState);
-        }
-        
-        private void OnObtenerDtsPL_Original_ConDetOperationCompleted(object arg) {
-            if ((this.ObtenerDtsPL_Original_ConDetCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerDtsPL_Original_ConDetCompleted(this, new ObtenerDtsPL_Original_ConDetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -4021,7 +4241,7 @@ namespace EstadosdePagos.WsMensajeria {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("Dts_PL")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     public partial class Dts_PL : global::System.Data.DataSet {
         
         private ObsCuadroProgramacionDataTable tableObsCuadroProgramacion;
@@ -4841,6 +5061,10 @@ namespace EstadosdePagos.WsMensajeria {
             
             private global::System.Data.DataColumn columnPesoTotal;
             
+            private global::System.Data.DataColumn columnNroEtiquetasConectores;
+            
+            private global::System.Data.DataColumn columnValorTotal_ITCon;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ResumenDespDataTable() {
@@ -4908,6 +5132,22 @@ namespace EstadosdePagos.WsMensajeria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NroEtiquetasConectoresColumn {
+                get {
+                    return this.columnNroEtiquetasConectores;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ValorTotal_ITConColumn {
+                get {
+                    return this.columnValorTotal_ITCon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4943,13 +5183,15 @@ namespace EstadosdePagos.WsMensajeria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ResumenDespRow AddResumenDespRow(string CodigoIT, string Obra, string NroGD, string PesoTotal) {
+            public ResumenDespRow AddResumenDespRow(string CodigoIT, string Obra, string NroGD, string PesoTotal, string NroEtiquetasConectores, string ValorTotal_ITCon) {
                 ResumenDespRow rowResumenDespRow = ((ResumenDespRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CodigoIT,
                         Obra,
                         NroGD,
-                        PesoTotal};
+                        PesoTotal,
+                        NroEtiquetasConectores,
+                        ValorTotal_ITCon};
                 rowResumenDespRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowResumenDespRow);
                 return rowResumenDespRow;
@@ -4982,6 +5224,8 @@ namespace EstadosdePagos.WsMensajeria {
                 this.columnObra = base.Columns["Obra"];
                 this.columnNroGD = base.Columns["NroGD"];
                 this.columnPesoTotal = base.Columns["PesoTotal"];
+                this.columnNroEtiquetasConectores = base.Columns["NroEtiquetasConectores"];
+                this.columnValorTotal_ITCon = base.Columns["ValorTotal_ITCon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4995,6 +5239,10 @@ namespace EstadosdePagos.WsMensajeria {
                 base.Columns.Add(this.columnNroGD);
                 this.columnPesoTotal = new global::System.Data.DataColumn("PesoTotal", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPesoTotal);
+                this.columnNroEtiquetasConectores = new global::System.Data.DataColumn("NroEtiquetasConectores", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNroEtiquetasConectores);
+                this.columnValorTotal_ITCon = new global::System.Data.DataColumn("ValorTotal_ITCon", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnValorTotal_ITCon);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7251,6 +7499,39 @@ namespace EstadosdePagos.WsMensajeria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string NroEtiquetasConectores {
+                get {
+                    try {
+                        return ((string)(this[this.tableResumenDesp.NroEtiquetasConectoresColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NroEtiquetasConectores\' de la tabla \'ResumenDesp\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableResumenDesp.NroEtiquetasConectoresColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ValorTotal_ITCon {
+                get {
+                    try {
+                        return ((string)(this[this.tableResumenDesp.ValorTotal_ITConColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ValorTotal_ITCon\' de la tabla \'ResumenDesp\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableResumenDesp.ValorTotal_ITConColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCodigoITNull() {
                 return this.IsNull(this.tableResumenDesp.CodigoITColumn);
             }
@@ -7295,6 +7576,30 @@ namespace EstadosdePagos.WsMensajeria {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPesoTotalNull() {
                 this[this.tableResumenDesp.PesoTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNroEtiquetasConectoresNull() {
+                return this.IsNull(this.tableResumenDesp.NroEtiquetasConectoresColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNroEtiquetasConectoresNull() {
+                this[this.tableResumenDesp.NroEtiquetasConectoresColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsValorTotal_ITConNull() {
+                return this.IsNull(this.tableResumenDesp.ValorTotal_ITConColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetValorTotal_ITConNull() {
+                this[this.tableResumenDesp.ValorTotal_ITConColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9041,7 +9346,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9242,7 +9547,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9455,7 +9760,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9596,7 +9901,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9662,6 +9967,14 @@ namespace EstadosdePagos.WsMensajeria {
         private int idFormaField;
         
         private string fueImpresaField;
+        
+        private string ordenCompraField;
+        
+        private string esVaPero_NoVaField;
+        
+        private string tieneConectorField;
+        
+        private string calidadAceroField;
         
         /// <remarks/>
         public string id {
@@ -9963,10 +10276,50 @@ namespace EstadosdePagos.WsMensajeria {
                 this.fueImpresaField = value;
             }
         }
+        
+        /// <remarks/>
+        public string OrdenCompra {
+            get {
+                return this.ordenCompraField;
+            }
+            set {
+                this.ordenCompraField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string EsVaPero_NoVa {
+            get {
+                return this.esVaPero_NoVaField;
+            }
+            set {
+                this.esVaPero_NoVaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TieneConector {
+            get {
+                return this.tieneConectorField;
+            }
+            set {
+                this.tieneConectorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CalidadAcero {
+            get {
+                return this.calidadAceroField;
+            }
+            set {
+                this.calidadAceroField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10107,7 +10460,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10212,7 +10565,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10317,7 +10670,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10398,7 +10751,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10659,7 +11012,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10728,7 +11081,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10809,7 +11162,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10819,7 +11172,7 @@ namespace EstadosdePagos.WsMensajeria {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Image))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10828,7 +11181,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10861,7 +11214,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10918,7 +11271,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10992,6 +11345,16 @@ namespace EstadosdePagos.WsMensajeria {
         private string avanceField;
         
         private string idEncargadoField;
+        
+        private string tipoCobraTransporteField;
+        
+        private string diaPresentacionEPField;
+        
+        private string contactoObraField;
+        
+        private string fonoContactoObraField;
+        
+        private string tieneNorma353Field;
         
         /// <remarks/>
         public string Id {
@@ -11332,10 +11695,60 @@ namespace EstadosdePagos.WsMensajeria {
                 this.idEncargadoField = value;
             }
         }
+        
+        /// <remarks/>
+        public string TipoCobraTransporte {
+            get {
+                return this.tipoCobraTransporteField;
+            }
+            set {
+                this.tipoCobraTransporteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DiaPresentacionEP {
+            get {
+                return this.diaPresentacionEPField;
+            }
+            set {
+                this.diaPresentacionEPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ContactoObra {
+            get {
+                return this.contactoObraField;
+            }
+            set {
+                this.contactoObraField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FonoContactoObra {
+            get {
+                return this.fonoContactoObraField;
+            }
+            set {
+                this.fonoContactoObraField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TieneNorma353 {
+            get {
+                return this.tieneNorma353Field;
+            }
+            set {
+                this.tieneNorma353Field = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11572,7 +11985,7 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11638,6 +12051,10 @@ namespace EstadosdePagos.WsMensajeria {
         private int nroCotasVarField;
         
         private string tramaHilosField;
+        
+        private string esVaPeroNoVaField;
+        
+        private string kgsNorma353Field;
         
         /// <remarks/>
         public string IdPieza {
@@ -11938,10 +12355,30 @@ namespace EstadosdePagos.WsMensajeria {
                 this.tramaHilosField = value;
             }
         }
+        
+        /// <remarks/>
+        public string EsVaPeroNoVa {
+            get {
+                return this.esVaPeroNoVaField;
+            }
+            set {
+                this.esVaPeroNoVaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string KgsNorma353 {
+            get {
+                return this.kgsNorma353Field;
+            }
+            set {
+                this.kgsNorma353Field = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12094,11 +12531,63 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerDtsPL_Original_ConDetCompletedEventHandler(object sender, ObtenerDtsPL_Original_ConDetCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDtsPL_Original_ConDetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDtsPL_Original_ConDetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Dts_PL Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Dts_PL)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void Obtener_TX_Mail_AClienteCompletedEventHandler(object sender, Obtener_TX_Mail_AClienteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Obtener_TX_Mail_AClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Obtener_TX_Mail_AClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ConDet_NewCompletedEventHandler(object sender, ObtenerDtsPL_ConDet_NewCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDet_NewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12120,11 +12609,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDiametros_SaldosViajeCompletedEventHandler(object sender, ObtenerDiametros_SaldosViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametros_SaldosViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12146,11 +12635,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerTrazabilidadColadasCompletedEventHandler(object sender, ObtenerTrazabilidadColadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTrazabilidadColadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12172,11 +12661,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ConDetBECHCompletedEventHandler(object sender, ObtenerDtsPL_ConDetBECHCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDetBECHCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12198,11 +12687,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ConDet_SaldosViajeCompletedEventHandler(object sender, ObtenerDtsPL_ConDet_SaldosViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDet_SaldosViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12224,11 +12713,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPLCompletedEventHandler(object sender, ObtenerDtsPLCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12250,11 +12739,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_Original_ViajeDespCompletedEventHandler(object sender, ObtenerDtsPL_Original_ViajeDespCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_Original_ViajeDespCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12276,11 +12765,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ViajeDespCompletedEventHandler(object sender, ObtenerDtsPL_ViajeDespCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ViajeDespCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12302,11 +12791,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ViajeDesp_ConSaldosCompletedEventHandler(object sender, ObtenerDtsPL_ViajeDesp_ConSaldosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ViajeDesp_ConSaldosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12328,11 +12817,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ConSaldosCompletedEventHandler(object sender, ObtenerDtsPL_ConSaldosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConSaldosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12354,11 +12843,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_BECHCompletedEventHandler(object sender, ObtenerDtsPL_BECHCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_BECHCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12380,11 +12869,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_OriginalCompletedEventHandler(object sender, ObtenerDtsPL_OriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_OriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12406,11 +12895,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPesoBechtellCompletedEventHandler(object sender, ObtenerPesoBechtellCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPesoBechtellCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12432,11 +12921,63 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerPesoPorObraCompletedEventHandler(object sender, ObtenerPesoPorObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerPesoPorObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerPesoPorObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerPesoPorObra_ConDecimalesCompletedEventHandler(object sender, ObtenerPesoPorObra_ConDecimalesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerPesoPorObra_ConDecimalesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerPesoPorObra_ConDecimalesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void DelPiezaTipoBCompletedEventHandler(object sender, DelPiezaTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DelPiezaTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12458,11 +12999,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDatosControlCargaCompletedEventHandler(object sender, ObtenerDatosControlCargaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosControlCargaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12484,11 +13025,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDatosProtocoloDimCompletedEventHandler(object sender, ObtenerDatosProtocoloDimCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosProtocoloDimCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12510,11 +13051,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ActualizaOrdenPorViajeCompletedEventHandler(object sender, ActualizaOrdenPorViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ActualizaOrdenPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12536,11 +13077,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDatosFacturacionPorCamionCompletedEventHandler(object sender, ObtenerDatosFacturacionPorCamionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosFacturacionPorCamionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12562,11 +13103,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObrasPorUsuarioCompletedEventHandler(object sender, ObrasPorUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObrasPorUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12588,11 +13129,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void CreaDatosEn_TOCompletedEventHandler(object sender, CreaDatosEn_TOCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CreaDatosEn_TOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12614,11 +13155,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void Crea_IT_ViajeEN_TOCompletedEventHandler(object sender, Crea_IT_ViajeEN_TOCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Crea_IT_ViajeEN_TOCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12640,11 +13181,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerProductosPorMaquinaCompletedEventHandler(object sender, ObtenerProductosPorMaquinaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerProductosPorMaquinaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12666,11 +13207,37 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerObjetoINET_CalamaCompletedEventHandler(object sender, ObtenerObjetoINET_CalamaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerObjetoINET_CalamaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerObjetoINET_CalamaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Objeto_WsINET Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Objeto_WsINET)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerObjetoINETCompletedEventHandler(object sender, ObtenerObjetoINETCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerObjetoINETCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12692,11 +13259,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerObjetoINETPorProductoCompletedEventHandler(object sender, ObtenerObjetoINETPorProductoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerObjetoINETPorProductoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12718,11 +13285,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPortada_PL_ItDespachadaCompletedEventHandler(object sender, ObtenerDtsPortada_PL_ItDespachadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPortada_PL_ItDespachadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12744,11 +13311,37 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void RevisionGuias_C_ICompletedEventHandler(object sender, RevisionGuias_C_ICompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RevisionGuias_C_ICompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RevisionGuias_C_ICompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabaImagenCompletedEventHandler(object sender, GrabaImagenCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaImagenCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12770,11 +13363,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ListadoKilosMontadosCompletedEventHandler(object sender, ListadoKilosMontadosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListadoKilosMontadosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12796,11 +13389,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void enviarCorreoNotificacionaObraCompletedEventHandler(object sender, enviarCorreoNotificacionaObraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class enviarCorreoNotificacionaObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12822,11 +13415,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void EnviaNotificacionesEnviaMsgDeNotificacionCompletedEventHandler(object sender, EnviaNotificacionesEnviaMsgDeNotificacionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class EnviaNotificacionesEnviaMsgDeNotificacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12848,11 +13441,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDatosBloqueosObraCompletedEventHandler(object sender, ObtenerDatosBloqueosObraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosBloqueosObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12874,11 +13467,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerNroGuiaInetCompletedEventHandler(object sender, ObtenerNroGuiaInetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerNroGuiaInetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12900,11 +13493,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerNroGuiaInet_DespachoCamCompletedEventHandler(object sender, ObtenerNroGuiaInet_DespachoCamCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerNroGuiaInet_DespachoCamCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12926,11 +13519,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerCantidadDesdeInetCompletedEventHandler(object sender, ObtenerCantidadDesdeInetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerCantidadDesdeInetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12952,11 +13545,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerKgsViajesCompletedEventHandler(object sender, ObtenerKgsViajesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerKgsViajesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -12978,11 +13571,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerTblDetallePreItCompletedEventHandler(object sender, ObtenerTblDetallePreItCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTblDetallePreItCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13004,11 +13597,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarImagenFormaCompletedEventHandler(object sender, GrabarImagenFormaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarImagenFormaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13030,11 +13623,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarImagenesLayoutCompletedEventHandler(object sender, GrabarImagenesLayoutCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarImagenesLayoutCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13056,11 +13649,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarImagenFormaOriginalCompletedEventHandler(object sender, GrabarImagenFormaOriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarImagenFormaOriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13082,11 +13675,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabaLogImpresionCompletedEventHandler(object sender, GrabaLogImpresionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaLogImpresionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13108,11 +13701,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ExistePiezaCompletedEventHandler(object sender, ExistePiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ExistePiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13134,11 +13727,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDatosCompletedEventHandler(object sender, ObtenerDatosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13160,11 +13753,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerParametroCompletedEventHandler(object sender, ObtenerParametroCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerParametroCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13186,11 +13779,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerHojaDespiecePorIdCompletedEventHandler(object sender, ObtenerHojaDespiecePorIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerHojaDespiecePorIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13212,11 +13805,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerHojaDespiecePorIdPCompletedEventHandler(object sender, ObtenerHojaDespiecePorIdPCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerHojaDespiecePorIdPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13238,11 +13831,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerResumenPiezasDigitadasCompletedEventHandler(object sender, ObtenerResumenPiezasDigitadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerResumenPiezasDigitadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13264,11 +13857,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerUsuarioCompletedEventHandler(object sender, ObtenerUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13290,11 +13883,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerUsuarioTOSOLCompletedEventHandler(object sender, ObtenerUsuarioTOSOLCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerUsuarioTOSOLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13316,11 +13909,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabaPiezaCompletedEventHandler(object sender, GrabaPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13342,11 +13935,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void Pasa_a_MM_ConIdFormaCompletedEventHandler(object sender, Pasa_a_MM_ConIdFormaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Pasa_a_MM_ConIdFormaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13368,11 +13961,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerImgCompletedEventHandler(object sender, ObtenerImgCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerImgCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13394,11 +13987,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerImagenOriginalCompletedEventHandler(object sender, ObtenerImagenOriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerImagenOriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13420,11 +14013,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabaHdCompletedEventHandler(object sender, GrabaHdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabaHdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13446,11 +14039,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerObrasVigentesCompletedEventHandler(object sender, ObtenerObrasVigentesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerObrasVigentesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13472,11 +14065,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerTBL_ObrasVigentesCompletedEventHandler(object sender, ObtenerTBL_ObrasVigentesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTBL_ObrasVigentesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13498,11 +14091,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerTipoFormaCompletedEventHandler(object sender, ObtenerTipoFormaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTipoFormaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13524,11 +14117,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerTipoFormaConHiloCompletedEventHandler(object sender, ObtenerTipoFormaConHiloCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTipoFormaConHiloCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13550,11 +14143,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerTodasLasFormasCompletedEventHandler(object sender, ObtenerTodasLasFormasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTodasLasFormasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13576,11 +14169,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerVariabilidadTipoFormasCompletedEventHandler(object sender, ObtenerVariabilidadTipoFormasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerVariabilidadTipoFormasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13602,11 +14195,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDiametrosCompletedEventHandler(object sender, ObtenerDiametrosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13628,11 +14221,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsSectorFiguraUbicacionCompletedEventHandler(object sender, ObtenerDtsSectorFiguraUbicacionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsSectorFiguraUbicacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13654,11 +14247,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPieasTipoB_V2CompletedEventHandler(object sender, ObtenerDtsPieasTipoB_V2CompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPieasTipoB_V2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13680,11 +14273,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPieasTipoBCompletedEventHandler(object sender, ObtenerDtsPieasTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPieasTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13706,11 +14299,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ClonarPiezasTipoBCompletedEventHandler(object sender, ClonarPiezasTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ClonarPiezasTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13732,11 +14325,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ModificacionEncabezados_HDCompletedEventHandler(object sender, ModificacionEncabezados_HDCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ModificacionEncabezados_HDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13758,11 +14351,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void CargaPiezasOCCompletedEventHandler(object sender, CargaPiezasOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CargaPiezasOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13784,11 +14377,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsCmbObrasCompletedEventHandler(object sender, ObtenerDtsCmbObrasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsCmbObrasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13810,11 +14403,37 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerDatosConectoresCompletedEventHandler(object sender, ObtenerDatosConectoresCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosConectoresCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosConectoresCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void EliminaColadaCompletedEventHandler(object sender, EliminaColadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class EliminaColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13836,11 +14455,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void CalcularNroPaquetesCompletedEventHandler(object sender, CalcularNroPaquetesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CalcularNroPaquetesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13862,11 +14481,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void RegistraErrorCompletedEventHandler(object sender, RegistraErrorCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RegistraErrorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13888,11 +14507,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarOCCompletedEventHandler(object sender, GrabarOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13914,11 +14533,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarColadaCompletedEventHandler(object sender, GrabarColadaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarColadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13940,11 +14559,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarCotasCompletedEventHandler(object sender, GrabarCotasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarCotasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13966,11 +14585,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerColadasIgresadasCompletedEventHandler(object sender, ObtenerColadasIgresadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerColadasIgresadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -13992,11 +14611,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void Obtener_entregasOCCompletedEventHandler(object sender, Obtener_entregasOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Obtener_entregasOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14018,11 +14637,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void Obtener_OC_IgresadasCompletedEventHandler(object sender, Obtener_OC_IgresadasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class Obtener_OC_IgresadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14044,11 +14663,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarActaEntregaCompletedEventHandler(object sender, GrabarActaEntregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarActaEntregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14070,11 +14689,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void EliminaActaEntregaCompletedEventHandler(object sender, EliminaActaEntregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class EliminaActaEntregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14096,11 +14715,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerActaEntregaCompletedEventHandler(object sender, ObtenerActaEntregaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerActaEntregaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14122,11 +14741,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsCmbObras_V2CompletedEventHandler(object sender, ObtenerDtsCmbObras_V2CompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsCmbObras_V2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14148,11 +14767,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPiezasPorPlanoParaDelCompletedEventHandler(object sender, ObtenerPiezasPorPlanoParaDelCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasPorPlanoParaDelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14174,11 +14793,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPiezaTipoB_PorIdCompletedEventHandler(object sender, ObtenerPiezaTipoB_PorIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezaTipoB_PorIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14200,11 +14819,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPiezasParaModCompletedEventHandler(object sender, ObtenerPiezasParaModCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasParaModCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14226,11 +14845,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDatosHdPorIdPiezaTipoBCompletedEventHandler(object sender, ObtenerDatosHdPorIdPiezaTipoBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDatosHdPorIdPiezaTipoBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14252,11 +14871,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPiezasPorPlanoCompletedEventHandler(object sender, ObtenerPiezasPorPlanoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasPorPlanoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14278,11 +14897,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void SP_GeneraDetallePaquetesPiezaCompletedEventHandler(object sender, SP_GeneraDetallePaquetesPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SP_GeneraDetallePaquetesPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14304,11 +14923,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerParametrosTextoImgCompletedEventHandler(object sender, ObtenerParametrosTextoImgCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerParametrosTextoImgCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14330,11 +14949,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerNombreUsuarioCompletedEventHandler(object sender, ObtenerNombreUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerNombreUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14356,11 +14975,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerResumenItsCompletedEventHandler(object sender, ObtenerResumenItsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerResumenItsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14382,11 +15001,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ResumenImpresionEtiquetasCompletedEventHandler(object sender, ResumenImpresionEtiquetasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResumenImpresionEtiquetasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14408,11 +15027,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ResumenItsPara_PLCompletedEventHandler(object sender, ResumenItsPara_PLCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResumenItsPara_PLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14434,11 +15053,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ResumenItsPara_LaminasCompletedEventHandler(object sender, ResumenItsPara_LaminasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ResumenItsPara_LaminasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14460,11 +15079,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void MarcaPiezasComoImpresasCompletedEventHandler(object sender, MarcaPiezasComoImpresasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MarcaPiezasComoImpresasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14486,11 +15105,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void MarcaPiezasComoLaminasImpresasCompletedEventHandler(object sender, MarcaPiezasComoLaminasImpresasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MarcaPiezasComoLaminasImpresasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14512,11 +15131,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerTipoDeObraCompletedEventHandler(object sender, ObtenerTipoDeObraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerTipoDeObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14538,11 +15157,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ConLamCompletedEventHandler(object sender, ObtenerDtsPL_ConLamCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConLamCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14564,11 +15183,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPiezasConProblemasImgCompletedEventHandler(object sender, ObtenerPiezasConProblemasImgCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezasConProblemasImgCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14590,11 +15209,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerCotas_PorIdPiezaCompletedEventHandler(object sender, ObtenerCotas_PorIdPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerCotas_PorIdPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14616,11 +15235,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerImg_PorIdPiezaCompletedEventHandler(object sender, ObtenerImg_PorIdPiezaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerImg_PorIdPiezaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14642,11 +15261,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPiezas_BELTECHCompletedEventHandler(object sender, ObtenerPiezas_BELTECHCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezas_BELTECHCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14668,11 +15287,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerPiezas_BELTECH_Desde_DbCompletedEventHandler(object sender, ObtenerPiezas_BELTECH_Desde_DbCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerPiezas_BELTECH_Desde_DbCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14694,11 +15313,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDiametrosPorViaje_ParaEPCompletedEventHandler(object sender, ObtenerDiametrosPorViaje_ParaEPCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosPorViaje_ParaEPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14720,11 +15339,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDiametrosPorViajeCompletedEventHandler(object sender, ObtenerDiametrosPorViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosPorViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14746,11 +15365,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDiametrosPorViaje_PL_OriginalCompletedEventHandler(object sender, ObtenerDiametrosPorViaje_PL_OriginalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDiametrosPorViaje_PL_OriginalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14772,11 +15391,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void OCCompletedEventHandler(object sender, OCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class OCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14798,11 +15417,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void GrabarEntregasOCCompletedEventHandler(object sender, GrabarEntregasOCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GrabarEntregasOCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14824,11 +15443,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerKilosEntregadosPorItemCompletedEventHandler(object sender, ObtenerKilosEntregadosPorItemCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerKilosEntregadosPorItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14850,11 +15469,11 @@ namespace EstadosdePagos.WsMensajeria {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerDtsPL_ConDetCompletedEventHandler(object sender, ObtenerDtsPL_ConDetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerDtsPL_ConDetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -14862,32 +15481,6 @@ namespace EstadosdePagos.WsMensajeria {
         private object[] results;
         
         internal ObtenerDtsPL_ConDetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Dts_PL Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Dts_PL)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
-    public delegate void ObtenerDtsPL_Original_ConDetCompletedEventHandler(object sender, ObtenerDtsPL_Original_ConDetCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerDtsPL_Original_ConDetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ObtenerDtsPL_Original_ConDetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

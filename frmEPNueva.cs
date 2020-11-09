@@ -22,6 +22,7 @@ namespace EstadosdePagos
         private string _obra = "";
         private string _tecnicoObra = "";
         private string _estado = "";
+        private string _TieneGuias = "";
 
         public string Empresa
         {
@@ -59,6 +60,13 @@ namespace EstadosdePagos
             get { return _estado; }
             set { _estado = value; }
         }
+
+        public string TieneGuias
+        {
+            get { return _TieneGuias; }
+            set { _TieneGuias = value; }
+        }
+
         #endregion
 
         private const string COLUMNNAME_MARCA = "MARCA";
@@ -240,6 +248,12 @@ namespace EstadosdePagos
             Cursor.Current = Cursors.WaitCursor;
             try
             {
+                if (incluyeGuias == true)
+                    TieneGuias = "S";
+                else
+                    TieneGuias = "N";
+
+
                 //wsTo = new WsTo.Operacion();
                 //Obtiene el dia de presentacion de los EP, y la fecha de creacion de la Obra
                 Lbl_PB.Text = ". . . OBTENIENDO DATOS INICIALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
@@ -348,6 +362,7 @@ namespace EstadosdePagos
                             //fin
 
                         }
+                      
 
                         Lbl_PB.Text = ". . . REALIZANDO CALCULOS FINALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
                         dgvGuiasDespacho.DataSource = dtGuiasDespachoINET;
@@ -363,6 +378,12 @@ namespace EstadosdePagos
                     else
                         MessageBox.Show(listaDataSetOp.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+
+
+                }
+
             }
             catch (Exception exc)
             {
@@ -733,7 +754,7 @@ namespace EstadosdePagos
 
                     if (this.Ep_id > 0)
                     {
-                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", this.Ep_id, ",0,' ', 0,0,'','','',7");
+                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", this.Ep_id, ",0,' ', 0,0,'','','','',7");
                         lDts = lPx.ObtenerDatos(lSql);
                         if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                         {
@@ -744,7 +765,7 @@ namespace EstadosdePagos
                     }
                     else
                     {
-                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", this._ep_obra, ", ' ',0,0,'','','',12");
+                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", this._ep_obra, ", ' ',0,0,'','','','',12");
                         lDts = lPx.ObtenerDatos(lSql);
                         if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                         {
@@ -849,8 +870,6 @@ namespace EstadosdePagos
                 Cursor.Current = Cursors.WaitCursor;
                 try
                 {
-   
-
                     //Graba el EP para generar el ID
                     //if (_ep_id.Equals(0))
                     //{
@@ -952,7 +971,7 @@ namespace EstadosdePagos
             }
             else
             {
-                if (lComun.Val(Lbl_totalOtros.Text) > 0)
+                if ((lComun.Val(Lbl_totalOtros.Text) > 0) ) // || (TieneGuias=="N"))
                 {
                     //1.- debemos guardar el EP 
                     estado_Pago = wsOperacion.RegistrarEP(_ep_obra, _ep_id, dtpFechaPresentEP.Value, txtComentario.Text.Trim(), Program.currentUser.Login, Program.currentUser.ComputerName);
@@ -969,7 +988,7 @@ namespace EstadosdePagos
                     {
                         WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
                         string lSql = "";
-                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", _ep_id, ", ", _ep_obra, ",' ',0,0, '','','',13");
+                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", _ep_id, ", ", _ep_obra, ",' ',0,0, '','','','',13");
                         lDts = lPx.ObtenerDatos(lSql);
                         if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                         {
@@ -982,8 +1001,44 @@ namespace EstadosdePagos
                         }                      
                      }
                 }
-                else  
-                    MessageBox.Show("No existen registros seleccionados.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    if (TieneGuias == "N")
+                    {
+                        //1.- debemos guardar el EP 
+                        estado_Pago = wsOperacion.RegistrarEP(_ep_obra, _ep_id, dtpFechaPresentEP.Value, txtComentario.Text.Trim(), Program.currentUser.Login, Program.currentUser.ComputerName);
+                        if (estado_Pago.MensajeError.Equals(""))
+                        {
+                            _ep_id = estado_Pago.Id;
+                            lblID.Text = _ep_id.ToString();
+                        }
+                        else
+                            error = estado_Pago.MensajeError.ToString();
+
+                        //2.- Vinculamos el EP a los EP_Otros 
+                        if (error.Equals(""))
+                        {
+                            //WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+                            //string lSql = "";
+                            //lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", _ep_id, ", ", _ep_obra, ",' ',0,0, '','','','',13");
+                            //lDts = lPx.ObtenerDatos(lSql);
+                            //if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                            //{
+                            //    if (lComun.Val(lDts.Tables[0].Rows[0][0].ToString()) > 0)
+                            //    {
+                            //        MessageBox.Show("Los Datos se han Grado Correctamente ", "Avisos sistema", MessageBoxButtons.OK);
+                            //    }
+                            //    else
+                            //        MessageBox.Show("Hubo un problema en la grabación de los datos. ", "Avisos sistema", MessageBoxButtons.OK);
+                            //}
+                        }
+
+                    } 
+                    else
+                        MessageBox.Show("No existen registros seleccionados.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
 
             }
 

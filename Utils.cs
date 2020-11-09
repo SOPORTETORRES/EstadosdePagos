@@ -1152,9 +1152,12 @@ namespace EstadosdePagos
                 Lbl_PB.Text = " Revisando Guías de Despacho   . . . "; Lbl_PB.Refresh();
                 //Pb.Maximum  = totalGuiasDespacho; Pb.Minimum = 1; Pb.Value  = 1;
 
-           
-               
-                if (!dir_guiaDespacho.Equals(""))
+
+                string lOBtenerPdfGuias = ConfigurationManager.AppSettings["IncluyeGuiasPdf"].ToString();
+
+                if (lOBtenerPdfGuias.ToUpper().Equals("S"))
+                { 
+                if ((!dir_guiaDespacho.Equals(""))) // &&())
                 {
                     foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
                     {
@@ -1275,7 +1278,8 @@ namespace EstadosdePagos
                 sb.Append("Total etiqueta(s): " + totalEtiquetas.ToString("N0") + "\n");
                 sb.Append("Total kilo(s): " + totalKilos.ToString("N0") + "\n\n");
                 sb.Append("Total $$$ a cobrar: " + (totalKilos * (valorKiloSuministro.Equals("") ? 0 : Convert.ToInt32(valorKiloSuministro))).ToString("N0"));
-                //MessageBox.Show(sb.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show(sb.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception exc)
             {
@@ -1409,7 +1413,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','',7");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','','',7");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1428,7 +1432,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','',14");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','','',14");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1448,7 +1452,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra," ,' ',' ',0,'','','',16");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra," ,' ',' ',0,'','','','',16");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1466,7 +1470,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, " ,' ',' ',0,'','','',17");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, " ,' ',' ',0,'','','','',17");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1485,7 +1489,7 @@ namespace EstadosdePagos
             switch (iTipo)
             {
                 case "N":
-                case "S":
+                case "S":   // Con Contrato
                     lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='", iTipo, "'"), "", DataViewRowState.CurrentRows);
                     if (lVtm.Count > 0)
                     {
@@ -1516,6 +1520,17 @@ namespace EstadosdePagos
                         }
                     }
                     break;
+                case "DAA":
+                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Tipo='D' and id_ep<", iId_EpActual), "", DataViewRowState.CurrentRows);
+                    if (lVtm.Count > 0)
+                    {
+                        for (i = 0; i < lVtm.Count; i++)
+                        {
+                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                        }
+                        lTotal = lTotal * (-1);
+                    }
+                    break;
                 case "SPA":
                     lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='S' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
                     if (lVtm.Count > 0)
@@ -1536,6 +1551,17 @@ namespace EstadosdePagos
                         }
                     }
                     break;
+                case "DPA":
+                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Tipo='D' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
+                    if (lVtm.Count > 0)
+                    {
+                        for (i = 0; i < lVtm.Count; i++)
+                        {
+                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                        }
+                        lTotal = lTotal * (-1);
+                    }
+                    break;
 
             }
 
@@ -1547,7 +1573,7 @@ namespace EstadosdePagos
 
         private void GeneraExcel_EP(int accion, string ep_obra, Int32 correlativo,int  ep_id , string lPathDest)
         {
-            string selectedPath = ""; string obra = "";
+            //string selectedPath = ""; string obra = "";
             WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
             WsOperacion.ListaDataSet listaDataSetOp = new WsOperacion.ListaDataSet();
             WsOperacion.ListaDataSet listaDataTMP = new WsOperacion.ListaDataSet();
@@ -1563,10 +1589,8 @@ namespace EstadosdePagos
             try
             {
                 lPathDestino = lPathDest;
-                    //Path.Combine (ConfigurationManager.AppSettings["PathLocal"].ToString(),correlativo.ToString () );
 
                 //Anexa el nombre de la carpeta a generar
-                //selectedPath = selectedPath + (!su.Right(Application.StartupPath, 1).Equals("\\") ? "\\" : "") + carpeta;
                 if (!fs.DirectoryExists(lPathDestino))
                     fs.createDirectory(lPathDestino);
 
@@ -1715,8 +1739,8 @@ namespace EstadosdePagos
                                     if (listaDataSetOp.MensajeError.Equals(""))
                                         dtResumenxGuiaDespacho = listaDataSetOp.DataSet.Tables[0];
 
-                                    totalKgSum = long.Parse (RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho,"FE"));
-                                    totalKgPrep = long.Parse(RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho, "F"));
+                                    totalKgSum = long.Parse (RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho,"S"));
+                                    totalKgPrep = long.Parse(RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho, "P"));
 
                                     excelSheet.Range["J7"].Value = totalKgSum;  // si la IT es tipo TP 
                                     excelSheet.Range["J8"].Value = totalKgPrep; // RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  //totalKilos;  //Sumunistro
@@ -1729,15 +1753,9 @@ namespace EstadosdePagos
                         else
                             error = listaDataSetOp.MensajeError.ToString();
 
-                        //excelSheet.Range["BC5"].Value = "Obra " + obra;
-                        //excelSheet.Range["BE6"].Value = "ESTADO DE PAGO ACTUAL N° " + correlativo;
-                        //FIN comentarios
 
-                        //EP generados (Todos)
-                        int fila = 11;
-                        int columna = 9;
                         Int64 kilos = 0, total = 0, correl = 0;
-                        Int64 totalKilosCobrados = 0, totalCobrado = 0;
+ 
                        
 
                         //LLenamos el Objeto con los totales del EP **********************************************+
@@ -1765,7 +1783,7 @@ namespace EstadosdePagos
 
                         String lRango = "";string lTotalAcumAnt = "0";
                         lIndex = -1;
-                        lWheres = " Contrato='S'  ";
+                        lWheres = " Tipo='C'  ";
                         // Seleccionamos la hoja del excel 
                         (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
                         lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
@@ -1813,9 +1831,8 @@ namespace EstadosdePagos
                         }
                          lIndex = lIndex+1; 
 
-                        lWheres = " Contrato<>'S'  ";
+                        lWheres = " Tipo='AP'   ";
                         lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
-                        //lVistaTmp = new DataView(lTblOtros, lWheres, "", DataViewRowState.CurrentRows);
                         lIndex = lIndex + 10;
                         for (i = 0; i < lVistaTmp.Count; i++)
                         {
@@ -1845,25 +1862,63 @@ namespace EstadosdePagos
                             //Total Acumulado
                             lRango = string.Concat("L", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "+H", (lIndex).ToString()); //"J10+H10";
                             lRango = string.Concat("M", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (lIndex).ToString(), "+K", (lIndex).ToString());
-                            //=I10 +K10";
 
                             //Saldo Pendiente
                             lRango = string.Concat("N", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (lIndex).ToString(), "-L", (lIndex).ToString()); //"=D10-L10";
                             lRango = string.Concat("O", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (lIndex).ToString(), "-M", (lIndex).ToString()); //"=G10-M10";
 
+                            lIndex = lIndex + 1;
+                            if (i < lVistaTmp.Count - 1)
+                            {
+                                excelSheet.Rows[(lIndex).ToString()].Insert();
+                            }                   
+                        }
+                        // Descuentos 
+                        lWheres = " Tipo='D'   ";
+                        lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
+                        lIndex = lIndex + 1;
+                        for (i = 0; i < lVistaTmp.Count; i++)
+                        {
+                            if (i == 0)
+                                excelSheet.Rows[(i + lIndex).ToString()].Insert();
 
+                            lRango = string.Concat("B", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("5.", (i + 1).ToString());
+                            lRango = string.Concat("C", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Descripcion"].ToString();
+                            lRango = string.Concat("D", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Total"].ToString();
+                            lRango = string.Concat("E", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Unidad_Otros"].ToString();
+                            lRango = string.Concat("F", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["PU"].ToString();
+                            lRango = string.Concat("G", (lIndex).ToString());
+                            excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*D", (lIndex).ToString()); //"=G10-M10";
+
+                            //Acumulado Anterior
+                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "DAA", lTblOtrosTodos, ep_id.ToString());
+                            lRango = string.Concat("H", (lIndex).ToString());
+                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                            // lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=(F", (lIndex).ToString(), "*H", (lIndex).ToString(),")*(-1))"); //"=G10-M10";
+                            lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*H", (lIndex).ToString(), "*(-1)"); //"=G10-M10";
+
+                            //Estado de Pago Actual
+                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "DPA", lTblOtrosTodos, ep_id.ToString());
+                            lRango = string.Concat("J", (lIndex).ToString());
+                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                            lRango = string.Concat("K", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "*F", (lIndex).ToString(),"*(-1)"); //"=G10-M10";
+
+                            //Total Acumulado
+                            lRango = string.Concat("L", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "+H", (lIndex).ToString()); //"J10+H10";
+                            lRango = string.Concat("M", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (lIndex).ToString(), "+K", (lIndex).ToString(), "*(-1)");
+
+                            //Saldo Pendiente
+                            lRango = string.Concat("N", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (lIndex).ToString(), "+L", (lIndex).ToString()); //"=D10-L10";
+                            lRango = string.Concat("O", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (lIndex).ToString(), "-M", (lIndex).ToString()); //"=G10-M10";
 
                             lIndex = lIndex + 1;
                             if (i < lVistaTmp.Count - 1)
                             {
                                 excelSheet.Rows[(lIndex).ToString()].Insert();
-                                //lIndex = lIndex -i;
-                                //lIndex = lIndex - 1;
                             }
-                                
-
                         }
-                        //*****************************    EP ANTERIORES    ******************************************
+
+                        //*****************************  Repocisiones  ******************************************
                         lTmps = lDts.DataSet.Tables["Guias"].Copy();
                         total = 0;
                         for (i = 0; i < lTmps.Rows .Count; i++)
@@ -1886,11 +1941,13 @@ namespace EstadosdePagos
                         lTotaPrep = lTotal_F  ;
                         lTotalRep = lTotal_R;
 
-
                         excelSheet.Range["H7"].Value = lTotalSum;
                         excelSheet.Range["H8"].Value = lTotaPrep;
-                        excelSheet.Range["H16"].Value = lTotalRep;
 
+                        lRango = string.Concat("H", (lIndex  ).ToString());
+                        excelSheet.Range[lRango].Value = lTotalRep;
+                        lRango = string.Concat("D", (lIndex).ToString());
+                        excelSheet.Range[lRango].Value = string.Concat("=H", (lIndex).ToString(), "+J", (lIndex ).ToString());  
 
                         // debemos  llenar la Informacion de la Nueva Pestaña
                         //•Se agrega hoja llamada “BD”, la cual debe contener las siguientes columnas desde sistema, acotadas para el EP
@@ -2005,26 +2062,25 @@ namespace EstadosdePagos
             return lRes;
         }
 
-        private string RevisaTiposDeGuiaINET(DataTable iTbl , string iTipoGuia )
+        private string RevisaTiposDeGuiaINET(DataTable iTbl , string iTipo )
         {
              int i = 0; int lTotal = 0;int lTotalTP = 0;
             for (i = 0; i < iTbl.Rows.Count; i++)
             {
-                if (iTipoGuia == "FE")
+                if (iTipo == "S")  // Suministro = F + FE 
                 {
-                    if (iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("FE"))
+                    if ((iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("FE"))  || (iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("F")))
                     {
                         lTotalTP = lTotalTP + int.Parse(iTbl.Rows[i]["Total_Kgs"].ToString());
                     }
-
-                }
-                if (iTipoGuia == "F")
+               }
+                if (iTipo == "P")  //Preparacion =F 
                 {
-                   
+                    if ((iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("F")))
+                    {
                         lTotalTP = lTotalTP + int.Parse(iTbl.Rows[i]["Total_Kgs"].ToString());
-                    
+                    }                  
                 }
-
             }
 
             // return (lTotal- lTotalTP).ToString ();
@@ -2139,7 +2195,7 @@ namespace EstadosdePagos
             Boolean lRes = false;   string lSql = ""; DataTable lTbTmp = new DataTable();
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
 
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,",idObra,", ' ',0,0,'", iServicio,"','','',13");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,",idObra,", ' ',0,0,'", iServicio,"','','','',13");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -2157,7 +2213,7 @@ namespace EstadosdePagos
             Boolean lRes = false; string lSql = ""; DataTable lTbTmp = new DataTable();
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
 
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, ", ' ',0,0,'", iServicio, "','",iCantidad ,"','",iUnidad ,"',14");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, ", ' ',0,0,'", iServicio, "','",iCantidad ,"','",iUnidad ,"','',14");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {

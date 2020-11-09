@@ -110,6 +110,11 @@ namespace EstadosdePagos
                     }
                     else
                         MessageBox.Show(estado_Pago.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+                    if (_NroGrabaciones > 1)
+                        btnCancelar.Enabled = true;
                 }
                 catch (Exception exc)
                 {

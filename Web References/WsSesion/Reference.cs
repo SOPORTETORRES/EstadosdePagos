@@ -24,7 +24,7 @@ namespace EstadosdePagos.WsSesion {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WS_SesionSoap", Namespace="http://tempuri.org/")]
@@ -37,6 +37,12 @@ namespace EstadosdePagos.WsSesion {
         private System.Threading.SendOrPostCallback FechaHoraOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerUsuarioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerDatosUsuarioLogeadoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegistraLoginOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RegistraLogOUTOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -87,6 +93,15 @@ namespace EstadosdePagos.WsSesion {
         
         /// <remarks/>
         public event ObtenerUsuarioCompletedEventHandler ObtenerUsuarioCompleted;
+        
+        /// <remarks/>
+        public event ObtenerDatosUsuarioLogeadoCompletedEventHandler ObtenerDatosUsuarioLogeadoCompleted;
+        
+        /// <remarks/>
+        public event RegistraLoginCompletedEventHandler RegistraLoginCompleted;
+        
+        /// <remarks/>
+        public event RegistraLogOUTCompletedEventHandler RegistraLogOUTCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Iniciar", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -211,6 +226,101 @@ namespace EstadosdePagos.WsSesion {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerDatosUsuarioLogeado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ObtenerDatosUsuarioLogeado(string iUser, string iNroMaquina) {
+            object[] results = this.Invoke("ObtenerDatosUsuarioLogeado", new object[] {
+                        iUser,
+                        iNroMaquina});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosUsuarioLogeadoAsync(string iUser, string iNroMaquina) {
+            this.ObtenerDatosUsuarioLogeadoAsync(iUser, iNroMaquina, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerDatosUsuarioLogeadoAsync(string iUser, string iNroMaquina, object userState) {
+            if ((this.ObtenerDatosUsuarioLogeadoOperationCompleted == null)) {
+                this.ObtenerDatosUsuarioLogeadoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerDatosUsuarioLogeadoOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerDatosUsuarioLogeado", new object[] {
+                        iUser,
+                        iNroMaquina}, this.ObtenerDatosUsuarioLogeadoOperationCompleted, userState);
+        }
+        
+        private void OnObtenerDatosUsuarioLogeadoOperationCompleted(object arg) {
+            if ((this.ObtenerDatosUsuarioLogeadoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerDatosUsuarioLogeadoCompleted(this, new ObtenerDatosUsuarioLogeadoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistraLogin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string RegistraLogin(string iUser, string iNroMaquina, string iPc_Accede) {
+            object[] results = this.Invoke("RegistraLogin", new object[] {
+                        iUser,
+                        iNroMaquina,
+                        iPc_Accede});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RegistraLoginAsync(string iUser, string iNroMaquina, string iPc_Accede) {
+            this.RegistraLoginAsync(iUser, iNroMaquina, iPc_Accede, null);
+        }
+        
+        /// <remarks/>
+        public void RegistraLoginAsync(string iUser, string iNroMaquina, string iPc_Accede, object userState) {
+            if ((this.RegistraLoginOperationCompleted == null)) {
+                this.RegistraLoginOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistraLoginOperationCompleted);
+            }
+            this.InvokeAsync("RegistraLogin", new object[] {
+                        iUser,
+                        iNroMaquina,
+                        iPc_Accede}, this.RegistraLoginOperationCompleted, userState);
+        }
+        
+        private void OnRegistraLoginOperationCompleted(object arg) {
+            if ((this.RegistraLoginCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegistraLoginCompleted(this, new RegistraLoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RegistraLogOUT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string RegistraLogOUT(string iUser, string iNroMaquina) {
+            object[] results = this.Invoke("RegistraLogOUT", new object[] {
+                        iUser,
+                        iNroMaquina});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RegistraLogOUTAsync(string iUser, string iNroMaquina) {
+            this.RegistraLogOUTAsync(iUser, iNroMaquina, null);
+        }
+        
+        /// <remarks/>
+        public void RegistraLogOUTAsync(string iUser, string iNroMaquina, object userState) {
+            if ((this.RegistraLogOUTOperationCompleted == null)) {
+                this.RegistraLogOUTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRegistraLogOUTOperationCompleted);
+            }
+            this.InvokeAsync("RegistraLogOUT", new object[] {
+                        iUser,
+                        iNroMaquina}, this.RegistraLogOUTOperationCompleted, userState);
+        }
+        
+        private void OnRegistraLogOUTOperationCompleted(object arg) {
+            if ((this.RegistraLogOUTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RegistraLogOUTCompleted(this, new RegistraLogOUTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -230,7 +340,7 @@ namespace EstadosdePagos.WsSesion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -275,7 +385,7 @@ namespace EstadosdePagos.WsSesion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -332,11 +442,11 @@ namespace EstadosdePagos.WsSesion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void IniciarCompletedEventHandler(object sender, IniciarCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class IniciarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -358,11 +468,11 @@ namespace EstadosdePagos.WsSesion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void TerminarCompletedEventHandler(object sender, TerminarCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class TerminarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -384,11 +494,11 @@ namespace EstadosdePagos.WsSesion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void FechaHoraCompletedEventHandler(object sender, FechaHoraCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class FechaHoraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -410,11 +520,11 @@ namespace EstadosdePagos.WsSesion {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void ObtenerUsuarioCompletedEventHandler(object sender, ObtenerUsuarioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ObtenerUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -431,6 +541,84 @@ namespace EstadosdePagos.WsSesion {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerDatosUsuarioLogeadoCompletedEventHandler(object sender, ObtenerDatosUsuarioLogeadoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerDatosUsuarioLogeadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerDatosUsuarioLogeadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void RegistraLoginCompletedEventHandler(object sender, RegistraLoginCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistraLoginCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistraLoginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void RegistraLogOUTCompletedEventHandler(object sender, RegistraLogOUTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RegistraLogOUTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RegistraLogOUTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }

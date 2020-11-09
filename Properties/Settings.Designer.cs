@@ -26,7 +26,7 @@ namespace EstadosdePagos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/Pruebas/WS/Ws_To.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:55038/WS/Ws_To.asmx")]
         public string EstadosdePagos_WsMensajeria_Ws_To {
             get {
                 return ((string)(this["EstadosdePagos_WsMensajeria_Ws_To"]));
@@ -36,7 +36,7 @@ namespace EstadosdePagos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/Pruebas/WS/ws_sesion.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresocaranza.cl/pruebas/ws/ws_sesion.asmx")]
         public string EstadosdePagos_WsSesion_Sesion1 {
             get {
                 return ((string)(this["EstadosdePagos_WsSesion_Sesion1"]));

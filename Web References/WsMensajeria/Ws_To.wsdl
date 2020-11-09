@@ -4,6 +4,46 @@
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
       <s:import namespace="http://tempuri.org/Dts_PL.xsd" />
       <s:import schemaLocation="http://localhost:55038/WS/Ws_To.asmx?schema=Dts_PL" namespace="http://tempuri.org/Dts_PL.xsd" />
+      <s:element name="ObtenerDtsPL_Original_ConDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iCodigoIt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iIdIT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iCodViaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iTipoImp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdObra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iTipo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDtsPL_Original_ConDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDtsPL_Original_ConDetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/Dts_PL.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Obtener_TX_Mail_ACliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iViaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdObra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Obtener_TX_Mail_AClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Obtener_TX_Mail_AClienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ObtenerDtsPL_ConDet_New">
         <s:complexType>
           <s:sequence>
@@ -301,6 +341,40 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ObtenerPesoPorObra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iLargo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iDiam" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCant" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iIdObra" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPesoPorObraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerPesoPorObraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPesoPorObra_ConDecimales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iLargo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iDiam" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCant" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iIdObra" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPesoPorObra_ConDecimalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPesoPorObra_ConDecimalesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="DelPiezaTipoB">
         <s:complexType>
           <s:sequence>
@@ -483,7 +557,7 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ObtenerObjetoINET">
+      <s:element name="ObtenerObjetoINET_Calama">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="iDts">
@@ -500,10 +574,10 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ObtenerObjetoINETResponse">
+      <s:element name="ObtenerObjetoINET_CalamaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerObjetoINETResult" type="tns:Objeto_WsINET" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerObjetoINET_CalamaResult" type="tns:Objeto_WsINET" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -553,6 +627,30 @@
           <s:element minOccurs="0" maxOccurs="1" name="Invmov17" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ObtenerObjetoINET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iDts">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="iFechaMov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iGlosa1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iGlosa2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerObjetoINETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerObjetoINETResult" type="tns:Objeto_WsINET" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ObtenerObjetoINETPorProducto">
         <s:complexType>
           <s:sequence>
@@ -589,6 +687,16 @@
                 </s:sequence>
               </s:complexType>
             </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RevisionGuias_C_I">
+        <s:complexType />
+      </s:element>
+      <s:element name="RevisionGuias_C_IResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RevisionGuias_C_IResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1037,6 +1145,8 @@
           <s:element minOccurs="1" maxOccurs="1" name="NroPiezasVar" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="NroCotasVar" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="TramaHilos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EsVaPeroNoVa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KgsNorma353" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="TipoDetalleCotas">
@@ -1170,6 +1280,11 @@
           <s:element minOccurs="0" maxOccurs="1" name="ObraRelacionada" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Avance" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="IdEncargado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoCobraTransporte" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaPresentacionEP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactoObra" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FonoContactoObra" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TieneNorma353" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="ObtenerObrasVigentesResponse">
@@ -1460,6 +1575,23 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="ObtenerDtsCmbObrasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosConectores">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerDatosConectoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDatosConectoresResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -2149,6 +2281,10 @@
           <s:element minOccurs="0" maxOccurs="1" name="NroCertificado" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="IdForma" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="FueImpresa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdenCompra" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EsVaPero_NoVa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TieneConector" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CalidadAcero" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfPiezaTipoB">
@@ -2331,33 +2467,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ObtenerDtsPL_Original_ConDet">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="iCodigoIt" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="iIdIT" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="iCodViaje" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="iTipoImp" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="IdObra" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="iTipo" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="ObtenerDtsPL_Original_ConDetResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDtsPL_Original_ConDetResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:any namespace="http://tempuri.org/Dts_PL.xsd" />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
     </s:schema>
   </wsdl:types>
+  <wsdl:message name="ObtenerDtsPL_Original_ConDetSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDtsPL_Original_ConDet" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDtsPL_Original_ConDetSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDtsPL_Original_ConDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Obtener_TX_Mail_AClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:Obtener_TX_Mail_ACliente" />
+  </wsdl:message>
+  <wsdl:message name="Obtener_TX_Mail_AClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:Obtener_TX_Mail_AClienteResponse" />
+  </wsdl:message>
   <wsdl:message name="ObtenerDtsPL_ConDet_NewSoapIn">
     <wsdl:part name="parameters" element="tns:ObtenerDtsPL_ConDet_New" />
   </wsdl:message>
@@ -2436,6 +2559,18 @@
   <wsdl:message name="ObtenerPesoBechtellSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerPesoBechtellResponse" />
   </wsdl:message>
+  <wsdl:message name="ObtenerPesoPorObraSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPesoPorObra" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPesoPorObraSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPesoPorObraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPesoPorObra_ConDecimalesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPesoPorObra_ConDecimales" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPesoPorObra_ConDecimalesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPesoPorObra_ConDecimalesResponse" />
+  </wsdl:message>
   <wsdl:message name="DelPiezaTipoBSoapIn">
     <wsdl:part name="parameters" element="tns:DelPiezaTipoB" />
   </wsdl:message>
@@ -2490,6 +2625,12 @@
   <wsdl:message name="ObtenerProductosPorMaquinaSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerProductosPorMaquinaResponse" />
   </wsdl:message>
+  <wsdl:message name="ObtenerObjetoINET_CalamaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerObjetoINET_Calama" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerObjetoINET_CalamaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerObjetoINET_CalamaResponse" />
+  </wsdl:message>
   <wsdl:message name="ObtenerObjetoINETSoapIn">
     <wsdl:part name="parameters" element="tns:ObtenerObjetoINET" />
   </wsdl:message>
@@ -2507,6 +2648,12 @@
   </wsdl:message>
   <wsdl:message name="ObtenerDtsPortada_PL_ItDespachadaSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerDtsPortada_PL_ItDespachadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RevisionGuias_C_ISoapIn">
+    <wsdl:part name="parameters" element="tns:RevisionGuias_C_I" />
+  </wsdl:message>
+  <wsdl:message name="RevisionGuias_C_ISoapOut">
+    <wsdl:part name="parameters" element="tns:RevisionGuias_C_IResponse" />
   </wsdl:message>
   <wsdl:message name="GrabaImagenSoapIn">
     <wsdl:part name="parameters" element="tns:GrabaImagen" />
@@ -2754,6 +2901,12 @@
   <wsdl:message name="ObtenerDtsCmbObrasSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerDtsCmbObrasResponse" />
   </wsdl:message>
+  <wsdl:message name="ObtenerDatosConectoresSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosConectores" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosConectoresSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosConectoresResponse" />
+  </wsdl:message>
   <wsdl:message name="EliminaColadaSoapIn">
     <wsdl:part name="parameters" element="tns:EliminaColada" />
   </wsdl:message>
@@ -3000,13 +3153,15 @@
   <wsdl:message name="ObtenerDtsPL_ConDetSoapOut">
     <wsdl:part name="parameters" element="tns:ObtenerDtsPL_ConDetResponse" />
   </wsdl:message>
-  <wsdl:message name="ObtenerDtsPL_Original_ConDetSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerDtsPL_Original_ConDet" />
-  </wsdl:message>
-  <wsdl:message name="ObtenerDtsPL_Original_ConDetSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerDtsPL_Original_ConDetResponse" />
-  </wsdl:message>
   <wsdl:portType name="Ws_ToSoap">
+    <wsdl:operation name="ObtenerDtsPL_Original_ConDet">
+      <wsdl:input message="tns:ObtenerDtsPL_Original_ConDetSoapIn" />
+      <wsdl:output message="tns:ObtenerDtsPL_Original_ConDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_TX_Mail_ACliente">
+      <wsdl:input message="tns:Obtener_TX_Mail_AClienteSoapIn" />
+      <wsdl:output message="tns:Obtener_TX_Mail_AClienteSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="ObtenerDtsPL_ConDet_New">
       <wsdl:input message="tns:ObtenerDtsPL_ConDet_NewSoapIn" />
       <wsdl:output message="tns:ObtenerDtsPL_ConDet_NewSoapOut" />
@@ -3059,6 +3214,14 @@
       <wsdl:input message="tns:ObtenerPesoBechtellSoapIn" />
       <wsdl:output message="tns:ObtenerPesoBechtellSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ObtenerPesoPorObra">
+      <wsdl:input message="tns:ObtenerPesoPorObraSoapIn" />
+      <wsdl:output message="tns:ObtenerPesoPorObraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPesoPorObra_ConDecimales">
+      <wsdl:input message="tns:ObtenerPesoPorObra_ConDecimalesSoapIn" />
+      <wsdl:output message="tns:ObtenerPesoPorObra_ConDecimalesSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="DelPiezaTipoB">
       <wsdl:input message="tns:DelPiezaTipoBSoapIn" />
       <wsdl:output message="tns:DelPiezaTipoBSoapOut" />
@@ -3095,6 +3258,10 @@
       <wsdl:input message="tns:ObtenerProductosPorMaquinaSoapIn" />
       <wsdl:output message="tns:ObtenerProductosPorMaquinaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ObtenerObjetoINET_Calama">
+      <wsdl:input message="tns:ObtenerObjetoINET_CalamaSoapIn" />
+      <wsdl:output message="tns:ObtenerObjetoINET_CalamaSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="ObtenerObjetoINET">
       <wsdl:input message="tns:ObtenerObjetoINETSoapIn" />
       <wsdl:output message="tns:ObtenerObjetoINETSoapOut" />
@@ -3106,6 +3273,10 @@
     <wsdl:operation name="ObtenerDtsPortada_PL_ItDespachada">
       <wsdl:input message="tns:ObtenerDtsPortada_PL_ItDespachadaSoapIn" />
       <wsdl:output message="tns:ObtenerDtsPortada_PL_ItDespachadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RevisionGuias_C_I">
+      <wsdl:input message="tns:RevisionGuias_C_ISoapIn" />
+      <wsdl:output message="tns:RevisionGuias_C_ISoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GrabaImagen">
       <wsdl:input message="tns:GrabaImagenSoapIn" />
@@ -3271,6 +3442,10 @@
       <wsdl:input message="tns:ObtenerDtsCmbObrasSoapIn" />
       <wsdl:output message="tns:ObtenerDtsCmbObrasSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosConectores">
+      <wsdl:input message="tns:ObtenerDatosConectoresSoapIn" />
+      <wsdl:output message="tns:ObtenerDatosConectoresSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="EliminaColada">
       <wsdl:input message="tns:EliminaColadaSoapIn" />
       <wsdl:output message="tns:EliminaColadaSoapOut" />
@@ -3435,13 +3610,27 @@
       <wsdl:input message="tns:ObtenerDtsPL_ConDetSoapIn" />
       <wsdl:output message="tns:ObtenerDtsPL_ConDetSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="ObtenerDtsPL_Original_ConDet">
-      <wsdl:input message="tns:ObtenerDtsPL_Original_ConDetSoapIn" />
-      <wsdl:output message="tns:ObtenerDtsPL_Original_ConDetSoapOut" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Ws_ToSoap" type="tns:Ws_ToSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerDtsPL_Original_ConDet">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDtsPL_Original_ConDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_TX_Mail_ACliente">
+      <soap:operation soapAction="http://tempuri.org/Obtener_TX_Mail_ACliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ObtenerDtsPL_ConDet_New">
       <soap:operation soapAction="http://tempuri.org/ObtenerDtsPL_ConDet_New" style="document" />
       <wsdl:input>
@@ -3559,6 +3748,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerPesoPorObra">
+      <soap:operation soapAction="http://tempuri.org/ObtenerPesoPorObra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPesoPorObra_ConDecimales">
+      <soap:operation soapAction="http://tempuri.org/ObtenerPesoPorObra_ConDecimales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DelPiezaTipoB">
       <soap:operation soapAction="http://tempuri.org/DelPiezaTipoB" style="document" />
       <wsdl:input>
@@ -3640,6 +3847,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerObjetoINET_Calama">
+      <soap:operation soapAction="http://tempuri.org/ObtenerObjetoINET_Calama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ObtenerObjetoINET">
       <soap:operation soapAction="http://tempuri.org/ObtenerObjetoINET" style="document" />
       <wsdl:input>
@@ -3660,6 +3876,15 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerDtsPortada_PL_ItDespachada">
       <soap:operation soapAction="http://tempuri.org/ObtenerDtsPortada_PL_ItDespachada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevisionGuias_C_I">
+      <soap:operation soapAction="http://tempuri.org/RevisionGuias_C_I" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4036,6 +4261,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosConectores">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDatosConectores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="EliminaColada">
       <soap:operation soapAction="http://tempuri.org/EliminaColada" style="document" />
       <wsdl:input>
@@ -4405,18 +4639,27 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ObtenerDtsPL_Original_ConDet">
-      <soap:operation soapAction="http://tempuri.org/ObtenerDtsPL_Original_ConDet" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Ws_ToSoap12" type="tns:Ws_ToSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerDtsPL_Original_ConDet">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDtsPL_Original_ConDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_TX_Mail_ACliente">
+      <soap12:operation soapAction="http://tempuri.org/Obtener_TX_Mail_ACliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ObtenerDtsPL_ConDet_New">
       <soap12:operation soapAction="http://tempuri.org/ObtenerDtsPL_ConDet_New" style="document" />
       <wsdl:input>
@@ -4534,6 +4777,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerPesoPorObra">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerPesoPorObra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPesoPorObra_ConDecimales">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerPesoPorObra_ConDecimales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DelPiezaTipoB">
       <soap12:operation soapAction="http://tempuri.org/DelPiezaTipoB" style="document" />
       <wsdl:input>
@@ -4615,6 +4876,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerObjetoINET_Calama">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerObjetoINET_Calama" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ObtenerObjetoINET">
       <soap12:operation soapAction="http://tempuri.org/ObtenerObjetoINET" style="document" />
       <wsdl:input>
@@ -4635,6 +4905,15 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerDtsPortada_PL_ItDespachada">
       <soap12:operation soapAction="http://tempuri.org/ObtenerDtsPortada_PL_ItDespachada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevisionGuias_C_I">
+      <soap12:operation soapAction="http://tempuri.org/RevisionGuias_C_I" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -5011,6 +5290,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosConectores">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDatosConectores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="EliminaColada">
       <soap12:operation soapAction="http://tempuri.org/EliminaColada" style="document" />
       <wsdl:input>
@@ -5373,15 +5661,6 @@
     </wsdl:operation>
     <wsdl:operation name="ObtenerDtsPL_ConDet">
       <soap12:operation soapAction="http://tempuri.org/ObtenerDtsPL_ConDet" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ObtenerDtsPL_Original_ConDet">
-      <soap12:operation soapAction="http://tempuri.org/ObtenerDtsPL_Original_ConDet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -36,7 +36,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Tx_CantTotal = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Chk_Contrato = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Tx_cantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,6 +59,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Dtg_Resultado = new System.Windows.Forms.DataGridView();
+            this.Rb_Descuento = new System.Windows.Forms.RadioButton();
+            this.Rb_Adicional = new System.Windows.Forms.RadioButton();
+            this.Rb_AdPuntual = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -108,7 +110,7 @@
             this.Cmb_Concepto.FormattingEnabled = true;
             this.Cmb_Concepto.Location = new System.Drawing.Point(7, 90);
             this.Cmb_Concepto.Name = "Cmb_Concepto";
-            this.Cmb_Concepto.Size = new System.Drawing.Size(478, 21);
+            this.Cmb_Concepto.Size = new System.Drawing.Size(412, 21);
             this.Cmb_Concepto.TabIndex = 24;
             this.Cmb_Concepto.SelectedIndexChanged += new System.EventHandler(this.Cmb_Concepto_SelectedIndexChanged);
             // 
@@ -116,7 +118,7 @@
             // 
             this.Cmb_Unidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cmb_Unidades.FormattingEnabled = true;
-            this.Cmb_Unidades.Location = new System.Drawing.Point(563, 89);
+            this.Cmb_Unidades.Location = new System.Drawing.Point(495, 88);
             this.Cmb_Unidades.Name = "Cmb_Unidades";
             this.Cmb_Unidades.Size = new System.Drawing.Size(48, 21);
             this.Cmb_Unidades.TabIndex = 23;
@@ -124,30 +126,32 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.Rb_AdPuntual);
+            this.groupBox3.Controls.Add(this.Rb_Adicional);
+            this.groupBox3.Controls.Add(this.Rb_Descuento);
             this.groupBox3.Controls.Add(this.Tx_saldo);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.Tx_CantTotal);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.Chk_Contrato);
-            this.groupBox3.Location = new System.Drawing.Point(715, 16);
+            this.groupBox3.Location = new System.Drawing.Point(640, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(175, 98);
+            this.groupBox3.Size = new System.Drawing.Size(253, 98);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Contrato";
+            this.groupBox3.Text = "Opciones";
             // 
             // Tx_saldo
             // 
             this.Tx_saldo.Enabled = false;
-            this.Tx_saldo.Location = new System.Drawing.Point(93, 67);
+            this.Tx_saldo.Location = new System.Drawing.Point(181, 66);
             this.Tx_saldo.Name = "Tx_saldo";
-            this.Tx_saldo.Size = new System.Drawing.Size(77, 20);
+            this.Tx_saldo.Size = new System.Drawing.Size(62, 20);
             this.Tx_saldo.TabIndex = 25;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(105, 50);
+            this.label11.Location = new System.Drawing.Point(141, 69);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 13);
             this.label11.TabIndex = 24;
@@ -156,37 +160,24 @@
             // Tx_CantTotal
             // 
             this.Tx_CantTotal.Enabled = false;
-            this.Tx_CantTotal.Location = new System.Drawing.Point(10, 67);
+            this.Tx_CantTotal.Location = new System.Drawing.Point(65, 66);
             this.Tx_CantTotal.Name = "Tx_CantTotal";
-            this.Tx_CantTotal.Size = new System.Drawing.Size(77, 20);
+            this.Tx_CantTotal.Size = new System.Drawing.Size(70, 20);
             this.Tx_CantTotal.TabIndex = 23;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 50);
+            this.label10.Location = new System.Drawing.Point(9, 60);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.Size = new System.Drawing.Size(50, 36);
             this.label10.TabIndex = 22;
             this.label10.Text = "Cantidad Total";
-            // 
-            // Chk_Contrato
-            // 
-            this.Chk_Contrato.AutoSize = true;
-            this.Chk_Contrato.Checked = true;
-            this.Chk_Contrato.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Chk_Contrato.Location = new System.Drawing.Point(41, 22);
-            this.Chk_Contrato.Name = "Chk_Contrato";
-            this.Chk_Contrato.Size = new System.Drawing.Size(82, 17);
-            this.Chk_Contrato.TabIndex = 21;
-            this.Chk_Contrato.Text = "En Contrato";
-            this.Chk_Contrato.UseVisualStyleBackColor = true;
-            this.Chk_Contrato.CheckedChanged += new System.EventHandler(this.Chk_Contrato_CheckedChanged);
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(634, 72);
+            this.label9.Location = new System.Drawing.Point(565, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 20;
@@ -194,7 +185,7 @@
             // 
             // Tx_cantidad
             // 
-            this.Tx_cantidad.Location = new System.Drawing.Point(635, 89);
+            this.Tx_cantidad.Location = new System.Drawing.Point(565, 88);
             this.Tx_cantidad.Name = "Tx_cantidad";
             this.Tx_cantidad.Size = new System.Drawing.Size(47, 20);
             this.Tx_cantidad.TabIndex = 19;
@@ -204,7 +195,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(567, 72);
+            this.label7.Location = new System.Drawing.Point(498, 71);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 18;
@@ -222,7 +213,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(501, 71);
+            this.label8.Location = new System.Drawing.Point(439, 70);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 16;
@@ -230,7 +221,7 @@
             // 
             // Tx_PU
             // 
-            this.Tx_PU.Location = new System.Drawing.Point(500, 89);
+            this.Tx_PU.Location = new System.Drawing.Point(438, 88);
             this.Tx_PU.Name = "Tx_PU";
             this.Tx_PU.Size = new System.Drawing.Size(40, 20);
             this.Tx_PU.TabIndex = 15;
@@ -240,7 +231,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(567, 22);
+            this.label6.Location = new System.Drawing.Point(498, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 14;
@@ -248,7 +239,7 @@
             // 
             // Tx_IdEP
             // 
-            this.Tx_IdEP.Location = new System.Drawing.Point(564, 38);
+            this.Tx_IdEP.Location = new System.Drawing.Point(496, 37);
             this.Tx_IdEP.Name = "Tx_IdEP";
             this.Tx_IdEP.ReadOnly = true;
             this.Tx_IdEP.Size = new System.Drawing.Size(40, 20);
@@ -257,15 +248,15 @@
             // Tx_total
             // 
             this.Tx_total.Enabled = false;
-            this.Tx_total.Location = new System.Drawing.Point(632, 38);
+            this.Tx_total.Location = new System.Drawing.Point(558, 37);
             this.Tx_total.Name = "Tx_total";
-            this.Tx_total.Size = new System.Drawing.Size(77, 20);
+            this.Tx_total.Size = new System.Drawing.Size(66, 20);
             this.Tx_total.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(647, 20);
+            this.label5.Location = new System.Drawing.Point(573, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 11;
@@ -274,7 +265,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(500, 22);
+            this.label4.Location = new System.Drawing.Point(432, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 10;
@@ -282,7 +273,7 @@
             // 
             // Tx_Id
             // 
-            this.Tx_Id.Location = new System.Drawing.Point(504, 38);
+            this.Tx_Id.Location = new System.Drawing.Point(436, 37);
             this.Tx_Id.Name = "Tx_Id";
             this.Tx_Id.ReadOnly = true;
             this.Tx_Id.Size = new System.Drawing.Size(40, 20);
@@ -341,7 +332,7 @@
             this.Tx_obra.Location = new System.Drawing.Point(6, 38);
             this.Tx_obra.Name = "Tx_obra";
             this.Tx_obra.ReadOnly = true;
-            this.Tx_obra.Size = new System.Drawing.Size(483, 20);
+            this.Tx_obra.Size = new System.Drawing.Size(412, 20);
             this.Tx_obra.TabIndex = 3;
             // 
             // label2
@@ -357,7 +348,7 @@
             // 
             this.Tx_Concepto.Location = new System.Drawing.Point(6, 89);
             this.Tx_Concepto.Name = "Tx_Concepto";
-            this.Tx_Concepto.Size = new System.Drawing.Size(481, 20);
+            this.Tx_Concepto.Size = new System.Drawing.Size(412, 20);
             this.Tx_Concepto.TabIndex = 1;
             this.Tx_Concepto.Visible = false;
             this.Tx_Concepto.TextChanged += new System.EventHandler(this.Tx_Concepto_TextChanged);
@@ -395,11 +386,47 @@
             this.Dtg_Resultado.TabIndex = 0;
             this.Dtg_Resultado.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Resultado_CellContentDoubleClick);
             // 
+            // Rb_Descuento
+            // 
+            this.Rb_Descuento.AutoSize = true;
+            this.Rb_Descuento.Location = new System.Drawing.Point(169, 23);
+            this.Rb_Descuento.Name = "Rb_Descuento";
+            this.Rb_Descuento.Size = new System.Drawing.Size(77, 17);
+            this.Rb_Descuento.TabIndex = 1;
+            this.Rb_Descuento.TabStop = true;
+            this.Rb_Descuento.Text = "Descuento";
+            this.Rb_Descuento.UseVisualStyleBackColor = true;
+            this.Rb_Descuento.CheckedChanged += new System.EventHandler(this.Rb_Descuento_CheckedChanged);
+            // 
+            // Rb_Adicional
+            // 
+            this.Rb_Adicional.AutoSize = true;
+            this.Rb_Adicional.Location = new System.Drawing.Point(6, 22);
+            this.Rb_Adicional.Name = "Rb_Adicional";
+            this.Rb_Adicional.Size = new System.Drawing.Size(68, 17);
+            this.Rb_Adicional.TabIndex = 26;
+            this.Rb_Adicional.TabStop = true;
+            this.Rb_Adicional.Text = "Adicional";
+            this.Rb_Adicional.UseVisualStyleBackColor = true;
+            this.Rb_Adicional.CheckedChanged += new System.EventHandler(this.Rb_Adicional_CheckedChanged);
+            // 
+            // Rb_AdPuntual
+            // 
+            this.Rb_AdPuntual.AutoSize = true;
+            this.Rb_AdPuntual.Location = new System.Drawing.Point(81, 23);
+            this.Rb_AdPuntual.Name = "Rb_AdPuntual";
+            this.Rb_AdPuntual.Size = new System.Drawing.Size(80, 17);
+            this.Rb_AdPuntual.TabIndex = 27;
+            this.Rb_AdPuntual.TabStop = true;
+            this.Rb_AdPuntual.Text = "Ad. Puntual";
+            this.Rb_AdPuntual.UseVisualStyleBackColor = true;
+            this.Rb_AdPuntual.CheckedChanged += new System.EventHandler(this.Rb_AdPuntual_CheckedChanged);
+            // 
             // frmEP_otros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 415);
+            this.ClientSize = new System.Drawing.Size(1088, 476);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmEP_otros";
@@ -439,7 +466,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox Tx_CantTotal;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox Chk_Contrato;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox Tx_cantidad;
         private System.Windows.Forms.Label label7;
@@ -450,5 +476,8 @@
         private System.Windows.Forms.ComboBox Cmb_Concepto;
         private System.Windows.Forms.TextBox Tx_saldo;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RadioButton Rb_Descuento;
+        private System.Windows.Forms.RadioButton Rb_AdPuntual;
+        private System.Windows.Forms.RadioButton Rb_Adicional;
     }
 }
