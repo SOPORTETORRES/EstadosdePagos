@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Tx_PU = new System.Windows.Forms.TextBox();
             this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.Tx_Servicio = new System.Windows.Forms.TextBox();
             this.Btn_Salir = new System.Windows.Forms.Button();
@@ -42,8 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Dtg_Datos = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Tx_PU = new System.Windows.Forms.TextBox();
+            this.Tx_ImporteTotal = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dtg_Datos)).BeginInit();
@@ -51,6 +53,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Tx_ImporteTotal);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.Tx_PU);
             this.groupBox1.Controls.Add(this.Btn_Eliminar);
@@ -70,6 +74,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Obra y Contrato";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(326, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "$ PU";
+            // 
+            // Tx_PU
+            // 
+            this.Tx_PU.Location = new System.Drawing.Point(363, 84);
+            this.Tx_PU.Name = "Tx_PU";
+            this.Tx_PU.Size = new System.Drawing.Size(40, 20);
+            this.Tx_PU.TabIndex = 30;
+            this.Tx_PU.Text = "0";
+            this.Tx_PU.Leave += new System.EventHandler(this.Tx_PU_Leave);
+            this.Tx_PU.Validating += new System.ComponentModel.CancelEventHandler(this.Tx_PU_Validating);
             // 
             // Btn_Eliminar
             // 
@@ -113,7 +136,7 @@
             // 
             this.Cmb_Unidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cmb_Unidades.FormattingEnabled = true;
-            this.Cmb_Unidades.Location = new System.Drawing.Point(340, 85);
+            this.Cmb_Unidades.Location = new System.Drawing.Point(257, 84);
             this.Cmb_Unidades.Name = "Cmb_Unidades";
             this.Cmb_Unidades.Size = new System.Drawing.Size(53, 21);
             this.Cmb_Unidades.TabIndex = 25;
@@ -122,7 +145,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(293, 88);
+            this.label7.Location = new System.Drawing.Point(210, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 24;
@@ -132,17 +155,18 @@
             // 
             this.Tx_CantidadTotal.Location = new System.Drawing.Point(124, 83);
             this.Tx_CantidadTotal.Name = "Tx_CantidadTotal";
-            this.Tx_CantidadTotal.Size = new System.Drawing.Size(107, 20);
+            this.Tx_CantidadTotal.Size = new System.Drawing.Size(74, 20);
             this.Tx_CantidadTotal.TabIndex = 5;
+            this.Tx_CantidadTotal.Leave += new System.EventHandler(this.Tx_CantidadTotal_Leave);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 90);
+            this.label3.Location = new System.Drawing.Point(36, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Cantidad Total";
+            this.label3.Text = "Cantidad ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -195,22 +219,22 @@
             this.Dtg_Datos.TabIndex = 0;
             this.Dtg_Datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Datos_CellContentClick);
             // 
-            // label8
+            // Tx_ImporteTotal
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(469, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "$ PU";
+            this.Tx_ImporteTotal.Location = new System.Drawing.Point(508, 83);
+            this.Tx_ImporteTotal.Name = "Tx_ImporteTotal";
+            this.Tx_ImporteTotal.ReadOnly = true;
+            this.Tx_ImporteTotal.Size = new System.Drawing.Size(91, 20);
+            this.Tx_ImporteTotal.TabIndex = 33;
             // 
-            // Tx_PU
+            // label4
             // 
-            this.Tx_PU.Location = new System.Drawing.Point(506, 86);
-            this.Tx_PU.Name = "Tx_PU";
-            this.Tx_PU.Size = new System.Drawing.Size(40, 20);
-            this.Tx_PU.TabIndex = 30;
-            this.Tx_PU.Text = "0";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(435, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Importe Total";
             // 
             // Frm_ContratosObra
             // 
@@ -250,5 +274,7 @@
         private System.Windows.Forms.Button Btn_Eliminar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Tx_PU;
+        private System.Windows.Forms.TextBox Tx_ImporteTotal;
+        private System.Windows.Forms.Label label4;
     }
 }

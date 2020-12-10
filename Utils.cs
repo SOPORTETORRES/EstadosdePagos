@@ -1328,8 +1328,9 @@ namespace EstadosdePagos
                     else
                         selectedPath = seleccionarCarpeta();
 
+                    //lSiglaOBra = view[0]["IT"].ToString().Substring(0, 3);
                     //*****************************************************************ZOna de Cambio  **************************************//
-                    GeneraExcel_EP(accion, ep_obra, correlativo, ep_id, lPathDestino);
+                    GeneraExcel_EP(accion, ep_obra, correlativo, ep_id, lPathDestino, lSiglaOBra);
                     GrabarArchivoLog(lPathDestino, sb  );
 
 
@@ -1413,7 +1414,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','','',7");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','','',7,''");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1432,7 +1433,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','','',14");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", iEP, ", 0 ,' ',' ',0,'','','','',14,''");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1452,7 +1453,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra," ,' ',' ',0,'','','','',16");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, " ,' ',' ',0,'','','','',16,''");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1470,7 +1471,7 @@ namespace EstadosdePagos
 
 
             string lRes = "0";
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, " ,' ',' ',0,'','','','',17");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, " ,' ',' ',0,'','','','',17,''");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -1486,82 +1487,89 @@ namespace EstadosdePagos
             int i = 0; int lTotal = 0;
             string lRes = "";DataView lVtm = null;
 
-            switch (iTipo)
+            try
             {
-                case "N":
-                case "S":   // Con Contrato
-                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='", iTipo, "'"), "", DataViewRowState.CurrentRows);
-                    if (lVtm.Count > 0)
-                    {
-                        for (i = 0; i < lVtm.Count; i++)
+                switch (iTipo)
+                {
+                    case "N":
+                    case "S":   // Con Contrato
+                        lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='", iTipo, "'"), "", DataViewRowState.CurrentRows);
+                        if (lVtm.Count > 0)
                         {
-                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                            for (i = 0; i < lVtm.Count; i++)
+                            {
+                                lTotal = lTotal + int.Parse(lVtm[i]["cant"].ToString());
+                            }
                         }
-                    }
 
-                    break;
-                case "SAA":
-                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='S' and id_ep<",iId_EpActual ), "", DataViewRowState.CurrentRows);
-                    if (lVtm.Count > 0)
-                    {
-                        for (i = 0; i < lVtm.Count; i++)
+                        break;
+                    case "SAA":
+                        lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='S' and id_ep<", iId_EpActual), "", DataViewRowState.CurrentRows);
+                        if (lVtm.Count > 0)
                         {
-                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                            for (i = 0; i < lVtm.Count; i++)
+                            {
+                                lTotal = lTotal + int.Parse(lVtm[i]["cantidad"].ToString());
+                            }
                         }
-                    }
-                    break;
-                case "NAA":
-                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='N' and id_ep<", iId_EpActual), "", DataViewRowState.CurrentRows);
-                    if (lVtm.Count > 0)
-                    {
-                        for (i = 0; i < lVtm.Count; i++)
+                        break;
+                    case "NAA":
+                        lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='N' and id_ep<", iId_EpActual), "", DataViewRowState.CurrentRows);
+                        if (lVtm.Count > 0)
                         {
-                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                            for (i = 0; i < lVtm.Count; i++)
+                            {
+                                lTotal = lTotal + int.Parse(lVtm[i]["cantidad"].ToString());
+                            }
                         }
-                    }
-                    break;
-                case "DAA":
-                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Tipo='D' and id_ep<", iId_EpActual), "", DataViewRowState.CurrentRows);
-                    if (lVtm.Count > 0)
-                    {
-                        for (i = 0; i < lVtm.Count; i++)
+                        break;
+                    case "DAA":
+                        lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Tipo='D' and id_ep<", iId_EpActual), "", DataViewRowState.CurrentRows);
+                        if (lVtm.Count > 0)
                         {
-                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                            for (i = 0; i < lVtm.Count; i++)
+                            {
+                                lTotal = lTotal + (int.Parse(lVtm[i]["cantidad"].ToString())  );
+                            }
+                            lTotal = lTotal * (-1);
                         }
-                        lTotal = lTotal * (-1);
-                    }
-                    break;
-                case "SPA":
-                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='S' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
-                    if (lVtm.Count > 0)
-                    {
-                        for (i = 0; i < lVtm.Count; i++)
+                        break;
+                    case "SPA":
+                        lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='S' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
+                        if (lVtm.Count > 0)
                         {
-                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                            for (i = 0; i < lVtm.Count; i++)
+                            {
+                                lTotal = lTotal + int.Parse(lVtm[i]["cantidad"].ToString());
+                            }
                         }
-                    }
-                    break;
-                case "NPA":
-                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='N' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
-                    if (lVtm.Count > 0)
-                    {
-                        for (i = 0; i < lVtm.Count; i++)
+                        break;
+                    case "NPA":
+                        lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Contrato='N' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
+                        if (lVtm.Count > 0)
                         {
-                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                            for (i = 0; i < lVtm.Count; i++)
+                            {
+                                lTotal = lTotal + int.Parse(lVtm[i]["cantidad"].ToString());
+                            }
                         }
-                    }
-                    break;
-                case "DPA":
-                    lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Tipo='D' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
-                    if (lVtm.Count > 0)
-                    {
-                        for (i = 0; i < lVtm.Count; i++)
+                        break;
+                    case "DPA":
+                        lVtm = new DataView(lTbl, string.Concat("Descripcion='", iNombre, "' and Tipo='D' and id_ep=", iId_EpActual), "", DataViewRowState.CurrentRows);
+                        if (lVtm.Count > 0)
                         {
-                            lTotal = lTotal + int.Parse(lVtm[i]["Importe"].ToString());
+                            for (i = 0; i < lVtm.Count; i++)
+                            {
+                                lTotal = lTotal + (int.Parse(lVtm[i]["cantidad"].ToString())  );
+                            }
+                            lTotal = lTotal * (-1);
                         }
-                        lTotal = lTotal * (-1);
-                    }
-                    break;
+                        break;
+
+                }
+            } catch (Exception iEx)
+            {
+
 
             }
 
@@ -1571,7 +1579,7 @@ namespace EstadosdePagos
             return lTotal.ToString ();
         }
 
-        private void GeneraExcel_EP(int accion, string ep_obra, Int32 correlativo,int  ep_id , string lPathDest)
+        private void GeneraExcel_EP(int accion, string ep_obra, Int32 correlativo,int  ep_id , string lPathDest, string iSiglaObra)
         {
             //string selectedPath = ""; string obra = "";
             WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
@@ -1585,7 +1593,7 @@ namespace EstadosdePagos
             string error = ""; string lPathDestino = ""; DataTable ltblServicios = new DataTable();
             string lHora = ""; int lTotalCD = 0; int lFE = 0; string lSubTitulo = "";
             string lValorSum = "0"; string lValorPrep = "0"; string lStrTmp = "";
-            long totalKgSum = 0; long totalKgPrep = 0;  int lIndex = -1;
+            long totalKgSum = 0; long totalKgPrep = 0;  int lIndex = -1; long totalKgRep = 0;
             try
             {
                 lPathDestino = lPathDest;
@@ -1599,11 +1607,12 @@ namespace EstadosdePagos
 
                 listaDataSetOp = wsOperacion.ListarEPResumenGuiaDespachoxEp(ep_id); //GD /IT /Etiquetas /Kilos
 
-                lHora = DateTime.Now.ToShortTimeString().Replace (":","_");
+                lHora =string .Concat (DateTime.Now.ToShortDateString().Replace("/", "_"),"_", DateTime.Now.ToShortTimeString().Replace (":","_"));
                 //Copia la plantilla al directorio de destino
                 string plantillaEP = Path.Combine (Application.StartupPath ,  "PlantillaEP.xls");
                 string lNombreArchivo = string.Concat("EP_NRO_", correlativo, "_Estado_");
-                string outputEP = Path.Combine(lPathDestino,string.Concat ("PlantillaEP_", lHora,".xls"));  //selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
+                //string outputEP = Path.Combine(lPathDestino,string.Concat ("PlantillaEP_", lHora,".xls"));  //selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
+                string outputEP = Path.Combine(lPathDestino, string.Concat("EPNro_", correlativo, "_", iSiglaObra,"_", lHora,".xls"));
                 string outputEPPdf = Path.Combine(lPathDestino, "PlantillaEP.Pdf");
                 if (fs.FileExists(plantillaEP))
                     fs.copyFile(plantillaEP, outputEP);
@@ -1741,12 +1750,13 @@ namespace EstadosdePagos
 
                                     totalKgSum = long.Parse (RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho,"S"));
                                     totalKgPrep = long.Parse(RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho, "P"));
+                                    totalKgRep = long.Parse(RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho, "R"));
 
                                     excelSheet.Range["J7"].Value = totalKgSum;  // si la IT es tipo TP 
                                     excelSheet.Range["J8"].Value = totalKgPrep; // RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  //totalKilos;  //Sumunistro
-                                                                                 //excelSheet.Range["BE12"].Value = totalKilos;  // si la IT es tipo TP                                                                                                                      //No se incluye en la linea de cobro de preparación==> TotalKilos - Kilos de la Guia 
-                                                                                 // excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
-                                    //long totalKgSum = 0; long totalKgPrep = 0;
+                                                                                //excelSheet.Range["BE12"].Value = totalKilos;  // si la IT es tipo TP                                                                                                                      //No se incluye en la linea de cobro de preparación==> TotalKilos - Kilos de la Guia 
+                                                                                // excelSheet.Range["BE11"].Value = totalKilos*int.Parse (listaDataTMP.DataSet.Tables[0].Rows[0]["ValorUnitario"].ToString());
+                                  
                                 }
                             }
                         }
@@ -1760,7 +1770,7 @@ namespace EstadosdePagos
 
                         //LLenamos el Objeto con los totales del EP **********************************************+
                         int lTmp = 0;
-                    
+                        String lRango = ""; string lTotalAcumAnt = "0";
 
                         //List<WsOperacion.EP_GeneradoDetalle> lList_DetEP = new List<WsOperacion.EP_GeneradoDetalle>() ;
                         WsOperacion.EP_GeneradoDetalle[] lList_DetEP = new WsOperacion.EP_GeneradoDetalle[3];
@@ -1781,143 +1791,145 @@ namespace EstadosdePagos
                         DataTable lTblOtrosResumen = ObtenerTablaOtrosResumen(ep_obra);
                         DataTable lTblOtrosTodos= ObtenerTablaOtrosHIstorico(ep_obra);
 
-                        String lRango = "";string lTotalAcumAnt = "0";
-                        lIndex = -1;
-                        lWheres = " Tipo='C'  ";
-                        // Seleccionamos la hoja del excel 
-                        (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
-                        lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
-                        //lVistaTmp = new DataView(lTblOtros, lWheres, "", DataViewRowState.CurrentRows);
-                        for (i = 0; i < lVistaTmp.Count ; i++)
+                        if (lTblOtrosResumen.Rows.Count > 0)
                         {
-                            if (i==0)
-                                excelSheet.Rows[(i + 10).ToString()].Insert();
-
-                            lRango = string.Concat("B",(i+ 10).ToString ());   excelSheet.Range[lRango].Value = string.Concat("3.",(i+1).ToString ());
-                            lRango = string.Concat("C", (i + 10).ToString());  excelSheet.Range[lRango].Value = lVistaTmp[i]["Descripcion"].ToString();
-                            lRango = string.Concat("D", (i + 10).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["TotalContrato"].ToString();
-                            lRango = string.Concat("E", (i + 10).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Unidad"].ToString();
-                            lRango = string.Concat("F", (i + 10).ToString());  excelSheet.Range[lRango].Value = lVistaTmp[i]["PU"].ToString();
-                            lRango = string.Concat("G", (i + 10).ToString());
-                            excelSheet.Range[lRango].Value = string.Concat("=F", (i + 10).ToString(), "*D", (i + 10).ToString()); //"=G10-M10";
-
-                            //Acumulado Anterior
-                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "SAA", lTblOtrosTodos, ep_id.ToString());
-                            lRango = string.Concat("H", (i + 10).ToString());
-                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
-                            lRango = string.Concat("I", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=F", (i + 10).ToString(), "*H", (i + 10).ToString()); //"=G10-M10";
-
-                            //Estado de Pago Actual
-                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "SPA", lTblOtrosTodos, ep_id.ToString());
-                            lRango = string.Concat("J", (i + 10).ToString());
-                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
-                            lRango = string.Concat("K", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (i + 10).ToString(), "*F", (i + 10).ToString()); //"=G10-M10";
-
-                            //Total Acumulado
-                            lRango = string.Concat("L", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (i + 10).ToString(), "+H", (i + 10).ToString()); //"J10+H10";
-                            lRango = string.Concat("M", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (i + 10).ToString(), "+K", (i + 10).ToString());
-                            //=I10 +K10";
-
-                            //Saldo Pendiente
-                            lRango = string.Concat("N", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (i + 10).ToString(), "-L", (i + 10).ToString()); //"=D10-L10";
-                            lRango = string.Concat("O", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (i + 10).ToString(), "-M", (i + 10).ToString()); //"=G10-M10";
-
-
-
-                            //excelSheet.Rows["9"].Insert();                        
-                            lIndex = i+1;
-                            if (i< lVistaTmp.Count-1)
-                                excelSheet.Rows[(i + 10 + 1).ToString()].Insert();
-                        }
-                         lIndex = lIndex+1; 
-
-                        lWheres = " Tipo='AP'   ";
-                        lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
-                        lIndex = lIndex + 10;
-                        for (i = 0; i < lVistaTmp.Count; i++)
-                        {
-                            if (i == 0)
-                                excelSheet.Rows[(i + lIndex).ToString()].Insert();
-
-                            lRango = string.Concat("B", ( lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("4.", (i + 1).ToString());
-                            lRango = string.Concat("C", ( lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Descripcion"].ToString();
-                            lRango = string.Concat("D", ( lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Total"].ToString();
-                            lRango = string.Concat("E", ( lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Unidad_Otros"].ToString();
-                            lRango = string.Concat("F", ( lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["PU"].ToString();
-                            lRango = string.Concat("G", ( lIndex).ToString());
-                            excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*D", (lIndex).ToString()); //"=G10-M10";
-
-                            //Acumulado Anterior
-                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "NAA", lTblOtrosTodos, ep_id.ToString());
-                            lRango = string.Concat("H", (lIndex).ToString());
-                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
-                            lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*H", (lIndex).ToString()); //"=G10-M10";
-
-                            //Estado de Pago Actual
-                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "NPA", lTblOtrosTodos, ep_id.ToString());
-                            lRango = string.Concat("J", (lIndex).ToString());
-                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
-                            lRango = string.Concat("K", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "*F", (lIndex).ToString()); //"=G10-M10";
-
-                            //Total Acumulado
-                            lRango = string.Concat("L", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "+H", (lIndex).ToString()); //"J10+H10";
-                            lRango = string.Concat("M", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (lIndex).ToString(), "+K", (lIndex).ToString());
-
-                            //Saldo Pendiente
-                            lRango = string.Concat("N", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (lIndex).ToString(), "-L", (lIndex).ToString()); //"=D10-L10";
-                            lRango = string.Concat("O", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (lIndex).ToString(), "-M", (lIndex).ToString()); //"=G10-M10";
-
-                            lIndex = lIndex + 1;
-                            if (i < lVistaTmp.Count - 1)
+                         
+                            lIndex = -1;
+                            lWheres = " Tipo='C'  ";
+                            // Seleccionamos la hoja del excel 
+                            (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
+                            lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
+                            //lVistaTmp = new DataView(lTblOtros, lWheres, "", DataViewRowState.CurrentRows);
+                            for (i = 0; i < lVistaTmp.Count; i++)
                             {
-                                excelSheet.Rows[(lIndex).ToString()].Insert();
-                            }                   
-                        }
-                        // Descuentos 
-                        lWheres = " Tipo='D'   ";
-                        lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
-                        lIndex = lIndex + 1;
-                        for (i = 0; i < lVistaTmp.Count; i++)
-                        {
-                            if (i == 0)
-                                excelSheet.Rows[(i + lIndex).ToString()].Insert();
+                                if (i == 0)
+                                    excelSheet.Rows[(i + 10).ToString()].Insert();
 
-                            lRango = string.Concat("B", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("5.", (i + 1).ToString());
-                            lRango = string.Concat("C", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Descripcion"].ToString();
-                            lRango = string.Concat("D", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Total"].ToString();
-                            lRango = string.Concat("E", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Unidad_Otros"].ToString();
-                            lRango = string.Concat("F", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["PU"].ToString();
-                            lRango = string.Concat("G", (lIndex).ToString());
-                            excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*D", (lIndex).ToString()); //"=G10-M10";
+                                lRango = string.Concat("B", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("3.", (i + 1).ToString());
+                                lRango = string.Concat("C", (i + 10).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Descripcion"].ToString();
+                                lRango = string.Concat("D", (i + 10).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["TotalContrato"].ToString();
+                                lRango = string.Concat("E", (i + 10).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Unidad"].ToString();
+                                lRango = string.Concat("F", (i + 10).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["PU"].ToString();
+                                lRango = string.Concat("G", (i + 10).ToString());
+                                excelSheet.Range[lRango].Value = string.Concat("=F", (i + 10).ToString(), "*D", (i + 10).ToString()); //"=G10-M10";
 
-                            //Acumulado Anterior
-                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "DAA", lTblOtrosTodos, ep_id.ToString());
-                            lRango = string.Concat("H", (lIndex).ToString());
-                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
-                            // lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=(F", (lIndex).ToString(), "*H", (lIndex).ToString(),")*(-1))"); //"=G10-M10";
-                            lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*H", (lIndex).ToString(), "*(-1)"); //"=G10-M10";
+                                //Acumulado Anterior
+                                lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "SAA", lTblOtrosTodos, ep_id.ToString());
+                                lRango = string.Concat("H", (i + 10).ToString());
+                                excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                                lRango = string.Concat("I", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=F", (i + 10).ToString(), "*H", (i + 10).ToString()); //"=G10-M10";
 
-                            //Estado de Pago Actual
-                            lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "DPA", lTblOtrosTodos, ep_id.ToString());
-                            lRango = string.Concat("J", (lIndex).ToString());
-                            excelSheet.Range[lRango].Value = lTotalAcumAnt;
-                            lRango = string.Concat("K", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "*F", (lIndex).ToString(),"*(-1)"); //"=G10-M10";
+                                //Estado de Pago Actual
+                                lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "SPA", lTblOtrosTodos, ep_id.ToString());
+                                lRango = string.Concat("J", (i + 10).ToString());
+                                excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                                lRango = string.Concat("K", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (i + 10).ToString(), "*F", (i + 10).ToString()); //"=G10-M10";
 
-                            //Total Acumulado
-                            lRango = string.Concat("L", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "+H", (lIndex).ToString()); //"J10+H10";
-                            lRango = string.Concat("M", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (lIndex).ToString(), "+K", (lIndex).ToString(), "*(-1)");
+                                //Total Acumulado
+                                lRango = string.Concat("L", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (i + 10).ToString(), "+H", (i + 10).ToString()); //"J10+H10";
+                                lRango = string.Concat("M", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (i + 10).ToString(), "+K", (i + 10).ToString());
+                                //=I10 +K10";
 
-                            //Saldo Pendiente
-                            lRango = string.Concat("N", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (lIndex).ToString(), "+L", (lIndex).ToString()); //"=D10-L10";
-                            lRango = string.Concat("O", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (lIndex).ToString(), "-M", (lIndex).ToString()); //"=G10-M10";
+                                //Saldo Pendiente
+                                lRango = string.Concat("N", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (i + 10).ToString(), "-L", (i + 10).ToString()); //"=D10-L10";
+                                lRango = string.Concat("O", (i + 10).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (i + 10).ToString(), "-M", (i + 10).ToString()); //"=G10-M10";
 
+
+
+                                //excelSheet.Rows["9"].Insert();                        
+                                lIndex = i + 1;
+                                if (i < lVistaTmp.Count - 1)
+                                    excelSheet.Rows[(i + 10 + 1).ToString()].Insert();
+                            }
                             lIndex = lIndex + 1;
-                            if (i < lVistaTmp.Count - 1)
+
+                            lWheres = " Tipo='AP'   ";
+                            lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
+                            lIndex = lIndex + 10;
+                            for (i = 0; i < lVistaTmp.Count; i++)
                             {
-                                excelSheet.Rows[(lIndex).ToString()].Insert();
+                                if (i == 0)
+                                    excelSheet.Rows[(i + lIndex).ToString()].Insert();
+
+                                lRango = string.Concat("B", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("4.", (i + 1).ToString());
+                                lRango = string.Concat("C", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Descripcion"].ToString();
+                                lRango = string.Concat("D", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["cant"].ToString();
+                                lRango = string.Concat("E", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Unidad_Otros"].ToString();
+                                lRango = string.Concat("F", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["PU"].ToString();
+                                lRango = string.Concat("G", (lIndex).ToString());
+                                excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*D", (lIndex).ToString()); //"=G10-M10";
+
+                                //Acumulado Anterior
+                                lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "NAA", lTblOtrosTodos, ep_id.ToString());
+                                lRango = string.Concat("H", (lIndex).ToString());
+                                excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                                lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*H", (lIndex).ToString()); //"=G10-M10";
+
+                                //Estado de Pago Actual
+                                lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "NPA", lTblOtrosTodos, ep_id.ToString());
+                                lRango = string.Concat("J", (lIndex).ToString());
+                                excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                                lRango = string.Concat("K", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "*F", (lIndex).ToString()); //"=G10-M10";
+
+                                //Total Acumulado
+                                lRango = string.Concat("L", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "+H", (lIndex).ToString()); //"J10+H10";
+                                lRango = string.Concat("M", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (lIndex).ToString(), "+K", (lIndex).ToString());
+
+                                //Saldo Pendiente
+                                lRango = string.Concat("N", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (lIndex).ToString(), "-L", (lIndex).ToString()); //"=D10-L10";
+                                lRango = string.Concat("O", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (lIndex).ToString(), "-M", (lIndex).ToString()); //"=G10-M10";
+
+                                lIndex = lIndex + 1;
+                                if (i < lVistaTmp.Count - 1)
+                                {
+                                    excelSheet.Rows[(lIndex).ToString()].Insert();
+                                }
+                            }
+                            // Descuentos 
+                            lWheres = " Tipo='D'   ";
+                            lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
+                            lIndex = lIndex + 1;
+                            for (i = 0; i < lVistaTmp.Count; i++)
+                            {
+                                if (i == 0)
+                                    excelSheet.Rows[(i + lIndex).ToString()].Insert();
+
+                                lRango = string.Concat("B", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("5.", (i + 1).ToString());
+                                lRango = string.Concat("C", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Descripcion"].ToString();
+                                lRango = string.Concat("D", (lIndex).ToString()); excelSheet.Range[lRango].Value = (long.Parse (lVistaTmp[i]["cant"].ToString())*(-1));
+                                lRango = string.Concat("E", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["Unidad_Otros"].ToString();
+                                lRango = string.Concat("F", (lIndex).ToString()); excelSheet.Range[lRango].Value = lVistaTmp[i]["PU"].ToString();
+                                lRango = string.Concat("G", (lIndex).ToString());
+                                excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*D", (lIndex).ToString()); //"=G10-M10";
+
+                                //Acumulado Anterior
+                                lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "DAA", lTblOtrosTodos, ep_id.ToString());
+                                lRango = string.Concat("H", (lIndex).ToString());
+                                excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                                // lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=(F", (lIndex).ToString(), "*H", (lIndex).ToString(),")*(-1))"); //"=G10-M10";
+                                lRango = string.Concat("I", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=F", (lIndex).ToString(), "*H", (lIndex).ToString(), "*(-1)"); //"=G10-M10";
+
+                                //Estado de Pago Actual
+                                lTotalAcumAnt = ObtenerAcumulados(lVistaTmp[i]["Descripcion"].ToString(), "DPA", lTblOtrosTodos, ep_id.ToString());
+                                lRango = string.Concat("J", (lIndex).ToString());
+                                excelSheet.Range[lRango].Value = lTotalAcumAnt;
+                                lRango = string.Concat("K", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "*F", (lIndex).ToString()); //"=G10-M10";
+
+                                //Total Acumulado
+                                lRango = string.Concat("L", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=J", (lIndex).ToString(), "+H", (lIndex).ToString()); //"J10+H10";
+                                lRango = string.Concat("M", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=I", (lIndex).ToString(), "+K", (lIndex).ToString());
+
+                                //Saldo Pendiente
+                                lRango = string.Concat("N", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=D", (lIndex).ToString(), "-L", (lIndex).ToString()); //"=D10-L10";
+                                lRango = string.Concat("O", (lIndex).ToString()); excelSheet.Range[lRango].Value = string.Concat("=G", (lIndex).ToString(), "-M", (lIndex).ToString() ); //"=G10-M10";
+
+                                lIndex = lIndex + 1;
+                                if (i < lVistaTmp.Count - 1)
+                                {
+                                    excelSheet.Rows[(lIndex).ToString()].Insert();
+                                }
                             }
                         }
-
                         //*****************************  Repocisiones  ******************************************
                         lTmps = lDts.DataSet.Tables["Guias"].Copy();
                         total = 0;
@@ -1944,17 +1956,35 @@ namespace EstadosdePagos
                         excelSheet.Range["H7"].Value = lTotalSum;
                         excelSheet.Range["H8"].Value = lTotaPrep;
 
-                        lRango = string.Concat("H", (lIndex  ).ToString());
-                        excelSheet.Range[lRango].Value = lTotalRep;
-                        lRango = string.Concat("D", (lIndex).ToString());
-                        excelSheet.Range[lRango].Value = string.Concat("=H", (lIndex).ToString(), "+J", (lIndex ).ToString());  
+                        if (lTotalRep > 0)
+                        {
+                            if (lIndex == -1)
+                                lIndex = 12;
+
+                            lRango = string.Concat("H", (lIndex).ToString());
+                            excelSheet.Range[lRango].Value = lTotalRep;
+                            lRango = string.Concat("D", (lIndex).ToString());
+                            excelSheet.Range[lRango].Value = string.Concat("=H", (lIndex).ToString(), "+J", (lIndex).ToString());
+                        }
+
+                        if (totalKgRep > 0)
+                        {
+                            if (lIndex == -1)
+                                lIndex = 12;
+
+                            lRango = string.Concat("J", (lIndex).ToString());
+                            excelSheet.Range[lRango].Value = totalKgRep;
+                            lRango = string.Concat("D", (lIndex).ToString());
+                            excelSheet.Range[lRango].Value = string.Concat("=H", (lIndex).ToString(), "+J", (lIndex).ToString());
+                        }
+
 
                         // debemos  llenar la Informacion de la Nueva Pestaña
                         //•Se agrega hoja llamada “BD”, la cual debe contener las siguientes columnas desde sistema, acotadas para el EP
                         //actual: Plano, Nivel, Elemento, Figura, Referencia, Marca, id pieza, Cant, Diam, 
                         //Largo Total(y todos los largos parciales), Kg, Nro Etiqueta, IT, Viaje, Nro Guía, Fecha Guía.
                         (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
-                        lCont = 4;
+                        lCont = 2;
                         for (i = 0; i < ltblDatos.Rows.Count; i++)
                         {
                             lDatos = wsOperacion.ObtenerBD_ParaExcel(ltblDatos.Rows[i]["IT"].ToString());
@@ -1965,37 +1995,40 @@ namespace EstadosdePagos
                                
                                 foreach (DataRow row in lTbl.Rows)
                                 {
-                                    lRangoEx = string.Concat("A", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Plano"].ToString();
-                                    lRangoEx = string.Concat("B", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Nivel"].ToString();
-                                    lRangoEx = string.Concat("C", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Elemento"].ToString();
-                                    lRangoEx = string.Concat("D", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Figura"].ToString();
-                                    lRangoEx = string.Concat("E", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Referencia"].ToString();
-                                    lRangoEx = string.Concat("F", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Marca"].ToString();
-                                    lRangoEx = string.Concat("G", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IdPieza"].ToString();
-                                    lRangoEx = string.Concat("H", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["NroPiezas"].ToString();
+                                    lRangoEx = string.Concat("A", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IdPieza"].ToString();
+                                    lRangoEx = string.Concat("B", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Plano"].ToString();
+                                    lRangoEx = string.Concat("C", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Nivel"].ToString();
+                                    lRangoEx = string.Concat("D", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Elemento"].ToString();
+                                    lRangoEx = string.Concat("E", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Figura"].ToString();
+                                    lRangoEx = string.Concat("F", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Referencia"].ToString();
+                                    lRangoEx = string.Concat("G", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Marca"].ToString();
+                                    lRangoEx = string.Concat("H", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IdForma"].ToString();
+                                    lRangoEx = string.Concat("I", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["NroPiezas"].ToString();
 
-                                    lRangoEx = string.Concat("I", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Diametro"].ToString();
-                                    lRangoEx = string.Concat("J", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Largo"].ToString();
-                                    lRangoEx = string.Concat("K", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["A"].ToString();
-                                    lRangoEx = string.Concat("L", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["B"].ToString();
-                                    lRangoEx = string.Concat("M", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["C"].ToString();
-                                    lRangoEx = string.Concat("N", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["D"].ToString();
-                                    lRangoEx = string.Concat("O", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["E"].ToString();
-                                    lRangoEx = string.Concat("P", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["F"].ToString();
-                                    lRangoEx = string.Concat("Q", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["G"].ToString();
-                                    lRangoEx = string.Concat("R", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["H"].ToString();
-                                    lRangoEx = string.Concat("S", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["I"].ToString();
-                                    lRangoEx = string.Concat("T", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["J"].ToString();
-                                    lRangoEx = string.Concat("U", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["K"].ToString();
-                                    lRangoEx = string.Concat("V", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["L"].ToString();
-                                    lRangoEx = string.Concat("W", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["N"].ToString();
+                                    lRangoEx = string.Concat("J", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Diametro"].ToString();
+                                    lRangoEx = string.Concat("K", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Largo"].ToString();
+                                    lRangoEx = string.Concat("L", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["A"].ToString();
+                                    lRangoEx = string.Concat("M", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["B"].ToString();
+                                    lRangoEx = string.Concat("N", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["C"].ToString();
+                                    lRangoEx = string.Concat("O", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["D"].ToString();
+                                    lRangoEx = string.Concat("P", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["E"].ToString();
+                                    lRangoEx = string.Concat("Q", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["F"].ToString();
+                                    lRangoEx = string.Concat("R", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["G"].ToString();
+                                    lRangoEx = string.Concat("S", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["H"].ToString();
+                                    lRangoEx = string.Concat("T", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["I"].ToString();
+                                    lRangoEx = string.Concat("U", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["J"].ToString();
+                                    lRangoEx = string.Concat("V", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["K"].ToString();
+                                    lRangoEx = string.Concat("W", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["L"].ToString();
+                                    lRangoEx = string.Concat("X", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["N"].ToString();
 
-                                    lRangoEx = string.Concat("X", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["TOTAL_kGS"].ToString();
-                                    lRangoEx = string.Concat("Y", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Etiqueta"].ToString();
-                                    lRangoEx = string.Concat("Z", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IT"].ToString();
-                                    lRangoEx = string.Concat("AA", lCont.ToString()); excelSheet.Range[lRangoEx].Value = "";
-                                    lRangoEx = string.Concat("AB", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["NroGuiaINET"].ToString();
-                                    lRangoEx = string.Concat("AC", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Fecha_GD"].ToString();
+                                    lRangoEx = string.Concat("Y", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["TOTAL_kGS"].ToString();
+                                    lRangoEx = string.Concat("Z", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Etiqueta"].ToString();
+                                    lRangoEx = string.Concat("AA", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IT"].ToString();
+                                    lRangoEx = string.Concat("AB", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["viaje"].ToString(); 
+                                    lRangoEx = string.Concat("AC", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["NroGuiaINET"].ToString();
+                                    lRangoEx = string.Concat("AD", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Fecha_GD"].ToString();
+                                    lRangoEx = string.Concat("AE", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["TipoGuia_INET"].ToString();
+                                    lRangoEx = string.Concat("AF", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["importeKgs"].ToString();
                                     lCont++;
                                 }
                              
@@ -2048,6 +2081,208 @@ namespace EstadosdePagos
 
         }
 
+        public  void GeneraExcel_Resumen_Eps()
+        {
+            //string selectedPath = ""; string obra = "";
+            WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+            WsOperacion.Operacion ws = new WsOperacion.Operacion(); string lRangoEx = "";
+             int i = 0; DataTable lTbl = new DataTable();
+            string error = ""; string lPathDestino = ""; DataTable ltblServicios = new DataTable();
+            string lHora = "";   int lIndex = -1;
+
+  
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataView lVista = null;DataSet lDts = new DataSet();
+            int lDias = 0;
+            try
+            {
+                lDts = wsOperacion.ObtenerInforme_EP();      //lPx.ObtenerDatos(lSql);
+                if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                {
+                    //Anexa el nombre de la carpeta a generar
+                    //if (!fs.DirectoryExists(lPathDestino))
+                    //    fs.createDirectory(lPathDestino);
+
+                    lTbl = lDts.Tables[0].Copy();
+
+                    lHora = string.Concat(DateTime.Now.ToShortDateString().Replace("/", "_"), "_", DateTime.Now.ToShortTimeString().Replace(":", "_"));
+                    //Copia la plantilla al directorio de destino
+                    string plantillaEP = Path.Combine(Application.StartupPath, "PlantillaEP_Generados.xlsx");
+                    //string lNombreArchivo = string.Concat("EP_NRO_", correlativo, "_Estado_");
+                    lPathDestino = @"C:\TMP\Estado de pago\";
+                    string outputEP = Path.Combine(lPathDestino, string.Concat("Listado_EP_", lHora, ".xlsx"));  //selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
+                                                                                                                 //string outputEP = Path.Combine(lPathDestino, string.Concat("EPNro_", correlativo, "_", iSiglaObra, "_", lHora, ".xls"));
+                                                                                                                 //string outputEPPdf = Path.Combine(lPathDestino, "PlantillaEP.Pdf");
+                    if (fs.FileExists(plantillaEP))
+                        fs.copyFile(plantillaEP, outputEP);
+
+
+                    if (fs.error == null)
+                    {
+                        //Inserta los datos en el excel de salida
+                        object paramMissing = Type.Missing;
+                        ExcelApp.Application excelApplication = new ExcelApp.Application();
+                        excelApplication.DisplayAlerts = false;
+                        excelApplication.Visible = true;
+                        ExcelApp.Workbook excelWorkBook = excelApplication.Workbooks.Open(outputEP); //.Add(paramMissing);
+                        ExcelApp.Worksheet excelSheet = null;
+                        DataTable ltblDatos = new DataTable(); DataTable ltblDatosPor_IT = new DataTable();
+                        //ltblDatos = listaDataSetOp.DataSet.Tables[0].Copy();
+
+
+                        if (excelWorkBook != null)
+                        {
+                            //LLenaremos primero el detalle de la pestaña de  Resumen GD, de la plantilla
+                            //Hoja: EP_Creado
+                            lVista = new DataView(lTbl, "Ep_Estado='P05'", "", DataViewRowState.CurrentRows);
+                            if (lVista.Count >0)
+                            {
+                                (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[1]).Select();
+                                for (i=0; i<lVista .Count; i++)
+                                {
+                                    lIndex = 3 + i;
+                                    lRangoEx = string.Concat("B", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Empresa"].ToString();
+                                    lRangoEx = string.Concat("C", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Año"].ToString();
+                                    lRangoEx = string.Concat("D", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["mes"].ToString();
+                                    lRangoEx = string.Concat("E", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["ep_fecha_creacion"].ToString();
+                                    lRangoEx = string.Concat("F", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Cliente"].ToString();
+                                    lRangoEx = string.Concat("G", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Nombre"].ToString();
+                                    lRangoEx = string.Concat("H", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Correlativo"].ToString();
+                                    lRangoEx = string.Concat("I", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Estado"].ToString();
+                                    lRangoEx = string.Concat("J", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["MontoTotal"].ToString();
+                                    lRangoEx = string.Concat("K", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Usuario"].ToString();
+                                    lRangoEx = string.Concat("L", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Dias_del_envio"].ToString();
+                                }
+                            }
+
+                            lVista = new DataView(lTbl, "Ep_Estado='P10'", "", DataViewRowState.CurrentRows);
+                            if (lVista.Count > 0)
+                            {
+                                (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[2]).Select();
+                                for (i = 0; i < lVista.Count; i++)
+                                {
+                                    lIndex = 3 + i;
+                                    lRangoEx = string.Concat("B", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Empresa"].ToString();
+                                    lRangoEx = string.Concat("C", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Año"].ToString();
+                                    lRangoEx = string.Concat("D", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["mes"].ToString();
+                                    lRangoEx = string.Concat("E", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["ep_fecha_creacion"].ToString();
+                                    lRangoEx = string.Concat("F", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Cliente"].ToString();
+                                    lRangoEx = string.Concat("G", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Nombre"].ToString();
+                                    lRangoEx = string.Concat("H", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Correlativo"].ToString();
+                                    lRangoEx = string.Concat("I", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Estado"].ToString();
+                                    lRangoEx = string.Concat("J", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["MontoTotal"].ToString();
+                                    lRangoEx = string.Concat("K", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Usuario"].ToString();
+                                    lRangoEx = string.Concat("L", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Dias_del_envio"].ToString();
+                                }
+                            }
+
+                            lVista = new DataView(lTbl, "Ep_Estado='P15'", "", DataViewRowState.CurrentRows);
+                            if (lVista.Count > 0)
+                            {
+                                (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[3]).Select();
+                                for (i = 0; i < lVista.Count; i++)
+                                {
+                                    lIndex = 3 + i;
+                                    lRangoEx = string.Concat("B", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Empresa"].ToString();
+                                    lRangoEx = string.Concat("C", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Año"].ToString();
+                                    lRangoEx = string.Concat("D", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["mes"].ToString();
+                                    lRangoEx = string.Concat("E", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["ep_fecha_creacion"].ToString();
+                                    lRangoEx = string.Concat("F", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Cliente"].ToString();
+                                    lRangoEx = string.Concat("G", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Nombre"].ToString();
+                                    lRangoEx = string.Concat("H", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Correlativo"].ToString();
+                                    lRangoEx = string.Concat("I", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Estado"].ToString();
+                                    lRangoEx = string.Concat("J", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["MontoTotal"].ToString();
+                                    lRangoEx = string.Concat("K", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Usuario"].ToString();
+                                    lRangoEx = string.Concat("L", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Dias_del_envio"].ToString();
+                                }
+                            }
+
+                            lVista = new DataView(lTbl, "Ep_Estado='P45'", "", DataViewRowState.CurrentRows);
+                            if (lVista.Count > 0)
+                            {
+                                (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[4]).Select();
+                                for (i = 0; i < lVista.Count; i++)
+                                {
+                                    lIndex = 3 + i;
+                                    lRangoEx = string.Concat("B", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Empresa"].ToString();
+                                    lRangoEx = string.Concat("C", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Año"].ToString();
+                                    lRangoEx = string.Concat("D", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["mes"].ToString();
+                                    lRangoEx = string.Concat("E", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["ep_fecha_creacion"].ToString();
+                                    lRangoEx = string.Concat("F", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Cliente"].ToString();
+                                    lRangoEx = string.Concat("G", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Nombre"].ToString();
+                                    lRangoEx = string.Concat("H", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Correlativo"].ToString();
+                                    lRangoEx = string.Concat("I", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Estado"].ToString();
+                                    lRangoEx = string.Concat("J", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["MontoTotal"].ToString();
+                                    lRangoEx = string.Concat("K", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Usuario"].ToString();
+                                    lRangoEx = string.Concat("L", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Dias_del_envio"].ToString();
+                                }
+                            }
+
+                            lVista = new DataView(lTbl, "Ep_Estado='P60'", "", DataViewRowState.CurrentRows);
+                            if (lVista.Count > 0)
+                            {
+                                (excelSheet = (ExcelApp.Worksheet)excelWorkBook.Worksheets[5]).Select();
+                                for (i = 0; i < lVista.Count; i++)
+                                {
+                                    lIndex = 3 + i;
+                                    lRangoEx = string.Concat("B", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Empresa"].ToString();
+                                    lRangoEx = string.Concat("C", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Año"].ToString();
+                                    lRangoEx = string.Concat("D", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["mes"].ToString();
+                                    lRangoEx = string.Concat("E", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["ep_fecha_creacion"].ToString();
+                                    lRangoEx = string.Concat("F", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Cliente"].ToString();
+                                    lRangoEx = string.Concat("G", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Nombre"].ToString();
+                                    lRangoEx = string.Concat("H", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Correlativo"].ToString();
+                                    lRangoEx = string.Concat("I", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Estado"].ToString();
+                                    lRangoEx = string.Concat("J", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["MontoTotal"].ToString();
+                                    lRangoEx = string.Concat("K", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["EP_Usuario"].ToString();
+                                    lRangoEx = string.Concat("L", lIndex.ToString()); excelSheet.Range[lRangoEx].Value = lVista[i]["Dias_del_envio"].ToString();
+                                }
+                            }
+
+
+
+                            excelWorkBook.Save();
+                            //excelWorkBook.ExportAsFixedFormat(ExcelApp.XlFixedFormatType.xlTypePDF, outputEPPdf);
+                        }
+                        excelWorkBook.Close(false);
+                        excelApplication.Quit();
+
+                        if (excelSheet != null)
+                        {
+                            while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelSheet) != 0) { }
+                            excelSheet = null;
+                        }
+                        if (excelWorkBook != null)
+                        {
+                            while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelWorkBook) != 0) { }
+                            excelWorkBook = null;
+                        }
+                        if (excelApplication != null)
+                        {
+                            while (System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApplication) != 0) { }
+                            excelApplication = null;
+                        }
+                        GC.Collect();
+                        GC.WaitForPendingFinalizers();
+
+
+                        fs.shell(lPathDestino);
+
+                    }
+                    else
+                        error = string.Concat(error, Environment.NewLine, fs.error.Message.ToString());
+                    //validacion.Append(fs.error.Message);
+                }
+            }
+            catch (Exception exc)
+            {
+                error = string.Concat(error, Environment.NewLine, fs.error.Message.ToString());
+                //validacion.Append(exc.Message);
+            }
+
+
+
+
+        }
 
 
 
@@ -2080,6 +2315,13 @@ namespace EstadosdePagos
                     {
                         lTotalTP = lTotalTP + int.Parse(iTbl.Rows[i]["Total_Kgs"].ToString());
                     }                  
+                }
+                if (iTipo == "R")  // Repocisiones = R
+                {
+                    if ((iTbl.Rows[i]["TipoGuia_INET"].ToString().ToUpper().Equals("R")))
+                    {
+                        lTotalTP = lTotalTP + int.Parse(iTbl.Rows[i]["Total_Kgs"].ToString());
+                    }
                 }
             }
 
@@ -2195,7 +2437,7 @@ namespace EstadosdePagos
             Boolean lRes = false;   string lSql = ""; DataTable lTbTmp = new DataTable();
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
 
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,",idObra,", ' ',0,0,'", iServicio,"','','','',13");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,",idObra,", ' ',0,0,'", iServicio, "','','','',13,''");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {
@@ -2213,7 +2455,7 @@ namespace EstadosdePagos
             Boolean lRes = false; string lSql = ""; DataTable lTbTmp = new DataTable();
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
 
-            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, ", ' ',0,0,'", iServicio, "','",iCantidad ,"','",iUnidad ,"','',14");
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", idObra, ", ' ',0,0,'", iServicio, "','",iCantidad ,"','",iUnidad , "','',14,''");
             lDts = lPx.ObtenerDatos(lSql);
             if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
             {

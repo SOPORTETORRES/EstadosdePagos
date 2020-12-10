@@ -32,6 +32,9 @@
             this.Cmb_Concepto = new System.Windows.Forms.ComboBox();
             this.Cmb_Unidades = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Rb_AdPuntual = new System.Windows.Forms.RadioButton();
+            this.Rb_Adicional = new System.Windows.Forms.RadioButton();
+            this.Rb_Descuento = new System.Windows.Forms.RadioButton();
             this.Tx_saldo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Tx_CantTotal = new System.Windows.Forms.TextBox();
@@ -59,9 +62,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Dtg_Resultado = new System.Windows.Forms.DataGridView();
-            this.Rb_Descuento = new System.Windows.Forms.RadioButton();
-            this.Rb_Adicional = new System.Windows.Forms.RadioButton();
-            this.Rb_AdPuntual = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -110,7 +110,7 @@
             this.Cmb_Concepto.FormattingEnabled = true;
             this.Cmb_Concepto.Location = new System.Drawing.Point(7, 90);
             this.Cmb_Concepto.Name = "Cmb_Concepto";
-            this.Cmb_Concepto.Size = new System.Drawing.Size(412, 21);
+            this.Cmb_Concepto.Size = new System.Drawing.Size(140, 21);
             this.Cmb_Concepto.TabIndex = 24;
             this.Cmb_Concepto.SelectedIndexChanged += new System.EventHandler(this.Cmb_Concepto_SelectedIndexChanged);
             // 
@@ -139,6 +139,41 @@
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Opciones";
+            // 
+            // Rb_AdPuntual
+            // 
+            this.Rb_AdPuntual.AutoSize = true;
+            this.Rb_AdPuntual.Location = new System.Drawing.Point(81, 23);
+            this.Rb_AdPuntual.Name = "Rb_AdPuntual";
+            this.Rb_AdPuntual.Size = new System.Drawing.Size(80, 17);
+            this.Rb_AdPuntual.TabIndex = 27;
+            this.Rb_AdPuntual.Text = "Ad. Puntual";
+            this.Rb_AdPuntual.UseVisualStyleBackColor = true;
+            this.Rb_AdPuntual.CheckedChanged += new System.EventHandler(this.Rb_AdPuntual_CheckedChanged);
+            // 
+            // Rb_Adicional
+            // 
+            this.Rb_Adicional.AutoSize = true;
+            this.Rb_Adicional.Checked = true;
+            this.Rb_Adicional.Location = new System.Drawing.Point(6, 22);
+            this.Rb_Adicional.Name = "Rb_Adicional";
+            this.Rb_Adicional.Size = new System.Drawing.Size(68, 17);
+            this.Rb_Adicional.TabIndex = 26;
+            this.Rb_Adicional.TabStop = true;
+            this.Rb_Adicional.Text = "Adicional";
+            this.Rb_Adicional.UseVisualStyleBackColor = true;
+            this.Rb_Adicional.CheckedChanged += new System.EventHandler(this.Rb_Adicional_CheckedChanged);
+            // 
+            // Rb_Descuento
+            // 
+            this.Rb_Descuento.AutoSize = true;
+            this.Rb_Descuento.Location = new System.Drawing.Point(169, 23);
+            this.Rb_Descuento.Name = "Rb_Descuento";
+            this.Rb_Descuento.Size = new System.Drawing.Size(77, 17);
+            this.Rb_Descuento.TabIndex = 1;
+            this.Rb_Descuento.Text = "Descuento";
+            this.Rb_Descuento.UseVisualStyleBackColor = true;
+            this.Rb_Descuento.CheckedChanged += new System.EventHandler(this.Rb_Descuento_CheckedChanged);
             // 
             // Tx_saldo
             // 
@@ -346,11 +381,10 @@
             // 
             // Tx_Concepto
             // 
-            this.Tx_Concepto.Location = new System.Drawing.Point(6, 89);
+            this.Tx_Concepto.Location = new System.Drawing.Point(150, 90);
             this.Tx_Concepto.Name = "Tx_Concepto";
-            this.Tx_Concepto.Size = new System.Drawing.Size(412, 20);
+            this.Tx_Concepto.Size = new System.Drawing.Size(274, 20);
             this.Tx_Concepto.TabIndex = 1;
-            this.Tx_Concepto.Visible = false;
             this.Tx_Concepto.TextChanged += new System.EventHandler(this.Tx_Concepto_TextChanged);
             // 
             // label1
@@ -385,42 +419,6 @@
             this.Dtg_Resultado.Size = new System.Drawing.Size(1071, 310);
             this.Dtg_Resultado.TabIndex = 0;
             this.Dtg_Resultado.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Resultado_CellContentDoubleClick);
-            // 
-            // Rb_Descuento
-            // 
-            this.Rb_Descuento.AutoSize = true;
-            this.Rb_Descuento.Location = new System.Drawing.Point(169, 23);
-            this.Rb_Descuento.Name = "Rb_Descuento";
-            this.Rb_Descuento.Size = new System.Drawing.Size(77, 17);
-            this.Rb_Descuento.TabIndex = 1;
-            this.Rb_Descuento.TabStop = true;
-            this.Rb_Descuento.Text = "Descuento";
-            this.Rb_Descuento.UseVisualStyleBackColor = true;
-            this.Rb_Descuento.CheckedChanged += new System.EventHandler(this.Rb_Descuento_CheckedChanged);
-            // 
-            // Rb_Adicional
-            // 
-            this.Rb_Adicional.AutoSize = true;
-            this.Rb_Adicional.Location = new System.Drawing.Point(6, 22);
-            this.Rb_Adicional.Name = "Rb_Adicional";
-            this.Rb_Adicional.Size = new System.Drawing.Size(68, 17);
-            this.Rb_Adicional.TabIndex = 26;
-            this.Rb_Adicional.TabStop = true;
-            this.Rb_Adicional.Text = "Adicional";
-            this.Rb_Adicional.UseVisualStyleBackColor = true;
-            this.Rb_Adicional.CheckedChanged += new System.EventHandler(this.Rb_Adicional_CheckedChanged);
-            // 
-            // Rb_AdPuntual
-            // 
-            this.Rb_AdPuntual.AutoSize = true;
-            this.Rb_AdPuntual.Location = new System.Drawing.Point(81, 23);
-            this.Rb_AdPuntual.Name = "Rb_AdPuntual";
-            this.Rb_AdPuntual.Size = new System.Drawing.Size(80, 17);
-            this.Rb_AdPuntual.TabIndex = 27;
-            this.Rb_AdPuntual.TabStop = true;
-            this.Rb_AdPuntual.Text = "Ad. Puntual";
-            this.Rb_AdPuntual.UseVisualStyleBackColor = true;
-            this.Rb_AdPuntual.CheckedChanged += new System.EventHandler(this.Rb_AdPuntual_CheckedChanged);
             // 
             // frmEP_otros
             // 

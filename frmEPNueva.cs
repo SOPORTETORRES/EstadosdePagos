@@ -186,7 +186,12 @@ namespace EstadosdePagos
             if (!this._ep_id.Equals(0)) //EP existente
             {
                 this.Text = (!this._estado.Equals("P15") ? "Modificacion de un EP" : "Modificacion de un E.P. x Obs. del cliente"); //P15-ENVIADO A CLIENTE
-                this.btnGuardar.Visible = false; //Desactiva el boton Guardar cuando son modificaciones
+
+                if (this.dgvGuiasDespacho.Rows.Count ==0)
+                        this.btnGuardar.Visible = false; //Desactiva el boton Guardar cuando son modificaciones
+                else
+                    this.btnGuardar.Visible = true ;
+
             }
             lblID.Text = _ep_id.ToString();
             lblObra.Text = _obra;
@@ -754,7 +759,7 @@ namespace EstadosdePagos
 
                     if (this.Ep_id > 0)
                     {
-                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", this.Ep_id, ",0,' ', 0,0,'','','','',7");
+                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", this.Ep_id, ",0,' ', 0,0,'','','','',7,''");
                         lDts = lPx.ObtenerDatos(lSql);
                         if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                         {
@@ -765,7 +770,7 @@ namespace EstadosdePagos
                     }
                     else
                     {
-                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", this._ep_obra, ", ' ',0,0,'','','','',12");
+                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0,", this._ep_obra, ", ' ',0,0,'','','','',12,''");
                         lDts = lPx.ObtenerDatos(lSql);
                         if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                         {
@@ -988,7 +993,7 @@ namespace EstadosdePagos
                     {
                         WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
                         string lSql = "";
-                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", _ep_id, ", ", _ep_obra, ",' ',0,0, '','','','',13");
+                        lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", _ep_id, ", ", _ep_obra, ",' ',0,0, '','','','',13,''");
                         lDts = lPx.ObtenerDatos(lSql);
                         if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                         {

@@ -286,7 +286,7 @@
             this.btnSalir.Image = global::EstadosdePagos.Properties.Resources.salir;
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(49, 20);
+            this.btnSalir.Size = new System.Drawing.Size(49, 22);
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -383,6 +383,7 @@
             this.Btn_ContratosObra.TabIndex = 16;
             this.Btn_ContratosObra.Text = "Contratos Obras";
             this.Btn_ContratosObra.UseVisualStyleBackColor = true;
+            this.Btn_ContratosObra.Visible = false;
             this.Btn_ContratosObra.Click += new System.EventHandler(this.Btn__Click);
             // 
             // Gb_Estado

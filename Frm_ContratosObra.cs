@@ -60,17 +60,24 @@ namespace EstadosdePagos
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",' ', 0,0,  '','','','',11");
+                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",' ', 0,0,  '','','','',11,''");
 
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                 {
                     lTbl = lDts.Tables[0].Copy();
+
+                    for (i = 0; i < lTbl.Rows.Count; i++)
+                    {
+                        lTbl.Rows[i]["Cantidad"] = lUti.Val (lTbl.Rows[i]["Cantidad"].ToString ()).ToString("N0");
+                        lTbl.Rows[i]["ImporteTotal"] = lUti.Val(lTbl.Rows[i]["ImporteTotal"].ToString()).ToString("N0");
+                    }
+
                     Dtg_Datos.DataSource = lTbl;
                     lTotal = 0;
                     for (i = 0; i < lTbl.Rows.Count; i++)
                     {
-                        lTotal = lTotal + int.Parse(lTbl.Rows[i]["Cantidad"].ToString());
+                        //lTotal = lTotal + int.Parse(lTbl.Rows[i]["Cantidad"].ToString());
                     }
 
                     Dtg_Datos.Columns[0].Width = 60;
@@ -80,7 +87,7 @@ namespace EstadosdePagos
                 }
 
 
-                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",' ' ,0,0, '','','','',15");
+                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",' ' ,0,0, '','','','',15,''");
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                 {
@@ -110,7 +117,7 @@ namespace EstadosdePagos
                 lConcepto = Tx_Servicio.Text;
 
                 lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, ", mIdObra, ",'", lConcepto, "','", lUtil.Val(Tx_CantidadTotal.Text.Replace(".", "")), "',0,'", Cmb_Unidades .SelectedValue , "','");
-                lSql = string.Concat(lSql, Tx_PU .Text , "' ,'','',10 ");
+                lSql = string.Concat(lSql, Tx_PU .Text , "' ,'','',10,'' ");
 
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
@@ -168,7 +175,11 @@ namespace EstadosdePagos
                 Tx_Servicio.Text = Dtg_Datos.Rows[lIndex].Cells["Servicio"].Value.ToString();
                 Tx_CantidadTotal .Text = Dtg_Datos.Rows[lIndex].Cells["Cantidad"].Value.ToString();
                 lUnidad= Dtg_Datos.Rows[lIndex].Cells["Unidad"].Value.ToString();
+
+                Tx_PU .Text   = Dtg_Datos.Rows[lIndex].Cells["PU"].Value.ToString();
                 Cmb_Unidades.SelectedValue  = lUnidad;
+
+                CalculaTotal();
 
                 if (lUt.ServicioEnEP(Tx_Servicio.Text, mIdObra) == false)
                     Btn_Eliminar.Enabled = true;
@@ -193,6 +204,32 @@ namespace EstadosdePagos
                 MuestraDatos();
             }
 
+        }
+
+        private void  CalculaTotal()
+        {
+            int lRes = 0; Utils lUtil = new Utils();
+
+
+            lRes = lUtil.Val(Tx_PU.Text) * lUtil.Val(Tx_CantidadTotal.Text);
+
+            Tx_ImporteTotal.Text = lRes.ToString ("N0");
+             
+        }
+
+        private void Tx_CantidadTotal_Leave(object sender, EventArgs e)
+        {
+            CalculaTotal();
+        }
+
+        private void Tx_PU_Validating(object sender, CancelEventArgs e)
+        {
+            CalculaTotal();
+        }
+
+        private void Tx_PU_Leave(object sender, EventArgs e)
+        {
+            CalculaTotal();
         }
     }
 

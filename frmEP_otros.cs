@@ -18,6 +18,7 @@ namespace EstadosdePagos
         private DataTable mTblConcepto = new DataTable();
         public   CurrentUser mUserActivo = new CurrentUser();
         private DataTable mTblDatosObra = new DataTable();
+        private DataTable mTblDescuentosObra = new DataTable();
 
         public frmEP_otros()
         {
@@ -26,7 +27,7 @@ namespace EstadosdePagos
 
         private void frmEP_otros_Load(object sender, EventArgs e)
         {
-
+       
         }
 
 
@@ -42,6 +43,25 @@ namespace EstadosdePagos
             mIdEP = iIdEP;
             mEstado_EP = iEstadoEP;
 
+            //private DataTable mTblDescuentosObra = new DataTable();
+
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();            string lSql = "";  
+            //DataTable lTbTmp = new DataTable(); Utils lUti = new Utils();
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',0,0,'','','','',11,''");
+            lDts = lPx.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                mTblConcepto = new DataTable();
+                mTblConcepto = lDts.Tables[0].Copy();
+            }
+            lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, 0,' ',0,0,'','','','',18,''");
+            lDts = lPx.ObtenerDatos(lSql);
+            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+            {
+                mTblDescuentosObra = new DataTable();
+                mTblDescuentosObra = lDts.Tables[0].Copy();
+            }
+            Rb_Adicional_CheckedChanged(null, null);
             MuestraDatos();
         }
 
@@ -82,7 +102,7 @@ namespace EstadosdePagos
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',0,0, '','','','',9");
+                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',0,0, '','','','',9,''");
                 Dtg_Resultado.DataSource = null;
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
@@ -109,7 +129,7 @@ namespace EstadosdePagos
                 }
                
 
-                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, 0,' ',0,0,'','','','',15");
+                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,0, 0,' ',0,0,'','','','',15,''");
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
                 {
@@ -119,28 +139,22 @@ namespace EstadosdePagos
                     Cmb_Unidades.DataSource = lTbTmp.Copy ();
                 }
 
-                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',0,0,'','','','',11");
-                lDts = lPx.ObtenerDatos(lSql);
-                if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                if (Rb_Adicional .Checked ==true )
                 {
-                    mTblConcepto = new DataTable();
-                    mTblConcepto = lDts.Tables[0].Copy();
-                    Cmb_Concepto  .DisplayMember = "Servicio";
+                    Cmb_Concepto.DisplayMember = "Servicio";
                     Cmb_Concepto.ValueMember = "Cantidad";
-                    Cmb_Concepto.DataSource = mTblConcepto.Copy(); ;
+                    Cmb_Concepto.DataSource = mTblConcepto.Copy();
                 }
-                //lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ', 0,0,'','','',13");
-                //lDts = lPx.ObtenerDatos(lSql);
-                //if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
-                //{
-                //    lTbTmp = new DataTable();
-                //    lTbTmp = lDts.Tables[0].Copy();
-                //    if (lTbTmp.Rows[0]["Cantidad"]!=null )
-                //            Tx_CantTotal.Text = lTbTmp.Rows[0]["Cantidad"].ToString();
+
+                if (Rb_Descuento .Checked == true)
+                {
+                    Cmb_Concepto.DisplayMember = "Par1";
+                    Cmb_Concepto.ValueMember = "Par1";
+                    Cmb_Concepto.DataSource = mTblDescuentosObra.Copy();
+                }
+
                 //}
 
-                //lSaldo = lUti.Val(Tx_CantTotal.Text) - lUti.Val(Tx_total.Text.Replace (".",""));
-                //Tx_saldo.Text = lSaldo.ToString();
 
                 if (this.mEstado_EP.Equals("P45")) //P15-ENVIADO A CLIENTE
                 {
@@ -166,7 +180,7 @@ namespace EstadosdePagos
             try
             {
                // currentUser
-                lSql = string.Concat("  SP_CRUD_EP_OTROS ", iId ,",0, 0,' ',' ',0,'','','','',8");
+                lSql = string.Concat("  SP_CRUD_EP_OTROS ", iId ,",0, 0,' ',' ',0,'','','','',8,''");
 
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
@@ -226,7 +240,7 @@ namespace EstadosdePagos
                 //currentUser
                 lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",'", lConcepto, "','", lImporte, "','");
                 lSql = string.Concat(lSql,  "0' ,'", lUtil.Val (Tx_PU.Text)  ,"', '");
-                lSql = string.Concat(lSql ,  Cmb_Unidades .SelectedValue , "','", lUtil .Val (lCantidad),"','", lTipo,"', 1 ");
+                lSql = string.Concat(lSql ,  Cmb_Unidades .SelectedValue , "','", lUtil .Val (lCantidad),"','", lTipo,"', 1 ,'",Tx_Concepto .Text ,"'" );
 
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
@@ -234,7 +248,7 @@ namespace EstadosdePagos
                     lTbl = lDts.Tables[0].Copy();
                     if (lTbl.Rows.Count > 0)
                     {
-                        lSql = string.Concat("   SP_CRUD_EP_OTROS  0,0,0 ,' ',0,0,'','' ,'','',12  ");
+                        lSql = string.Concat("   SP_CRUD_EP_OTROS  0,0,0 ,' ',0,0,'','' ,'','',12 ,'' ");
 
                         lDts = lPx.ObtenerDatos(lSql);
                         if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
@@ -242,9 +256,7 @@ namespace EstadosdePagos
 
                             MessageBox.Show(" Los Datos se han grabdo  Satisfactoriamente ", "Avisos Sistema", MessageBoxButtons.OK);
 
-                        }
-
-                           
+                        }                   
 
                         Tx_Concepto.Text = "";
                         Tx_Importe.Text = "";
@@ -281,7 +293,7 @@ namespace EstadosdePagos
                 lMsg = "  Debe Indicar el Concepto ";
             }
 
-            if (lUt.Val(Tx_Importe .Text)<0 )
+            if (lUt.Val(Tx_Importe .Text)<1 )
             {
                 lRes = false;
                 lMsg = string .Concat (lMsg , " -   Debe Indicar el Importe ");
@@ -292,7 +304,7 @@ namespace EstadosdePagos
                 lRes = false;
                 lMsg = string.Concat(lMsg, " -   Debe Indicar el Precio Unitario ");
             }
-            if (lUt.Val(Tx_cantidad .Text )<0)
+            if (lUt.Val(Tx_cantidad .Text )<1)
             {
                 lRes = false;
                 lMsg = string.Concat(lMsg, " -   Debe Indicar  la Cantidad ");
@@ -353,16 +365,27 @@ namespace EstadosdePagos
 
         private void CalculaTotal()
         {
-            Utils lUti = new Utils();int lTotal = 0;
+            Utils lUti = new Utils();int lTotal = 0;int i = 0; int lCantidadUsada = 0;
 
             if ((lUti.Val(Tx_PU.Text) > 0) && (lUti.Val(Tx_cantidad.Text) > 0)) 
             {
                 lTotal = lUti.Val(Tx_PU.Text) * lUti.Val(Tx_cantidad.Text);
+                lCantidadUsada =  lUti.Val(Tx_cantidad.Text);
+                for (i=0;i<this .Dtg_Resultado .RowCount-1;i++)
+                {
+                    if (Dtg_Resultado .Rows[i].Cells ["Descripcion"].Value.ToString ().Equals (Cmb_Concepto.Text  ))
+                    {
+                        lCantidadUsada = lCantidadUsada + lUti.Val(Dtg_Resultado.Rows[i].Cells["Cantidad"].Value.ToString());
 
-                Tx_Importe .Text = lTotal.ToString ();
+                    }
+
+                }
+
+
+                Tx_Importe.Text = lTotal.ToString ();
                 if (Rb_Adicional.Checked == true)
                 {
-                    Tx_saldo.Text = (lUti.Val(this.Tx_CantTotal.Text) - lTotal).ToString("#,##0");
+                    Tx_saldo.Text = (lUti.Val(this.Tx_CantTotal.Text) - lCantidadUsada).ToString("#,##0");
                     if (lUti.Val(Tx_saldo.Text) < 0)
                     {
                         MessageBox.Show("El Saldo NO puede ser menor que cero, NO se puede realizar la Operación, Favor repita el Proceso. ", "Avisos Sistema", MessageBoxButtons.OK);
@@ -418,28 +441,52 @@ namespace EstadosdePagos
             DataView lVista = null; string lWheres = "";  Utils lUt = new Utils();int  lImporte = 0; int lSaldo = 0;
             if (Cmb_Concepto.SelectedValue != null)
             {
-                this.Cmb_Unidades.Enabled = true ; Tx_saldo.Text = "0";
-                lWheres = string.Concat("Servicio='", Cmb_Concepto.Text .ToString(), "'");
-                lVista = new DataView(mTblConcepto, lWheres, "", DataViewRowState.CurrentRows);
-                if (lVista.Count > 0)
+                if (Rb_Adicional.Checked == true)
                 {
-                    Tx_CantTotal.Text = Cmb_Concepto.SelectedValue.ToString();
-                    this.Cmb_Unidades.SelectedValue  = lVista[0]["Unidad"].ToString();
-                    this.Cmb_Unidades.Enabled = false;
-                    Rb_Adicional.Checked = true;
-                    this.Tx_PU.Text = lVista[0]["PE"].ToString();
-                    this.Tx_PU.Enabled = false;
-                }
-                //Cargamos los datos del servicio seleccionado
-                if (mTblDatosObra.Rows.Count > 0)
-                {
-                    lWheres = string.Concat("Descripcion='", Cmb_Concepto.Text.ToString().Trim(), "'");
-                    lVista = new DataView(this.mTblDatosObra, lWheres, "", DataViewRowState.CurrentRows);
+                    this.Cmb_Unidades.Enabled = true; Tx_saldo.Text = "0";
+                    lWheres = string.Concat("Servicio='", Cmb_Concepto.Text.ToString(), "'");
+                    lVista = new DataView(mTblConcepto, lWheres, "", DataViewRowState.CurrentRows);
                     if (lVista.Count > 0)
                     {
-                        lImporte = lUt.Val(lVista[0]["Importe"].ToString());
-                        lSaldo = lUt.Val(Tx_CantTotal.Text) - lImporte;
-                        Tx_saldo.Text = lSaldo.ToString();
+                        Tx_CantTotal.Text = Cmb_Concepto.SelectedValue.ToString();
+                        this.Cmb_Unidades.SelectedValue = lVista[0]["Unidad"].ToString();
+                        this.Cmb_Unidades.Enabled = false;
+                        Rb_Adicional.Checked = true;
+                        this.Tx_PU.Text = lVista[0]["PU"].ToString();
+                        this.Tx_PU.Enabled = false;
+                    }
+                    //Cargamos los datos del servicio seleccionado
+                    if (mTblDatosObra.Rows.Count > 0)
+                    {
+                        lWheres = string.Concat("Descripcion='", Cmb_Concepto.Text.ToString().Trim(), "'");
+                        lVista = new DataView(this.mTblDatosObra, lWheres, "", DataViewRowState.CurrentRows);
+                        if (lVista.Count > 0)
+                        {
+                            lImporte = lUt.Val(lVista[0]["Importe"].ToString());
+                            lSaldo = lUt.Val(Tx_CantTotal.Text) - lImporte;
+                            Tx_saldo.Text = lSaldo.ToString();
+                        }
+                    }
+                }
+                if (Rb_Descuento .Checked ==true )
+                {
+                    if (Cmb_Concepto.SelectedValue.ToString().Trim ().ToUpper().Equals("OTROS"))
+                    {
+                        Cmb_Concepto.Visible = true;
+                        Tx_Concepto.Visible = true;
+                        Cmb_Unidades.Enabled = true;
+                        Tx_saldo.Text = "0";
+                        Tx_CantTotal.Text = "0";
+                        Tx_PU.Enabled = true;
+                        Cmb_Concepto.Size = new Size(140, 21);
+                        Cmb_Concepto.Top = 90;
+                        Cmb_Concepto.Left = 7;
+
+                        Tx_Concepto.Top = 90; Tx_Concepto.Left = 150;
+                        Tx_Concepto.Size = new Size(274, 20);
+
+                        Tx_Concepto.Visible = true;
+                        Tx_Concepto.Focus();
                     }
                 }
             }
@@ -447,14 +494,30 @@ namespace EstadosdePagos
 
         private void Rb_Descuento_CheckedChanged(object sender, EventArgs e)
         {
-            if (Rb_Descuento .Checked ==true )
+            if (Rb_Descuento.Checked == true)
             {
-                Cmb_Concepto.Visible = false;
+                Cmb_Concepto.Visible = true;
                 Tx_Concepto.Visible = true;
                 Cmb_Unidades.Enabled = true;
                 Tx_saldo.Text = "0";
                 Tx_CantTotal.Text = "0";
                 Tx_PU.Enabled = true;
+                Cmb_Concepto.Size = new Size(140, 21);
+                Cmb_Concepto.Top = 90;
+                Cmb_Concepto.Left = 7;
+
+                Tx_Concepto.Top = 90; Tx_Concepto.Left = 150;
+                Tx_Concepto.Size = new Size(274, 20);
+
+                Tx_Concepto .Visible = true;
+                //Tx_Concepto.Left  = 150;Cmb_Concepto.Top = 90;
+                // Hay que cargar los datos del desplegable
+
+                Cmb_Concepto.DataSource = mTblDescuentosObra.Copy();
+                Cmb_Concepto.DisplayMember = "Par1";
+                    Cmb_Concepto.ValueMember = "Par1";
+    
+
 
             }
         }
@@ -469,6 +532,8 @@ namespace EstadosdePagos
                 Tx_saldo.Text = "0";
                 Tx_CantTotal.Text = "0";
                 Tx_PU.Enabled = true;
+                Tx_Concepto.Top = 90;Tx_Concepto.Left = 7;
+                Tx_Concepto.Size = new Size(411, 21);
 
             }
         }
@@ -480,6 +545,18 @@ namespace EstadosdePagos
                 Tx_CantTotal.Enabled = false;
                 Cmb_Concepto.Visible = true;
                 Tx_Concepto.Visible = false;
+                Cmb_Concepto.Size = new Size (411, 21);
+                if (mTblConcepto .Rows .Count >0)
+                {
+                    Cmb_Concepto.DataSource = mTblConcepto.Copy();
+                    Cmb_Concepto.DisplayMember = "Servicio";
+                    Cmb_Concepto.ValueMember = "Cantidad";
+
+                }
+         
+                   
+          
+
             }
         }
     }

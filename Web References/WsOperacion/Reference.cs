@@ -154,9 +154,11 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ObtenerBD_ParaExcelOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ObtenerEtiquetaOperationCompleted;
+        private System.Threading.SendOrPostCallback ObtenerInforme_EPOperationCompleted;
         
         private System.Threading.SendOrPostCallback ObtenerAsignacionITMaqOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ObtenerEtiquetaOperationCompleted;
         
         private System.Threading.SendOrPostCallback GrabarRecepcion_MPOperationCompleted;
         
@@ -551,10 +553,13 @@ namespace EstadosdePagos.WsOperacion {
         public event ObtenerBD_ParaExcelCompletedEventHandler ObtenerBD_ParaExcelCompleted;
         
         /// <remarks/>
-        public event ObtenerEtiquetaCompletedEventHandler ObtenerEtiquetaCompleted;
+        public event ObtenerInforme_EPCompletedEventHandler ObtenerInforme_EPCompleted;
         
         /// <remarks/>
         public event ObtenerAsignacionITMaqCompletedEventHandler ObtenerAsignacionITMaqCompleted;
+        
+        /// <remarks/>
+        public event ObtenerEtiquetaCompletedEventHandler ObtenerEtiquetaCompleted;
         
         /// <remarks/>
         public event GrabarRecepcion_MPCompletedEventHandler GrabarRecepcion_MPCompleted;
@@ -2715,33 +2720,29 @@ namespace EstadosdePagos.WsOperacion {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerEtiqueta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public TipoEtiquetaAza ObtenerEtiqueta(string iLote, string iBulto) {
-            object[] results = this.Invoke("ObtenerEtiqueta", new object[] {
-                        iLote,
-                        iBulto});
-            return ((TipoEtiquetaAza)(results[0]));
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerInforme_EP", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet ObtenerInforme_EP() {
+            object[] results = this.Invoke("ObtenerInforme_EP", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void ObtenerEtiquetaAsync(string iLote, string iBulto) {
-            this.ObtenerEtiquetaAsync(iLote, iBulto, null);
+        public void ObtenerInforme_EPAsync() {
+            this.ObtenerInforme_EPAsync(null);
         }
         
         /// <remarks/>
-        public void ObtenerEtiquetaAsync(string iLote, string iBulto, object userState) {
-            if ((this.ObtenerEtiquetaOperationCompleted == null)) {
-                this.ObtenerEtiquetaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEtiquetaOperationCompleted);
+        public void ObtenerInforme_EPAsync(object userState) {
+            if ((this.ObtenerInforme_EPOperationCompleted == null)) {
+                this.ObtenerInforme_EPOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerInforme_EPOperationCompleted);
             }
-            this.InvokeAsync("ObtenerEtiqueta", new object[] {
-                        iLote,
-                        iBulto}, this.ObtenerEtiquetaOperationCompleted, userState);
+            this.InvokeAsync("ObtenerInforme_EP", new object[0], this.ObtenerInforme_EPOperationCompleted, userState);
         }
         
-        private void OnObtenerEtiquetaOperationCompleted(object arg) {
-            if ((this.ObtenerEtiquetaCompleted != null)) {
+        private void OnObtenerInforme_EPOperationCompleted(object arg) {
+            if ((this.ObtenerInforme_EPCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ObtenerEtiquetaCompleted(this, new ObtenerEtiquetaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ObtenerInforme_EPCompleted(this, new ObtenerInforme_EPCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2775,6 +2776,37 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ObtenerAsignacionITMaqCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ObtenerAsignacionITMaqCompleted(this, new ObtenerAsignacionITMaqCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ObtenerEtiqueta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public TipoEtiquetaAza ObtenerEtiqueta(string iLote, string iBulto) {
+            object[] results = this.Invoke("ObtenerEtiqueta", new object[] {
+                        iLote,
+                        iBulto});
+            return ((TipoEtiquetaAza)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetaAsync(string iLote, string iBulto) {
+            this.ObtenerEtiquetaAsync(iLote, iBulto, null);
+        }
+        
+        /// <remarks/>
+        public void ObtenerEtiquetaAsync(string iLote, string iBulto, object userState) {
+            if ((this.ObtenerEtiquetaOperationCompleted == null)) {
+                this.ObtenerEtiquetaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnObtenerEtiquetaOperationCompleted);
+            }
+            this.InvokeAsync("ObtenerEtiqueta", new object[] {
+                        iLote,
+                        iBulto}, this.ObtenerEtiquetaOperationCompleted, userState);
+        }
+        
+        private void OnObtenerEtiquetaOperationCompleted(object arg) {
+            if ((this.ObtenerEtiquetaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ObtenerEtiquetaCompleted(this, new ObtenerEtiquetaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -9837,26 +9869,26 @@ namespace EstadosdePagos.WsOperacion {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void ObtenerEtiquetaCompletedEventHandler(object sender, ObtenerEtiquetaCompletedEventArgs e);
+    public delegate void ObtenerInforme_EPCompletedEventHandler(object sender, ObtenerInforme_EPCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ObtenerEtiquetaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class ObtenerInforme_EPCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal ObtenerEtiquetaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal ObtenerInforme_EPCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public TipoEtiquetaAza Result {
+        public System.Data.DataSet Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((TipoEtiquetaAza)(this.results[0]));
+                return ((System.Data.DataSet)(this.results[0]));
             }
         }
     }
@@ -9883,6 +9915,32 @@ namespace EstadosdePagos.WsOperacion {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void ObtenerEtiquetaCompletedEventHandler(object sender, ObtenerEtiquetaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ObtenerEtiquetaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ObtenerEtiquetaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public TipoEtiquetaAza Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((TipoEtiquetaAza)(this.results[0]));
             }
         }
     }

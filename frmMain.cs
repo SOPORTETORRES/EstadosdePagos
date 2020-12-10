@@ -532,15 +532,16 @@ namespace EstadosdePagos
                                 frm7.ShowDialog(this);
                                 if (frm7.changed) //Se adjunto el documento
                                 {
-                                    frmEPAprobacion frm8 = new frmEPAprobacion();
-                                    frm8.Ep_id = ep_id;
-                                    frm8.Ep_obra = ep_obra;
-                                    frm8.Obra = obra;
-                                    frm8.TecnicoObra = tecnicoObra;
-                                    frm8.ShowDialog(this);
-                                    if (frm8.ok)
-                                                    actualizar();
-                                    frm8.Dispose();
+                                    //frmEPAprobacion frm8 = new frmEPAprobacion();
+                                    //frm8.Ep_id = ep_id;
+                                    //frm8.Ep_obra = ep_obra;
+                                    //frm8.Obra = obra;
+                                    //frm8.TecnicoObra = tecnicoObra;
+                                    //frm8.ShowDialog(this);
+                                    //if (frm8.ok)
+                                    //                actualizar();
+                                    //frm8.Dispose();
+                                    Aprobar_EP(obra, ep_id, DateTime.Now, ep_obra);
                                 }
                                 frm7.Dispose();
                             }
@@ -574,6 +575,33 @@ namespace EstadosdePagos
             else
                 MessageBox.Show("No existen registros seleccionados.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void Aprobar_EP( string  Ep_Obra , int  Ep_Id , DateTime  lFecha , string  Ep_IdObra )
+        {
+
+
+                Cursor.Current = Cursors.WaitCursor;
+                try
+                {
+                    WsOperacion.Operacion wsOperacion = new WsOperacion.Operacion();
+                    WsOperacion.Estado_Pago estado_Pago = new WsOperacion.Estado_Pago();
+                    estado_Pago = wsOperacion.RegistrarEPAprobacionCliente(Ep_Obra, Ep_Id, lFecha, "", Program.currentUser.Login, Program.currentUser.ComputerName);
+                    if (estado_Pago.MensajeError.Equals(""))
+                    {
+                        new Utils().enviarCorreoNotificacionInterna("EP_APROBADO_VB_CLIENTE", Ep_IdObra, Ep_Id, "", "", Ep_Obra);
+
+                    }
+                    else
+                        MessageBox.Show(estado_Pago.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                Cursor.Current = Cursors.Default;
+
+        }
+
 
         private void btnCrearEP_Click(object sender, EventArgs e)
         {
@@ -688,10 +716,13 @@ namespace EstadosdePagos
             if (dgvResumen.Rows.Count > 0)
             {
                 Cursor.Current = Cursors.WaitCursor;
-                Excel excel = new Excel();
-                if (tabGuiasDespacho.Visible && dgvDetalle.Rows.Count > 0) //Detalle
-                    excel.exportar(dgvDetalle);
-                excel.exportar(dgvResumen); //Resumen
+                //Excel excel = new Excel();
+                //if (tabGuiasDespacho.Visible && dgvDetalle.Rows.Count > 0) //Detalle
+                //    excel.exportar(dgvDetalle);
+                //excel.exportar(dgvResumen); //Resumen
+                Utils lUtil = new Utils();
+                lUtil.GeneraExcel_Resumen_Eps();
+
                 Cursor.Current = Cursors.Default;
             }
             else

@@ -80,7 +80,7 @@
             this.txtClave.PasswordChar = 'X';
             this.txtClave.Size = new System.Drawing.Size(230, 20);
             this.txtClave.TabIndex = 1;
-            this.txtClave.Text = "Dtexier18";
+            this.txtClave.Text = "123.456";
             this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
             this.txtClave.Leave += new System.EventHandler(this.txtClave_Leave);
             // 
