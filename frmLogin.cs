@@ -126,10 +126,34 @@ namespace EstadosdePagos
             //lFrm.ShowDialog(this);
 
 
-            Pruebas.FrmExcel lFrm = new Pruebas.FrmExcel();
-            lFrm.ShowDialog();
+            //Pruebas.FrmExcel lFrm = new Pruebas.FrmExcel();
+            //lFrm.ShowDialog();
+            ActualizaPrecio();
+
+        }
+
+        private void ActualizaPrecio()
+        {
+              string lSql = ""; DataTable lTbTmp = new DataTable();int i = 0; DataSet lDtsTmp = new DataSet();
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();DataTable lTbl = new DataTable();
 
 
+            lSql = string.Concat(" select Id  from obras o  where estadoalta<>'FIN' and (( Select count(1)  from   PrecioKilosPorObra   where  o.Id = IdObra  ))=0  ");
+            lDtsTmp = lPx.ObtenerDatos(lSql);
+            if  ((lDtsTmp.Tables .Count  > 0) && (lDtsTmp.Tables[0].Rows .Count >0))
+            {
+                lTbl = lDtsTmp.Tables[0].Copy();
+                for (i = 0; i < lTbl.Rows .Count -1 ; i++)
+                {
+                    lSql = string.Concat(" insert into PrecioKilosPorObra (  IdObra, Vigente , ValorKilo,FechaRegistro, Servicio,IdUserMod,   ");
+                    lSql = string.Concat(lSql, " Obs , NombreArchivo ,ValorKiloAnt , FechaVigencia , TotalPr_EnPesos , TotalDesp_EnPesos) ");
+                    lSql = string.Concat(lSql, " select s.idobra , 'S'  , ImporteServicio , getdate(), Servicio ,s.IdUsuario ,'Inicial','',0,getdate()-30, ");
+                    lSql = string.Concat(lSql, " ( SELECT isnull(Sum(peso),0) FROM OC_INGRESADAS WHERE IdObra= s.idobra  and estado <>'ELIMINADA'  and (tipoOc is null or tipoOc<>'CO')  ) * ImporteServicio  ,   ");
+                    lSql = string.Concat(lSql, "  0 from TestCubgest .dbo. ServiciosObra s where s.idobra=", lTbl.Rows[i][0].ToString(), " and  servicio='Suministro'  ");
+
+                    lDts = lPx.ObtenerDatos(lSql);
+                }
+            }
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

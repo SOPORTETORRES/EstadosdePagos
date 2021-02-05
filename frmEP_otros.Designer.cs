@@ -418,6 +418,7 @@
             this.Dtg_Resultado.Name = "Dtg_Resultado";
             this.Dtg_Resultado.Size = new System.Drawing.Size(1071, 310);
             this.Dtg_Resultado.TabIndex = 0;
+            this.Dtg_Resultado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Resultado_CellClick);
             this.Dtg_Resultado.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Resultado_CellContentDoubleClick);
             // 
             // frmEP_otros

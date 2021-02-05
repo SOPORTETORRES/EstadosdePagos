@@ -116,15 +116,15 @@ namespace EstadosdePagos
                     }
                     Tx_total.Text = lTotal.ToString("#,##0");
 
-                    Dtg_Resultado.Columns[0].Width = 50;
-                    Dtg_Resultado.Columns[1].Width = 60;
-                    Dtg_Resultado.Columns[2].Width = 70;
-                    Dtg_Resultado.Columns[3].Width = 350;
+                    Dtg_Resultado.Columns[0].Width = 70;
+                    Dtg_Resultado.Columns[1].Width = 80;
+                    Dtg_Resultado.Columns[2].Width = 50;
+                    Dtg_Resultado.Columns[3].Width =50;
                     Dtg_Resultado.Columns[4].Width = 60;
-                    Dtg_Resultado.Columns[5].Width = 80;
-                    Dtg_Resultado.Columns[6].Width = 100;
+                    Dtg_Resultado.Columns[5].Width = 300;
+                    Dtg_Resultado.Columns[6].Width = 80;
                     Dtg_Resultado.Columns[7].Width = 80;
-                    Dtg_Resultado.Columns[8].Width = 70;
+                    Dtg_Resultado.Columns[8].Width = 100;
                     Dtg_Resultado.Columns[9].Width = 70;
                 }
                
@@ -174,21 +174,38 @@ namespace EstadosdePagos
         {
 
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
-            string lSql = ""; DataTable lTbl = new DataTable();
+            string lSql = ""; DataTable lTbl = new DataTable();string lEstadoEP = "";
 
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-               // currentUser
-                lSql = string.Concat("  SP_CRUD_EP_OTROS ", iId ,",0, 0,' ',' ',0,'','','','',8,''");
-
+                // Debemos  controlar el estado del EP, si esta aprobado por el cliente NO SE PUEDE ELIMINAR NADA.
+                lSql = string.Concat("  SP_CRUD_EP_OTROS 0, ", Tx_IdEP.Text , ", 0,' ',' ',0,'','','','',19,''");
                 lDts = lPx.ObtenerDatos(lSql);
                 if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                    lEstadoEP = lDts.Tables[0].Rows[0]["EP_ESTADO"].ToString();
+
+
+                if (lEstadoEP.ToUpper().Equals("P45"))
                 {
-                    MessageBox.Show("Los Datos se ha eliminado Correctamente ", "Avisos sistema ", MessageBoxButtons.OK);
-                 }
+                    MessageBox.Show("NO se puede elimimar ya que el EP esta aprobado", "Avisos Sistema", MessageBoxButtons.OK);
+                }
                 else
-                    MessageBox.Show(" Ha Habido un error en la eliminación de los Datos, repita la Operación ", "Avisos sistema ", MessageBoxButtons.OK ,MessageBoxIcon.Question);
+                {
+
+                    lSql = string.Concat("  SP_CRUD_EP_OTROS ", iId, ",0, 0,' ',' ',0,'','','','',8,''");
+
+                    lDts = lPx.ObtenerDatos(lSql);
+                    if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                    {
+                        MessageBox.Show("Los Datos se ha eliminado Correctamente ", "Avisos sistema ", MessageBoxButtons.OK);
+                    }
+                    else
+                        MessageBox.Show(" Ha Habido un error en la eliminación de los Datos, repita la Operación ", "Avisos sistema ", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+
+                }
+
 
             }
             catch (Exception iEx)
@@ -558,6 +575,12 @@ namespace EstadosdePagos
           
 
             }
+        }
+
+        private void Dtg_Resultado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string lId = Dtg_Resultado.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+            Tx_Id.Text = lId;
         }
     }
 }

@@ -946,99 +946,136 @@ namespace EstadosdePagos
         }
 
 
+        private string  NombreArchivoGuia(string iNroGuia,string iPathBuscar)
+        {
+            DirectoryInfo di = null;string lArchivo = ""; string[] separators2 = { " " };
+            string[] lPartes = null;int i = 0;string lTx = ""; string lRes = "";
+
+            if (Directory.Exists (iPathBuscar ))
+            {
+                di = new DirectoryInfo(iPathBuscar);
+                foreach (var fi in di.GetFiles())
+                {
+                    lArchivo=fi.Name;
+                    lTx = string.Concat(iNroGuia, ".pdf");
+                     lPartes = lArchivo.Split(separators2, StringSplitOptions.RemoveEmptyEntries);
+                    for (i=0;i<lPartes .Length; i++ )
+                    {
+                        if (lPartes[i].ToString().Equals(lTx))
+                        {
+                            lRes = lArchivo;
+                        }
+
+                    }
+                }
+            }
+            return lRes;
+
+        }
+
         private string OBtenerPath_EGD(string iDato)
         {
             string lRes = "";string lCodSuc = ""; string lFecha = "";
             string[] separators = { "|" }; string[] separators2 = { "/" };
             string[] lPartes = iDato.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            lCodSuc = lPartes[0];
+            lCodSuc = lPartes[0]; string lMesPath = ""; string lTmpPath = "";
             lFecha = lPartes[1];
 
             switch (lPartes[0])
             {
                 case "1":  // Santiago
-                    lRes = @"U:\Guías TO (Stgo)\2020\";
+                    lPartes = lFecha.Split(separators2, StringSplitOptions.RemoveEmptyEntries);
+                    lRes = Path.Combine(@"U:\Guías TO (Stgo)\",  lPartes[2].ToString());
+
+                    //lRes = @"U:\Guías TO (Stgo)\2020\";
                     break;
                 case "2":  //Calama 
                     lPartes = lFecha.Split(separators2, StringSplitOptions.RemoveEmptyEntries);
 
                     if (lPartes[1].ToString().Equals ("01"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\01 ENERO\"));
 
                     if (lPartes[1].ToString().Equals("02"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\02 FEBRERO\"));
 
                     if (lPartes[1].ToString().Equals("03"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString()), @"\03 MARZO\");
 
                     if (lPartes[1].ToString().Equals("04"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\04 ABRIL\"));
 
                     if (lPartes[1].ToString().Equals("05"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\05 MAYO\"));
 
                     if (lPartes[1].ToString().Equals("06"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\06 JUNIO\"));
 
                     if (lPartes[1].ToString().Equals("07"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\07 JULIO\"));
 
                     if (lPartes[1].ToString().Equals("08"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\08 AGOSTO\"));
 
                     if (lPartes[1].ToString().Equals("09"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\09 SEPTIEMBRE\"));
 
                     if (lPartes[1].ToString().Equals("10"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\10 OCTUBRE\"));
 
                     if (lPartes[1].ToString().Equals("11"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\11 NOVIEMBRE\"));
 
                     if (lPartes[1].ToString().Equals("12"))
-                        lRes = @"U:\Guías TO (Calama)\2020\01 ENERO\";
+                        lRes = Path.Combine(@"U:\Guías TO (Calama)\", string.Concat(lPartes[2].ToString(), @"\12 DICIEMBRE\"));
 
-                
+
                     break;
               
                 case "3": //Coronel
                     lPartes = lFecha.Split(separators2, StringSplitOptions.RemoveEmptyEntries);
+                    lMesPath = Path .Combine (@"U:\Guías Coronel\", string.Concat ("Coronel ", lPartes[2].ToString()));
+
 
                     if (lPartes[1].ToString().Equals("01"))
-                        lRes = @"U:\Guías Coronel\Coronel 2020\ENERO 2020\";
+                    {
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\ENERO 2020\"));
+
+                    }
+                       
+
 
                     if (lPartes[1].ToString().Equals("02"))
-                        lRes = @"U:\Guías TO (Calama)\2020\FEBRERO 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\FEBRERO 2020\"));
 
                     if (lPartes[1].ToString().Equals("03"))
-                        lRes = @"U:\Guías TO (Calama)\2020\MARZO 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\MARZO 2020\"));  
 
                     if (lPartes[1].ToString().Equals("04"))
-                        lRes = @"U:\Guías TO (Calama)\2020\ABRIL 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\ABRIL 2020\"));
 
                     if (lPartes[1].ToString().Equals("05"))
-                        lRes = @"U:\Guías TO (Calama)\2020\MARZO 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\MARZO 2020\"));
 
                     if (lPartes[1].ToString().Equals("06"))
-                        lRes = @"U:\Guías TO (Calama)\2020\JUNIO 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\JUNIO 2020\"));
 
                     if (lPartes[1].ToString().Equals("07"))
-                        lRes = @"U:\Guías TO (Calama)\2020\JULIO 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\JULIO 2020\"));
 
                     if (lPartes[1].ToString().Equals("08"))
-                        lRes = @"U:\Guías TO (Calama)\2020\AGOSTO 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\AGOSTO 2020\"));
 
                     if (lPartes[1].ToString().Equals("09"))
-                        lRes = @"U:\Guías TO (Calama)\2020\SEPTIEMBRE 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\SEPTIEMBRE 2020\"));
 
                     if (lPartes[1].ToString().Equals("10"))
-                        lRes = @"U:\Guías TO (Calama)\2020\NOVIEMBRE 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\OCTUBRE 2020\"));
 
                     if (lPartes[1].ToString().Equals("11"))
-                        lRes = @"U:\Guías TO (Calama)\2020\NOVIEMBRE 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\2020\NOVIEMBRE 2020\"));
 
                     if (lPartes[1].ToString().Equals("12"))
-                        lRes = @"U:\Guías TO (Calama)\2020\DICIEMBRE 2020\";
+                        lRes = Path.Combine(@"U:\Guías Coronel\", string.Concat("Coronel ", lPartes[2].ToString(), @"\DICIEMBRE 2020\"));
                    
                     break;
                          
@@ -1059,7 +1096,7 @@ namespace EstadosdePagos
             int totalGuiasDespacho = 0, totalITs = 0, totalEtiquetas = 0, totalKilos = 0;            DataView view = null;
             DataTable dtResumenxGuiaDespacho = null;            WsOperacion.EP_Generado lEP = new WsOperacion.EP_Generado();
             string lPathDestino = ""; string lPathDestinoLocal = "";string lPathServer = "";string lSiglaOBra = "";
-            string lCodSucINET = "0";string lTmp = "";
+            string lPathGuia = "";string lTmp = "";
             //Verifica si existe la informacion necesaria para generar el informe
             try
             {
@@ -1154,33 +1191,43 @@ namespace EstadosdePagos
 
 
                 string lOBtenerPdfGuias = ConfigurationManager.AppSettings["IncluyeGuiasPdf"].ToString();
-
-                if (lOBtenerPdfGuias.ToUpper().Equals("S"))
+                if (MessageBox.Show("¿Esta seguro que desea Descargar los Respaldos ?", "Avisos Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)          
+                   // if (lOBtenerPdfGuias.ToUpper().Equals("S"))
                 { 
-                if ((!dir_guiaDespacho.Equals(""))) // &&())
-                {
-                    foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
+                    if ((!dir_guiaDespacho.Equals(""))) // &&())
                     {
-                       // lCodSucINET
-                            lTmp = ws.ObtenerSucursal_PorNroGuiaDespacho(row[COLUMNNAME_GUIA_DESPACHO].ToString());
-
-                        dir_guiaDespacho = OBtenerPath_EGD(lTmp);
-
-                        archivo = row[COLUMNNAME_GUIA_DESPACHO].ToString() + ".pdf";
-                       
-                       if (fs.FileExists(Path.Combine(dir_guiaDespacho, archivo)))
+                        foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
                         {
-                            listArchivosGuiasDespacho.Add(archivo);
-                            CopiarArchivo(Path.Combine(dir_guiaDespacho, archivo), Path.Combine(lPathDestino, archivo));
-                        } 
-                        else
-                            archivoFaltantesGD.Append(" -> " + archivo + "\n");
-                    }
+                           // lCodSucINET
+                                lTmp = ws.ObtenerSucursal_PorNroGuiaDespacho(row[COLUMNNAME_GUIA_DESPACHO].ToString());
 
-                    if (archivoFaltantesGD.ToString().Length > 0)
-                        sb.Append("Faltan los siguientes archivos gds :\n");
-                    sb.Append(archivoFaltantesGD);
-                }
+                            dir_guiaDespacho = OBtenerPath_EGD(lTmp);
+
+                            archivo = string.Concat ( "GTE GUIA ",  row[COLUMNNAME_GUIA_DESPACHO].ToString() , ".pdf");
+                       
+                           if (fs.FileExists(Path.Combine(dir_guiaDespacho, archivo)))
+                            {
+                                listArchivosGuiasDespacho.Add(archivo);
+                                CopiarArchivo(Path.Combine(dir_guiaDespacho, archivo), Path.Combine(lPathDestino, archivo));
+                            } 
+                            else
+                                {
+                                    lPathGuia= NombreArchivoGuia(row[COLUMNNAME_GUIA_DESPACHO].ToString(), dir_guiaDespacho);
+                                    if (File.Exists(Path.Combine(dir_guiaDespacho, lPathGuia)) == false)
+                                        archivoFaltantesGD.Append(" -> " + archivo + "\n");
+                                    else
+                                    {
+                                        listArchivosGuiasDespacho.Add(lPathGuia);
+                                        CopiarArchivo(Path.Combine(dir_guiaDespacho, lPathGuia), Path.Combine(lPathDestino, lPathGuia));
+                                    }
+                                }
+                          
+                        }
+
+                        if (archivoFaltantesGD.ToString().Length > 0)
+                            sb.Append("Faltan los siguientes archivos gds :\n");
+                        sb.Append(archivoFaltantesGD);
+                    }
 
                 ///---ITs---///
                 //Obtiene el directorio donde se almacenan los PDF de las its
@@ -1609,10 +1656,10 @@ namespace EstadosdePagos
 
                 lHora =string .Concat (DateTime.Now.ToShortDateString().Replace("/", "_"),"_", DateTime.Now.ToShortTimeString().Replace (":","_"));
                 //Copia la plantilla al directorio de destino
-                string plantillaEP = Path.Combine (Application.StartupPath ,  "PlantillaEP.xls");
+                string plantillaEP = Path.Combine (Application.StartupPath ,  "PlantillaEP.xlsx");
                 string lNombreArchivo = string.Concat("EP_NRO_", correlativo, "_Estado_");
                 //string outputEP = Path.Combine(lPathDestino,string.Concat ("PlantillaEP_", lHora,".xls"));  //selectedPath + (!su.Right(selectedPath, 1).Equals("\\") ? "\\" : "") + "PlantillaEP.xls";
-                string outputEP = Path.Combine(lPathDestino, string.Concat("EPNro_", correlativo, "_", iSiglaObra,"_", lHora,".xls"));
+                string outputEP = Path.Combine(lPathDestino, string.Concat("EPNro_", correlativo, "_", iSiglaObra,"_", lHora,".xlsx"));
                 string outputEPPdf = Path.Combine(lPathDestino, "PlantillaEP.Pdf");
                 if (fs.FileExists(plantillaEP))
                     fs.copyFile(plantillaEP, outputEP);
@@ -1846,6 +1893,10 @@ namespace EstadosdePagos
                             lWheres = " Tipo='AP'   ";
                             lVistaTmp = new DataView(lTblOtrosResumen, lWheres, "", DataViewRowState.CurrentRows);
                             lIndex = lIndex + 10;
+                            // PAra el caso que el EP no tengan Adicional
+                            if (lIndex == 10)
+                                lIndex = 11;
+                            //**************************+
                             for (i = 0; i < lVistaTmp.Count; i++)
                             {
                                 if (i == 0)
