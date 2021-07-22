@@ -489,8 +489,9 @@
             this.tx_KgsSeleccionado.Location = new System.Drawing.Point(177, 151);
             this.tx_KgsSeleccionado.Name = "tx_KgsSeleccionado";
             this.tx_KgsSeleccionado.ReadOnly = true;
-            this.tx_KgsSeleccionado.Size = new System.Drawing.Size(198, 20);
+            this.tx_KgsSeleccionado.Size = new System.Drawing.Size(81, 20);
             this.tx_KgsSeleccionado.TabIndex = 42;
+            this.tx_KgsSeleccionado.TextChanged += new System.EventHandler(this.tx_KgsSeleccionado_TextChanged);
             // 
             // Btn_ObtenerKgsSel
             // 

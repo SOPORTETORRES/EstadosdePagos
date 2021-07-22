@@ -70,7 +70,7 @@ namespace EstadosdePagos.Informes
             if (DTG.Rows.Count > 0)
             {
                 mEstaProcesando = true;
-                for (i = 0; i <10 ; i++)
+                for (i = 0; i <2 ; i++)
                 {
                     Tx_codigo.Text = DTG.Rows[i].Cells["Codigo"].Value.ToString();
                     lNroImpresos = DTG.Rows[i].Cells["Impreso"].Value.ToString();
@@ -86,6 +86,8 @@ namespace EstadosdePagos.Informes
 
                 }
                 mEstaProcesando = false ;
+                AppDomain.CurrentDomain.SetData("Tipo", "Autom");
+                this.Close();
             }
             //if (Tx_codigo.Text.Length > 0)
             //{
@@ -97,7 +99,7 @@ namespace EstadosdePagos.Informes
         {
 
             Utils lInf = new Utils();
-            lInf.CreaInforme_Autom(iCod, true, @"U:\Guías Santiago\IT\");
+            lInf.CreaInforme_Autom(iCod, true, @"\\192.168.1.191\Gerencia de Logistica\Guias de Despacho\Guías Santiago\IT\");
             Tx_codigo.Text = "";
             //MessageBox.Show("Generación de PDF Finalizada");
             Buscar();
@@ -105,7 +107,14 @@ namespace EstadosdePagos.Informes
 
         private void Frm_Tmp_Load(object sender, EventArgs e)
         {
-           // Btn_Buscar_Click(null, null);
+            Btn_Buscar_Click(null, null);
+
+            string lTipo = AppDomain.CurrentDomain.GetData("Tipo").ToString(); //, "Autom");
+
+            if (lTipo.ToString().ToUpper().Equals("Autom".ToUpper()))
+            {
+                this.Btn_Imprimir_Click(null, null);
+            }
         }
 
         private void ImprimeAutomatico()

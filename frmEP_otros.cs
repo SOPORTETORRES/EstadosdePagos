@@ -399,7 +399,7 @@ namespace EstadosdePagos
                 }
 
 
-                Tx_Importe.Text = lTotal.ToString ();
+                Tx_Importe.Text = lTotal.ToString ("N0");
                 if (Rb_Adicional.Checked == true)
                 {
                     Tx_saldo.Text = (lUti.Val(this.Tx_CantTotal.Text) - lCantidadUsada).ToString("#,##0");

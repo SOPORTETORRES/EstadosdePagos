@@ -1078,7 +1078,7 @@ namespace EstadosdePagos
 
                 frm0.ShowDialog(this);
                 if (frm0.changed)
-                                actualizar();
+                          actualizar();
             }
         }
 

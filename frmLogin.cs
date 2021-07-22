@@ -122,13 +122,35 @@ namespace EstadosdePagos
 
         private void Btn_imprimePL_Click(object sender, EventArgs e)
         {
-            //Informes.Frm_Tmp lFrm = new Informes.Frm_Tmp();
-            //lFrm.ShowDialog(this);
+            Informes.Frm_Tmp lFrm = new Informes.Frm_Tmp();
+            lFrm.ShowDialog(this);
 
+            string lTipo = AppDomain.CurrentDomain.GetData("Tipo").ToString (); //, "Autom");
+
+            while (lTipo.ToString ().ToUpper ().Equals ("Autom".ToUpper() ))
+            {
+                 lFrm = new Informes.Frm_Tmp();
+                lFrm.ShowDialog(this);
+                  lTipo = AppDomain.CurrentDomain.GetData("Tipo").ToString();
+            }
 
             //Pruebas.FrmExcel lFrm = new Pruebas.FrmExcel();
             //lFrm.ShowDialog();
-            ActualizaPrecio();
+            // ActualizaPrecio();
+
+
+
+        }
+
+        private void CargaDatos_A_Cubigest()
+        {
+            //Tipo Archivo SKU - Logistica
+
+
+
+            //Tipo Archivo - Produccion
+
+
 
         }
 

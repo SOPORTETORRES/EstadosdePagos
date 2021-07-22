@@ -46,7 +46,7 @@ namespace EstadosdePagos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://cubigest.torresOcaranza.cl/pruebas/WS/Operacion.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.1.191/test/WS/Operacion.asmx")]
         public string EstadosdePagos_WsOperacion_Operacion {
             get {
                 return ((string)(this["EstadosdePagos_WsOperacion_Operacion"]));

@@ -309,7 +309,7 @@ namespace EstadosdePagos
                     listaDataSetOp = wsOperacion.ObtenerGuiasDesdeInicio_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
                     if (listaDataSetOp.MensajeError.Equals(""))
                     {
-                        dtGuiasDespachoINET = listaDataSetOp.DataSet.Tables[0];
+                        dtGuiasDespachoINET = AgregaEstadoGuia(listaDataSetOp.DataSet.Tables[0], listaDataSetOp.DataSet.Tables[1]);
 
                         //Inserta la columna MARCA y la columna EtiquetasconEP para mostrar los registros ya asociados a un EP
                         DataColumn marca = new DataColumn(COLUMNNAME_MARCA, typeof(bool));
@@ -377,7 +377,8 @@ namespace EstadosdePagos
                         forms.dataGridViewAutoSizeColumnsMode(dgvGuiasDespacho, DataGridViewAutoSizeColumnsMode.DisplayedCells);
                         dgvGuiasDespacho.Columns["fechaDespacho"].DisplayIndex = dgvGuiasDespacho.Columns.Count - 1;
                         lblRegistrosGDespacho.Text = "Registro(s): " + dgvGuiasDespacho.Rows.Count;
-
+                        dgvGuiasDespacho.Columns["Doc"].Visible = false;
+                        dgvGuiasDespacho.Columns["EtiquetasconEP"].Visible = false;
                         Btn_ObtenerKgsSel_Click(null, null);
                     }
                     else
@@ -395,6 +396,27 @@ namespace EstadosdePagos
                 MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Cursor.Current = Cursors.Default;    
+        }
+
+        private DataTable AgregaEstadoGuia(DataTable iTblGuias, DataTable iTblDescriptores)
+        {
+            int i = 0; DataView lVista = null;string lCodcod = "";
+            iTblGuias.Columns.Add("TipoGuiaINET");
+
+            for (i = 0; i < iTblGuias.Rows.Count ; i++)
+            {
+                lCodcod = iTblGuias.Rows[i]["TipoDoc"].ToString();
+                lVista = new DataView(iTblDescriptores, string.Concat("par2='", lCodcod, "'"), "", DataViewRowState.CurrentRows);
+                if (lVista.Count > 0)
+                {
+                    iTblGuias.Rows[i]["TipoGuiaINET"] = lVista[0]["PAr1"].ToString();
+                }
+
+            }
+
+
+            return iTblGuias;
+
         }
 
 
@@ -462,10 +484,11 @@ namespace EstadosdePagos
                     if (listaDataSetOp.MensajeError.Equals(""))
                     {
                     // hay 3 tablas en el Dataset EP - Otros - Guias 
-                        dtGuiasDespachoINET = listaDataSetOp.DataSet.Tables["Guias"];
+                        dtGuiasDespachoINET = this.AgregaEstadoGuia (  listaDataSetOp.DataSet.Tables["Guias"], listaDataSetOp.DataSet.Tables["DescriptorGuias"]);
+                    //DescriptorGuias
 
-                        //Inserta la columna MARCA y la columna EtiquetasconEP para mostrar los registros ya asociados a un EP
-                        DataColumn marca = new DataColumn(COLUMNNAME_MARCA, typeof(bool));
+                    //Inserta la columna MARCA y la columna EtiquetasconEP para mostrar los registros ya asociados a un EP
+                    DataColumn marca = new DataColumn(COLUMNNAME_MARCA, typeof(bool));
                         dtGuiasDespachoINET.Columns.Add(marca);
                         marca.SetOrdinal(0);
                         DataColumn etiquetasconEP = new DataColumn(COLUMNNAME_ETIQUETASCONEP, typeof(Int32));
@@ -546,6 +569,7 @@ namespace EstadosdePagos
                         forms.dataGridViewHideColumns(dgvGuiasDespacho, new string[] { "Column1", COLUMNNAME_MARCA_ORIGINAL });
                         new Utils().estiloMillaresDataGridViewColumn(dgvGuiasDespacho, new string[] { "Kgsguia" });
                         forms.dataGridViewAutoSizeColumnsMode(dgvGuiasDespacho, DataGridViewAutoSizeColumnsMode.DisplayedCells);
+                    dgvGuiasDespacho.Columns["FechaDespINET"].Visible = false;
 
                     if (dtGuiasDespachoINET.Rows.Count > 0)
                     {
@@ -1368,7 +1392,7 @@ namespace EstadosdePagos
             {
                 MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return lTotal.ToString();
+            return lTotal.ToString("N0");
 
         }
 
@@ -1423,6 +1447,9 @@ namespace EstadosdePagos
             lFrmAdj.ShowDialog(this);
         }
 
+        private void tx_KgsSeleccionado_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
