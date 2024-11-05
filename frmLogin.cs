@@ -105,8 +105,8 @@ namespace EstadosdePagos
         {
             StringUtility stringUtility = new StringUtility();
             string salida = entrada;
-            if (!salida.Trim().Equals(""))
-                salida = stringUtility.removeInvalidCharacters(salida, stringUtility.RegexPattern_Address);
+            //if (!salida.Trim().Equals(""))
+                //salida = stringUtility.removeInvalidCharacters(salida, stringUtility.RegexPattern_Address);
             return salida;
         }
 

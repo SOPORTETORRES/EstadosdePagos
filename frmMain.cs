@@ -28,6 +28,7 @@ namespace EstadosdePagos
         private const string COLUMNNAME_TOTAL_KGS = "TOTAL_KGS";
         private Utils utils = new Utils();
         private Boolean  mEp_ContieneGuias = true;
+        private string  mIdObra= "";
         //public static CurrentUser currentUser = new CurrentUser();
 
         public frmMain()
@@ -381,6 +382,7 @@ namespace EstadosdePagos
                 DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
                 String ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
                 String obra = currentRow.Cells["OBRA"].Value.ToString();
+                mIdObra = ep_obra;
                 Int32 ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
                 String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
                 Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
@@ -977,10 +979,10 @@ namespace EstadosdePagos
                             actualizar();
         }
 
-        private void actualizarInfoDetalle(int ep_id) //ResumenGuiaDespachoxEp: agrupado x Gd/IT 
+        private void actualizarInfoDetalle(int ep_id , string iIdObra) //ResumenGuiaDespachoxEp: agrupado x Gd/IT 
         {
             int totalEtiquetas = 0, totalKilos = 0;
-            DataTable dtResumenxGuiaDespacho = null;
+            DataTable dtResumenxGuiaDespacho = null; DataTable lTblOtros = new DataTable();
 
             lblTotalGuiasDespacho.Text = "0";
             lblTotalEtiquetas.Text = "0";
@@ -993,8 +995,29 @@ namespace EstadosdePagos
                 listaDataSet = wsOperacion.ListarEPResumenGuiaDespachoxEp(ep_id);
                 if (listaDataSet.MensajeError.Equals(""))
                 {
+                    lTblOtros = new Utils().ObtenerOtrosCobros(ep_id.ToString (), iIdObra);
                     dtResumenxGuiaDespacho = listaDataSet.DataSet.Tables[0];
                     dgvDetalle.DataSource = dtResumenxGuiaDespacho;
+                    Dtg_Otros.DataSource = lTblOtros;
+                    if (lTblOtros.Rows.Count > 0)
+                    {
+                        Dtg_Otros.Columns["Contrato"].Visible = false;
+                        Dtg_Otros.Columns["TotalContrato"].Visible = false;
+                        Dtg_Otros.Columns["Id"].Visible = false;
+                        Dtg_Otros.Columns["Id_Ep"].Visible = false;
+                        Dtg_Otros.Columns["Id_Obra"].Visible = false;
+                        Dtg_Otros.Columns["IdUserGraba"].Visible = false;
+                        Dtg_Otros.Columns["FechaGraba"].Visible = false;
+                        Dtg_Otros.Columns["Descripcion1"].Visible = false;
+                        Dtg_Otros.Columns["Descripcion"].Width = 200;
+                        Dtg_Otros.Columns["Unidad"].Width = 60;
+                        Dtg_Otros.Columns["Cantidad"].Width = 60;
+                        Dtg_Otros.Columns["Importe"].Width = 70;
+                        Dtg_Otros.Columns["Tipo"].Width = 60;
+                    }
+
+
+
                     //forms.dataGridViewHideColumns(dgvResumen, new string[] { "ID", "USUARIO", "FECHA", "TOTEM", "COMPLETA", "USUARIO_RECEP", "FECHA_RECEP", "USUARIO_CIERRE", "FECHA_CIERRE", "INET_MSG", "INET_FECHA" });
                     new Utils().estiloMillaresDataGridViewColumn(dgvDetalle, new string[] { "N_ETIQUETAS", "TOTAL_KGS" });
                     forms.dataGridViewAutoSizeColumnsMode(dgvDetalle, DataGridViewAutoSizeColumnsMode.AllCells);
@@ -1020,15 +1043,33 @@ namespace EstadosdePagos
 
         private void dgvResumen_SelectionChanged(object sender, EventArgs e)
         {
-            tabGuiasDespacho.Visible = false;
+            tabGuiasDespacho.Visible = false;string lFechaEnvioClte = ""; int lIdEP = 0; tabOtrosCobros.Visible = false;
             DataGridViewRow currentRow = dgvResumen.CurrentRow;
             if (currentRow != null) 
             {
                 if (!currentRow.Cells[COLUMNNAME_ID].Value.ToString().Equals("0")) //Actualiza la informacion del detalle de la EP: dgvDetalle
                 { 
                     Cursor.Current = Cursors.WaitCursor;
-                    actualizarInfoDetalle(Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString()));
+                    actualizarInfoDetalle(Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString()), currentRow.Cells["Ep_Obra"].Value.ToString());
                     tabGuiasDespacho.Visible = true;
+                    tabOtrosCobros.Visible = true;
+                    lFechaEnvioClte = currentRow.Cells["FECHA_ENVIO_CLTE"].Value.ToString();
+                    lIdEP = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
+                    Btn_eliminaEP.Enabled = false;
+
+
+
+                    //if ((lFechaEnvioClte.Length > 0) )
+                    //    Btn_eliminaEP.Enabled = false;
+                    //else
+                    if ((lIdEP > 0) && (lFechaEnvioClte.Length == 0))
+                        Btn_eliminaEP.Enabled = true;
+
+                    //    Btn_eliminaEP.Enabled = false;
+                    //else
+                    //    Btn_eliminaEP.Enabled = true;
+
+
                     Cursor.Current = Cursors.Default; 
                 }
             }
@@ -1116,6 +1157,96 @@ namespace EstadosdePagos
         }
 
         private void dgvResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ePInicialVerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utils lUtil = new Utils();
+            DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
+            String ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
+            String obra = currentRow.Cells["OBRA"].Value.ToString();
+            Int32 ep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
+            String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+            Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
+            String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
+            lUtil.generarEP_Inicial_Ver(ep_obra, obra, ep_id, 0, ref this.Pb,  ref this.Lbl_PB, carpeta, correlativo);
+     
+
+        }
+
+        private void Btn_BuscarEP_Click(object sender, EventArgs e)
+        {
+            string lSql = ""; string lFechaIni = ""; string lFechaFin = "";
+            WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+            
+            lFechaIni = string.Concat(Dtp_Inicio.Value.ToShortDateString(), " 00:00:01");
+            lFechaFin = string.Concat(Dtp_fin.Value.ToShortDateString(), " 23:59:59");
+
+            lSql = string .Concat (" SELECT * FROM VW_EP_PENDIENTExGENERAR  where  FECHA_CREACION between '",lFechaIni,"' and '",lFechaFin ,"'   ");
+
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                dgvResumen.DataSource = null;
+                dgvDetalle.DataSource = null;
+
+
+                lDts = lPx.ObtenerDatos (lSql );
+                if (lDts.Tables .Count >0)
+                {
+                    dgvResumen.DataSource = lDts.Tables[0].Copy ();
+                    forms.dataGridViewHideColumns(dgvResumen, new string[] { "USUARIO_MOD_ADMIN", "FECHA_ENVIO_FACT", "USUARIO_CREACION_FACT_INET", "FECHA_CREACION_FACT_INET", "NUMERO_FACT_INET", "FECHA_ENVIO_FACT_CLTE", "FECHA_VENC_FACT_CLTE", "USUARIO_DAXCOBRADO", "FECHA_COBRO" }); //"FECHA_MOD_ADMIN", 
+                    new Utils().estiloMillaresDataGridViewColumn(dgvResumen, new string[] { "TOTAL_KGS", "TOTAL_KGS_REPUESTOS", "TOTAL_KGS_FACTURAR", "VALOR_KILO", "TOTAL_$$$" });
+                    forms.dataGridViewAutoSizeColumnsMode(dgvResumen, DataGridViewAutoSizeColumnsMode.DisplayedCells);
+                    tlsEstado.Text = "Registro(s): " + dgvResumen.Rows.Count;
+                }
+                //else
+                //    MessageBox.Show(listaDataSet.MensajeError.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Cursor.Current = Cursors.Default;
+
+        }
+
+        private void Btn_eliminaEP_Click(object sender, EventArgs e)
+        {
+            string lMsg = ""; string lSql = ""; WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
+
+                if (dgvResumen.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow currentRow = dgvResumen.SelectedRows[0];
+                    String ep_obra = currentRow.Cells["EP_OBRA"].Value.ToString();
+                    String obra = currentRow.Cells["OBRA"].Value.ToString();
+                    Int32 lep_id = Convert.ToInt32(currentRow.Cells[COLUMNNAME_ID].Value.ToString());
+                    String tecnicoObra = currentRow.Cells["USUARIO"].Value.ToString();
+                    Int32 correlativo = (String.IsNullOrEmpty(currentRow.Cells["CORRELATIVO"].Value.ToString()) ? 0 : Convert.ToInt32(currentRow.Cells["CORRELATIVO"].Value.ToString()));
+                    String carpeta = currentRow.Cells["CARPETA"].Value.ToString();
+                    lMsg = string.Concat("¿Esta seguro que desea eliminar el EP: ", lep_id.ToString(), ", de la Obra: ", obra, "?");
+
+
+                if (lep_id>0  )
+                        if (MessageBox.Show(lMsg, "Avisos sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            // Eliminamos el estado de pago solo si el EP, no esta en estado Enviado a Cliente
+                            //"EXEC SP_EP_CONTROL ''," + ep.ToString() + ",'','','','','','','','','','','',0,'','','','','',0,'',0,'','','','','','',225"
+                            lSql = string.Concat ("   SP_EP_CONTROL  '', ", lep_id.ToString() , ", '', '', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', '', 0, '', 0, '', '', '', '', '', '', 605");
+                            lDts = lPx.ObtenerDatos(lSql);
+                            if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                            {
+                            MessageBox.Show("Los datos han sido eliminados correctamente", "Avisos sistema", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                            }
+                        cboFiltro_SelectedIndexChanged(null, null);
+                        }
+                }
+            
+        }
+
+        private void btnReporteEP_Click(object sender, EventArgs e)
         {
 
         }

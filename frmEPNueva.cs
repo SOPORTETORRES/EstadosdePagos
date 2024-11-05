@@ -207,8 +207,8 @@ namespace EstadosdePagos
             TabPage lTabTmp = new TabPage (); TabPage lTabTmp2 = new TabPage();
             lTabTmp = tabCrecionEP.TabPages[1];
             lTabTmp2 = tabCrecionEP.TabPages[2];
-            tabCrecionEP.TabPages.Remove(lTabTmp);
-            tabCrecionEP.TabPages.Remove(lTabTmp2);
+            //tabCrecionEP.TabPages.Remove(lTabTmp);
+            //tabCrecionEP.TabPages.Remove(lTabTmp2);
 
             if (lblID.Text.ToUpper().Equals("0"))
                 Btn_Otros.Enabled = false;
@@ -261,7 +261,8 @@ namespace EstadosdePagos
 
                 //wsTo = new WsTo.Operacion();
                 //Obtiene el dia de presentacion de los EP, y la fecha de creacion de la Obra
-                Lbl_PB.Text = ". . . OBTENIENDO DATOS INICIALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
+                if (Lbl_PB!=null)
+                    Lbl_PB.Text = ". . . OBTENIENDO DATOS INICIALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
 
                 listaDataSetOp = wsOperacion.ObtenerObrasActivas_EP(this._empresa);
                 if (listaDataSetOp.MensajeError.Equals(""))
@@ -303,7 +304,8 @@ namespace EstadosdePagos
                 }
                 if (incluyeGuias == true)
                 {
-                    Lbl_PB.Text = ". . . OBTENIENDO GUÍAS DE DESPACHO . . . "; Refrescar(ref Pb, ref Lbl_PB);
+                    if (Lbl_PB != null)
+                        Lbl_PB.Text = ". . . OBTENIENDO GUÍAS DE DESPACHO . . . "; Refrescar(ref Pb, ref Lbl_PB);
 
                     //Obtiene las guias de despacho, pendientes por asignar a un EP
                     listaDataSetOp = wsOperacion.ObtenerGuiasDesdeInicio_EP(this._ep_obra, DateTime.Now.ToString("dd-MM-yyyy"));
@@ -325,9 +327,13 @@ namespace EstadosdePagos
                         //Recorre el dataTable para contar las etiquetas de la guia de despacho que ya cuentan con EP
 
                         int lCont = 0;
-                        Lbl_PB.Text = ". . . REVISANDO GUIAS DE DESPACHO . . . ";
-                        Pb.Maximum = dtGuiasDespachoINET.Rows.Count; Pb.Minimum = 1; Pb.Value = 1;
-                        Refrescar(ref Pb, ref Lbl_PB);
+                        if (Lbl_PB != null)
+                        {
+                            Lbl_PB.Text = ". . . REVISANDO GUIAS DE DESPACHO . . . ";
+                            Pb.Maximum = dtGuiasDespachoINET.Rows.Count; Pb.Minimum = 1; Pb.Value = 1;
+                            Refrescar(ref Pb, ref Lbl_PB);
+                        }
+                      
 
                         foreach (DataRow row in dtGuiasDespachoINET.Rows)
                         {
@@ -361,15 +367,17 @@ namespace EstadosdePagos
                             if (Pb.Value < Pb.Maximum)
                                 Pb.Value = Pb.Value + 1;
                             //else
-                                //Pb.Value = Pb.Value - 1;
-
-                            Refrescar(ref Pb, ref Lbl_PB);
+                            //Pb.Value = Pb.Value - 1;
+                            if (Lbl_PB != null)
+                                Refrescar(ref Pb, ref Lbl_PB);
                             //fin
 
                         }
-                      
 
-                        Lbl_PB.Text = ". . . REALIZANDO CALCULOS FINALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
+                        if (Lbl_PB != null)
+                        {
+                            Lbl_PB.Text = ". . . REALIZANDO CALCULOS FINALES . . . "; Refrescar(ref Pb, ref Lbl_PB);
+                        }
                         dgvGuiasDespacho.DataSource = dtGuiasDespachoINET;
                         utils.bloquearColumnas(dgvGuiasDespacho);
                         forms.dataGridViewHideColumns(dgvGuiasDespacho, new string[] { "Column1", COLUMNNAME_MARCA_ORIGINAL });
@@ -379,6 +387,11 @@ namespace EstadosdePagos
                         lblRegistrosGDespacho.Text = "Registro(s): " + dgvGuiasDespacho.Rows.Count;
                         dgvGuiasDespacho.Columns["Doc"].Visible = false;
                         dgvGuiasDespacho.Columns["EtiquetasconEP"].Visible = false;
+                        //dgvGuiasDespacho.Columns["IdDespachoCamion"].Visible = false;
+                        //dgvGuiasDespacho.Columns["Codigo1"].Visible = false;
+                        //dgvGuiasDespacho.Columns["IdMov"].Visible = false;
+                        //dgvGuiasDespacho.Columns["IdDespachoCamion"].Visible = false;
+
                         Btn_ObtenerKgsSel_Click(null, null);
                     }
                     else
@@ -389,6 +402,7 @@ namespace EstadosdePagos
 
 
                 }
+
 
             }
             catch (Exception exc)
@@ -847,11 +861,23 @@ namespace EstadosdePagos
                         {
                             cboIT.Items.Add(row[0].ToString());
                         }
-                        if (cboIT.Items.Count > 0) {
-                            cboIT.Enabled = true;
-                            cboIT.SelectedIndex = 0;
-                        }
+                        //if (cboIT.Items.Count > 0) {
+                        //    cboIT.Enabled = true;
+                        //    cboIT.SelectedIndex = 0;
+                        //}
                         dgvEtiquetas.DataSource = dtEtiquetasINET;
+
+                        dgvEtiquetas.Columns["IdDespachoCamion"].Visible = false;
+                        dgvEtiquetas.Columns["Codigo1"].Visible = false;
+                        dgvEtiquetas.Columns["IdPieza"].Visible = false;
+                        dgvEtiquetas.Columns["IdMov"].Visible = false;
+                        dgvEtiquetas.Columns["NroPaq"].Visible = false;
+                        dgvEtiquetas.Columns["TotalPaq"].Visible = false;
+                        dgvEtiquetas.Columns["FechaRegistro"].Visible = false;
+                        dgvEtiquetas.Columns["IdViaje"].Visible = false;
+                        dgvEtiquetas.Columns["KgsReales"].Visible = false;
+
+
                         dgvEtiquetas.Tag = guiaDespacho;
                     }
                     else
@@ -915,6 +941,9 @@ namespace EstadosdePagos
                     //else
                     if (error.Equals(""))
                     {
+                        // Si la Obra Tiene configurado en la ficha Devolucion de Anticipo lo Creamos al momento de guardar el EP
+                        // Los Parametros son IdObra - Nro EP generado 
+
                         //Elimina la informacion completa del EP_Detalle, para actualizarla
                         estado_Pago = wsOperacion.EliminarEPCreacionEtiquetaxEP(_ep_obra, _ep_id, Program.currentUser.Login, Program.currentUser.ComputerName);
                         if (!estado_Pago.MensajeError.Equals(""))
@@ -1240,15 +1269,16 @@ namespace EstadosdePagos
 
         private void dgvGuiasDespacho_DoubleClick(object sender, EventArgs e)
         {
-            //DataGridViewRow currentRow = dgvGuiasDespacho.CurrentRow;
-            //if (currentRow != null) 
-            //{
-            //    lblGuiaDespacho.Text = (currentRow.Cells[1].Value.ToString().Equals("") ? "0" : currentRow.Cells[1].Value.ToString());
-            //    if (!lblGuiaDespacho.Text.Equals("0")) { 
-            //        cargarInfoEtiquetasxGuiaDespacho_INET(lblGuiaDespacho.Text);
-            //        tabCrecionEP.SelectedIndex = 1;
-            //    }
-            //}
+            DataGridViewRow currentRow = dgvGuiasDespacho.CurrentRow;
+            if (currentRow != null)
+            {
+                lblGuiaDespacho.Text = (currentRow.Cells[1].Value.ToString().Equals("") ? "0" : currentRow.Cells[1].Value.ToString());
+                if (!lblGuiaDespacho.Text.Equals("0"))
+                {
+                    cargarInfoEtiquetasxGuiaDespacho_INET(lblGuiaDespacho.Text);
+                    tabCrecionEP.SelectedIndex = 1;
+                }
+            }
         }
 
         private void cboIT_SelectedIndexChanged(object sender, EventArgs e)
@@ -1333,43 +1363,45 @@ namespace EstadosdePagos
 
         private void dgvGuiasDespacho_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ////int lKgsSel = 0; Utils lCnn = new EstadosdePagos.Utils();
-            ////try {
-            ////    if (dgvGuiasDespacho.CurrentCell.GetType() == typeof(DataGridViewCheckBoxCell))
-            ////    {
-            ////        if (dgvGuiasDespacho.CurrentCell.IsInEditMode)
-            ////        {
-            ////            if (dgvGuiasDespacho.IsCurrentCellDirty)
-            ////            {
-            ////                dgvGuiasDespacho.EndEdit();
-            ////                string fechaDespINET = dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["FechaDespINET"].Value.ToString();
-            ////                if (dgvGuiasDespacho.CurrentCell.Value.Equals(true) && !fechaDespINET.Equals(""))
-            ////                {
-            ////                    if (Convert.ToDateTime(fechaDespINET) > dtpFechaPresentEP.Value)
-            ////                    {
-            ////                        if (MessageBox.Show("Esta seleccionando una guia con fecha de despacho INET posterior a la próxima presentación.\n\n¿Desea continuar?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.No)
-            ////                            dgvGuiasDespacho.CurrentCell.Value = false;
-            ////                    }
-            ////                    //if (lCnn.EsNumeroDesdeINET(dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["KgsGuia"].Value.ToString()) == true)
-            ////                    //{
-            ////                    //    lKgsSel = lKgsSel + lCnn.ValDesdeINET(dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["KgsGuia"].Value.ToString());
-            ////                    //    tx_KgsSeleccionado.Text = lKgsSel.ToString();
-            ////                    //}
-            ////                }
-            ////            }
-            ////        }
-            ////    }   
-            ////    //TotalKilosSeleccionados();
-            ////}
-            ////catch (Exception exc)
-            ////{
-            ////    MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            ////}
+            int lKgsSel = 0; Utils lCnn = new EstadosdePagos.Utils();
+            try
+            {
+                //if (dgvGuiasDespacho.CurrentCell.GetType() == typeof(DataGridViewCheckBoxCell))
+                //{
+                //    if (dgvGuiasDespacho.CurrentCell.IsInEditMode)
+                //    {
+                //        if (dgvGuiasDespacho.IsCurrentCellDirty)
+                //        {
+                //            dgvGuiasDespacho.EndEdit();
+                //            string fechaDespINET = dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["FechaDespacho"].Value.ToString();
+                //            if (dgvGuiasDespacho.CurrentCell.Value.Equals(true) && !fechaDespINET.Equals(""))
+                //            {
+                //                if (Convert.ToDateTime(fechaDespINET) > dtpFechaPresentEP.Value)
+                //                {
+                //                    if (MessageBox.Show("Esta seleccionando una guia con fecha de despacho INET posterior a la próxima presentación.\n\n¿Desea continuar?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.No)
+                //                        dgvGuiasDespacho.CurrentCell.Value = false;
+                //                }
+                //                if (lCnn.EsNumeroDesdeINET(dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["KgsGuia"].Value.ToString()) == true)
+                //                {
+                //                    lKgsSel = lKgsSel + lCnn.ValDesdeINET(dgvGuiasDespacho.Rows[dgvGuiasDespacho.CurrentCell.RowIndex].Cells["KgsGuia"].Value.ToString());
+                //                    tx_KgsSeleccionado.Text = lKgsSel.ToString();
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
+                //TotalKilosSeleccionados();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private string TotalKilosSeleccionados()
         {
             int i = 0;Utils lCnn = new Utils();int lTotal = 0;/* bool lCheck = false;*/
+            int lTotalPend = 0;
             try
             {
                 for (i = 0; i < dgvGuiasDespacho.RowCount; i++)
@@ -1385,6 +1417,8 @@ namespace EstadosdePagos
                             lTotal = lTotal + lCnn.ValDesdeINET(dgvGuiasDespacho.Rows[i].Cells["KgsGuia"].Value.ToString());
                         }
                     }
+                    else
+                        lTotalPend = lTotalPend + lCnn.ValDesdeINET(dgvGuiasDespacho.Rows[i].Cells["KgsGuia"].Value.ToString());
 
                 }
             }
@@ -1392,6 +1426,7 @@ namespace EstadosdePagos
             {
                 MessageBox.Show(exc.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Tx_KgsPendientes .Text = lTotalPend.ToString("N0");
             return lTotal.ToString("N0");
 
         }
@@ -1450,6 +1485,18 @@ namespace EstadosdePagos
         private void tx_KgsSeleccionado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_VerGuiasPendientes_Click(object sender, EventArgs e)
+        {
+            DataTable lTblGuias = new DataTable(); DataTable lTblEP = new DataTable();
+            ProgressBar lPb = new ProgressBar(); Label lLbl = new Label();
+
+            lTblEP = (DataTable)dgvGuiasDespacho.DataSource;
+            cargarInfoObrayGuiaDespacho_INET(ref lPb, ref lLbl, true );
+            lTblGuias = (DataTable)dgvGuiasDespacho.DataSource;
+            lTblEP.Merge(lTblGuias);
+            dgvGuiasDespacho.DataSource = lTblEP;
         }
     }
 }

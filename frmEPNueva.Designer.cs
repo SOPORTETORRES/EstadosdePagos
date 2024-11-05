@@ -75,6 +75,9 @@
             this.Btn_Otros = new System.Windows.Forms.Button();
             this.Lbl_totalOtros = new System.Windows.Forms.Label();
             this.Btn_Adjunto = new System.Windows.Forms.Button();
+            this.Btn_VerGuiasPendientes = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Tx_KgsPendientes = new System.Windows.Forms.TextBox();
             this.tabCrecionEP.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDespacho)).BeginInit();
@@ -98,7 +101,7 @@
             this.tabCrecionEP.Location = new System.Drawing.Point(7, 175);
             this.tabCrecionEP.Name = "tabCrecionEP";
             this.tabCrecionEP.SelectedIndex = 0;
-            this.tabCrecionEP.Size = new System.Drawing.Size(788, 399);
+            this.tabCrecionEP.Size = new System.Drawing.Size(953, 399);
             this.tabCrecionEP.TabIndex = 26;
             // 
             // tabPage1
@@ -108,7 +111,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(780, 373);
+            this.tabPage1.Size = new System.Drawing.Size(945, 373);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Seleccion de las Guias de despacho";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -123,7 +126,7 @@
             this.dgvGuiasDespacho.MultiSelect = false;
             this.dgvGuiasDespacho.Name = "dgvGuiasDespacho";
             this.dgvGuiasDespacho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGuiasDespacho.Size = new System.Drawing.Size(774, 367);
+            this.dgvGuiasDespacho.Size = new System.Drawing.Size(939, 367);
             this.dgvGuiasDespacho.TabIndex = 8;
             this.dgvGuiasDespacho.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDespacho_CellContentClick);
             this.dgvGuiasDespacho.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDespacho_CellValueChanged);
@@ -138,7 +141,7 @@
             this.panel2.Controls.Add(this.lblRegistrosGDespacho);
             this.panel2.Location = new System.Drawing.Point(3, 230);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 232);
+            this.panel2.Size = new System.Drawing.Size(939, 232);
             this.panel2.TabIndex = 9;
             // 
             // label9
@@ -424,7 +427,7 @@
             this.txtComentario.MaxLength = 500;
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(574, 38);
+            this.txtComentario.Size = new System.Drawing.Size(778, 29);
             this.txtComentario.TabIndex = 0;
             this.txtComentario.Leave += new System.EventHandler(this.txtComentario_Leave);
             // 
@@ -486,20 +489,20 @@
             // 
             // tx_KgsSeleccionado
             // 
-            this.tx_KgsSeleccionado.Location = new System.Drawing.Point(177, 151);
+            this.tx_KgsSeleccionado.Location = new System.Drawing.Point(173, 150);
             this.tx_KgsSeleccionado.Name = "tx_KgsSeleccionado";
             this.tx_KgsSeleccionado.ReadOnly = true;
-            this.tx_KgsSeleccionado.Size = new System.Drawing.Size(81, 20);
+            this.tx_KgsSeleccionado.Size = new System.Drawing.Size(74, 20);
             this.tx_KgsSeleccionado.TabIndex = 42;
             this.tx_KgsSeleccionado.TextChanged += new System.EventHandler(this.tx_KgsSeleccionado_TextChanged);
             // 
             // Btn_ObtenerKgsSel
             // 
-            this.Btn_ObtenerKgsSel.Location = new System.Drawing.Point(393, 152);
+            this.Btn_ObtenerKgsSel.Location = new System.Drawing.Point(255, 146);
             this.Btn_ObtenerKgsSel.Name = "Btn_ObtenerKgsSel";
-            this.Btn_ObtenerKgsSel.Size = new System.Drawing.Size(114, 25);
+            this.Btn_ObtenerKgsSel.Size = new System.Drawing.Size(110, 25);
             this.Btn_ObtenerKgsSel.TabIndex = 43;
-            this.Btn_ObtenerKgsSel.Text = "Kilos Seleccionados";
+            this.Btn_ObtenerKgsSel.Text = "Kgs. Seleccionados";
             this.Btn_ObtenerKgsSel.UseVisualStyleBackColor = true;
             this.Btn_ObtenerKgsSel.Click += new System.EventHandler(this.Btn_ObtenerKgsSel_Click);
             // 
@@ -508,7 +511,7 @@
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.Image = global::EstadosdePagos.Properties.Resources.guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(349, 587);
+            this.btnGuardar.Location = new System.Drawing.Point(514, 587);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 23);
             this.btnGuardar.TabIndex = 27;
@@ -521,7 +524,7 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Image = global::EstadosdePagos.Properties.Resources.cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(572, 587);
+            this.btnCancelar.Location = new System.Drawing.Point(737, 587);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 23);
             this.btnCancelar.TabIndex = 19;
@@ -535,7 +538,7 @@
             this.btnAceptar.Enabled = false;
             this.btnAceptar.Image = global::EstadosdePagos.Properties.Resources.aceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(479, 587);
+            this.btnAceptar.Location = new System.Drawing.Point(644, 587);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(87, 23);
             this.btnAceptar.TabIndex = 18;
@@ -546,9 +549,9 @@
             // 
             // Btn_Otros
             // 
-            this.Btn_Otros.Location = new System.Drawing.Point(533, 153);
+            this.Btn_Otros.Location = new System.Drawing.Point(799, 153);
             this.Btn_Otros.Name = "Btn_Otros";
-            this.Btn_Otros.Size = new System.Drawing.Size(114, 25);
+            this.Btn_Otros.Size = new System.Drawing.Size(96, 25);
             this.Btn_Otros.TabIndex = 44;
             this.Btn_Otros.Text = "Otros Conceptos";
             this.Btn_Otros.UseVisualStyleBackColor = true;
@@ -558,7 +561,7 @@
             // 
             this.Lbl_totalOtros.AutoSize = true;
             this.Lbl_totalOtros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_totalOtros.Location = new System.Drawing.Point(663, 159);
+            this.Lbl_totalOtros.Location = new System.Drawing.Point(901, 159);
             this.Lbl_totalOtros.Name = "Lbl_totalOtros";
             this.Lbl_totalOtros.Size = new System.Drawing.Size(40, 13);
             this.Lbl_totalOtros.TabIndex = 45;
@@ -575,11 +578,41 @@
             this.Btn_Adjunto.UseVisualStyleBackColor = true;
             this.Btn_Adjunto.Click += new System.EventHandler(this.Btn_Adjunto_Click);
             // 
+            // Btn_VerGuiasPendientes
+            // 
+            this.Btn_VerGuiasPendientes.Location = new System.Drawing.Point(666, 156);
+            this.Btn_VerGuiasPendientes.Name = "Btn_VerGuiasPendientes";
+            this.Btn_VerGuiasPendientes.Size = new System.Drawing.Size(118, 21);
+            this.Btn_VerGuiasPendientes.TabIndex = 47;
+            this.Btn_VerGuiasPendientes.Text = "Ver Guias Pendientes";
+            this.Btn_VerGuiasPendientes.UseVisualStyleBackColor = true;
+            this.Btn_VerGuiasPendientes.Click += new System.EventHandler(this.Btn_VerGuiasPendientes_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(386, 153);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 13);
+            this.label14.TabIndex = 48;
+            this.label14.Text = "Kilos Pendientes";
+            // 
+            // Tx_KgsPendientes
+            // 
+            this.Tx_KgsPendientes.Location = new System.Drawing.Point(477, 150);
+            this.Tx_KgsPendientes.Name = "Tx_KgsPendientes";
+            this.Tx_KgsPendientes.ReadOnly = true;
+            this.Tx_KgsPendientes.Size = new System.Drawing.Size(74, 20);
+            this.Tx_KgsPendientes.TabIndex = 49;
+            // 
             // frmEPNueva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 615);
+            this.ClientSize = new System.Drawing.Size(968, 615);
+            this.Controls.Add(this.Tx_KgsPendientes);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.Btn_VerGuiasPendientes);
             this.Controls.Add(this.Btn_Adjunto);
             this.Controls.Add(this.Lbl_totalOtros);
             this.Controls.Add(this.Btn_Otros);
@@ -682,5 +715,8 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView Dtg_OtrasGuias;
         private System.Windows.Forms.Button Btn_Adjunto;
+        private System.Windows.Forms.Button Btn_VerGuiasPendientes;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox Tx_KgsPendientes;
     }
 }

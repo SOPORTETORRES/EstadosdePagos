@@ -27,10 +27,10 @@ namespace EstadosdePagos.Informes
             string lSql = "";DataSet lDts = new DataSet() ; WsMensajeria.Ws_To lDal = new WsMensajeria.Ws_To();
             DataTable lTbl = new DataTable();
 
-            lSql = " select id, fechacreacion, v.codigo, nroguiaINET, (Select count(1) from ViajesIMpresos vi where vi.codigo=v.codigo  ) Impreso ";
-            lSql = string.Concat(lSql, " from viaje v  where FechaCreacion > getdate()-200 and estado='DES'  ");
+            lSql = " select id, fechacreacion, v.codigo, nroguiaINET, (Select count(1) from ViajesIMpresos vi where vi.codigo=v.codigo  ) Impreso , fechaGuiaINET";
+            lSql = string.Concat(lSql, " from viaje v  where FechaCreacion > getdate()-200 and nroguiaINET>0  ");
             lSql = string.Concat(lSql, " and  (Select count(1) from ViajesIMpresos vi where vi.codigo=v.codigo  )<2 ");
-            lSql = string.Concat(lSql, "  order by (Select count(1) from ViajesIMpresos vi where vi.codigo=v.codigo  ) , v.Codigo ");
+            lSql = string.Concat(lSql, "  order by  fechacreacion desc , (Select count(1) from ViajesIMpresos vi where vi.codigo=v.codigo  ) , v.Codigo ");
 
 
 
@@ -58,7 +58,6 @@ namespace EstadosdePagos.Informes
                     Lbl_NroAtencion.Text = DTG.Rows[e.RowIndex].Cells["NroAtencion"].Value.ToString();
                     lbl_NombreObra .Text = DTG.Rows[e.RowIndex].Cells["Obra"].Value.ToString();
                 }
-
                 else
                     Tx_codigo.Text = DTG.Rows[e.RowIndex].Cells["Codigo"].Value.ToString();
             }
@@ -70,7 +69,7 @@ namespace EstadosdePagos.Informes
             if (DTG.Rows.Count > 0)
             {
                 mEstaProcesando = true;
-                for (i = 0; i <2 ; i++)
+                for (i = 0; i <1 ; i++)
                 {
                     Tx_codigo.Text = DTG.Rows[i].Cells["Codigo"].Value.ToString();
                     lNroImpresos = DTG.Rows[i].Cells["Impreso"].Value.ToString();
@@ -97,19 +96,27 @@ namespace EstadosdePagos.Informes
 
         private void GeneraPDF_PL(string iCod)
         {
+            try
+            {
+                Utils lInf = new Utils();
+                //lInf.CreaInforme_Autom(iCod, true, @"S:\Guías Santiago\IT\");
 
-            Utils lInf = new Utils();
-            lInf.CreaInforme_Autom(iCod, true, @"\\192.168.1.191\Gerencia de Logistica\Guias de Despacho\Guías Santiago\IT\");
-            Tx_codigo.Text = "";
-            //MessageBox.Show("Generación de PDF Finalizada");
-            Buscar();
+                lInf.CreaInforme_Autom(iCod, true, @"C:\Cubigest\PDF");
+
+                Tx_codigo.Text = "";
+                MessageBox.Show("Generación de PDF Finalizada"); //C:\TMP\IT
+                Buscar();
+            }
+            catch (Exception iex)
+            {
+            }
     }
 
         private void Frm_Tmp_Load(object sender, EventArgs e)
         {
             Btn_Buscar_Click(null, null);
 
-            string lTipo = AppDomain.CurrentDomain.GetData("Tipo").ToString(); //, "Autom");
+            string lTipo = "";  //AppDomain.CurrentDomain.GetData("Tipo").ToString(); //, "Autom");
 
             if (lTipo.ToString().ToUpper().Equals("Autom".ToUpper()))
             {

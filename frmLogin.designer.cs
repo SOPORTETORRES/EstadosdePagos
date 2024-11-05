@@ -68,7 +68,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(230, 20);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Text = "mgonzalez";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
@@ -80,7 +79,6 @@
             this.txtClave.PasswordChar = 'X';
             this.txtClave.Size = new System.Drawing.Size(230, 20);
             this.txtClave.TabIndex = 1;
-            this.txtClave.Text = "Mgon.2021";
             this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
             this.txtClave.Leave += new System.EventHandler(this.txtClave_Leave);
             // 
@@ -127,13 +125,12 @@
             // 
             // Btn_imprimePL
             // 
-            this.Btn_imprimePL.Location = new System.Drawing.Point(167, 138);
+            this.Btn_imprimePL.Location = new System.Drawing.Point(167, 12);
             this.Btn_imprimePL.Name = "Btn_imprimePL";
             this.Btn_imprimePL.Size = new System.Drawing.Size(75, 23);
             this.Btn_imprimePL.TabIndex = 14;
             this.Btn_imprimePL.Text = "Imprime PL";
             this.Btn_imprimePL.UseVisualStyleBackColor = true;
-            this.Btn_imprimePL.Visible = false;
             this.Btn_imprimePL.Click += new System.EventHandler(this.Btn_imprimePL_Click);
             // 
             // frmLogin

@@ -41,6 +41,8 @@
             this.btnReporteEP = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnVerReporteEP = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGenerarReporteEP = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEP_InicialVer = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEP_InicialGen = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEnviarEP = new System.Windows.Forms.ToolStripButton();
             this.btnModEPxObsClte = new System.Windows.Forms.ToolStripButton();
             this.btnComentSegEP = new System.Windows.Forms.ToolStripButton();
@@ -60,6 +62,13 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTotalKilos = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_eliminaEP = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_BuscarEP = new System.Windows.Forms.Button();
+            this.Dtp_fin = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_Inicio = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.Btn_ContratosObra = new System.Windows.Forms.Button();
             this.Gb_Estado = new System.Windows.Forms.GroupBox();
             this.Lbl_PB = new System.Windows.Forms.Label();
@@ -79,14 +88,21 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
             this.tabGuiasDespacho = new System.Windows.Forms.TabControl();
+            this.tabOtrosCobros = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Dtg_Otros = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.Gb_Estado.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.tabGuiasDespacho.SuspendLayout();
+            this.tabOtrosCobros.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dtg_Otros)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvResumen
@@ -101,7 +117,7 @@
             this.dgvResumen.Name = "dgvResumen";
             this.dgvResumen.ReadOnly = true;
             this.dgvResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResumen.Size = new System.Drawing.Size(1174, 222);
+            this.dgvResumen.Size = new System.Drawing.Size(1305, 222);
             this.dgvResumen.TabIndex = 6;
             this.dgvResumen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResumen_CellContentClick);
             this.dgvResumen.SelectionChanged += new System.EventHandler(this.dgvResumen_SelectionChanged);
@@ -130,7 +146,7 @@
             this.btnSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1179, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1310, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -186,26 +202,42 @@
             // 
             this.btnReporteEP.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnVerReporteEP,
-            this.btnGenerarReporteEP});
+            this.btnGenerarReporteEP,
+            this.btnEP_InicialVer,
+            this.btnEP_InicialGen});
             this.btnReporteEP.Image = global::EstadosdePagos.Properties.Resources.reporte;
             this.btnReporteEP.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReporteEP.Name = "btnReporteEP";
             this.btnReporteEP.Size = new System.Drawing.Size(77, 22);
             this.btnReporteEP.Text = "Reporte";
+            this.btnReporteEP.Click += new System.EventHandler(this.btnReporteEP_Click);
             // 
             // btnVerReporteEP
             // 
             this.btnVerReporteEP.Name = "btnVerReporteEP";
-            this.btnVerReporteEP.Size = new System.Drawing.Size(115, 22);
+            this.btnVerReporteEP.Size = new System.Drawing.Size(173, 22);
             this.btnVerReporteEP.Text = "Ver";
             this.btnVerReporteEP.Click += new System.EventHandler(this.btnVerReporteEP_Click);
             // 
             // btnGenerarReporteEP
             // 
             this.btnGenerarReporteEP.Name = "btnGenerarReporteEP";
-            this.btnGenerarReporteEP.Size = new System.Drawing.Size(115, 22);
+            this.btnGenerarReporteEP.Size = new System.Drawing.Size(173, 22);
             this.btnGenerarReporteEP.Text = "Generar";
             this.btnGenerarReporteEP.Click += new System.EventHandler(this.btnGenerarReporteEP_Click);
+            // 
+            // btnEP_InicialVer
+            // 
+            this.btnEP_InicialVer.Name = "btnEP_InicialVer";
+            this.btnEP_InicialVer.Size = new System.Drawing.Size(173, 22);
+            this.btnEP_InicialVer.Text = "EP Inicial (Ver)";
+            this.btnEP_InicialVer.Click += new System.EventHandler(this.ePInicialVerToolStripMenuItem_Click);
+            // 
+            // btnEP_InicialGen
+            // 
+            this.btnEP_InicialGen.Name = "btnEP_InicialGen";
+            this.btnEP_InicialGen.Size = new System.Drawing.Size(173, 22);
+            this.btnEP_InicialGen.Text = "EP Inicial (Generar)";
             // 
             // btnEnviarEP
             // 
@@ -300,9 +332,9 @@
             this.lblTotalEtiquetas,
             this.toolStripStatusLabel2,
             this.lblTotalKilos});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 580);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 609);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1179, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1310, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -355,6 +387,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Btn_eliminaEP);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.Btn_ContratosObra);
             this.panel1.Controls.Add(this.Gb_Estado);
             this.panel1.Controls.Add(this.Btn_imprimePL);
@@ -372,16 +406,84 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1179, 128);
+            this.panel1.Size = new System.Drawing.Size(1310, 128);
             this.panel1.TabIndex = 7;
+            // 
+            // Btn_eliminaEP
+            // 
+            this.Btn_eliminaEP.Location = new System.Drawing.Point(805, 91);
+            this.Btn_eliminaEP.Name = "Btn_eliminaEP";
+            this.Btn_eliminaEP.Size = new System.Drawing.Size(84, 31);
+            this.Btn_eliminaEP.TabIndex = 18;
+            this.Btn_eliminaEP.Text = "Eliminar EP";
+            this.Btn_eliminaEP.UseVisualStyleBackColor = true;
+            this.Btn_eliminaEP.Click += new System.EventHandler(this.Btn_eliminaEP_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Btn_BuscarEP);
+            this.groupBox1.Controls.Add(this.Dtp_fin);
+            this.groupBox1.Controls.Add(this.Dtp_Inicio);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(549, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(357, 78);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Buscar E.P por fecha";
+            // 
+            // Btn_BuscarEP
+            // 
+            this.Btn_BuscarEP.Location = new System.Drawing.Point(235, 25);
+            this.Btn_BuscarEP.Name = "Btn_BuscarEP";
+            this.Btn_BuscarEP.Size = new System.Drawing.Size(75, 39);
+            this.Btn_BuscarEP.TabIndex = 4;
+            this.Btn_BuscarEP.Text = "Buscar";
+            this.Btn_BuscarEP.UseVisualStyleBackColor = true;
+            this.Btn_BuscarEP.Click += new System.EventHandler(this.Btn_BuscarEP_Click);
+            // 
+            // Dtp_fin
+            // 
+            this.Dtp_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_fin.Location = new System.Drawing.Point(94, 50);
+            this.Dtp_fin.Name = "Dtp_fin";
+            this.Dtp_fin.Size = new System.Drawing.Size(89, 20);
+            this.Dtp_fin.TabIndex = 3;
+            // 
+            // Dtp_Inicio
+            // 
+            this.Dtp_Inicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_Inicio.Location = new System.Drawing.Point(95, 19);
+            this.Dtp_Inicio.Name = "Dtp_Inicio";
+            this.Dtp_Inicio.Size = new System.Drawing.Size(89, 20);
+            this.Dtp_Inicio.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Fecha  Fin";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Fecha Inicial";
             // 
             // Btn_ContratosObra
             // 
-            this.Btn_ContratosObra.Location = new System.Drawing.Point(544, 13);
+            this.Btn_ContratosObra.Location = new System.Drawing.Point(30, 68);
             this.Btn_ContratosObra.Name = "Btn_ContratosObra";
-            this.Btn_ContratosObra.Size = new System.Drawing.Size(78, 35);
+            this.Btn_ContratosObra.Size = new System.Drawing.Size(58, 23);
             this.Btn_ContratosObra.TabIndex = 16;
-            this.Btn_ContratosObra.Text = "Contratos Obras";
+            this.Btn_ContratosObra.Text = "Ep Inicial";
             this.Btn_ContratosObra.UseVisualStyleBackColor = true;
             this.Btn_ContratosObra.Visible = false;
             this.Btn_ContratosObra.Click += new System.EventHandler(this.Btn__Click);
@@ -390,9 +492,9 @@
             // 
             this.Gb_Estado.Controls.Add(this.Lbl_PB);
             this.Gb_Estado.Controls.Add(this.Pb);
-            this.Gb_Estado.Location = new System.Drawing.Point(706, 13);
+            this.Gb_Estado.Location = new System.Drawing.Point(912, 10);
             this.Gb_Estado.Name = "Gb_Estado";
-            this.Gb_Estado.Size = new System.Drawing.Size(461, 63);
+            this.Gb_Estado.Size = new System.Drawing.Size(377, 63);
             this.Gb_Estado.TabIndex = 15;
             this.Gb_Estado.TabStop = false;
             this.Gb_Estado.Text = "Estado de la Operación";
@@ -408,9 +510,9 @@
             // 
             // Pb
             // 
-            this.Pb.Location = new System.Drawing.Point(26, 20);
+            this.Pb.Location = new System.Drawing.Point(6, 24);
             this.Pb.Name = "Pb";
-            this.Pb.Size = new System.Drawing.Size(409, 15);
+            this.Pb.Size = new System.Drawing.Size(365, 15);
             this.Pb.TabIndex = 15;
             // 
             // Btn_imprimePL
@@ -426,7 +528,7 @@
             // 
             // btnDestinatariosObra
             // 
-            this.btnDestinatariosObra.Location = new System.Drawing.Point(809, 93);
+            this.btnDestinatariosObra.Location = new System.Drawing.Point(1154, 92);
             this.btnDestinatariosObra.Name = "btnDestinatariosObra";
             this.btnDestinatariosObra.Size = new System.Drawing.Size(108, 23);
             this.btnDestinatariosObra.TabIndex = 12;
@@ -547,7 +649,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1171, 176);
+            this.tabPage1.Size = new System.Drawing.Size(634, 202);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Guías de despacho";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -563,7 +665,7 @@
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.ReadOnly = true;
             this.dgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalle.Size = new System.Drawing.Size(1165, 170);
+            this.dgvDetalle.Size = new System.Drawing.Size(628, 196);
             this.dgvDetalle.TabIndex = 7;
             // 
             // tabGuiasDespacho
@@ -571,17 +673,56 @@
             this.tabGuiasDespacho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tabGuiasDespacho.Controls.Add(this.tabPage1);
-            this.tabGuiasDespacho.Location = new System.Drawing.Point(0, 378);
+            this.tabGuiasDespacho.Location = new System.Drawing.Point(0, 381);
             this.tabGuiasDespacho.Name = "tabGuiasDespacho";
             this.tabGuiasDespacho.SelectedIndex = 0;
-            this.tabGuiasDespacho.Size = new System.Drawing.Size(1179, 202);
+            this.tabGuiasDespacho.Size = new System.Drawing.Size(642, 228);
             this.tabGuiasDespacho.TabIndex = 8;
+            // 
+            // tabOtrosCobros
+            // 
+            this.tabOtrosCobros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabOtrosCobros.Controls.Add(this.tabPage2);
+            this.tabOtrosCobros.Location = new System.Drawing.Point(642, 380);
+            this.tabOtrosCobros.Name = "tabOtrosCobros";
+            this.tabOtrosCobros.SelectedIndex = 0;
+            this.tabOtrosCobros.Size = new System.Drawing.Size(660, 229);
+            this.tabOtrosCobros.TabIndex = 9;
+            this.tabOtrosCobros.Visible = false;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.Dtg_Otros);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(652, 203);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Otros Cobros";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Dtg_Otros
+            // 
+            this.Dtg_Otros.AllowUserToAddRows = false;
+            this.Dtg_Otros.AllowUserToDeleteRows = false;
+            this.Dtg_Otros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dtg_Otros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Dtg_Otros.Location = new System.Drawing.Point(3, 3);
+            this.Dtg_Otros.MultiSelect = false;
+            this.Dtg_Otros.Name = "Dtg_Otros";
+            this.Dtg_Otros.ReadOnly = true;
+            this.Dtg_Otros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dtg_Otros.Size = new System.Drawing.Size(646, 197);
+            this.Dtg_Otros.TabIndex = 7;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 602);
+            this.ClientSize = new System.Drawing.Size(1310, 631);
+            this.Controls.Add(this.tabOtrosCobros);
             this.Controls.Add(this.dgvResumen);
             this.Controls.Add(this.tabGuiasDespacho);
             this.Controls.Add(this.panel1);
@@ -600,10 +741,15 @@
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.Gb_Estado.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.tabGuiasDespacho.ResumeLayout(false);
+            this.tabOtrosCobros.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Dtg_Otros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,5 +807,17 @@
         private System.Windows.Forms.Label Lbl_PB;
         private System.Windows.Forms.ProgressBar Pb;
         private System.Windows.Forms.Button Btn_ContratosObra;
+        private System.Windows.Forms.ToolStripMenuItem btnEP_InicialVer;
+        private System.Windows.Forms.ToolStripMenuItem btnEP_InicialGen;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Btn_BuscarEP;
+        private System.Windows.Forms.DateTimePicker Dtp_fin;
+        private System.Windows.Forms.DateTimePicker Dtp_Inicio;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Btn_eliminaEP;
+        private System.Windows.Forms.TabControl tabOtrosCobros;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView Dtg_Otros;
     }
 }

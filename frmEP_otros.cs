@@ -102,12 +102,15 @@ namespace EstadosdePagos
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',0,0, '','','','',9,''");
-                Dtg_Resultado.DataSource = null;
-                lDts = lPx.ObtenerDatos(lSql);
-                if ((lDts.Tables.Count > 0) && (lDts.Tables[0].Rows.Count > 0))
+                //lSql = string.Concat("  SP_CRUD_EP_OTROS  0,", mIdEP, ", ", mIdObra, ",' ',0,0, '','','','',9,''");
+                //Dtg_Resultado.DataSource = null;
+                //lDts = lPx.ObtenerDatos(lSql);
+                //ObtenerOtrosCobros
+                mTblDatosObra = lUti.ObtenerOtrosCobros(mIdEP, mIdObra);
+
+                if ((mTblDatosObra.Rows.Count > 0))
                 {
-                    mTblDatosObra = lDts.Tables[0].Copy();
+                    //mTblDatosObra = lDts.Tables[0].Copy();
                     Dtg_Resultado.DataSource = mTblDatosObra;
                     lTotal = 0;
                     for (i = 0; i < mTblDatosObra.Rows.Count; i++)
@@ -251,6 +254,11 @@ namespace EstadosdePagos
                     lTipo = "D";
                     lImporte = ((-1) * Int64.Parse(Tx_Importe.Text.Replace(".", ""))).ToString(); ;
                     lCantidad = (   Int64.Parse(Tx_cantidad.Text)).ToString ();
+                    if ((Cmb_Concepto.SelectedValue != null) && (Cmb_Concepto.SelectedValue.ToString().ToUpper().Equals("DEVOLUCION ANTICIPO")))
+                    {
+                        Tx_Concepto.Text = "DEVOLUCION ANTICIPO";
+                        lConcepto = string.Concat("(Dev. Anticipo): ", lConcepto);
+                    }
                 }
                     
 
