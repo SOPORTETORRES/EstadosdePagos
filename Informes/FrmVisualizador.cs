@@ -38,8 +38,8 @@ namespace EstadosdePagos.Informes
         private void GrabaGeneracion_PL(string iViaje, string iPath, string iTipo)
         {
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); DataSet lDts = new DataSet();
-          
-                string lSql = string.Concat(" insert into ViajesImpresos (codigo, Tipo, FechaImpresion, Path ) Values ('");
+            lPx.Url = "http://192.168.1.195/WS/Ws_To.asmx";
+            string lSql = string.Concat(" insert into ViajesImpresos (codigo, Tipo, FechaImpresion, Path ) Values ('");
                 lSql = string.Concat(lSql, iViaje,"','", iTipo ,"',getdate(),'",iPath ,"') ");
                 lDts = lPx.ObtenerDatos(lSql);
                 
@@ -51,7 +51,7 @@ namespace EstadosdePagos.Informes
             int lRes = 0;
             if (mDtsInforme != null)
             {
-                string lPathArchivo = string.Concat(iPathDestino, ""); // "C:\\TMP\\Estado de pago\\DOC\\";
+                string lPathArchivo = string.Concat(iPathDestino, "\\"); // "C:\\TMP\\Estado de pago\\DOC\\";
                 //string lPathArchivo = "//192.168.1.191//Gerencia de Logistica//Guias de Despacho//Guías Santiago//IT//";
 
                 //\\192.168.1.191\Gerencia de Logistica\Guias de Despacho\Guías Santiago\IT//string lPathArchivo = "C:\\TMP\\Oficina Tecnica\\EP\\";
@@ -64,15 +64,16 @@ namespace EstadosdePagos.Informes
                     string[] lPartes = mViaje.Split(separators, StringSplitOptions.RemoveEmptyEntries);
                     if (lPartes.Length > 1)
                     {
-                        lPathArchivo = string.Concat(lPathArchivo, lPartes[0], "\\");
-                        if (Directory.Exists(lPathArchivo) == false)
+                        //lPathArchivo = string.Concat(lPathArchivo, lPartes[0], "\\");
+                        lPathArchivo = string.Concat(lPathArchivo, mViaje.Replace ("/","_"), "\\");
+                        if (Directory.Exists(iPathDestino) == false)
                         {
                             Directory.CreateDirectory(lPathArchivo);
                         }
                         switch (mInforme.ToUpper())
                         {
                             case "P":
-                                lArchivo = string.Concat(lPathArchivo, mViaje.Replace("/", "_"), "P.pdf");
+                                lArchivo = string.Concat(lPathArchivo,  mViaje.Replace("/", "_"), "P.pdf");
                                 if (mEliminaArchivo == true)
                                 {
                                     if (File.Exists(lArchivo) == true)
@@ -82,7 +83,7 @@ namespace EstadosdePagos.Informes
                                 mReport.SetDataSource(mDtsInforme);
                                 this.crystalReportViewer1.ReportSource = mReport;
                                 mReport.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, lArchivo);
-                                GrabaGeneracion_PL(mViaje, lPathArchivo, "P");
+                                GrabaGeneracion_PL(mViaje, iPathDestino, "P");
                                 mReport.Close();
                                 mReport.Dispose();
 

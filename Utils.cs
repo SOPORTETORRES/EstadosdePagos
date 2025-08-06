@@ -1098,7 +1098,7 @@ namespace EstadosdePagos
             int totalGuiasDespacho = 0, totalITs = 0, totalEtiquetas = 0, totalKilos = 0;            DataView view = null;
             DataTable dtResumenxGuiaDespacho = null;            WsOperacion.EP_Generado lEP = new WsOperacion.EP_Generado();
             string lPathDestino = ""; string lPathDestinoLocal = "";string lPathServer = "";string lSiglaOBra = "";
-            string lPathGuia = "";string lTmp = "";
+            string lPathGuia = "";string lTmp = ""; string dir_Calidad = "";
             //Verifica si existe la informacion necesaria para generar el informe
             try
             {
@@ -1196,57 +1196,57 @@ namespace EstadosdePagos
                 if (MessageBox.Show("¿Esta seguro que desea Descargar los Respaldos ?", "Avisos Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)          
                    // if (lOBtenerPdfGuias.ToUpper().Equals("S"))
                 { 
-                    if ((!dir_guiaDespacho.Equals(""))) // &&())
-                    {
-                        foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
-                        {
-                            // lCodSucINET
-                            //lTmp = ws.ObtenerSucursal_PorNroGuiaDespacho(row[COLUMNNAME_GUIA_DESPACHO].ToString());
+                //    if ((!dir_guiaDespacho.Equals(""))) // &&())
+                //    {
+                //        foreach (DataRow row in view.ToTable(true, COLUMNNAME_GUIA_DESPACHO).Rows)
+                //        {
+                //            // lCodSucINET
+                //            //lTmp = ws.ObtenerSucursal_PorNroGuiaDespacho(row[COLUMNNAME_GUIA_DESPACHO].ToString());
 
-                            dir_guiaDespacho = Path.Combine(@"S:\Guias Torres Ocaranza\"); //, string.Concat (row[COLUMNNAME_GUIA_DESPACHO].ToString()));  //OBtenerPath_EGD(lTmp);
+                //            dir_guiaDespacho = Path.Combine(@"S:\Guias Torres Ocaranza\"); //, string.Concat (row[COLUMNNAME_GUIA_DESPACHO].ToString()));  //OBtenerPath_EGD(lTmp);
 
-                            //archivo = string.Concat ( "GTE GUIA ",  row[COLUMNNAME_GUIA_DESPACHO].ToString() , ".pdf");
-                            archivo = string.Concat("", row[COLUMNNAME_GUIA_DESPACHO].ToString(), ".pdf");
+                //            //archivo = string.Concat ( "GTE GUIA ",  row[COLUMNNAME_GUIA_DESPACHO].ToString() , ".pdf");
+                //            archivo = string.Concat("", row[COLUMNNAME_GUIA_DESPACHO].ToString(), ".pdf");
 
-                            if (fs.FileExists(Path.Combine(dir_guiaDespacho, archivo)))
-                            {
-                                listArchivosGuiasDespacho.Add(archivo);
-                                CopiarArchivo(Path.Combine(dir_guiaDespacho, archivo), Path.Combine(lPathDestino, archivo));
-                            } 
-                            else
-                                {
-                                    lPathGuia= NombreArchivoGuia(row[COLUMNNAME_GUIA_DESPACHO].ToString(), dir_guiaDespacho);
-                                    if (File.Exists(Path.Combine(dir_guiaDespacho, lPathGuia)) == false)
-                                        archivoFaltantesGD.Append(" -> " + archivo + "\n");
-                                    else
-                                    {
-                                        listArchivosGuiasDespacho.Add(lPathGuia);
-                                        CopiarArchivo(Path.Combine(dir_guiaDespacho, lPathGuia), Path.Combine(lPathDestino, lPathGuia));
-                                    }
-                                }
+                //            if (fs.FileExists(Path.Combine(dir_guiaDespacho, archivo)))
+                //            {
+                //                listArchivosGuiasDespacho.Add(archivo);
+                //                CopiarArchivo(Path.Combine(dir_guiaDespacho, archivo), Path.Combine(lPathDestino, archivo));
+                //            } 
+                //            else
+                //                {
+                //                    lPathGuia= NombreArchivoGuia(row[COLUMNNAME_GUIA_DESPACHO].ToString(), dir_guiaDespacho);
+                //                    if (File.Exists(Path.Combine(dir_guiaDespacho, lPathGuia)) == false)
+                //                        archivoFaltantesGD.Append(" -> " + archivo + "\n");
+                //                    else
+                //                    {
+                //                        listArchivosGuiasDespacho.Add(lPathGuia);
+                //                        CopiarArchivo(Path.Combine(dir_guiaDespacho, lPathGuia), Path.Combine(lPathDestino, lPathGuia));
+                //                    }
+                //                }
                           
-                        }
+                //        }
 
-                        if (archivoFaltantesGD.ToString().Length > 0)
-                            sb.Append("Faltan los siguientes archivos gds :\n");
-                        sb.Append(archivoFaltantesGD);
-                    }
+                //        if (archivoFaltantesGD.ToString().Length > 0)
+                //            sb.Append("Faltan los siguientes archivos gds :\n");
+                //        sb.Append(archivoFaltantesGD);
+                //    }
 
-                ///---ITs---///
-                //Obtiene el directorio donde se almacenan los PDF de las its
-                result = obtenerParametro("EP_DIRECTORIO", "DIR_IT"); //utils
-                if (result.MensajeError.Equals(""))
-                {
-                    rows = result.DataRows;
-                    if (rows.Length > 0)
-                    {
-                        dir_it = rows[0]["Par_Alf1"].ToString();
-                        dir_it += (!su.Right(dir_it, 1).Equals("\\") ? "\\" : "");
-                    }
-                }
-                else
-                    error = result.MensajeError;
-                sb.Append("Directorio con las ITs: " + (dir_it.Trim().Equals("") ? "(No definido)" : dir_it) + "\n\n");
+                /////---ITs---///
+                ////Obtiene el directorio donde se almacenan los PDF de las its
+                //result = obtenerParametro("EP_DIRECTORIO", "DIR_IT"); //utils
+                //if (result.MensajeError.Equals(""))
+                //{
+                //    rows = result.DataRows;
+                //    if (rows.Length > 0)
+                //    {
+                //        dir_it = rows[0]["Par_Alf1"].ToString();
+                //        dir_it += (!su.Right(dir_it, 1).Equals("\\") ? "\\" : "");
+                //    }
+                //}
+                //else
+                //    error = result.MensajeError;
+                //sb.Append("Directorio con las ITs: " + (dir_it.Trim().Equals("") ? "(No definido)" : dir_it) + "\n\n");
 
 
                 // Recorremos la tabla con las IT, si no estan las creamos
@@ -1256,6 +1256,7 @@ namespace EstadosdePagos
                 int i = 0; string lPathArchivo = ""; // @"\\192.168.1.191\Gerencia de Logistica\Guias de Despacho"; // dir_it;
                 for (i = 0; i < dtResumenxGuiaDespacho.Rows.Count; i++)
                 {
+                        Pb.Visible = true;
                     if (Pb.Value < Pb.Maximum)
                         Pb.Value = Pb.Value + 1;
                     else
@@ -1263,59 +1264,87 @@ namespace EstadosdePagos
                         Pb.Value = Pb.Value - 1;
 
                     Pb.Refresh();
+                        
                         //lPathServer = Path.Combine(dir_it, dtResumenxGuiaDespacho.Rows[i]["It"].ToString().Substring(0, 3));
                         lPathServer = Path.Combine(@"S:\Guías Santiago\IT", ObtenerCodigoViaje(dtResumenxGuiaDespacho.Rows[i]["It"].ToString()));
                         //por cada IT, debe haber una portada y un detalle 
-                        if (ExisteArchivo(dtResumenxGuiaDespacho.Rows[i]["It"].ToString(), lPathServer) == false)
-                        CreaInforme(dtResumenxGuiaDespacho.Rows[i]["It"].ToString(), true, lPathServer);
-                }
+                        //if (ExisteArchivo(dtResumenxGuiaDespacho.Rows[i]["It"].ToString(), lPathServer) == false)
+                        //CreaInforme(dtResumenxGuiaDespacho.Rows[i]["It"].ToString(), true, lPathServer);
 
-                //Obtiene la cantidad de ITs y verifica si el reporte cuenta con los archivos PDFs de las ITs
-                view = new DataView(dtResumenxGuiaDespacho);
-                if (view .Count >0)
-                      totalITs = view.ToTable(true, COLUMNNAME_IT).Rows.Count;
+                        //Por cambios y generacion de web de clientes cambia la logica, Se debe ir a buscar  a la carpeta de certificaciones it pot IT
+                        dir_Calidad = Path.Combine(@"P:\", dtResumenxGuiaDespacho.Rows[i]["Sucursal"].ToString(), ObtenerCodigoViaje(dtResumenxGuiaDespacho.Rows[i]["It"].ToString()), dtResumenxGuiaDespacho.Rows[i]["It"].ToString().Replace ("/","_"));
 
-                if (!dir_it.Equals(""))
-                {
-                    foreach (DataRow row in view.ToTable(true, COLUMNNAME_IT).Rows)
-                    {
-                        
-                        lPathDestinoLocal = Path.Combine(lPathDestinoLocal);
-                        //debemos revisar 2 archivos por IT
-                        // lPathArchivo = Path.Combine(lPathDestinoLocal);
+                        //Destino de la copia 
+                        lPathDestinoLocal = Path.Combine(lPathDestino, dtResumenxGuiaDespacho.Rows[i]["It"].ToString().Replace("/", "_"));
+                        if (Directory.Exists(lPathDestinoLocal) == false)
+                            Directory.CreateDirectory(lPathDestinoLocal);
 
-                        // if (ExisteArchivo(archivo.ToString(), lPathArchivo) == false)
-                        //Primero P
-                        archivo = row[COLUMNNAME_IT].ToString().Replace("/", "_")  + "P.PDF";
-                  //      archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
-                        if (fs.FileExists(Path.Combine(lPathServer,  archivo)))
+                        //obtenemos los archivos del directorio de calidad                                   
+                        string[] lPartes = Directory.GetFiles(dir_Calidad); int k = 0;
+                        string[] palabrasProhibidas = { "_C", "_I", "Fabricacion", "Coladas" };
+                        bool lSeguir = true;
+                        //archivo = dtResumenxGuiaDespacho.Rows[i]["It"].ToString().Replace("/", "_");
+                        //iteramos y los copiamos al directorio local
+                        for (k = 0; k < lPartes.Length; k++)
                         {
-                            listArchivosIT.Add(archivo);
-                            CopiarArchivo(Path.Combine(lPathServer, archivo), Path.Combine(lPathDestino, archivo));
+                            lSeguir = true;
+                            archivo = Path.GetFileName(lPartes[k].ToString ());
+                            foreach (var palabra in palabrasProhibidas)
+                            {
+                                if (archivo.Contains(palabra))
+                                    lSeguir = false;
+                            }
+                            if (lSeguir)
+                                CopiarArchivo(lPartes[k].ToString(), Path.Combine(lPathDestinoLocal, archivo));
                         }
-                        else
-                        {
-                            archivoFaltantesIT.Append(" -> " + archivo + "\n");
-                        }
-                        //Primero D
-                        archivo = row[COLUMNNAME_IT].ToString().Replace("/", "_") + "D.PDF";
-                        //archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
-                        if (fs.FileExists(Path.Combine(lPathServer, archivo)))
-                        {
-                            listArchivosIT.Add(archivo);
-                            CopiarArchivo(Path.Combine(lPathServer, archivo), Path.Combine(lPathDestino, archivo));
-                        }
-                        else
-                        {
-                            archivoFaltantesIT.Append(" -> " + archivo + "\n");
-                        }
-
                     }
-                    if (archivoFaltantesIT.ToString().Length > 0)
-                        sb.Append("Faltan los siguientes archivos its :\n");
-                    sb.Append(archivoFaltantesIT);
-                }
 
+                    //Obtiene la cantidad de ITs y verifica si el reporte cuenta con los archivos PDFs de las ITs
+                //    view = new DataView(dtResumenxGuiaDespacho);
+                //if (view .Count >0)
+                //      totalITs = view.ToTable(true, COLUMNNAME_IT).Rows.Count;
+
+                //if (!dir_it.Equals(""))
+                //{
+                //    foreach (DataRow row in view.ToTable(true, COLUMNNAME_IT).Rows)
+                //    {
+                        
+                //        lPathDestinoLocal = Path.Combine(lPathDestinoLocal);
+                //        //debemos revisar 2 archivos por IT
+                //        // lPathArchivo = Path.Combine(lPathDestinoLocal);
+
+                //        // if (ExisteArchivo(archivo.ToString(), lPathArchivo) == false)
+                //        //Primero P
+                //        archivo = row[COLUMNNAME_IT].ToString().Replace("/", "_")  + "P.PDF";
+                //  //      archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
+                //        if (fs.FileExists(Path.Combine(lPathServer,  archivo)))
+                //        {
+                //            listArchivosIT.Add(archivo);
+                //            CopiarArchivo(Path.Combine(lPathServer, archivo), Path.Combine(lPathDestino, archivo));
+                //        }
+                //        else
+                //        {
+                //            archivoFaltantesIT.Append(" -> " + archivo + "\n");
+                //        }
+                //        //Primero D
+                //        archivo = row[COLUMNNAME_IT].ToString().Replace("/", "_") + "D.PDF";
+                //        //archivo = archivo.Replace("/", "_"); //ECT-1/1.PDF -> ECT-1_1.PDF
+                //        if (fs.FileExists(Path.Combine(lPathServer, archivo)))
+                //        {
+                //            listArchivosIT.Add(archivo);
+                //            CopiarArchivo(Path.Combine(lPathServer, archivo), Path.Combine(lPathDestino, archivo));
+                //        }
+                //        else
+                //        {
+                //            archivoFaltantesIT.Append(" -> " + archivo + "\n");
+                //        }
+
+                //    }
+                //    if (archivoFaltantesIT.ToString().Length > 0)
+                //        sb.Append("Faltan los siguientes archivos its :\n");
+                //    sb.Append(archivoFaltantesIT);
+                }
+                Pb.Visible = false;
                 ///--------///
                 //Resumen
                 //Obtiene la cantidad de etiquetas y kilos totales x EP
@@ -1330,7 +1359,7 @@ namespace EstadosdePagos
                 sb.Append("Total kilo(s): " + totalKilos.ToString("N0") + "\n\n");
                 sb.Append("Total $$$ a cobrar: " + (totalKilos * (valorKiloSuministro.Equals("") ? 0 : Convert.ToInt32(valorKiloSuministro))).ToString("N0"));
                     //MessageBox.Show(sb.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
             }
             catch (Exception exc)
             {
@@ -2281,10 +2310,13 @@ namespace EstadosdePagos
             DataTable lTblRes = new DataTable(); int i = 0; string lTxAux = "";DataView lVista = null;
             int lKgsSum = 0;int lCont = 0;DataRow lfila = null; int lKgsPrep = 0;string lFecha = "";
 
-            lTblRes.Columns.Add("Precio");
+            lTblRes.Columns.Add("PrecioSum");
+            lTblRes.Columns.Add("PrecioPrep");
+            lTblRes.Columns.Add("Importe");
             lTblRes.Columns.Add("KgsSUM");
             lTblRes.Columns.Add("KgsPREP");
             lTblRes.Columns.Add("Fecha");
+            lTblRes.Columns.Add("Id_EP");
 
             for (i = 0; i < iTbl.Rows.Count ; i++)
             {
@@ -2296,16 +2328,19 @@ namespace EstadosdePagos
                         if (lVista[lCont]["TipoGuia_INET"].ToString().ToUpper().Equals("F"))
                         {
                             lKgsSum = lKgsSum + int.Parse(lVista[lCont]["Total_Kgs"].ToString());
-                            lKgsPrep = lKgsSum + int.Parse(lVista[lCont]["Total_Kgs"].ToString());
+                            lKgsPrep = lKgsPrep + int.Parse(lVista[lCont]["Total_Kgs"].ToString());
                         }
                         else
                             lKgsSum = lKgsSum + int.Parse(lVista[lCont]["Total_Kgs"].ToString());
 
                     }
                     lfila = lTblRes.NewRow();
-                    lfila["Precio"] = iTbl.Rows[i]["Importe"].ToString();
+                    lfila["PrecioSum"] = iTbl.Rows[i]["SoloSum"].ToString();
+                    lfila["PrecioPrep"] = iTbl.Rows[i]["Prep"].ToString();
+                    lfila["Importe"] = iTbl.Rows[i]["Importe"].ToString();
                     lfila["KgsSUM"] = lKgsSum;
                     lfila["KgsPREP"] = lKgsPrep;
+                    lfila["Id_EP"] = iTbl.Rows[i]["det_ep_Id"].ToString();
                     lTblRes.Rows.Add(lfila);
                     lTxAux = string.Concat(lTxAux, "-", iTbl.Rows[i]["Importe"].ToString());
                     lKgsSum = 0;
@@ -2315,7 +2350,7 @@ namespace EstadosdePagos
             //Obtenemos las Fechas de los cambios de precio
             for (i = 0; i < lTblRes.Rows.Count; i++)
             {
-                lVista = new DataView(iTbl, string.Concat("Importe=", lTblRes.Rows[i]["Precio"].ToString()), "FechaDespacho asc", DataViewRowState.CurrentRows);
+                lVista = new DataView(iTbl, string.Concat("Importe=", lTblRes.Rows[i]["Importe"].ToString()), "FechaDespacho asc", DataViewRowState.CurrentRows);
                 if (lVista.Count > 0)
                 {
                     lFecha = string.Concat(lVista[0]["FechaDespacho"].ToString(), " - ", lVista[lVista.Count-1]["FechaDespacho"].ToString());
@@ -2550,16 +2585,24 @@ namespace EstadosdePagos
                                 if ((listaDataTMP.DataSet.Tables.Count > 0) && (listaDataTMP.DataSet.Tables[0].Rows.Count > 0))
                                 {
                                     // obtenemos el histocio de datos
-                                    listaDataSetOp = wsOperacion.ListarEPResumenGuiaDespachox_IdPObra(ep_id); //GD /IT /Etiquetas /Kilos
+                                    listaDataSetOp = wsOperacion.ListarEPResumenGuiaDespachox_IdPObra(ep_obra); //GD /IT /Etiquetas /Kilos
                                     // Con los datos historicos creamos la tabla y los totales.
                                     lTBlTmp = ObtenerTablaPrecios(listaDataSetOp.DataSet.Tables[0].Copy());
                                     //dependiendo de la cantidad de precios que tenga  lValorSum
                                     if (lTBlTmp.Rows.Count == 1)
                                     {
-                                        excelSheet.Range["C9"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
-                                        excelSheet.Range["E9"].Value = lValorSum.ToString();
-                                        excelSheet.Range["C10"].Value = listaDataTMP.DataSet.Tables[0].Rows[0]["CANTIDAD"].ToString();
-                                        excelSheet.Range["E10"].Value = lValorPrep.ToString();
+                                        //excelSheet.Range["B9"].Value = string.Concat("Suministro: ", lTBlTmp.Rows[0]["Fecha"].ToString());
+                                        excelSheet.Range["C9"].Value = ObtenerKgsTotales( listaDataSetOp.DataSet.Tables[1].Copy (),"S");  // lTBlTmp.Rows[0]["KgsSum"].ToString();
+                                        excelSheet.Range["D9"].Value = "Kg";
+                                        excelSheet.Range["E9"].Value = lTBlTmp.Rows[0]["PrecioSum"].ToString();
+
+                                        excelSheet.Range["C10"].Value = ObtenerKgsTotales(listaDataSetOp.DataSet.Tables[1].Copy(), "P");  // lTBlTmp.Rows[0]["KgsSum"].ToString();
+                                        excelSheet.Range["D10"].Value = "Kg";
+                                        excelSheet.Range["E10"].Value = lTBlTmp.Rows[0]["PrecioPrep"].ToString();
+
+                                        //excelSheet.Range["E9"].Value = lTBlTmp.Rows[0]["PrecioSum"].ToString();
+                                        
+                                        //excelSheet.Range["E10"].Value = lTBlTmp.Rows[0]["PrecioPrep"].ToString();
 
                                         if (listaDataSetOp.MensajeError.Equals(""))
                                             dtResumenxGuiaDespacho = listaDataSetOp.DataSet.Tables[0];
@@ -2568,8 +2611,8 @@ namespace EstadosdePagos
                                         totalKgPrep = long.Parse(RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho, "P"));
                                         totalKgRep = long.Parse(RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho, "R"));
                                                                                
-                                        excelSheet.Range["I9"].Value = totalKgSum;  // si la IT es tipo TP 
-                                        excelSheet.Range["I10"].Value = totalKgPrep; // RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  //totalKilos;  //Sumunistro                                                                                     
+                                        excelSheet.Range["I9"].Value = lTBlTmp.Rows[0]["KgsSum"].ToString();   // si la IT es tipo TP 
+                                        excelSheet.Range["I10"].Value = lTBlTmp.Rows[0]["KgsPrep"].ToString(); ; // RevisaTiposDeGuiaINET(dtResumenxGuiaDespacho);  //totalKilos;  //Sumunistro                                                                                     
                                     }
                                     // tiene mas de un precio hay que iterar
                                     if (lTBlTmp.Rows.Count > 1)
@@ -2579,16 +2622,45 @@ namespace EstadosdePagos
                                         {
                                             if (i == 0)
                                             {
+                                                excelSheet.Range[string.Concat("B", lCont + i)].Value = string.Concat("Suministro: ", lTBlTmp.Rows[i]["Fecha"].ToString());
                                                 excelSheet.Range[string.Concat("C", lCont + i)].Value = lTBlTmp.Rows[i]["KgsSum"].ToString();
-                                                excelSheet.Range[string.Concat("E", lCont + i)].Value = lTBlTmp.Rows[i]["Precio"].ToString();
+                                                excelSheet.Range[string.Concat("E", lCont + i)].Value = lTBlTmp.Rows[i]["PrecioSum"].ToString();
+                                                if (lTBlTmp.Rows[i]["Id_EP"].ToString().Equals(ep_id))  //EP Actual
+                                                {
+                                                    excelSheet.Range[string.Concat("I", lCont + i)].Value = lTBlTmp.Rows[i]["KgsSum"].ToString();
+                                                    excelSheet.Range[string.Concat("I", lCont + i+1)].Value = lTBlTmp.Rows[i]["KgsPrep"].ToString();
+                                                }
+                                                else  // EP Anterior
+                                                {
+                                                    excelSheet.Range[string.Concat("G", lCont + i)].Value = lTBlTmp.Rows[i]["KgsSum"].ToString();
+                                                    excelSheet.Range[string.Concat("G", lCont + i + 1)].Value = lTBlTmp.Rows[i]["KgsPrep"].ToString();
+                                                }
+                                                
                                             }
                                             else
                                             {
                                                 excelSheet.Rows[(lCont + i).ToString()].Insert();
-                                                excelSheet.Range[string.Concat("B", lCont + i)].Value = string.Concat ("Suministro: ",lTBlTmp.Rows[i]["Fecha"].ToString());
+                                                excelSheet.Range[string.Concat("B", lCont + i)].Value = string.Concat("Suministro: ", lTBlTmp.Rows[i]["Fecha"].ToString());
                                                 excelSheet.Range[string.Concat("C", lCont + i)].Value = lTBlTmp.Rows[i]["KgsSum"].ToString();
-                                                excelSheet.Range[string.Concat("E", lCont + i)].Value = lTBlTmp.Rows[i]["Precio"].ToString();
-                                                excelSheet.Range[string.Concat("F", lCont + i)].Value = string.Concat("=+", string.Concat("E", lCont + i),"*", string.Concat("C", lCont + i));// E9*C9";
+                                                excelSheet.Range[string.Concat("E", lCont + i)].Value = lTBlTmp.Rows[i]["PrecioSum"].ToString();
+                                                excelSheet.Range[string.Concat("F", lCont + i)].Value = string.Concat("=+", string.Concat("E", lCont + i), "*", string.Concat("C", lCont + i));// E9*C9";
+                                                excelSheet.Range[string.Concat("K", lCont + i)].Value = string.Concat("=+", string.Concat("G", lCont + i), "+", string.Concat("I", lCont + i));// 
+                                                excelSheet.Range[string.Concat("L", lCont + i)].Value = string.Concat("=+", string.Concat("H", lCont + i), "+", string.Concat("J", lCont + i));// 
+                                                excelSheet.Range[string.Concat("M", lCont + i)].Value = string.Concat("=+", string.Concat("C", lCont + i), "-", string.Concat("K", lCont + i));// 
+                                                excelSheet.Range[string.Concat("N", lCont + i)].Value = string.Concat("=+", string.Concat("F", lCont + i), "-", string.Concat("L", lCont + i));// 
+                                                if (lTBlTmp.Rows[i]["Id_EP"].ToString().Equals(ep_id.ToString() ))  //EP Actual
+                                                {
+                                                    excelSheet.Range[string.Concat("I", lCont + i)].Value = lTBlTmp.Rows[i]["KgsSum"].ToString();
+                                                    excelSheet.Range[string.Concat("J", lCont + i)].Value = string.Concat("=+", string.Concat("I", lCont + i), "*", string.Concat("E", lCont + i));// E9*C9";
+                                                    excelSheet.Range[string.Concat("I", lCont + i + 1)].Value = lTBlTmp.Rows[i]["KgsPrep"].ToString();
+                                                }
+                                                else
+                                                {
+                                                    excelSheet.Range[string.Concat("G", lCont + i)].Value = lTBlTmp.Rows[i]["KgsSum"].ToString();
+                                                    excelSheet.Range[string.Concat("G", lCont + i + 1)].Value = lTBlTmp.Rows[i]["KgsPrep"].ToString();
+                                                }
+                                                
+                                                
                                             }
                                           totalKgPrep =  totalKgPrep + long.Parse (lTBlTmp.Rows[i]["KgsPrep"].ToString());
 
@@ -2596,6 +2668,7 @@ namespace EstadosdePagos
                                         }
                                         //ahora Preparacion
                                         excelSheet.Range[string.Concat("C", lCont + i)].Value = totalKgPrep;
+                                        excelSheet.Range[string.Concat("E", lCont + i)].Value = lValorPrep;
 
                                     }
 
@@ -3035,8 +3108,13 @@ namespace EstadosdePagos
                                     lRangoEx = string.Concat("V", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["K"].ToString();
                                     lRangoEx = string.Concat("W", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["L"].ToString();
                                     lRangoEx = string.Concat("X", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["N"].ToString();
+                                    // Convertir el valor desde la DataRow a decimal (sin reemplazar nada)
+                                    decimal valorDecimal = Convert.ToDecimal(row["TOTAL_kGS"]);
 
-                                    lRangoEx = string.Concat("Y", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["TOTAL_kGS"].ToString();
+                                    lRangoEx = string.Concat("Y", lCont.ToString()); 
+                                    excelSheet.Range[lRangoEx].NumberFormat = "#,##0.00";
+                                    excelSheet.Range[lRangoEx].Value = valorDecimal;
+
                                     lRangoEx = string.Concat("Z", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["Etiqueta"].ToString();
                                     lRangoEx = string.Concat("AA", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["IT"].ToString();
                                     lRangoEx = string.Concat("AB", lCont.ToString()); excelSheet.Range[lRangoEx].Value = row["viaje"].ToString(); 
@@ -3097,6 +3175,25 @@ namespace EstadosdePagos
 
         }
 
+        private string ObtenerKgsTotales(DataTable iTbl, string iTipo)
+        {
+            string lRes = "";DataView lVista = null;
+
+            if (iTipo == "S")
+            {
+                lVista = new DataView(iTbl, string.Concat("Servicio like '%Suministro%' "), "", DataViewRowState.CurrentRows);
+                if (lVista.Count > 0)
+                    lRes = lVista[0][1].ToString();
+            }
+            if (iTipo == "P")
+            {
+                lVista = new DataView(iTbl, string.Concat("Servicio like '%Preparaci%' "), "", DataViewRowState.CurrentRows);
+                if (lVista.Count > 0)
+                    lRes = lVista[0][1].ToString();
+            }
+
+            return lRes;
+        }
         public  void GeneraExcel_Resumen_Eps()
         {
             //string selectedPath = ""; string obra = "";

@@ -2223,6 +2223,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ListarEPResumenGuiaDespachox_IdPObra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdObra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEPResumenGuiaDespachox_IdPObraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarEPResumenGuiaDespachox_IdPObraResult" type="tns:ListaDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="ListarEPDetalleEtiquetasxGuiaDespacho">
         <s:complexType>
           <s:sequence>
@@ -3605,6 +3619,12 @@
   <wsdl:message name="ListarEPResumenGuiaDespachoxEpSoapOut">
     <wsdl:part name="parameters" element="tns:ListarEPResumenGuiaDespachoxEpResponse" />
   </wsdl:message>
+  <wsdl:message name="ListarEPResumenGuiaDespachox_IdPObraSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarEPResumenGuiaDespachox_IdPObra" />
+  </wsdl:message>
+  <wsdl:message name="ListarEPResumenGuiaDespachox_IdPObraSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarEPResumenGuiaDespachox_IdPObraResponse" />
+  </wsdl:message>
   <wsdl:message name="ListarEPDetalleEtiquetasxGuiaDespachoSoapIn">
     <wsdl:part name="parameters" element="tns:ListarEPDetalleEtiquetasxGuiaDespacho" />
   </wsdl:message>
@@ -4339,6 +4359,10 @@
     <wsdl:operation name="ListarEPResumenGuiaDespachoxEp">
       <wsdl:input message="tns:ListarEPResumenGuiaDespachoxEpSoapIn" />
       <wsdl:output message="tns:ListarEPResumenGuiaDespachoxEpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPResumenGuiaDespachox_IdPObra">
+      <wsdl:input message="tns:ListarEPResumenGuiaDespachox_IdPObraSoapIn" />
+      <wsdl:output message="tns:ListarEPResumenGuiaDespachox_IdPObraSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ListarEPDetalleEtiquetasxGuiaDespacho">
       <wsdl:input message="tns:ListarEPDetalleEtiquetasxGuiaDespachoSoapIn" />
@@ -5579,6 +5603,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarEPResumenGuiaDespachoxEp">
       <soap:operation soapAction="http://tempuri.org/ListarEPResumenGuiaDespachoxEp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPResumenGuiaDespachox_IdPObra">
+      <soap:operation soapAction="http://tempuri.org/ListarEPResumenGuiaDespachox_IdPObra" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -7040,6 +7073,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarEPResumenGuiaDespachoxEp">
       <soap12:operation soapAction="http://tempuri.org/ListarEPResumenGuiaDespachoxEp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEPResumenGuiaDespachox_IdPObra">
+      <soap12:operation soapAction="http://tempuri.org/ListarEPResumenGuiaDespachox_IdPObra" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

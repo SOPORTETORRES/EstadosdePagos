@@ -14,6 +14,7 @@ namespace EstadosdePagos.Informes
             string lSql = "";WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To();DataTable lTblRes = new DataTable();string lValorKilo = "";
             //Dim lSql As String = "", lPx As New Px_Ws.Ws_ToSoapClient, lTblRes As New DataTable, lValorKilo As String = "0"
             DataSet lDts = new DataSet();
+            lPx.Url = "http://192.168.1.195/WS/Ws_To.asmx";
             lSql = string.Concat ("Exec SP_CRUD_SERVICIOS_OBRA  0," , iIdObra, ",'',0,0,'','',3");
             //'       @Id int,             '   @IdObra int,	            '@Servicio VARCHAR(50),
             //'   @Importe int,	         '@IdUsuario int,              '@NombreUsuario VARCHAR(50),
@@ -39,7 +40,7 @@ namespace EstadosdePagos.Informes
             //Dim frmVisualiza As FrmVisualizador, lTmp As String = ""
             Dts_PL dtsPl = new EstadosdePagos.Informes.Dts_PL();string iIdIt = "";string iIdObra = "";
             //Dim dtsPl As New Dts_PL()
-
+            lPx.Url = "http://192.168.1.195/WS/Ws_To.asmx";
             string lSql = string.Concat("select IdIt, IdObra  from viaje v, it where v.IdIt =it.id and Codigo ='", iViaje, "' ");
             lDtsTmp = lPx.ObtenerDatos(lSql);
             if ((lDtsTmp.Tables.Count > 0) && (lDtsTmp.Tables[0].Rows.Count > 0))
@@ -106,6 +107,7 @@ namespace EstadosdePagos.Informes
             Dts_PL lDts = new Dts_PL(); DataSet lDtsTmp = new DataSet();
             try
             {
+                lPx.Url = "http://192.168.1.195/WS/Ws_To.asmx";
                string lSql = string.Concat("select IdIt, IdObra  from viaje v, it where v.IdIt =it.id and Codigo ='", iViaje, "' ");
                 lDtsTmp = lPx.ObtenerDatos(lSql);
                 if ((lDtsTmp.Tables.Count > 0) && (lDtsTmp.Tables[0].Rows.Count > 0))
@@ -159,6 +161,7 @@ namespace EstadosdePagos.Informes
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); int i = 0;
             FrmVisualizador lFrmInf = new FrmVisualizador();
             Dts_PL lDts = new Dts_PL(); DataSet lDtsTmp = new DataSet();
+            lPx.Url = "http://192.168.1.195/WS/Ws_To.asmx";
 
             string lSql = string.Concat("select IdIt, IdObra  from viaje v, it where v.IdIt =it.id and Codigo ='", iViaje, "' ");
             lDtsTmp = lPx.ObtenerDatos(lSql);
@@ -181,7 +184,7 @@ namespace EstadosdePagos.Informes
             WsMensajeria.Ws_To lPx = new WsMensajeria.Ws_To(); int i = 0;
             FrmVisualizador lFrmInf = new FrmVisualizador();
             Dts_PL lDts = new Dts_PL(); DataSet lDtsTmp = new DataSet();
-
+            lPx.Url = "http://192.168.1.195/WS/Ws_To.asmx";
             string lSql = string.Concat("select IdIt, IdObra  from viaje v, it where v.IdIt =it.id and Codigo ='", iViaje, "' ");
             lDtsTmp = lPx.ObtenerDatos(lSql);
             if ((lDtsTmp.Tables.Count > 0) && (lDtsTmp.Tables[0].Rows.Count > 0))
@@ -295,6 +298,7 @@ namespace EstadosdePagos.Informes
             //'@Par3 Varchar(100),        '@Par4 Varchar(100),  '@Par5 Varchar(100)
             try
             {
+                lPx.Url = "http://192.168.1.195/WS/Ws_To.asmx";
                 lSql = string.Concat("exec SP_Consultas_WS 24,'", iViaje, "','','','','','',''");
                 lDts = lPx.ObtenerDatos(lSql);
                 if (lDts.Tables.Count > 0)

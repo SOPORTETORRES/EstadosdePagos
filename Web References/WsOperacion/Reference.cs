@@ -268,6 +268,8 @@ namespace EstadosdePagos.WsOperacion {
         
         private System.Threading.SendOrPostCallback ListarEPResumenGuiaDespachoxEpOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ListarEPResumenGuiaDespachox_IdPObraOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ListarEPDetalleEtiquetasxGuiaDespachoOperationCompleted;
         
         private System.Threading.SendOrPostCallback RegistrarEPGeneracionReporteOperationCompleted;
@@ -748,6 +750,9 @@ namespace EstadosdePagos.WsOperacion {
         
         /// <remarks/>
         public event ListarEPResumenGuiaDespachoxEpCompletedEventHandler ListarEPResumenGuiaDespachoxEpCompleted;
+        
+        /// <remarks/>
+        public event ListarEPResumenGuiaDespachox_IdPObraCompletedEventHandler ListarEPResumenGuiaDespachox_IdPObraCompleted;
         
         /// <remarks/>
         public event ListarEPDetalleEtiquetasxGuiaDespachoCompletedEventHandler ListarEPDetalleEtiquetasxGuiaDespachoCompleted;
@@ -4644,6 +4649,35 @@ namespace EstadosdePagos.WsOperacion {
             if ((this.ListarEPResumenGuiaDespachoxEpCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ListarEPResumenGuiaDespachoxEpCompleted(this, new ListarEPResumenGuiaDespachoxEpCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarEPResumenGuiaDespachox_IdPObra", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ListaDataSet ListarEPResumenGuiaDespachox_IdPObra(string IdObra) {
+            object[] results = this.Invoke("ListarEPResumenGuiaDespachox_IdPObra", new object[] {
+                        IdObra});
+            return ((ListaDataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarEPResumenGuiaDespachox_IdPObraAsync(string IdObra) {
+            this.ListarEPResumenGuiaDespachox_IdPObraAsync(IdObra, null);
+        }
+        
+        /// <remarks/>
+        public void ListarEPResumenGuiaDespachox_IdPObraAsync(string IdObra, object userState) {
+            if ((this.ListarEPResumenGuiaDespachox_IdPObraOperationCompleted == null)) {
+                this.ListarEPResumenGuiaDespachox_IdPObraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarEPResumenGuiaDespachox_IdPObraOperationCompleted);
+            }
+            this.InvokeAsync("ListarEPResumenGuiaDespachox_IdPObra", new object[] {
+                        IdObra}, this.ListarEPResumenGuiaDespachox_IdPObraOperationCompleted, userState);
+        }
+        
+        private void OnListarEPResumenGuiaDespachox_IdPObraOperationCompleted(object arg) {
+            if ((this.ListarEPResumenGuiaDespachox_IdPObraCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarEPResumenGuiaDespachox_IdPObraCompleted(this, new ListarEPResumenGuiaDespachox_IdPObraCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -11922,6 +11956,32 @@ namespace EstadosdePagos.WsOperacion {
         private object[] results;
         
         internal ListarEPResumenGuiaDespachoxEpCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ListaDataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ListaDataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    public delegate void ListarEPResumenGuiaDespachox_IdPObraCompletedEventHandler(object sender, ListarEPResumenGuiaDespachox_IdPObraCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarEPResumenGuiaDespachox_IdPObraCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarEPResumenGuiaDespachox_IdPObraCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
